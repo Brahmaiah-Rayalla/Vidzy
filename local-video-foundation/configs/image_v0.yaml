@@ -1,0 +1,41 @@
+# Configuration for Stage 1 Image Generation Model
+
+# Model architecture
+model:
+  image_size: 64
+  in_channels: 3
+  model_channels: 64
+  channel_mult: [1, 2, 2, 2]  # Multipliers for each resolution level
+  attention_resolutions: []  # No attention in this simple version
+  num_res_blocks: 2
+  dropout: 0.0
+
+# Diffusion process
+diffusion:
+  num_timesteps: 1000
+  beta_start: 0.0001
+  beta_end: 0.02
+  beta_schedule: "linear"
+
+# Training
+training:
+  num_steps: 2000
+  batch_size: 8
+  learning_rate: 0.0002
+  weight_decay: 0.01
+  seed: 42
+  save_interval: 500
+  log_interval: 10
+  sample_interval: 500
+
+# Dataset
+dataset:
+  num_images: 5000
+  image_size: 64
+  seed: 42
+
+# Inference
+inference:
+  num_samples: 4
+  sampling_steps: 50  # DDIM sampling steps
+  seed: 42

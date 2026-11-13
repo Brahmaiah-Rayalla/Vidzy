@@ -1,0 +1,60 @@
+{
+  "total_parameters": 11682953,
+  "trainable_parameters": 2243782,
+  "frozen_parameters": 9439171,
+  "temporal_parameters": 124032,
+  "temporal_tensors_with_grad": 16,
+  "temporal_tensors_without_grad": 0,
+  "temporal_params_with_grad": 124032,
+  "temporal_params_without_grad": 0,
+  "gradient_norms": {
+    "temporal_modules.bottleneck.layers.0.weight": [
+      2.576910083007533e-05
+    ],
+    "temporal_modules.bottleneck.layers.0.bias": [
+      1.6196993328776443e-06
+    ],
+    "temporal_modules.bottleneck.layers.1.weight": [
+      1.1617929658314097e-06
+    ],
+    "temporal_modules.bottleneck.layers.1.bias": [
+      1.1775720167861436e-06
+    ],
+    "temporal_modules.bottleneck.layers.3.weight": [
+      2.8788726922357455e-05
+    ],
+    "temporal_modules.bottleneck.layers.3.bias": [
+      3.407897565921303e-06
+    ],
+    "temporal_modules.bottleneck.layers.4.weight": [
+      4.0537124732509255e-05
+    ],
+    "temporal_modules.bottleneck.layers.4.bias": [
+      4.7044912207638845e-05
+    ],
+    "temporal_modules.low_res.layers.0.weight": [
+      9.88882857200224e-06
+    ],
+    "temporal_modules.low_res.layers.0.bias": [
+      1.3516360013454687e-06
+    ],
+    "temporal_modules.low_res.layers.1.weight": [
+      6.418910629690799e-07
+    ],
+    "temporal_modules.low_res.layers.1.bias": [
+      5.897518349229358e-07
+    ],
+    "temporal_modules.low_res.layers.3.weight": [
+      1.0511756045161746e-05
+    ],
+    "temporal_modules.low_res.layers.3.bias": [
+      1.6989359892249922e-06
+    ],
+    "temporal_modules.low_res.layers.4.weight": [
+      4.942463056067936e-05
+    ],
+    "temporal_modules.low_res.layers.4.bias": [
+      6.406556349247694e-05
+    ]
+  }
+}

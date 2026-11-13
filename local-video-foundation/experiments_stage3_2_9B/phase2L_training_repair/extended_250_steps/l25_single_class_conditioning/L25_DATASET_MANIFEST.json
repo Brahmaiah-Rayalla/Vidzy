@@ -1,0 +1,10 @@
+{
+  "n_train": 600,
+  "n_val": 150,
+  "colors": [
+    "red",
+    "blue",
+    "yellow"
+  ],
+  "resolution": 64
+}

@@ -1,0 +1,28 @@
+{
+  "cross_attn_param_count": 252,
+  "cross_attn_grad_mean": 0.00042990590503547187,
+  "cross_attn_grad_max": 0.008613068610429764,
+  "overall_grad_mean": 0.002191932173832316,
+  "top10": [
+    [
+      "conv_out.weight",
+      0.20615187287330627
+    ],
+    [
+      "up_blocks.14.0.conv2.weight",
+      0.0779900848865509
+    ],
+    [
+      "up_blocks.14.0.conv1.weight",
+      0.06136440858244896
+    ],
+    [
+      "up_blocks.13.0.conv2.weight",
+      0.06104298308491707
+    ],
+    [
+      "up_blocks.14.0.skip_connection.weight",
+      0.05983608216047287
+    ]
+  ]
+}

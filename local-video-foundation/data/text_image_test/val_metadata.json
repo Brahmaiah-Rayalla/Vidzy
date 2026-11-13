@@ -1,0 +1,245 @@
+[
+  {
+    "image_path": "data/text_image_test\\image_00072.png",
+    "caption": "On a white background, there is a medium blue triangle.",
+    "scene_params": {
+      "bg_color": "white",
+      "objects": [
+        {
+          "shape": "triangle",
+          "color": "blue",
+          "size": "medium",
+          "position": "left",
+          "x": 7,
+          "y": 19,
+          "size_pixels": 16
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/text_image_test\\image_00016.png",
+    "caption": "A medium orange triangle on a light_yellow background.",
+    "scene_params": {
+      "bg_color": "light_yellow",
+      "objects": [
+        {
+          "shape": "triangle",
+          "color": "orange",
+          "size": "medium",
+          "position": "right",
+          "x": 50,
+          "y": 32,
+          "size_pixels": 16
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/text_image_test\\image_00031.png",
+    "caption": "On light_gray, there is a medium cyan triangle and a small red square.",
+    "scene_params": {
+      "bg_color": "light_gray",
+      "objects": [
+        {
+          "shape": "triangle",
+          "color": "cyan",
+          "size": "medium",
+          "position": "center",
+          "x": 24,
+          "y": 30,
+          "size_pixels": 16
+        },
+        {
+          "shape": "square",
+          "color": "red",
+          "size": "small",
+          "position": "right",
+          "x": 54,
+          "y": 37,
+          "size_pixels": 9
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/text_image_test\\image_00042.png",
+    "caption": "A large blue triangle and a small pink triangle on light_yellow.",
+    "scene_params": {
+      "bg_color": "light_yellow",
+      "objects": [
+        {
+          "shape": "triangle",
+          "color": "blue",
+          "size": "large",
+          "position": "center",
+          "x": 27,
+          "y": 35,
+          "size_pixels": 22
+        },
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "size": "small",
+          "position": "left",
+          "x": 15,
+          "y": 21,
+          "size_pixels": 9
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/text_image_test\\image_00006.png",
+    "caption": "A cyan square in the right and a orange triangle in the center on white.",
+    "scene_params": {
+      "bg_color": "white",
+      "objects": [
+        {
+          "shape": "square",
+          "color": "cyan",
+          "size": "large",
+          "position": "right",
+          "x": 46,
+          "y": 26,
+          "size_pixels": 22
+        },
+        {
+          "shape": "triangle",
+          "color": "orange",
+          "size": "large",
+          "position": "center",
+          "x": 34,
+          "y": 25,
+          "size_pixels": 22
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/text_image_test\\image_00002.png",
+    "caption": "On a white background, there is a medium pink triangle.",
+    "scene_params": {
+      "bg_color": "white",
+      "objects": [
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "size": "medium",
+          "position": "right",
+          "x": 46,
+          "y": 49,
+          "size_pixels": 16
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/text_image_test\\image_00076.png",
+    "caption": "On cream, there is a medium cyan triangle and a medium green square.",
+    "scene_params": {
+      "bg_color": "cream",
+      "objects": [
+        {
+          "shape": "triangle",
+          "color": "cyan",
+          "size": "medium",
+          "position": "top",
+          "x": 44,
+          "y": 13,
+          "size_pixels": 16
+        },
+        {
+          "shape": "square",
+          "color": "green",
+          "size": "medium",
+          "position": "right",
+          "x": 48,
+          "y": 50,
+          "size_pixels": 16
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/text_image_test\\image_00081.png",
+    "caption": "On light_blue, there is a medium yellow square and a large black triangle.",
+    "scene_params": {
+      "bg_color": "light_blue",
+      "objects": [
+        {
+          "shape": "square",
+          "color": "yellow",
+          "size": "medium",
+          "position": "bottom",
+          "x": 18,
+          "y": 47,
+          "size_pixels": 16
+        },
+        {
+          "shape": "triangle",
+          "color": "black",
+          "size": "large",
+          "position": "left",
+          "x": 17,
+          "y": 23,
+          "size_pixels": 22
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/text_image_test\\image_00099.png",
+    "caption": "A small green square and a large pink square on white.",
+    "scene_params": {
+      "bg_color": "white",
+      "objects": [
+        {
+          "shape": "square",
+          "color": "green",
+          "size": "small",
+          "position": "left",
+          "x": 17,
+          "y": 18,
+          "size_pixels": 9
+        },
+        {
+          "shape": "square",
+          "color": "pink",
+          "size": "large",
+          "position": "bottom",
+          "x": 28,
+          "y": 54,
+          "size_pixels": 22
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/text_image_test\\image_00027.png",
+    "caption": "A large yellow square and a medium light_gray triangle on light_yellow.",
+    "scene_params": {
+      "bg_color": "light_yellow",
+      "objects": [
+        {
+          "shape": "square",
+          "color": "yellow",
+          "size": "large",
+          "position": "right",
+          "x": 47,
+          "y": 27,
+          "size_pixels": 22
+        },
+        {
+          "shape": "triangle",
+          "color": "light_gray",
+          "size": "medium",
+          "position": "top",
+          "x": 24,
+          "y": 16,
+          "size_pixels": 16
+        }
+      ]
+    }
+  }
+]

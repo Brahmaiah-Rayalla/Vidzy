@@ -1,0 +1,110 @@
+[
+  {
+    "image_path": "data/conditional_minimal\\image_00025.png",
+    "caption": "A white circle of small size on light_yellow.",
+    "scene_params": {
+      "bg_color": "light_yellow",
+      "objects": [
+        {
+          "shape": "circle",
+          "color": "white",
+          "size": "small",
+          "position": "left",
+          "x": 7,
+          "y": 15,
+          "size_pixels": 9
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/conditional_minimal\\image_00021.png",
+    "caption": "A medium light_gray square positioned in the center on white.",
+    "scene_params": {
+      "bg_color": "white",
+      "objects": [
+        {
+          "shape": "square",
+          "color": "light_gray",
+          "size": "medium",
+          "position": "center",
+          "x": 27,
+          "y": 26,
+          "size_pixels": 16
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/conditional_minimal\\image_00024.png",
+    "caption": "A yellow circle in the left and a red triangle in the right on light_yellow.",
+    "scene_params": {
+      "bg_color": "light_yellow",
+      "objects": [
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "size": "medium",
+          "position": "left",
+          "x": 18,
+          "y": 35,
+          "size_pixels": 16
+        },
+        {
+          "shape": "triangle",
+          "color": "red",
+          "size": "large",
+          "position": "right",
+          "x": 45,
+          "y": 35,
+          "size_pixels": 22
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/conditional_minimal\\image_00001.png",
+    "caption": "On white, there is a small red circle and a large orange triangle.",
+    "scene_params": {
+      "bg_color": "white",
+      "objects": [
+        {
+          "shape": "circle",
+          "color": "red",
+          "size": "small",
+          "position": "left",
+          "x": 9,
+          "y": 35,
+          "size_pixels": 9
+        },
+        {
+          "shape": "triangle",
+          "color": "orange",
+          "size": "large",
+          "position": "bottom",
+          "x": 28,
+          "y": 50,
+          "size_pixels": 22
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/conditional_minimal\\image_00048.png",
+    "caption": "A pink circle of medium size on light_gray.",
+    "scene_params": {
+      "bg_color": "light_gray",
+      "objects": [
+        {
+          "shape": "circle",
+          "color": "pink",
+          "size": "medium",
+          "position": "right",
+          "x": 51,
+          "y": 28,
+          "size_pixels": 16
+        }
+      ]
+    }
+  }
+]

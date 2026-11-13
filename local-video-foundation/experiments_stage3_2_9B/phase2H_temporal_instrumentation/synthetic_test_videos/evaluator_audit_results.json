@@ -1,0 +1,716 @@
+{
+  "left_to_right": {
+    "expected_direction": "right",
+    "actual_direction": "left",
+    "evaluation": {
+      "valid": true,
+      "tracking": {
+        "detection_rate": 1.0,
+        "detected_frames": 16,
+        "total_frames": 16,
+        "trajectory": [
+          [
+            10,
+            32
+          ],
+          [
+            12,
+            32
+          ],
+          [
+            14,
+            32
+          ],
+          [
+            16,
+            32
+          ],
+          [
+            18,
+            32
+          ],
+          [
+            20,
+            32
+          ],
+          [
+            22,
+            32
+          ],
+          [
+            24,
+            32
+          ],
+          [
+            26,
+            32
+          ],
+          [
+            28,
+            32
+          ],
+          [
+            30,
+            32
+          ],
+          [
+            32,
+            32
+          ],
+          [
+            34,
+            32
+          ],
+          [
+            36,
+            32
+          ],
+          [
+            38,
+            32
+          ],
+          [
+            40,
+            32
+          ]
+        ],
+        "displacements": [
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "total_displacement": 30.0,
+        "avg_displacement": 2.0
+      },
+      "direction": {
+        "expected_direction": "right",
+        "dominant_direction": "right",
+        "direction_x": 30,
+        "direction_y": 0,
+        "direction_accuracy": 1.0
+      },
+      "speed": {
+        "avg_pixel_displacement": 2.0,
+        "max_pixel_displacement": 2.0,
+        "speed_variance": 0.0
+      },
+      "appearance": {
+        "color_consistency": 1.0,
+        "size_variance": 0.0,
+        "visibility_rate": 1.0
+      },
+      "temporal": {
+        "frame_to_frame_variation": 2.65625,
+        "flicker_score": 0.0,
+        "smoothness": 0.27350427350427353
+      }
+    }
+  },
+  "right_to_left": {
+    "expected_direction": "left",
+    "actual_direction": "right",
+    "evaluation": {
+      "valid": true,
+      "tracking": {
+        "detection_rate": 1.0,
+        "detected_frames": 16,
+        "total_frames": 16,
+        "trajectory": [
+          [
+            54,
+            32
+          ],
+          [
+            52,
+            32
+          ],
+          [
+            50,
+            32
+          ],
+          [
+            48,
+            32
+          ],
+          [
+            46,
+            32
+          ],
+          [
+            44,
+            32
+          ],
+          [
+            42,
+            32
+          ],
+          [
+            40,
+            32
+          ],
+          [
+            38,
+            32
+          ],
+          [
+            36,
+            32
+          ],
+          [
+            34,
+            32
+          ],
+          [
+            32,
+            32
+          ],
+          [
+            30,
+            32
+          ],
+          [
+            28,
+            32
+          ],
+          [
+            26,
+            32
+          ],
+          [
+            24,
+            32
+          ]
+        ],
+        "displacements": [
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "total_displacement": 30.0,
+        "avg_displacement": 2.0
+      },
+      "direction": {
+        "expected_direction": "left",
+        "dominant_direction": "left",
+        "direction_x": -30,
+        "direction_y": 0,
+        "direction_accuracy": 1.0
+      },
+      "speed": {
+        "avg_pixel_displacement": 2.0,
+        "max_pixel_displacement": 2.0,
+        "speed_variance": 0.0
+      },
+      "appearance": {
+        "color_consistency": 1.0,
+        "size_variance": 0.0,
+        "visibility_rate": 1.0
+      },
+      "temporal": {
+        "frame_to_frame_variation": 2.65625,
+        "flicker_score": 0.0,
+        "smoothness": 0.27350427350427353
+      }
+    }
+  },
+  "top_to_bottom": {
+    "expected_direction": "down",
+    "actual_direction": "down",
+    "evaluation": {
+      "valid": true,
+      "tracking": {
+        "detection_rate": 1.0,
+        "detected_frames": 16,
+        "total_frames": 16,
+        "trajectory": [
+          [
+            32,
+            10
+          ],
+          [
+            32,
+            12
+          ],
+          [
+            32,
+            14
+          ],
+          [
+            32,
+            16
+          ],
+          [
+            32,
+            18
+          ],
+          [
+            32,
+            20
+          ],
+          [
+            32,
+            22
+          ],
+          [
+            32,
+            24
+          ],
+          [
+            32,
+            26
+          ],
+          [
+            32,
+            28
+          ],
+          [
+            32,
+            30
+          ],
+          [
+            32,
+            32
+          ],
+          [
+            32,
+            34
+          ],
+          [
+            32,
+            36
+          ],
+          [
+            32,
+            38
+          ],
+          [
+            32,
+            40
+          ]
+        ],
+        "displacements": [
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "total_displacement": 30.0,
+        "avg_displacement": 2.0
+      },
+      "direction": {
+        "expected_direction": "down",
+        "dominant_direction": "down",
+        "direction_x": 0,
+        "direction_y": 30,
+        "direction_accuracy": 1.0
+      },
+      "speed": {
+        "avg_pixel_displacement": 2.0,
+        "max_pixel_displacement": 2.0,
+        "speed_variance": 0.0
+      },
+      "appearance": {
+        "color_consistency": 1.0,
+        "size_variance": 0.0,
+        "visibility_rate": 1.0
+      },
+      "temporal": {
+        "frame_to_frame_variation": 2.65625,
+        "flicker_score": 0.0,
+        "smoothness": 0.27350427350427353
+      }
+    }
+  },
+  "bottom_to_top": {
+    "expected_direction": "up",
+    "actual_direction": "up",
+    "evaluation": {
+      "valid": true,
+      "tracking": {
+        "detection_rate": 1.0,
+        "detected_frames": 16,
+        "total_frames": 16,
+        "trajectory": [
+          [
+            32,
+            54
+          ],
+          [
+            32,
+            52
+          ],
+          [
+            32,
+            50
+          ],
+          [
+            32,
+            48
+          ],
+          [
+            32,
+            46
+          ],
+          [
+            32,
+            44
+          ],
+          [
+            32,
+            42
+          ],
+          [
+            32,
+            40
+          ],
+          [
+            32,
+            38
+          ],
+          [
+            32,
+            36
+          ],
+          [
+            32,
+            34
+          ],
+          [
+            32,
+            32
+          ],
+          [
+            32,
+            30
+          ],
+          [
+            32,
+            28
+          ],
+          [
+            32,
+            26
+          ],
+          [
+            32,
+            24
+          ]
+        ],
+        "displacements": [
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "total_displacement": 30.0,
+        "avg_displacement": 2.0
+      },
+      "direction": {
+        "expected_direction": "up",
+        "dominant_direction": "up",
+        "direction_x": 0,
+        "direction_y": -30,
+        "direction_accuracy": 1.0
+      },
+      "speed": {
+        "avg_pixel_displacement": 2.0,
+        "max_pixel_displacement": 2.0,
+        "speed_variance": 0.0
+      },
+      "appearance": {
+        "color_consistency": 1.0,
+        "size_variance": 0.0,
+        "visibility_rate": 1.0
+      },
+      "temporal": {
+        "frame_to_frame_variation": 2.65625,
+        "flicker_score": 0.0,
+        "smoothness": 0.27350427350427353
+      }
+    }
+  },
+  "stationary": {
+    "expected_direction": "stationary",
+    "actual_direction": "stationary",
+    "evaluation": {
+      "valid": true,
+      "tracking": {
+        "detection_rate": 1.0,
+        "detected_frames": 16,
+        "total_frames": 16,
+        "trajectory": [
+          [
+            32,
+            32
+          ],
+          [
+            32,
+            32
+          ],
+          [
+            32,
+            32
+          ],
+          [
+            32,
+            32
+          ],
+          [
+            32,
+            32
+          ],
+          [
+            32,
+            32
+          ],
+          [
+            32,
+            32
+          ],
+          [
+            32,
+            32
+          ],
+          [
+            32,
+            32
+          ],
+          [
+            32,
+            32
+          ],
+          [
+            32,
+            32
+          ],
+          [
+            32,
+            32
+          ],
+          [
+            32,
+            32
+          ],
+          [
+            32,
+            32
+          ],
+          [
+            32,
+            32
+          ],
+          [
+            32,
+            32
+          ]
+        ],
+        "displacements": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "total_displacement": 0.0,
+        "avg_displacement": 0.0
+      },
+      "direction": {
+        "expected_direction": "stationary",
+        "dominant_direction": "up",
+        "direction_x": 0,
+        "direction_y": 0,
+        "direction_accuracy": 1.0
+      },
+      "speed": {
+        "avg_pixel_displacement": 0.0,
+        "max_pixel_displacement": 0.0,
+        "speed_variance": 0.0
+      },
+      "appearance": {
+        "color_consistency": 1.0,
+        "size_variance": 0.0,
+        "visibility_rate": 1.0
+      },
+      "temporal": {
+        "frame_to_frame_variation": 0.0,
+        "flicker_score": 0.0,
+        "smoothness": 1.0
+      }
+    }
+  },
+  "direction_reversal": {
+    "expected_direction": "reversal",
+    "actual_direction": "reversal",
+    "evaluation": {
+      "valid": true,
+      "tracking": {
+        "detection_rate": 1.0,
+        "detected_frames": 16,
+        "total_frames": 16,
+        "trajectory": [
+          [
+            32,
+            32
+          ],
+          [
+            34,
+            32
+          ],
+          [
+            36,
+            32
+          ],
+          [
+            38,
+            32
+          ],
+          [
+            40,
+            32
+          ],
+          [
+            42,
+            32
+          ],
+          [
+            44,
+            32
+          ],
+          [
+            46,
+            32
+          ],
+          [
+            46,
+            32
+          ],
+          [
+            44,
+            32
+          ],
+          [
+            42,
+            32
+          ],
+          [
+            40,
+            32
+          ],
+          [
+            38,
+            32
+          ],
+          [
+            36,
+            32
+          ],
+          [
+            34,
+            32
+          ],
+          [
+            32,
+            32
+          ]
+        ],
+        "displacements": [
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          0.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "total_displacement": 28.0,
+        "avg_displacement": 1.8666666666666667
+      },
+      "direction": {
+        "expected_direction": "reversal",
+        "dominant_direction": "up",
+        "direction_x": 0,
+        "direction_y": 0,
+        "direction_accuracy": 0.5
+      },
+      "speed": {
+        "avg_pixel_displacement": 1.8666666666666667,
+        "max_pixel_displacement": 2.0,
+        "speed_variance": 0.24888888888888897
+      },
+      "appearance": {
+        "color_consistency": 1.0,
+        "size_variance": 0.0,
+        "visibility_rate": 1.0
+      },
+      "temporal": {
+        "frame_to_frame_variation": 2.4791666666666665,
+        "flicker_score": 0.6625851622412189,
+        "smoothness": 0.2874251497005988
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "trainable_param_scalars": 124034,
+  "cpu_cores": 8,
+  "ram_gb": 15.650993347167969,
+  "avg_step_time_s": 1.8904476881027221,
+  "std_step_time_s": 0.07534393201991736,
+  "estimated_500_steps_min": 15.753730734189352,
+  "estimated_500_steps_hours": 0.26256217890315586
+}

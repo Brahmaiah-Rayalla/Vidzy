@@ -1,0 +1,5 @@
+{
+  "arch": "Linear256-256-3 masked-mean pooled TE",
+  "te": "frozen",
+  "loss": "CE"
+}

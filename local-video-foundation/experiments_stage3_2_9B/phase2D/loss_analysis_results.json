@@ -1,0 +1,46 @@
+{
+  "experiment_B": {
+    "num_steps": 100,
+    "initial_loss": 0.009628781117498875,
+    "final_loss": 0.006957277189940214,
+    "min_loss": 0.00509587163105607,
+    "max_loss": 0.21939142048358917,
+    "mean_loss": 0.019939664537087082,
+    "std_loss": 0.032127614586716736,
+    "loss_range": [
+      0.00509587163105607,
+      0.21939142048358917
+    ],
+    "loss_reduction": 0.0026715039275586605,
+    "loss_reduction_percent": 27.744985527852535
+  },
+  "experiment_C": {
+    "num_steps": 100,
+    "initial_loss": 1.2860318422317505,
+    "final_loss": 1.1771355867385864,
+    "min_loss": 0.922432005405426,
+    "max_loss": 1.6667743921279907,
+    "mean_loss": 1.2211505568027496,
+    "std_loss": 0.11493343696963189,
+    "loss_range": [
+      0.922432005405426,
+      1.6667743921279907
+    ],
+    "loss_reduction": 0.10889625549316406,
+    "loss_reduction_percent": 8.4676173572956
+  },
+  "comparison": {
+    "loss_scale_difference": 133.56122924993895,
+    "final_loss_ratio": 169.1948666988072,
+    "loss_reduction_ratio": 0.3051945133939666,
+    "parameter_ratio": 13.1126953125
+  },
+  "scale_analysis": {
+    "different_scales": true
+  },
+  "stability_analysis": {
+    "exp_B_cv": 1.6112414793619265,
+    "exp_C_cv": 0.09411897356092913,
+    "exp_C_more_volatile": false
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "config_comparison": {
+    "image_size": 64,
+    "num_frames": 16,
+    "num_timesteps": 1000,
+    "batch_size": 1,
+    "learning_rate": 0.0002,
+    "weight_decay": 0.01,
+    "beta_start": 0.0001,
+    "beta_end": 0.02,
+    "loss_function": "MSE",
+    "reduction": "mean"
+  },
+  "loss_comparison": {
+    "experiment_B_loss": 0.026020938530564308,
+    "experiment_C_loss": 1.1985164880752563,
+    "absolute_difference": 1.172495549544692,
+    "relative_difference": 0.02171095582702607,
+    "losses_comparable": false,
+    "per_frame_loss_B": [
+      0.02305321767926216,
+      0.02526293508708477,
+      0.029746660962700844
+    ],
+    "per_frame_loss_C": [
+      1.1422492265701294,
+      1.2206792831420898,
+      1.2326208353042603
+    ],
+    "per_frame_mean_B": 0.02602093666791916,
+    "per_frame_mean_C": 1.1985163688659668,
+    "text_embedding_max_diff": 2.5045042037963867,
+    "text_embeddings_identical": false
+  },
+  "summary": {
+    "all_checks_pass": false
+  }
+}

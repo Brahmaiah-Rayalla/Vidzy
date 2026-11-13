@@ -1,0 +1,5 @@
+{
+  "rgb_weights": "copied bit-exact",
+  "bias": "copied",
+  "text_weights": "N(0,0.02)"
+}

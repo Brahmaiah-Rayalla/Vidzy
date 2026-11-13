@@ -1,0 +1,6 @@
+{
+  "ddim": "unchanged L.11/L.12 schedule (linear betas 0.0001-0.02, 1000 steps, 25 sampling steps)",
+  "text_path": "standard TextEncoder + SimpleTokenizer, verified parity with fixed split encoder",
+  "bypass_check": "video temporal-disabled path verified frame-independent in L.13 (temporal_activity=0.0)",
+  "normalization": "(x.clamp(-1,1)+1)/2 output scaling unchanged"
+}

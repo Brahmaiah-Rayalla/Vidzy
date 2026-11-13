@@ -1,0 +1,13 @@
+{
+  "c1_step_0_loss": 1.955854,
+  "c1_step_25_loss": 1.128883,
+  "c1_step_50_loss": 1.205477,
+  "c1_step_75_loss": 1.589969,
+  "c1_step_100_loss": 1.144010,
+  "c25_step_0_loss": 2.019901,
+  "c25_step_25_loss": 1.126950,
+  "c25_step_50_loss": 1.117678,
+  "c25_step_75_loss": 1.495079,
+  "c25_step_100_loss": 0.942490,
+  "loss_improvement_percent": 17.62
+}

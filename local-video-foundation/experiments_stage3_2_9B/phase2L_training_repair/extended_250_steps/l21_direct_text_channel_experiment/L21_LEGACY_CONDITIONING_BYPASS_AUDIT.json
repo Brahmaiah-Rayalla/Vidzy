@@ -1,0 +1,4 @@
+{
+  "method": "text_emb=zeros,mask=ones -> constant attn output",
+  "verified": "swap sensitivity consistent"
+}

@@ -1,0 +1,132 @@
+{
+  "defect": "load_from_standard_encoder skipped transformer weight copy when freeze_transformer=True -> random transformer",
+  "fix": "weights now always copied (text_encoder_split.py)",
+  "per_prompt": {
+    "A medium blue circle slowly moving from left to right on a white background.": {
+      "final_emb_fixed_vs_standard": {
+        "mean_abs": 0.023656882345676422,
+        "max_abs": 1.0571744441986084,
+        "mse": 0.003776057856157422,
+        "cosine": 0.9980852603912354
+      },
+      "final_emb_buggy_vs_standard": {
+        "mean_abs": 0.6240412592887878,
+        "max_abs": 3.3851318359375,
+        "mse": 0.6279194951057434,
+        "cosine": 0.6838256120681763
+      }
+    },
+    "A large pink triangle quickly moving from right to left on a white background.": {
+      "final_emb_fixed_vs_standard": {
+        "mean_abs": 0.023666586726903915,
+        "max_abs": 1.1709799766540527,
+        "mse": 0.0035873819142580032,
+        "cosine": 0.998180627822876
+      },
+      "final_emb_buggy_vs_standard": {
+        "mean_abs": 0.616559624671936,
+        "max_abs": 3.2727253437042236,
+        "mse": 0.6135292053222656,
+        "cosine": 0.6910603046417236
+      }
+    },
+    "A large pink circle slowly moving from top to bottom on a light_yellow background.": {
+      "final_emb_fixed_vs_standard": {
+        "mean_abs": 0.023622311651706696,
+        "max_abs": 1.0619752407073975,
+        "mse": 0.0037273685447871685,
+        "cosine": 0.9981095790863037
+      },
+      "final_emb_buggy_vs_standard": {
+        "mean_abs": 0.6228564977645874,
+        "max_abs": 3.3817172050476074,
+        "mse": 0.6277263760566711,
+        "cosine": 0.6839074492454529
+      }
+    },
+    "A medium white circle moving from bottom to top on a light_yellow background.": {
+      "final_emb_fixed_vs_standard": {
+        "mean_abs": 0.013193925842642784,
+        "max_abs": 0.8008689880371094,
+        "mse": 0.0017507891170680523,
+        "cosine": 0.999112069606781
+      },
+      "final_emb_buggy_vs_standard": {
+        "mean_abs": 0.6281663775444031,
+        "max_abs": 3.1911838054656982,
+        "mse": 0.641412615776062,
+        "cosine": 0.6770318150520325
+      }
+    },
+    "A small purple triangle moving diagonally on a black background.": {
+      "final_emb_fixed_vs_standard": {
+        "mean_abs": 0.015150370076298714,
+        "max_abs": 0.8036497831344604,
+        "mse": 0.0017689564265310764,
+        "cosine": 0.9991029500961304
+      },
+      "final_emb_buggy_vs_standard": {
+        "mean_abs": 0.6320276856422424,
+        "max_abs": 3.3341290950775146,
+        "mse": 0.661995530128479,
+        "cosine": 0.6666808724403381
+      }
+    },
+    "A medium cyan square on a gray background, remaining stationary.": {
+      "final_emb_fixed_vs_standard": {
+        "mean_abs": 0.01355007290840149,
+        "max_abs": 0.732987105846405,
+        "mse": 0.001319029601290822,
+        "cosine": 0.999330997467041
+      },
+      "final_emb_buggy_vs_standard": {
+        "mean_abs": 0.6241531372070312,
+        "max_abs": 3.3141677379608154,
+        "mse": 0.6327241659164429,
+        "cosine": 0.6813987493515015
+      }
+    },
+    "A red circle on a white background": {
+      "final_emb_fixed_vs_standard": {
+        "mean_abs": 0.0,
+        "max_abs": 0.0,
+        "mse": 0.0,
+        "cosine": 0.9999995827674866
+      },
+      "final_emb_buggy_vs_standard": {
+        "mean_abs": 0.6467599272727966,
+        "max_abs": 3.621992826461792,
+        "mse": 0.6743707656860352,
+        "cosine": 0.6604593396186829
+      }
+    },
+    "A blue square on a white background": {
+      "final_emb_fixed_vs_standard": {
+        "mean_abs": 0.0,
+        "max_abs": 0.0,
+        "mse": 0.0,
+        "cosine": 1.000000238418579
+      },
+      "final_emb_buggy_vs_standard": {
+        "mean_abs": 0.6486355066299438,
+        "max_abs": 3.770226240158081,
+        "mse": 0.6773155331611633,
+        "cosine": 0.6589848399162292
+      }
+    }
+  },
+  "aggregate": {
+    "final_emb_fixed_vs_standard": {
+      "mean_abs": 0.014105018693953753,
+      "max_abs": 0.7034544423222542,
+      "mse": 0.001991197932511568,
+      "cosine": 0.9989901632070541
+    },
+    "final_emb_buggy_vs_standard": {
+      "mean_abs": 0.6304000020027161,
+      "max_abs": 3.408909261226654,
+      "mse": 0.6446242108941078,
+      "cosine": 0.6754186227917671
+    }
+  }
+}

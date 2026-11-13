@@ -1,0 +1,65 @@
+{
+  "stage": "3.2.9L.12",
+  "date": "2026-11-09",
+  "scope": "Inference-only fusion gate attribution on C25 step-250 checkpoint",
+  "gate_mechanism": {
+    "implementation": "experiments_stage3_2_7/video_foundation/models/video_unet_fixed.py",
+    "parameter": "fusion_modules[<name>].gate stores a raw logit; sigmoid applied at use",
+    "formula": "fused = temporal_features + sigmoid(gate_logit) * (temporal_processed - temporal_features)",
+    "injection": "fused features are ADDED to decoder hidden state h in ConditionalUNet.forward (h = h + injected_features[<name>]); the full fused tensor is injected, not only the gated residual",
+    "levels": {
+      "bottleneck": "128 channels, injected after middle_block",
+      "low_res": "64 channels, injected after decoder up_blocks, before conv_out"
+    },
+    "independence": "Two independent scalar gates; residuals computed by separate TemporalConv1DBlock modules",
+    "near_zero_bypass": "If BOTH activated gates < 0.001, forward() uses _forward_frame_independent"
+  },
+  "native_gate_values": {
+    "C1_step250": {
+      "checkpoint": "extended_250_steps/recovery_l10/C1/checkpoint_step_000250.pt",
+      "bottleneck": {"raw_logit": -4.557628154754639, "activated": 0.010378069244325161},
+      "low_res": {"raw_logit": -4.523617267608643, "activated": 0.010733253322541714}
+    },
+    "C25_step250": {
+      "checkpoint": "extended_250_steps/recovery_l10/C25/checkpoint_step_000250.pt",
+      "bottleneck": {"raw_logit": -1.0409202575683594, "activated": 0.2609724700450897},
+      "low_res": {"raw_logit": -1.0322657823562622, "activated": 0.26264506578445435}
+    }
+  },
+  "gate_configurations": {
+    "C1_native": {"checkpoint": "C1", "bottleneck_activated": null, "low_res_activated": null},
+    "C25_native": {"checkpoint": "C25", "bottleneck_activated": null, "low_res_activated": null},
+    "C25_10_10": {"checkpoint": "C25", "bottleneck_activated": 0.10, "low_res_activated": 0.10},
+    "C25_25_10": {"checkpoint": "C25", "bottleneck_activated": 0.25, "low_res_activated": 0.10},
+    "C25_10_25": {"checkpoint": "C25", "bottleneck_activated": 0.10, "low_res_activated": 0.25},
+    "C25_25_0": {"checkpoint": "C25", "bottleneck_activated": 0.25, "low_res_activated": 0.0},
+    "C25_0_25": {"checkpoint": "C25", "bottleneck_activated": 0.0, "low_res_activated": 0.25}
+  },
+  "logit_conversion": {
+    "0.10": -2.1972245773362196,
+    "0.25": -1.0986122886681098,
+    "0.50": 0.0,
+    "0.01": -4.59511985013459,
+    "0%_override": -15.0,
+    "note": "Gate values in the experiment table are ACTIVATED sigmoid values; raw logits computed as log(p/(1-p)) and written to fusion_modules.<name>.gate.data at inference only. Native logits restored after each configuration. Checkpoints never modified."
+  },
+  "single_forward_isolation_test": {
+    "date": "2026-11-09",
+    "prompt": "stationary caption",
+    "timestep": "mid-schedule",
+    "results_max_abs_diff_of_predicted_noise": {
+      "bottleneck_0.25_vs_0.0_lowres_0.25_fixed": 4.00543212890625e-05,
+      "lowres_0.25_vs_0.0_bottleneck_0.25_fixed": 0.9544458389282227,
+      "both_0.25_vs_both_0.0": 4.3361430168151855,
+      "lowres_0.0_vs_lowres_0.25_bottleneck_0": 5.178085803985596
+    },
+    "conclusion": "The bottleneck gate has NEGLIGIBLE effect on model output (~4e-5 max diff). Essentially all gate sensitivity resides in the low_res gate. Asymmetric pairs (C25_10_10 vs C25_25_10; C25_10_25 vs C25_0_25) produce near-identical videos, confirmed by generated-output diff ~1e-4."
+  },
+  "runtime_residual_statistics": {
+    "source": "L12_GATE_ACTIVATION_ANALYSIS.json",
+    "bottleneck_residual_rel_to_feature": 0.596,
+    "low_res_residual_rel_to_feature": 0.999,
+    "c25_native_gated_delta_rel": {"bottleneck": 0.1555, "low_res": 0.2623},
+    "note": "Gate override scales the gated delta linearly; residual magnitudes are gate-independent."
+  }
+}

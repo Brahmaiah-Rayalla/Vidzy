@@ -1,0 +1,11 @@
+{
+  "stage2_sha256": "a7f5142e133c6aeadc656967639eab046a7a8f922e3201a6feda4496a544d57c (unchanged - verified on checkpoint_stage2_spatial.pt; motion_expanded 9a75aadc...)",
+  "te_frozen_verified": "all te params requires_grad=False, eval mode, never in optimizer",
+  "probe_ckpts": [
+    "probe_step100.pt",
+    "probe_step200.pt",
+    "probe_step350.pt",
+    "probe_step500.pt"
+  ],
+  "originals_untouched": true
+}

@@ -1,0 +1,10 @@
+{
+  "stage2_mse": 0.009525971487164497,
+  "video_mse": 0.009189856238663197,
+  "stage2_correlation": 0.9967379570007324,
+  "video_correlation": 0.9969519376754761,
+  "mse_difference": 0.0003361152485013008,
+  "matching_params": 504,
+  "mismatching_params": 0,
+  "total_params": 504
+}

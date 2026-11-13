@@ -1,0 +1,7 @@
+{
+  "final_acc": 0.792,
+  "n_per_class": 24,
+  "chance": 0.333,
+  "threshold": 0.8,
+  "note": "0.792 just below 80% threshold; trend strongly positive"
+}

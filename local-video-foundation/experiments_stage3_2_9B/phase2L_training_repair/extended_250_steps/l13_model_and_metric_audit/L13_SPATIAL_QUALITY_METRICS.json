@@ -1,0 +1,28 @@
+{
+  "A_stage2_image": {
+    "corner_std_range": "0.34-0.44 (textured, not flat backgrounds)",
+    "color_frac_by_prompt": {
+      "red_circle": 0.162,
+      "blue_square": 0.01,
+      "yellow_triangle": 0.467,
+      "green_circle": 0.007,
+      "red_square": 0.57
+    },
+    "white_bg_frac": "0.009-0.085"
+  },
+  "A2_stage2_spatial_ref": "identical outputs to A (same spatial weights)",
+  "train_caption_probe": {
+    "corner_std": "0.34-0.40",
+    "conclusion": "Stage2.1 produces textured/abstract output even on in-distribution training captions"
+  },
+  "B_temporal_disabled": {
+    "temporal_activity": 0.0,
+    "diverges_from_A": "mean_abs_diff 0.20-0.55 due to split text encoder",
+    "output": "abstract, blue-shifted palette"
+  },
+  "C_temporal_enabled": {
+    "temporal_activity": "0.09-0.18",
+    "output": "abstract with temporal flicker"
+  },
+  "object_recognizability": "NONE of A/A2/B/C produced a recognizable prompted shape; backgrounds are high-frequency texture not flat color"
+}

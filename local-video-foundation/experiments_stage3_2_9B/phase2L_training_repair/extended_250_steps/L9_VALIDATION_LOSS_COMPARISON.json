@@ -1,0 +1,20 @@
+{
+  "C1": {
+    "step_100_loss": 1.144010066986084,
+    "step_150_loss": "NOT_AVAILABLE",
+    "step_200_loss": "NOT_AVAILABLE",
+    "step_250_loss": "NOT_AVAILABLE"
+  },
+  "C25": {
+    "step_100_loss": 0.9424901604652405,
+    "step_150_loss": "NOT_AVAILABLE",
+    "step_200_loss": "NOT_AVAILABLE",
+    "step_250_loss": "NOT_AVAILABLE"
+  },
+  "comparison_at_step_100": {
+    "C1_loss": 1.144010066986084,
+    "C25_loss": 0.9424901604652405,
+    "improvement_percent": 17.615221433474925
+  },
+  "note": "L.8 training did not complete for C25. Validation loss comparison limited to step 100 from L.7."
+}

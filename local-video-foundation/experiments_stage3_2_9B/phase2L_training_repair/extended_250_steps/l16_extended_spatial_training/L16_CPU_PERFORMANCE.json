@@ -1,0 +1,7 @@
+{
+  "train_min": 68,
+  "eval_min": 30,
+  "total_min": 98.6,
+  "step_s": 2.0,
+  "threads": 8
+}

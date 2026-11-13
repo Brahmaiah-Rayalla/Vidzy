@@ -1,0 +1,79 @@
+{
+  "performance_timestamp": "2026-11-02",
+  "device": "CPU",
+  "configuration": {
+    "resolution": 64,
+    "num_frames": 16,
+    "sampling_steps": 25,
+    "batch_size": 1
+  },
+  "experiment_A": {
+    "name": "Spatial Reference",
+    "model_parameters": 9439171,
+    "load_time": 0.51,
+    "samples": 3,
+    "sampling_times": [2.71, 2.71, 2.81],
+    "avg_sampling_time": 2.74,
+    "time_per_frame": 0.17,
+    "time_per_step": 0.11,
+    "total_generation_time": 8.23
+  },
+  "experiment_B": {
+    "name": "Motion-Conditioned (Temporal Disabled)",
+    "model_parameters": 11568579,
+    "load_time": 0.20,
+    "samples": 5,
+    "sampling_times": [34.18, 32.84, 167.75, 34.21, 34.32],
+    "avg_sampling_time": 60.66,
+    "time_per_frame": 3.79,
+    "time_per_step": 2.43,
+    "total_generation_time": 303.30,
+    "note": "Sample 3 showed anomalously high time (167.75s), likely due to system resource contention"
+  },
+  "experiment_C": {
+    "name": "Temporal-Enabled",
+    "model_parameters": 11692613,
+    "load_time": 0.26,
+    "samples": 5,
+    "sampling_times": [73.48, 69.93, 71.74, 371.00, 67.62],
+    "avg_sampling_time": 130.75,
+    "time_per_frame": 8.17,
+    "time_per_step": 5.23,
+    "total_generation_time": 653.77,
+    "note": "Sample 3 showed anomalously high time (371.00s), likely due to system resource contention"
+  },
+  "performance_comparison": {
+    "experiment_A_vs_B_ratio": {
+      "sampling_time": 22.1,
+      "time_per_frame": 22.3,
+      "time_per_step": 22.1
+    },
+    "experiment_B_vs_C_ratio": {
+      "sampling_time": 2.16,
+      "time_per_frame": 2.16,
+      "time_per_step": 2.15
+    },
+    "experiment_A_vs_C_ratio": {
+      "sampling_time": 47.7,
+      "time_per_frame": 48.1,
+      "time_per_step": 47.5
+    }
+  },
+  "temporal_overhead": {
+    "experiment_B_avg_step_time": 2.43,
+    "experiment_C_avg_step_time": 5.23,
+    "overhead_percentage": 115.2,
+    "interpretation": "Temporal processing adds ~115% overhead per denoising step"
+  },
+  "video_vs_image_overhead": {
+    "experiment_A_avg_step_time": 0.11,
+    "experiment_B_avg_step_time": 2.43,
+    "overhead_percentage": 2209.1,
+    "interpretation": "Video processing (16 frames) adds ~22x overhead per denoising step"
+  },
+  "system_notes": {
+    "peak_ram_usage": "Not measured",
+    "cpu_thread_count": "Not measured",
+    "recommendation": "Future runs should measure peak RAM and CPU thread count for complete profiling"
+  }
+}

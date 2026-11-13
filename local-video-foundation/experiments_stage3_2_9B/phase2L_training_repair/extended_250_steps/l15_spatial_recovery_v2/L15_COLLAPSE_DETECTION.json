@@ -1,0 +1,7 @@
+{
+  "partial_mode_collapse": true,
+  "evidence": "pairwise sample diff fell 0.233->0.067-0.128 across checkpoints; outputs less prompt-diverse",
+  "corner_std": "decreased to 0.10-0.39 mid-training (smoother) then rose 0.43-0.48 at step500",
+  "no_constant_color": "outputs not single-color; no NaN",
+  "verdict": "mild diversity collapse, not full L14-style collapse"
+}

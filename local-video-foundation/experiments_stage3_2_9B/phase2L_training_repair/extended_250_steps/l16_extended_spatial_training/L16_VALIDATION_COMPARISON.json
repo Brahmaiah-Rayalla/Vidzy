@@ -1,0 +1,10 @@
+{
+  "val_mean": {
+    "250": 0.0216,
+    "500": 0.0219,
+    "1000": 0.0143,
+    "1500": 0.015,
+    "2000": 0.0104
+  },
+  "trend": "improving but decoupled from visual quality"
+}

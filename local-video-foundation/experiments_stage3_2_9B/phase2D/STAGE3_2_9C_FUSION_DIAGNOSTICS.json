@@ -1,0 +1,37 @@
+{
+  "fusion_gate_analysis": {
+    "num_steps": 100,
+    "bottleneck_gate": {
+      "initial": 0.01000070758163929,
+      "final": 0.010046334937214851,
+      "min": 0.009997577406466007,
+      "max": 0.010046334937214851,
+      "mean": 0.010012788055464626,
+      "std": 1.428790936491922e-05,
+      "total_change": 4.5627355575561523e-05,
+      "percent_change": 0.4562412729608319
+    },
+    "low_res_gate": {
+      "initial": 0.01000326219946146,
+      "final": 0.01027755718678236,
+      "min": 0.01000326219946146,
+      "max": 0.01027755718678236,
+      "mean": 0.010130096403881907,
+      "std": 8.166095391096754e-05,
+      "total_change": 0.00027429498732089996,
+      "percent_change": 2.7420553600571123
+    }
+  },
+  "interpretation": {
+    "gates_near_initialization": true,
+    "gates_learning": false,
+    "gates_balanced": true,
+    "temporal_module_active": false
+  },
+  "recommendations": [
+    "Gates remain at initialization (0.01), suggesting temporal features are not being used",
+    "More training steps may be needed for gates to activate",
+    "Consider increasing gate initialization to 0.5 to encourage earlier activation",
+    "Diagnostic gate values (0.01, 0.05, 0.10, 0.25) should be tested to verify temporal feature quality"
+  ]
+}

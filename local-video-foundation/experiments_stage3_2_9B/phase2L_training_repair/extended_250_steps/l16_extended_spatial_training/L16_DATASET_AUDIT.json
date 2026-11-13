@@ -1,0 +1,9 @@
+{
+  "source": "data/text_image/train_metadata.json + PNGs",
+  "n": 800,
+  "split": "700 train / 100 val disjoint",
+  "resolution": 64,
+  "range": "uint8 PNG -> float [-1,1] via /255*2-1",
+  "captions": "single-image descriptions, verified vs scene_params",
+  "note": "same generator family as original stage2 dataset"
+}

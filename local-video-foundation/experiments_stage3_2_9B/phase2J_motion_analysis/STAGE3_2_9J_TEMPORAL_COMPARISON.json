@@ -1,0 +1,326 @@
+{
+  "B_seed42_prompt0": {
+    "config": "B",
+    "seed": 42,
+    "prompt_idx": 0,
+    "prompt": "A red object moving left",
+    "flicker": 112.71328132340234,
+    "motion_smoothness": 0.038208301786491705,
+    "unexpected_variation": 193.75625712281325
+  },
+  "B_seed42_prompt1": {
+    "config": "B",
+    "seed": 42,
+    "prompt_idx": 1,
+    "prompt": "A red object moving right",
+    "flicker": 110.47153470242,
+    "motion_smoothness": 0.09367093958275186,
+    "unexpected_variation": 190.70933120602274
+  },
+  "B_seed42_prompt2": {
+    "config": "B",
+    "seed": 42,
+    "prompt_idx": 2,
+    "prompt": "A blue object moving diagonally",
+    "flicker": 106.66340299875172,
+    "motion_smoothness": 0.1600609224344881,
+    "unexpected_variation": 183.16264365416816
+  },
+  "B_seed42_prompt3": {
+    "config": "B",
+    "seed": 42,
+    "prompt_idx": 3,
+    "prompt": "A yellow object remaining stationary",
+    "flicker": 110.51418889052019,
+    "motion_smoothness": 0.08783815011035412,
+    "unexpected_variation": 189.90270251873997
+  },
+  "B_seed123_prompt0": {
+    "config": "B",
+    "seed": 123,
+    "prompt_idx": 0,
+    "prompt": "A red object moving left",
+    "flicker": 109.35933255712034,
+    "motion_smoothness": 0.12591523320885767,
+    "unexpected_variation": 186.9243575086686
+  },
+  "B_seed123_prompt1": {
+    "config": "B",
+    "seed": 123,
+    "prompt_idx": 1,
+    "prompt": "A red object moving right",
+    "flicker": 106.24670424077621,
+    "motion_smoothness": 0.1839515300139204,
+    "unexpected_variation": 182.59222694834975
+  },
+  "B_seed123_prompt2": {
+    "config": "B",
+    "seed": 123,
+    "prompt_idx": 2,
+    "prompt": "A blue object moving diagonally",
+    "flicker": 107.13407848215999,
+    "motion_smoothness": 0.1632066880646601,
+    "unexpected_variation": 184.45660824590001
+  },
+  "B_seed123_prompt3": {
+    "config": "B",
+    "seed": 123,
+    "prompt_idx": 3,
+    "prompt": "A yellow object remaining stationary",
+    "flicker": 109.38294941012329,
+    "motion_smoothness": 0.11547202608641649,
+    "unexpected_variation": 187.82788463956118
+  },
+  "B_seed456_prompt0": {
+    "config": "B",
+    "seed": 456,
+    "prompt_idx": 0,
+    "prompt": "A red object moving left",
+    "flicker": 113.80334242839663,
+    "motion_smoothness": -0.02249851430501737,
+    "unexpected_variation": 198.524687564197
+  },
+  "B_seed456_prompt1": {
+    "config": "B",
+    "seed": 456,
+    "prompt_idx": 1,
+    "prompt": "A red object moving right",
+    "flicker": 108.35744723126557,
+    "motion_smoothness": 0.09975057622709249,
+    "unexpected_variation": 186.80217571060322
+  },
+  "B_seed456_prompt2": {
+    "config": "B",
+    "seed": 456,
+    "prompt_idx": 2,
+    "prompt": "A blue object moving diagonally",
+    "flicker": 107.60830707285646,
+    "motion_smoothness": 0.10976752485199459,
+    "unexpected_variation": 188.46319315636322
+  },
+  "B_seed456_prompt3": {
+    "config": "B",
+    "seed": 456,
+    "prompt_idx": 3,
+    "prompt": "A yellow object remaining stationary",
+    "flicker": 110.80422081064008,
+    "motion_smoothness": 0.044107298510872806,
+    "unexpected_variation": 193.50721684335332
+  },
+  "C_seed42_prompt0": {
+    "config": "C",
+    "seed": 42,
+    "prompt_idx": 0,
+    "prompt": "A red object moving left",
+    "flicker": 113.42072308597827,
+    "motion_smoothness": 0.026100060428431826,
+    "unexpected_variation": 194.96423796810745
+  },
+  "C_seed42_prompt1": {
+    "config": "C",
+    "seed": 42,
+    "prompt_idx": 1,
+    "prompt": "A red object moving right",
+    "flicker": 111.33169410930057,
+    "motion_smoothness": 0.08009834797561843,
+    "unexpected_variation": 192.1535810875969
+  },
+  "C_seed42_prompt2": {
+    "config": "C",
+    "seed": 42,
+    "prompt_idx": 2,
+    "prompt": "A blue object moving diagonally",
+    "flicker": 107.66829494197093,
+    "motion_smoothness": 0.14374619905371044,
+    "unexpected_variation": 184.91954665101025
+  },
+  "C_seed42_prompt3": {
+    "config": "C",
+    "seed": 42,
+    "prompt_idx": 3,
+    "prompt": "A yellow object remaining stationary",
+    "flicker": 111.50170469046854,
+    "motion_smoothness": 0.07073343595324111,
+    "unexpected_variation": 191.62711270506853
+  },
+  "C_seed123_prompt0": {
+    "config": "C",
+    "seed": 123,
+    "prompt_idx": 0,
+    "prompt": "A red object moving left",
+    "flicker": 110.5977857954421,
+    "motion_smoothness": 0.10717233454636621,
+    "unexpected_variation": 189.1194080039996
+  },
+  "C_seed123_prompt1": {
+    "config": "C",
+    "seed": 123,
+    "prompt_idx": 1,
+    "prompt": "A red object moving right",
+    "flicker": 107.64368777438538,
+    "motion_smoothness": 0.1632982212190225,
+    "unexpected_variation": 185.00908873225447
+  },
+  "C_seed123_prompt2": {
+    "config": "C",
+    "seed": 123,
+    "prompt_idx": 2,
+    "prompt": "A blue object moving diagonally",
+    "flicker": 108.34073754847033,
+    "motion_smoothness": 0.14523872146504502,
+    "unexpected_variation": 186.49419693614863
+  },
+  "C_seed123_prompt3": {
+    "config": "C",
+    "seed": 123,
+    "prompt_idx": 3,
+    "prompt": "A yellow object remaining stationary",
+    "flicker": 110.74895145913985,
+    "motion_smoothness": 0.09457629123824118,
+    "unexpected_variation": 190.1649963297779
+  },
+  "C_seed456_prompt0": {
+    "config": "C",
+    "seed": 456,
+    "prompt_idx": 0,
+    "prompt": "A red object moving left",
+    "flicker": 114.93368768580025,
+    "motion_smoothness": -0.04009195503426066,
+    "unexpected_variation": 200.5181884267465
+  },
+  "C_seed456_prompt1": {
+    "config": "C",
+    "seed": 456,
+    "prompt_idx": 1,
+    "prompt": "A red object moving right",
+    "flicker": 109.71227097307909,
+    "motion_smoothness": 0.07936772563260863,
+    "unexpected_variation": 189.2847331103321
+  },
+  "C_seed456_prompt2": {
+    "config": "C",
+    "seed": 456,
+    "prompt_idx": 2,
+    "prompt": "A blue object moving diagonally",
+    "flicker": 108.91318776907008,
+    "motion_smoothness": 0.08928457660152667,
+    "unexpected_variation": 190.597983208621
+  },
+  "C_seed456_prompt3": {
+    "config": "C",
+    "seed": 456,
+    "prompt_idx": 3,
+    "prompt": "A yellow object remaining stationary",
+    "flicker": 112.13629057415257,
+    "motion_smoothness": 0.022547949434602366,
+    "unexpected_variation": 195.76929840881925
+  },
+  "D_seed42_prompt0": {
+    "config": "D",
+    "seed": 42,
+    "prompt_idx": 0,
+    "prompt": "A red object moving left",
+    "flicker": 112.71328132340234,
+    "motion_smoothness": 0.038208301786491705,
+    "unexpected_variation": 193.75625712281325
+  },
+  "D_seed42_prompt1": {
+    "config": "D",
+    "seed": 42,
+    "prompt_idx": 1,
+    "prompt": "A red object moving right",
+    "flicker": 110.47153470242,
+    "motion_smoothness": 0.09367093958275186,
+    "unexpected_variation": 190.70933120602274
+  },
+  "D_seed42_prompt2": {
+    "config": "D",
+    "seed": 42,
+    "prompt_idx": 2,
+    "prompt": "A blue object moving diagonally",
+    "flicker": 106.66340299875172,
+    "motion_smoothness": 0.1600609224344881,
+    "unexpected_variation": 183.16264365416816
+  },
+  "D_seed42_prompt3": {
+    "config": "D",
+    "seed": 42,
+    "prompt_idx": 3,
+    "prompt": "A yellow object remaining stationary",
+    "flicker": 110.51418889052019,
+    "motion_smoothness": 0.08783815011035412,
+    "unexpected_variation": 189.90270251873997
+  },
+  "D_seed123_prompt0": {
+    "config": "D",
+    "seed": 123,
+    "prompt_idx": 0,
+    "prompt": "A red object moving left",
+    "flicker": 109.35933255712034,
+    "motion_smoothness": 0.12591523320885767,
+    "unexpected_variation": 186.9243575086686
+  },
+  "D_seed123_prompt1": {
+    "config": "D",
+    "seed": 123,
+    "prompt_idx": 1,
+    "prompt": "A red object moving right",
+    "flicker": 106.24670424077621,
+    "motion_smoothness": 0.1839515300139204,
+    "unexpected_variation": 182.59222694834975
+  },
+  "D_seed123_prompt2": {
+    "config": "D",
+    "seed": 123,
+    "prompt_idx": 2,
+    "prompt": "A blue object moving diagonally",
+    "flicker": 107.13407848215999,
+    "motion_smoothness": 0.1632066880646601,
+    "unexpected_variation": 184.45660824590001
+  },
+  "D_seed123_prompt3": {
+    "config": "D",
+    "seed": 123,
+    "prompt_idx": 3,
+    "prompt": "A yellow object remaining stationary",
+    "flicker": 109.38294941012329,
+    "motion_smoothness": 0.11547202608641649,
+    "unexpected_variation": 187.82788463956118
+  },
+  "D_seed456_prompt0": {
+    "config": "D",
+    "seed": 456,
+    "prompt_idx": 0,
+    "prompt": "A red object moving left",
+    "flicker": 113.80334242839663,
+    "motion_smoothness": -0.02249851430501737,
+    "unexpected_variation": 198.524687564197
+  },
+  "D_seed456_prompt1": {
+    "config": "D",
+    "seed": 456,
+    "prompt_idx": 1,
+    "prompt": "A red object moving right",
+    "flicker": 108.35744723126557,
+    "motion_smoothness": 0.09975057622709249,
+    "unexpected_variation": 186.80217571060322
+  },
+  "D_seed456_prompt2": {
+    "config": "D",
+    "seed": 456,
+    "prompt_idx": 2,
+    "prompt": "A blue object moving diagonally",
+    "flicker": 107.60830707285646,
+    "motion_smoothness": 0.10976752485199459,
+    "unexpected_variation": 188.46319315636322
+  },
+  "D_seed456_prompt3": {
+    "config": "D",
+    "seed": 456,
+    "prompt_idx": 3,
+    "prompt": "A yellow object remaining stationary",
+    "flicker": 110.80422081064008,
+    "motion_smoothness": 0.044107298510872806,
+    "unexpected_variation": 193.50721684335332
+  }
+}

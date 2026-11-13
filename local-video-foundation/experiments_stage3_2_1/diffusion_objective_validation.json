@@ -1,0 +1,57 @@
+{
+  "zero_prediction": {
+    "mse": 0.9948670268058777,
+    "target_noise_mean": -0.0009232072625309229,
+    "target_noise_std": 0.997432291507721
+  },
+  "frame_independent": {
+    "mse": 1.1294807195663452,
+    "predicted_noise_mean": -0.18141014873981476,
+    "predicted_noise_std": 0.28162580728530884,
+    "correlation": -0.04045262932777405,
+    "improvement_over_zero": -13.530822625879818
+  },
+  "temporal": {
+    "mse": 1.4082905054092407,
+    "predicted_noise_mean": -0.38917043805122375,
+    "predicted_noise_std": 0.49329566955566406,
+    "correlation": -0.019662609323859215,
+    "improvement_over_zero": -41.55565190764251,
+    "improvement_over_frame_independent": -24.68477602255506
+  },
+  "losses_by_range": {
+    "low": {
+      "range": [
+        0,
+        250
+      ],
+      "avg_loss": 1.5003496646881103,
+      "std": 0.044440446218209397
+    },
+    "mid-low": {
+      "range": [
+        250,
+        500
+      ],
+      "avg_loss": 1.4531089305877685,
+      "std": 0.03783210153675085
+    },
+    "mid-high": {
+      "range": [
+        500,
+        750
+      ],
+      "avg_loss": 1.4901105880737304,
+      "std": 0.048007915629957994
+    },
+    "high": {
+      "range": [
+        750,
+        1000
+      ],
+      "avg_loss": 1.5183379650115967,
+      "std": 0.02663720964142601
+    }
+  },
+  "timestep": 137
+}

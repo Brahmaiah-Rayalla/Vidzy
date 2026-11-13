@@ -1,0 +1,54 @@
+{
+  "baseline_metrics": {
+    "max_abs_diff": 0.0,
+    "mean_abs_diff": 0.0,
+    "rmse": 0.0,
+    "relative_l2_error": 0.0,
+    "cosine_similarity": 1.000000238418579,
+    "baseline_std": 1.0573400259017944,
+    "baseline_rms": 1.0573358535766602
+  },
+  "zero_gate_metrics": {
+    "max_abs_diff": 0.0,
+    "mean_abs_diff": 0.0,
+    "rmse": 0.0,
+    "relative_l2_error": 0.0,
+    "cosine_similarity": 1.000000238418579,
+    "baseline_std": 1.0573400259017944,
+    "baseline_rms": 1.0573358535766602
+  },
+  "normal_init_metrics": {
+    "max_abs_diff": 4.678637504577637,
+    "mean_abs_diff": 0.8442628383636475,
+    "rmse": 1.0570896863937378,
+    "relative_l2_error": 0.9997672438621521,
+    "cosine_similarity": 0.9999616146087646,
+    "baseline_std": 1.0573400259017944,
+    "baseline_rms": 1.0573358535766602
+  },
+  "fusion_gate_values": {
+    "original": {
+      "bottleneck": -4.59499979019165,
+      "low_res": -4.59499979019165
+    },
+    "forced_zero": {
+      "bottleneck": 0.0,
+      "low_res": 0.0
+    },
+    "restored": {
+      "bottleneck": -4.59499979019165,
+      "low_res": -4.59499979019165
+    }
+  },
+  "temporal_residuals": {},
+  "stage3_2_9a_tolerance": 0.0001,
+  "gate_perturbation_metrics": {
+    "max_abs_diff": 4.678637504577637,
+    "mean_abs_diff": 0.8442628383636475,
+    "rmse": 1.0570896863937378,
+    "relative_l2_error": 0.9997672438621521,
+    "cosine_similarity": 0.9999616146087646,
+    "baseline_std": 1.0573400259017944,
+    "baseline_rms": 1.0573358535766602
+  }
+}

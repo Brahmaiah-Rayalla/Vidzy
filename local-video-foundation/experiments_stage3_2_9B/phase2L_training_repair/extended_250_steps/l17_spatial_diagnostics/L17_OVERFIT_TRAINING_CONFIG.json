@@ -1,0 +1,9 @@
+{
+  "init": "stage2 ckpt",
+  "trainable": "UNet",
+  "frozen": "TE",
+  "lr": 0.0001,
+  "bs": 1,
+  "steps": 1000,
+  "data": "10 fixed pairs"
+}

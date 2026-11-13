@@ -1,0 +1,160 @@
+{
+  "stage": "3.2.9I",
+  "date": "2026-11-03",
+  "dataset_analysis": {
+    "dataset_path": "data/controlled_video/train",
+    "total_videos": 32,
+    "num_frames": 16,
+    "image_size": 64,
+    "examples_per_trajectory": 8
+  },
+  "supported_motion_categories": {
+    "moving_left": {
+      "training_trajectory": "red_circle_left_to_right",
+      "shape": "circle",
+      "color": "red",
+      "motion": "left_to_right",
+      "speed": "quickly",
+      "examples": 8,
+      "supported": true,
+      "evaluation_prompt": "A red object moving left"
+    },
+    "moving_right": {
+      "training_trajectory": "red_circle_right_to_left",
+      "shape": "circle",
+      "color": "red",
+      "motion": "right_to_left",
+      "speed": "quickly",
+      "examples": 8,
+      "supported": true,
+      "evaluation_prompt": "A red object moving right"
+    },
+    "moving_diagonal": {
+      "training_trajectory": "blue_square_diagonal",
+      "shape": "square",
+      "color": "blue",
+      "motion": "diagonal_down_right",
+      "speed": "quickly",
+      "examples": 8,
+      "supported": true,
+      "evaluation_prompt": "A blue object moving diagonally"
+    },
+    "stationary": {
+      "training_trajectory": "yellow_circle_stationary",
+      "shape": "circle",
+      "color": "yellow",
+      "motion": "stationary",
+      "speed": "slowly",
+      "examples": 8,
+      "supported": true,
+      "evaluation_prompt": "A yellow object remaining stationary"
+    }
+  },
+  "unsupported_motion_categories": {
+    "moving_upward": {
+      "supported": false,
+      "reason": "No training examples with upward motion"
+    },
+    "moving_downward": {
+      "supported": false,
+      "reason": "No training examples with downward motion"
+    },
+    "slow_movement": {
+      "supported": false,
+      "reason": "Only stationary examples are slow, no slow movement examples"
+    },
+    "fast_movement": {
+      "supported": false,
+      "reason": "All movement examples are already 'quickly', no fast/slow distinction"
+    },
+    "bouncing": {
+      "supported": false,
+      "reason": "No training examples with bouncing motion"
+    },
+    "rotation": {
+      "supported": false,
+      "reason": "No training examples with rotation"
+    },
+    "direction_reversal": {
+      "supported": false,
+      "reason": "No training examples with direction reversal"
+    }
+  },
+  "primary_evaluation_prompts": [
+    {
+      "category": "direction_control",
+      "prompt_A": "A red object moving left",
+      "expected_direction": "left",
+      "expected_x_displacement": "positive",
+      "supported": true
+    },
+    {
+      "category": "direction_control",
+      "prompt_B": "A red object moving right",
+      "expected_direction": "right",
+      "expected_x_displacement": "negative",
+      "supported": true
+    },
+    {
+      "category": "direction_control",
+      "prompt_C": "A blue object moving diagonally",
+      "expected_direction": "diagonal_down_right",
+      "expected_x_displacement": "positive",
+      "expected_y_displacement": "positive",
+      "supported": true
+    },
+    {
+      "category": "stationary_control",
+      "prompt_D": "A yellow object remaining stationary",
+      "expected_direction": "none",
+      "expected_x_displacement": "near_zero",
+      "expected_y_displacement": "near_zero",
+      "supported": true
+    }
+  ],
+  "exploratory_prompts": [
+    {
+      "category": "out_of_distribution",
+      "prompt": "A red object moving upward",
+      "supported": false,
+      "classification": "exploratory"
+    },
+    {
+      "category": "out_of_distribution",
+      "prompt": "A red object moving downward",
+      "supported": false,
+      "classification": "exploratory"
+    },
+    {
+      "category": "out_of_distribution",
+      "prompt": "A red object moving slowly",
+      "supported": false,
+      "classification": "exploratory"
+    },
+    {
+      "category": "out_of_distribution",
+      "prompt": "A red object moving quickly",
+      "supported": false,
+      "classification": "exploratory"
+    },
+    {
+      "category": "out_of_distribution",
+      "prompt": "An object bouncing",
+      "supported": false,
+      "classification": "exploratory"
+    },
+    {
+      "category": "out_of_distribution",
+      "prompt": "An object moving left and then reversing direction",
+      "supported": false,
+      "classification": "exploratory"
+    }
+  ],
+  "prompt_template_consistency": {
+    "direction_prompts": "A [color] object moving [direction]",
+    "stationary_prompts": "A [color] object remaining stationary",
+    "note": "Consistent template structure to ensure only motion instruction varies"
+  },
+  "evaluation_seeds": [42, 123, 456],
+  "notes": "Primary evaluation uses only supported categories from training data. Exploratory prompts test out-of-distribution generalization."
+}

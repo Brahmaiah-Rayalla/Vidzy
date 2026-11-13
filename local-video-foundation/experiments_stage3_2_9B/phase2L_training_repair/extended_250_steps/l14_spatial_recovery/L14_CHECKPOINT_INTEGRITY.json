@@ -1,0 +1,30 @@
+{
+  "stage2_motion_expanded": {
+    "sha256": "9a75aadc6bae18b9083797fa4bf2424f58fdf73118eac620e259e092096fa28a",
+    "size_mb": 139.5
+  },
+  "stage2_spatial_ref": {
+    "sha256": "a7f5142e133c6aeadc656967639eab046a7a8f922e3201a6feda4496a544d57c",
+    "size_mb": 139.5
+  },
+  "C1_250": {
+    "sha256": "72a785361df3c5aede885b9308c73b27c57055f7c93369f275dde0dc734e3cd1",
+    "size_mb": 48.2
+  },
+  "C25_250": {
+    "sha256": "7642e01dffa44bb869b0790fb08b7508d8c5b5a310ed638f7cd4d535128ac5ce",
+    "size_mb": 48.2
+  },
+  "tokenizer": {
+    "sha256": "9227a1001b4d3503fa59729c04a26a01307d4e0a050b579e858ee8a809d679e8",
+    "size_mb": 0.0
+  },
+  "reference_sha256": "a7f5142e133c6aeadc656967639eab046a7a8f922e3201a6feda4496a544d57c",
+  "reference_match": [
+    "stage2_spatial_ref"
+  ],
+  "modified_files": [
+    "experiments_stage3_2_7/video_foundation/models/text_encoder_split.py (transformer weight copy now unconditional)"
+  ],
+  "note": "C1/C25/Stage2.1 checkpoints NOT modified. Probe checkpoint is a disposable copy."
+}

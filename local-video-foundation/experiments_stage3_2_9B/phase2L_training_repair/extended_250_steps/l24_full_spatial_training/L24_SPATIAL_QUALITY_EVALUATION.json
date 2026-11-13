@@ -1,0 +1,9 @@
+{
+  "diversity": [
+    "s0 0.266",
+    "s1000 0.104",
+    "s4000 0.123",
+    "s10000 0.071"
+  ],
+  "note": "diversity declined; val_loss improved - same decoupling as L16"
+}

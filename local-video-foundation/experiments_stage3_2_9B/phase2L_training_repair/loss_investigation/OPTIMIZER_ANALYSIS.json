@@ -1,0 +1,67 @@
+{
+  "optimizer_config": {
+    "type": "AdamW",
+    "learning_rate": 0.0002,
+    "weight_decay": 0.01,
+    "total_steps": 100
+  },
+  "trainable_parameters": {
+    "B": {
+      "total": 134274,
+      "motion_embeddings": 10240,
+      "temporal_modules": 0,
+      "fusion_gates": 0
+    },
+    "C": {
+      "total": 134274,
+      "motion_embeddings": 10240,
+      "temporal_modules": 124032,
+      "fusion_gates": 2
+    }
+  },
+  "gradient_analysis": {
+    "B_motion": {
+      "mean": 0.000787984630005667,
+      "std": 0.0010210734130935337,
+      "median": 0.0003524698840919882
+    },
+    "C_motion": {
+      "mean": 0.015545067116618157,
+      "std": 0.00673847654235184,
+      "median": 0.012351829092949629
+    },
+    "C_temporal": {
+      "mean": 0.00928041956640081,
+      "std": 0.0009861621946294983,
+      "median": 0.009149587996228947
+    },
+    "C_fusion": {
+      "mean": 0.005793950269301573,
+      "std": 0.0034321906953616375,
+      "median": 0.005906304435014276
+    }
+  },
+  "performance": {
+    "B": {
+      "mean_step_time": 11.943990182876586,
+      "median_step_time": 3.4102208614349365,
+      "max_step_time": 852.5162043571472,
+      "mean_ram_mb": 2086.5729296875,
+      "max_ram_mb": 2127.5234375
+    },
+    "C": {
+      "mean_step_time": 30.623929646015167,
+      "median_step_time": 7.2108999490737915,
+      "max_step_time": 2344.046667575836,
+      "mean_ram_mb": 2984.748984375,
+      "max_ram_mb": 3189.14453125
+    }
+  },
+  "update_ratios": {
+    "motion_grad_ratio": 19.727627322510543,
+    "temporal_vs_motion_C": 0.5970009326289595,
+    "fusion_vs_motion_C": 0.37271954027832155,
+    "time_ratio": 2.56396138787178,
+    "ram_ratio": 1.430455145807924
+  }
+}

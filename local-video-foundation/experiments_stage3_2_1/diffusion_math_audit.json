@@ -1,0 +1,9 @@
+{
+  "noise_mean": -8.119462290778756e-05,
+  "noise_std": 1.003929615020752,
+  "shape_match": true,
+  "q_sample_formula_match": true,
+  "zero_pred_loss": 1.0025371313095093,
+  "actual_noise_mean": 0.0025497779715806246,
+  "actual_noise_std": 1.0012670755386353
+}

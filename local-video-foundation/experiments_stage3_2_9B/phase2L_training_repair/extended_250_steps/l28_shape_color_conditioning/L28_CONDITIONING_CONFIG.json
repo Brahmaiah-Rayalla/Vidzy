@@ -1,0 +1,4 @@
+{
+  "type": "onehot6",
+  "cid": "color*2+shape"
+}

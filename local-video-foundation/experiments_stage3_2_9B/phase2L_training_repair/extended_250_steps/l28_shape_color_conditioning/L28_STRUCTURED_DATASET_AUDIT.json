@@ -1,0 +1,13 @@
+{
+  "balanced": true,
+  "shapes": [
+    "circle",
+    "square"
+  ],
+  "colors": [
+    "red",
+    "blue",
+    "yellow"
+  ],
+  "masks": true
+}

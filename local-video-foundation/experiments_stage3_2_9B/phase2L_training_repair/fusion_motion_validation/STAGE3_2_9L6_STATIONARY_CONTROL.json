@@ -1,0 +1,1 @@
+{"note": "Stationary control evaluation requires full DDIM generation and object tracking. This diagnostic stage used simplified metrics. Deferring to future stage with proper inference infrastructure.", "status": "DEFERRED"}

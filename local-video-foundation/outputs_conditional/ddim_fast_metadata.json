@@ -1,0 +1,12 @@
+{
+  "prompt": "A small red circle on a blue background.",
+  "sampling_method": "DDIM",
+  "num_steps": 5,
+  "num_images": 2,
+  "seed": 42,
+  "elapsed_time_s": 1.0090129375457764,
+  "peak_memory_mb": 544.2734375,
+  "throughput_imgs_per_sec": 1.9821351397778932,
+  "clip_x0": true,
+  "preset": "fast"
+}

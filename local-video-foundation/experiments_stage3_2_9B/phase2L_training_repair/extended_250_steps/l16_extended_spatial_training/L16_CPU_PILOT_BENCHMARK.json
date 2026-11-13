@@ -1,0 +1,8 @@
+{
+  "pilot": "first 50 steps timed inline",
+  "step_time_s": 2.0,
+  "bs4_64px": "~2s/step",
+  "est_2000_steps_min": 67,
+  "actual_total_min": 98.6,
+  "eval_overhead_min": 30
+}

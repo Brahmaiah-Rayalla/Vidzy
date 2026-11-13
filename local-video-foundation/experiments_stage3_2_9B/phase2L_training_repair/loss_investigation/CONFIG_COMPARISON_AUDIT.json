@@ -1,0 +1,97 @@
+{
+  "shared_config": {
+    "image_size": 64,
+    "num_frames": 16,
+    "num_timesteps": 1000,
+    "batch_size": 1,
+    "learning_rate": 0.0002,
+    "weight_decay": 0.01,
+    "beta_start": 0.0001,
+    "beta_end": 0.02,
+    "seed": 42,
+    "num_steps": 100,
+    "cpu_threads": 8
+  },
+  "config_B": {
+    "image_size": 64,
+    "num_frames": 16,
+    "num_timesteps": 1000,
+    "batch_size": 1,
+    "learning_rate": 0.0002,
+    "weight_decay": 0.01,
+    "beta_start": 0.0001,
+    "beta_end": 0.02,
+    "seed": 42,
+    "num_steps": 100,
+    "cpu_threads": 8,
+    "enable_temporal": false
+  },
+  "config_C": {
+    "image_size": 64,
+    "num_frames": 16,
+    "num_timesteps": 1000,
+    "batch_size": 1,
+    "learning_rate": 0.0002,
+    "weight_decay": 0.01,
+    "beta_start": 0.0001,
+    "beta_end": 0.02,
+    "seed": 42,
+    "num_steps": 100,
+    "cpu_threads": 8,
+    "enable_temporal": true
+  },
+  "differences": [
+    {
+      "parameter": "enable_temporal",
+      "B": false,
+      "C": true
+    },
+    {
+      "parameter": "trainable_parameters",
+      "B": 10240,
+      "C": 134274,
+      "difference": 124034,
+      "ratio": 13.1126953125
+    }
+  ],
+  "parameter_counts_B": {
+    "reported": {
+      "num_tensors": 19,
+      "num_scalars": 134274,
+      "num_trainable_tensors": 19,
+      "num_trainable_scalars": 134274
+    },
+    "actual": {
+      "motion_embeddings": 10240,
+      "total": 10240
+    }
+  },
+  "parameter_counts_C": {
+    "reported": {
+      "num_tensors": 19,
+      "num_scalars": 134274,
+      "num_trainable_tensors": 19,
+      "num_trainable_scalars": 134274
+    },
+    "actual": {
+      "motion_embeddings": 10240,
+      "temporal_conv": 124032,
+      "fusion_gates": 2,
+      "total": 134274
+    }
+  },
+  "loss_comparison": {
+    "B_initial": 0.0056947157718241215,
+    "B_final": 0.008371599018573761,
+    "C_initial": 1.2087653875350952,
+    "C_final": 1.1375727653503418,
+    "C_minus_B_initial": 1.203070671763271,
+    "C_minus_B_final": 1.129201166331768,
+    "C_over_B_ratio": 135.88476500444546
+  },
+  "gradient_comparison": {
+    "B_motion_mean": 0.000787984630005667,
+    "C_motion_mean": 0.015545067116618157,
+    "C_over_B_ratio": 19.727627322510543
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "note": "placeholder - see images/ and metrics",
+  "baseline_step0": "images/step0_*",
+  "probe_steps": "images/step{100,200,350,500}_*"
+}

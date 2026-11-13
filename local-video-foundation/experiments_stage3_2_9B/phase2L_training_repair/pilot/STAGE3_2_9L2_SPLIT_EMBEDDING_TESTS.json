@@ -1,0 +1,173 @@
+{
+  "tests": {
+    "test1_original_only": {
+      "tokens": [
+        [
+          5,
+          10,
+          15,
+          20,
+          25,
+          30,
+          35,
+          40
+        ]
+      ],
+      "motion_tokens_present": false,
+      "output_requires_grad": true,
+      "motion_has_grad": true,
+      "original_has_grad": false,
+      "output_shape": [
+        1,
+        8,
+        256
+      ]
+    },
+    "test2_motion_only": {
+      "tokens": [
+        [
+          42,
+          43,
+          44,
+          45,
+          50,
+          55,
+          60,
+          65
+        ]
+      ],
+      "motion_tokens_present": true,
+      "output_requires_grad": true,
+      "motion_has_grad": true,
+      "original_has_grad": false,
+      "motion_grad_norm": 45.25483322143555,
+      "output_shape": [
+        1,
+        8,
+        256
+      ]
+    },
+    "test3_mixed": {
+      "tokens": [
+        [
+          5,
+          10,
+          42,
+          43,
+          15,
+          44,
+          20,
+          45,
+          25,
+          50
+        ]
+      ],
+      "motion_tokens_present": true,
+      "num_motion_tokens": 5,
+      "output_requires_grad": true,
+      "motion_has_grad": true,
+      "original_has_grad": false,
+      "motion_grad_norm": 35.7770881652832,
+      "output_shape": [
+        1,
+        10,
+        256
+      ]
+    },
+    "test4_padding": {
+      "tokens": [
+        [
+          0,
+          0,
+          5,
+          10,
+          42,
+          43,
+          0,
+          0
+        ]
+      ],
+      "motion_tokens_present": true,
+      "num_padding_tokens": 4,
+      "output_requires_grad": true,
+      "motion_has_grad": true,
+      "original_has_grad": false,
+      "motion_grad_norm": 22.627416610717773,
+      "output_shape": [
+        1,
+        8,
+        256
+      ]
+    },
+    "test5_repeated_motion": {
+      "tokens": [
+        [
+          42,
+          42,
+          43,
+          43,
+          44,
+          44,
+          45,
+          45
+        ]
+      ],
+      "motion_tokens_present": true,
+      "unique_motion_tokens": 4,
+      "output_requires_grad": true,
+      "motion_has_grad": true,
+      "original_has_grad": false,
+      "motion_grad_norm": 64.0,
+      "output_shape": [
+        1,
+        8,
+        256
+      ]
+    },
+    "test6_standard_comparison": {
+      "tokens": [
+        [
+          5,
+          10,
+          15,
+          20,
+          25,
+          30,
+          35,
+          40
+        ]
+      ],
+      "max_absolute_difference": 0.0,
+      "mean_absolute_difference": 0.0,
+      "equivalent_within_tolerance": true
+    },
+    "test7_gradient_health": {
+      "has_nan": false,
+      "has_inf": false,
+      "gradient_finite": true
+    },
+    "test8_ordering": {
+      "tokens": [
+        [
+          5,
+          42,
+          10,
+          43,
+          15,
+          44,
+          20,
+          45
+        ]
+      ],
+      "position_0_matches": true,
+      "position_1_matches": true,
+      "ordering_correct": true
+    }
+  },
+  "summary": {
+    "total_tests": 8,
+    "passed": 8,
+    "failed": 0,
+    "all_passed": true
+  }
+}

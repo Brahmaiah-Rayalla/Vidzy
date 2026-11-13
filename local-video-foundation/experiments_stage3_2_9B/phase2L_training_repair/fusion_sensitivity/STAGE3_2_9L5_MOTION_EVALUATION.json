@@ -1,0 +1,4 @@
+{
+  "note": "Phase G (Corrected prompt-controlled generation) requires full inference pipeline with motion metrics. This diagnostic stage focused on gate sensitivity. Motion evaluation deferred to future stage with proper inference infrastructure.",
+  "status": "DEFERRED"
+}

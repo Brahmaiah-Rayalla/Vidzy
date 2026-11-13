@@ -1,0 +1,8 @@
+{
+  "stage2": "untouched",
+  "arm_ckpts": [
+    "A_step{100,250,500,750}.pt",
+    "B_step{100,250,500,750}.pt"
+  ],
+  "te_frozen": true
+}

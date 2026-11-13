@@ -1,0 +1,6 @@
+{
+  "init": "L21 A_step750",
+  "trainable": "tokproj+conv_text+down_blocks.0.0@1e-5",
+  "lr": 0.0001,
+  "steps": 500
+}

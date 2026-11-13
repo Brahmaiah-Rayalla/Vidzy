@@ -1,0 +1,10 @@
+{
+  "hinge_tests": {
+    "correct_better": true,
+    "equal_positive": true,
+    "wrong_better_larger": true
+  },
+  "lambda": 0.1,
+  "margin": 0.02,
+  "note": "L=max(0,margin+Lc-Lw); verified zero when Lc<Lw-margin"
+}

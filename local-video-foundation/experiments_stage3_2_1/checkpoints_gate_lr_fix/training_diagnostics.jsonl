@@ -1,0 +1,1 @@
+{"step": 0, "loss": 0.2076311856508255, "bottleneck_gate": 0.5024999976158142, "low_res_gate": 0.5024999976158142, "temporal_grad_norm": 0.13379560684552416, "fusion_grad_norm": 0.10126196220517159}

@@ -1,0 +1,14 @@
+{
+  "n": 540,
+  "kinds": [
+    "bg_texture",
+    "fg_texture",
+    "soft_edges",
+    "antialias",
+    "blur",
+    "color_var",
+    "illum",
+    "noise",
+    "combined"
+  ]
+}

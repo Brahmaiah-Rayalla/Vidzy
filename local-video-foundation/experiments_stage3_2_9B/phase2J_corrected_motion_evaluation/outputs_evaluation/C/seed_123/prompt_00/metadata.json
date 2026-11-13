@@ -1,0 +1,20 @@
+{
+  "config_name": "C",
+  "checkpoint_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2C\\checkpoints\\checkpoint_phase2c_C.pt",
+  "prompt": "A red object moving left",
+  "seed": 123,
+  "enable_temporal": true,
+  "sampling_steps": 25,
+  "total_time": 89.57623600959778,
+  "avg_step_time": 3.732343167066574,
+  "text_conditioning": "CORRECTED",
+  "video_shape": [
+    1,
+    3,
+    16,
+    64,
+    64
+  ],
+  "video_mean": 0.4930087625980377,
+  "video_std": 0.45902878046035767
+}

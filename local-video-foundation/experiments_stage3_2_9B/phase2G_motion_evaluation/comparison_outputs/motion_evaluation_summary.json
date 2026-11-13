@@ -1,0 +1,134 @@
+{
+  "experiment_comparison": {
+    "B": {
+      "direction_accuracy_sum": 5.055325786007604,
+      "direction_accuracy_count": 10,
+      "detection_rate_sum": 10.0,
+      "detection_rate_count": 10,
+      "avg_displacement_sum": 15.744570233206607,
+      "avg_displacement_count": 10,
+      "smoothness_sum": 0.156986066903208,
+      "smoothness_count": 10,
+      "avg_direction_accuracy": 0.5055325786007604,
+      "avg_detection_rate": 1.0,
+      "avg_displacement": 1.5744570233206607,
+      "avg_smoothness": 0.015698606690320797
+    },
+    "C": {
+      "direction_accuracy_sum": 4.751406246869025,
+      "direction_accuracy_count": 10,
+      "detection_rate_sum": 10.0,
+      "detection_rate_count": 10,
+      "avg_displacement_sum": 20.80989588551624,
+      "avg_displacement_count": 10,
+      "smoothness_sum": 0.15589019343032498,
+      "smoothness_count": 10,
+      "avg_direction_accuracy": 0.4751406246869025,
+      "avg_detection_rate": 1.0,
+      "avg_displacement": 2.080989588551624,
+      "avg_smoothness": 0.015589019343032497
+    },
+    "D": {
+      "direction_accuracy_sum": 5.055325786007604,
+      "direction_accuracy_count": 10,
+      "detection_rate_sum": 10.0,
+      "detection_rate_count": 10,
+      "avg_displacement_sum": 15.744570233206607,
+      "avg_displacement_count": 10,
+      "smoothness_sum": 0.156986066903208,
+      "smoothness_count": 10,
+      "avg_direction_accuracy": 0.5055325786007604,
+      "avg_detection_rate": 1.0,
+      "avg_displacement": 1.5744570233206607,
+      "avg_smoothness": 0.015698606690320797
+    }
+  },
+  "by_direction": {
+    "left": {
+      "B": {
+        "direction_accuracy_sum": 1.0,
+        "count": 2,
+        "avg_direction_accuracy": 0.5
+      },
+      "C": {
+        "direction_accuracy_sum": 1.0,
+        "count": 2,
+        "avg_direction_accuracy": 0.5
+      },
+      "D": {
+        "direction_accuracy_sum": 1.0,
+        "count": 2,
+        "avg_direction_accuracy": 0.5
+      }
+    },
+    "right": {
+      "B": {
+        "direction_accuracy_sum": 1.0,
+        "count": 2,
+        "avg_direction_accuracy": 0.5
+      },
+      "C": {
+        "direction_accuracy_sum": 1.0,
+        "count": 2,
+        "avg_direction_accuracy": 0.5
+      },
+      "D": {
+        "direction_accuracy_sum": 1.0,
+        "count": 2,
+        "avg_direction_accuracy": 0.5
+      }
+    },
+    "up": {
+      "B": {
+        "direction_accuracy_sum": 2.0,
+        "count": 2,
+        "avg_direction_accuracy": 1.0
+      },
+      "C": {
+        "direction_accuracy_sum": 2.0,
+        "count": 2,
+        "avg_direction_accuracy": 1.0
+      },
+      "D": {
+        "direction_accuracy_sum": 2.0,
+        "count": 2,
+        "avg_direction_accuracy": 1.0
+      }
+    },
+    "down": {
+      "B": {
+        "direction_accuracy_sum": 0.0,
+        "count": 2,
+        "avg_direction_accuracy": 0.0
+      },
+      "C": {
+        "direction_accuracy_sum": 0.0,
+        "count": 2,
+        "avg_direction_accuracy": 0.0
+      },
+      "D": {
+        "direction_accuracy_sum": 0.0,
+        "count": 2,
+        "avg_direction_accuracy": 0.0
+      }
+    },
+    "stationary": {
+      "B": {
+        "direction_accuracy_sum": 1.0553257860076037,
+        "count": 2,
+        "avg_direction_accuracy": 0.5276628930038019
+      },
+      "C": {
+        "direction_accuracy_sum": 0.7514062468690256,
+        "count": 2,
+        "avg_direction_accuracy": 0.3757031234345128
+      },
+      "D": {
+        "direction_accuracy_sum": 1.0553257860076037,
+        "count": 2,
+        "avg_direction_accuracy": 0.5276628930038019
+      }
+    }
+  },
+  "overall_statistics": {}
+}

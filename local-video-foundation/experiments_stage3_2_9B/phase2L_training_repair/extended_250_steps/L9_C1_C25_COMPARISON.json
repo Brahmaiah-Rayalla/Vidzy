@@ -1,0 +1,59 @@
+{
+  "summary": {
+    "available_data": "C1 steps 100, 150, 200; C25 step 100 only",
+    "L8_status": "INCOMPLETE - C25 training did not complete",
+    "limitation": "Cannot assess C25 advantage beyond step 100"
+  },
+  "loss_comparison": {
+    "step_100": {
+      "C1": 1.144010066986084,
+      "C25": 0.9424901604652405,
+      "improvement_percent": 17.615221433474925,
+      "conclusion": "C25 shows 17.62% lower loss at step 100"
+    }
+  },
+  "gate_convergence": {
+    "C1": {
+      "step_100": {
+        "bottleneck": 0.010082864202558994,
+        "low_res": 0.010266407392919064
+      },
+      "step_150": {
+        "bottleneck": 0.01016478706151247,
+        "low_res": 0.010425311513245106
+      },
+      "step_200": {
+        "bottleneck": 0.010267918929457664,
+        "low_res": 0.01057989802211523
+      },
+      "change_100_to_200": {
+        "bottleneck_percent": 1.8353388797173722,
+        "low_res_percent": 3.0535572688493486
+      },
+      "conclusion": "C1 gates show minimal convergence (1.84% bottleneck, 3.05% low-res over 100 steps)"
+    },
+    "C25": {
+      "step_100": {
+        "bottleneck": 0.25407910346984863,
+        "low_res": 0.2544783651828766
+      },
+      "step_150": "NOT_AVAILABLE",
+      "step_200": "NOT_AVAILABLE",
+      "conclusion": "C25 gate convergence cannot be assessed (L.8 incomplete)"
+    }
+  },
+  "key_findings": [
+    "C25 (25% init) achieved 17.62% lower loss than C1 (1% init) at step 100",
+    "C1 gates show minimal convergence over 100 additional steps (1-3% change)",
+    "C25 gate convergence cannot be assessed due to incomplete L.8 training",
+    "Motion evaluation not available (requires DDIM infrastructure)",
+    "L.8 training: C1 reached step 200, C25 training did not complete"
+  ],
+  "limitations": [
+    "L.8 training incomplete - C25 checkpoints for steps 150, 200, 250 not available",
+    "Cannot assess whether C25 advantage persists beyond step 100",
+    "Cannot assess C25 gate convergence over extended training",
+    "Motion evaluation deferred (DDIM infrastructure not available)",
+    "Validation loss comparison limited to step 100"
+  ]
+}

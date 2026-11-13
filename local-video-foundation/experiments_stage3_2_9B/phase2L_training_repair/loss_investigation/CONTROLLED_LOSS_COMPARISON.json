@@ -1,0 +1,62 @@
+{
+  "experiment_B": {
+    "25": {
+      "mean_loss": 0.450431,
+      "std_loss": 0.834323,
+      "min_loss": 0.006199,
+      "max_loss": 3.476098
+    },
+    "50": {
+      "mean_loss": 0.682072,
+      "std_loss": 1.087192,
+      "min_loss": 0.006211,
+      "max_loss": 4.214449
+    },
+    "75": {
+      "mean_loss": 0.872812,
+      "std_loss": 1.074321,
+      "min_loss": 0.006064,
+      "max_loss": 3.210263
+    },
+    "100": {
+      "mean_loss": 0.851020,
+      "std_loss": 1.172836,
+      "min_loss": 0.005988,
+      "max_loss": 3.976474
+    }
+  },
+  "experiment_C": {
+    "25": {
+      "mean_loss": 2.978329,
+      "std_loss": 3.002634,
+      "min_loss": 1.114973,
+      "max_loss": 10.281287
+    },
+    "50": {
+      "mean_loss": 3.175725,
+      "std_loss": 3.343084,
+      "min_loss": 1.107277,
+      "max_loss": 11.824079
+    },
+    "75": {
+      "mean_loss": 2.582518,
+      "std_loss": 3.168215,
+      "min_loss": 1.085477,
+      "max_loss": 11.806758
+    },
+    "100": {
+      "mean_loss": 2.831279,
+      "std_loss": 3.030953,
+      "min_loss": 1.127822,
+      "max_loss": 11.209454
+    }
+  },
+  "comparison": {
+    "loss_difference_at_25": 2.527898,
+    "loss_difference_at_50": 2.493653,
+    "loss_difference_at_75": 1.709706,
+    "loss_difference_at_100": 1.980260,
+    "B_convergence": 0.400588,
+    "C_convergence": -0.147050
+  }
+}

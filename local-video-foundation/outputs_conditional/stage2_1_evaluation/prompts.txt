@@ -1,0 +1,10 @@
+1. A small red circle on a blue background.
+2. A small blue circle on a red background.
+3. A large green triangle near the center.
+4. A large green triangle near the left.
+5. A yellow square on a white background.
+6. A yellow square on a black background.
+7. A small red circle in the center.
+8. A large red circle in the center.
+9. A green triangle on the left.
+10. A green triangle on the right.

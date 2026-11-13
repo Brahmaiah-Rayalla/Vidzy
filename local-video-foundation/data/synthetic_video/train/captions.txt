@@ -1,0 +1,10 @@
+A large yellow triangle slowly moves diagonally down and right on a purple background.
+A large purple triangle quickly moves diagonally down and right on a white background.
+A medium red circle quickly moves from bottom to top on a cyan background.
+A large green triangle quickly moves from bottom to top on a cyan background.
+A medium yellow square quickly moves from left to right on a pink background.
+A large purple triangle quickly remains stationary on a red background.
+A medium pink square slowly moves from bottom to top on a blue background.
+A large purple triangle quickly moves diagonally down and left on a cyan background.
+A small purple circle quickly moves from right to left on a cyan background.
+A large green triangle slowly moves from left to right on a red background.

@@ -1,0 +1,20 @@
+{
+  "config_name": "C",
+  "checkpoint_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2C\\checkpoints\\checkpoint_phase2c_C.pt",
+  "prompt": "A blue object moving diagonally",
+  "seed": 123,
+  "enable_temporal": true,
+  "sampling_steps": 25,
+  "total_time": 89.9616367816925,
+  "avg_step_time": 3.748401532570521,
+  "text_conditioning": "CORRECTED",
+  "video_shape": [
+    1,
+    3,
+    16,
+    64,
+    64
+  ],
+  "video_mean": 0.5016379952430725,
+  "video_std": 0.45949992537498474
+}

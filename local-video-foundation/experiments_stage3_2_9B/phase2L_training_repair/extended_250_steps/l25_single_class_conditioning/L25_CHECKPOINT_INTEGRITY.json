@@ -1,0 +1,4 @@
+{
+  "stage2": "untouched",
+  "ckpts": "ckpt_{250..2000}.pt"
+}

@@ -1,0 +1,4368 @@
+{
+  "experiment_B": {
+    "losses": [
+      0.1514928638935089,
+      0.013275071047246456,
+      0.007851853035390377,
+      0.01610712520778179,
+      0.009211740456521511,
+      0.009023422375321388,
+      0.00925645511597395,
+      0.0063981725834310055,
+      0.010603819042444229,
+      0.007877537980675697
+    ],
+    "optimizer_step_count": 10,
+    "timing": {
+      "data_loading": [
+        0.004289150238037109,
+        0.002766132354736328,
+        0.004933595657348633,
+        0.022472858428955078,
+        0.004021883010864258,
+        0.005838155746459961,
+        0.0036401748657226562,
+        0.0034637451171875,
+        0.0019063949584960938,
+        0.0021431446075439453
+      ],
+      "forward_pass": [
+        2.095766305923462,
+        1.8573360443115234,
+        1.9880633354187012,
+        1.9140613079071045,
+        2.002089500427246,
+        1.991832971572876,
+        2.0118110179901123,
+        2.0037591457366943,
+        2.0054988861083984,
+        2.046113967895508
+      ],
+      "backward_pass": [
+        2.0560555458068848,
+        1.8532516956329346,
+        2.088676929473877,
+        1.902409315109253,
+        2.1008152961730957,
+        1.7985968589782715,
+        1.9144797325134277,
+        1.8639323711395264,
+        1.8173222541809082,
+        1.8011829853057861
+      ],
+      "optimizer_step": [
+        0.0018019676208496094,
+        0.0005714893341064453,
+        0.00036025047302246094,
+        0.0005304813385009766,
+        0.0004296302795410156,
+        0.0004818439483642578,
+        0.0005578994750976562,
+        0.00048542022705078125,
+        0.0004401206970214844,
+        0.0003578662872314453
+      ],
+      "total_step": [
+        4.166844606399536,
+        3.7181756496429443,
+        4.0864362716674805,
+        3.842852830886841,
+        4.111799240112305,
+        3.8014488220214844,
+        3.93453311920166,
+        3.875427484512329,
+        3.8293087482452393,
+        3.85353946685791
+      ],
+      "peak_ram_gb": 10.396537780761719
+    },
+    "parameter_comparison": {
+      "motion_emb": {
+        "max_diff": 0.0018790625035762787,
+        "unchanged": false
+      },
+      "appearance_emb": {
+        "max_diff": 0.0,
+        "unchanged": true
+      },
+      "spatial_unet": {
+        "conv_in.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "conv_in.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.0.0.timestep_proj.1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.0.0.timestep_proj.1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.0.0.conv1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.0.0.conv1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.0.0.norm1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.0.0.norm1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.0.0.conv2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.0.0.conv2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.0.0.norm2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.0.0.norm2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.0.0.cross_attn.norm.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.0.0.cross_attn.norm.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.0.0.cross_attn.cross_attn.q_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.0.0.cross_attn.cross_attn.q_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.0.0.cross_attn.cross_attn.k_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.0.0.cross_attn.cross_attn.k_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.0.0.cross_attn.cross_attn.v_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.0.0.cross_attn.cross_attn.v_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.0.0.cross_attn.cross_attn.out_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.0.0.cross_attn.cross_attn.out_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.0.0.cross_attn.text_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.0.0.cross_attn.text_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.1.0.timestep_proj.1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.1.0.timestep_proj.1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.1.0.conv1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.1.0.conv1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.1.0.norm1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.1.0.norm1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.1.0.conv2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.1.0.conv2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.1.0.norm2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.1.0.norm2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.1.0.cross_attn.norm.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.1.0.cross_attn.norm.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.1.0.cross_attn.cross_attn.q_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.1.0.cross_attn.cross_attn.q_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.1.0.cross_attn.cross_attn.k_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.1.0.cross_attn.cross_attn.k_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.1.0.cross_attn.cross_attn.v_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.1.0.cross_attn.cross_attn.v_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.1.0.cross_attn.cross_attn.out_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.1.0.cross_attn.cross_attn.out_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.1.0.cross_attn.text_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.1.0.cross_attn.text_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.2.0.conv.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.2.0.conv.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.3.0.timestep_proj.1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.3.0.timestep_proj.1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.3.0.conv1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.3.0.conv1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.3.0.norm1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.3.0.norm1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.3.0.conv2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.3.0.conv2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.3.0.norm2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.3.0.norm2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.3.0.skip_connection.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.3.0.skip_connection.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.3.0.cross_attn.norm.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.3.0.cross_attn.norm.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.3.0.cross_attn.cross_attn.q_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.3.0.cross_attn.cross_attn.q_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.3.0.cross_attn.cross_attn.k_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.3.0.cross_attn.cross_attn.k_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.3.0.cross_attn.cross_attn.v_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.3.0.cross_attn.cross_attn.v_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.3.0.cross_attn.cross_attn.out_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.3.0.cross_attn.cross_attn.out_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.3.0.cross_attn.text_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.3.0.cross_attn.text_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.4.0.timestep_proj.1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.4.0.timestep_proj.1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.4.0.conv1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.4.0.conv1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.4.0.norm1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.4.0.norm1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.4.0.conv2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.4.0.conv2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.4.0.norm2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.4.0.norm2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.4.0.cross_attn.norm.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.4.0.cross_attn.norm.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.4.0.cross_attn.cross_attn.q_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.4.0.cross_attn.cross_attn.q_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.4.0.cross_attn.cross_attn.k_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.4.0.cross_attn.cross_attn.k_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.4.0.cross_attn.cross_attn.v_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.4.0.cross_attn.cross_attn.v_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.4.0.cross_attn.cross_attn.out_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.4.0.cross_attn.cross_attn.out_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.4.0.cross_attn.text_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.4.0.cross_attn.text_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.5.0.conv.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.5.0.conv.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.6.0.timestep_proj.1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.6.0.timestep_proj.1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.6.0.conv1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.6.0.conv1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.6.0.norm1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.6.0.norm1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.6.0.conv2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.6.0.conv2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.6.0.norm2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.6.0.norm2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.6.0.cross_attn.norm.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.6.0.cross_attn.norm.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.6.0.cross_attn.cross_attn.q_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.6.0.cross_attn.cross_attn.q_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.6.0.cross_attn.cross_attn.k_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.6.0.cross_attn.cross_attn.k_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.6.0.cross_attn.cross_attn.v_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.6.0.cross_attn.cross_attn.v_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.6.0.cross_attn.cross_attn.out_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.6.0.cross_attn.cross_attn.out_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.6.0.cross_attn.text_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.6.0.cross_attn.text_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.7.0.timestep_proj.1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.7.0.timestep_proj.1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.7.0.conv1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.7.0.conv1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.7.0.norm1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.7.0.norm1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.7.0.conv2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.7.0.conv2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.7.0.norm2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.7.0.norm2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.7.0.cross_attn.norm.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.7.0.cross_attn.norm.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.7.0.cross_attn.cross_attn.q_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.7.0.cross_attn.cross_attn.q_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.7.0.cross_attn.cross_attn.k_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.7.0.cross_attn.cross_attn.k_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.7.0.cross_attn.cross_attn.v_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.7.0.cross_attn.cross_attn.v_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.7.0.cross_attn.cross_attn.out_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.7.0.cross_attn.cross_attn.out_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.7.0.cross_attn.text_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.7.0.cross_attn.text_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.8.0.conv.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.8.0.conv.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.9.0.timestep_proj.1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.9.0.timestep_proj.1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.9.0.conv1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.9.0.conv1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.9.0.norm1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.9.0.norm1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.9.0.conv2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.9.0.conv2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.9.0.norm2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.9.0.norm2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.9.0.cross_attn.norm.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.9.0.cross_attn.norm.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.9.0.cross_attn.cross_attn.q_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.9.0.cross_attn.cross_attn.q_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.9.0.cross_attn.cross_attn.k_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.9.0.cross_attn.cross_attn.k_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.9.0.cross_attn.cross_attn.v_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.9.0.cross_attn.cross_attn.v_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.9.0.cross_attn.cross_attn.out_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.9.0.cross_attn.cross_attn.out_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.9.0.cross_attn.text_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.9.0.cross_attn.text_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.10.0.timestep_proj.1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.10.0.timestep_proj.1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.10.0.conv1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.10.0.conv1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.10.0.norm1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.10.0.norm1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.10.0.conv2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.10.0.conv2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.10.0.norm2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.10.0.norm2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.10.0.cross_attn.norm.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.10.0.cross_attn.norm.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.10.0.cross_attn.cross_attn.q_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.10.0.cross_attn.cross_attn.q_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.10.0.cross_attn.cross_attn.k_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.10.0.cross_attn.cross_attn.k_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.10.0.cross_attn.cross_attn.v_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.10.0.cross_attn.cross_attn.v_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.10.0.cross_attn.cross_attn.out_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.10.0.cross_attn.cross_attn.out_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.10.0.cross_attn.text_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.10.0.cross_attn.text_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "middle_block.timestep_proj.1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "middle_block.timestep_proj.1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "middle_block.conv1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "middle_block.conv1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "middle_block.norm1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "middle_block.norm1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "middle_block.conv2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "middle_block.conv2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "middle_block.norm2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "middle_block.norm2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "middle_block.cross_attn.norm.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "middle_block.cross_attn.norm.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "middle_block.cross_attn.cross_attn.q_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "middle_block.cross_attn.cross_attn.q_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "middle_block.cross_attn.cross_attn.k_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "middle_block.cross_attn.cross_attn.k_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "middle_block.cross_attn.cross_attn.v_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "middle_block.cross_attn.cross_attn.v_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "middle_block.cross_attn.cross_attn.out_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "middle_block.cross_attn.cross_attn.out_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "middle_block.cross_attn.text_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "middle_block.cross_attn.text_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.0.0.timestep_proj.1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.0.0.timestep_proj.1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.0.0.conv1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.0.0.conv1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.0.0.norm1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.0.0.norm1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.0.0.conv2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.0.0.conv2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.0.0.norm2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.0.0.norm2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.0.0.skip_connection.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.0.0.skip_connection.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.0.0.cross_attn.norm.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.0.0.cross_attn.norm.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.0.0.cross_attn.cross_attn.q_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.0.0.cross_attn.cross_attn.q_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.0.0.cross_attn.cross_attn.k_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.0.0.cross_attn.cross_attn.k_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.0.0.cross_attn.cross_attn.v_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.0.0.cross_attn.cross_attn.v_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.0.0.cross_attn.cross_attn.out_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.0.0.cross_attn.cross_attn.out_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.0.0.cross_attn.text_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.0.0.cross_attn.text_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.1.0.timestep_proj.1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.1.0.timestep_proj.1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.1.0.conv1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.1.0.conv1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.1.0.norm1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.1.0.norm1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.1.0.conv2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.1.0.conv2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.1.0.norm2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.1.0.norm2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.1.0.skip_connection.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.1.0.skip_connection.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.1.0.cross_attn.norm.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.1.0.cross_attn.norm.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.1.0.cross_attn.cross_attn.q_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.1.0.cross_attn.cross_attn.q_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.1.0.cross_attn.cross_attn.k_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.1.0.cross_attn.cross_attn.k_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.1.0.cross_attn.cross_attn.v_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.1.0.cross_attn.cross_attn.v_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.1.0.cross_attn.cross_attn.out_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.1.0.cross_attn.cross_attn.out_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.1.0.cross_attn.text_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.1.0.cross_attn.text_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.2.0.timestep_proj.1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.2.0.timestep_proj.1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.2.0.conv1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.2.0.conv1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.2.0.norm1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.2.0.norm1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.2.0.conv2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.2.0.conv2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.2.0.norm2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.2.0.norm2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.2.0.skip_connection.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.2.0.skip_connection.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.2.0.cross_attn.norm.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.2.0.cross_attn.norm.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.2.0.cross_attn.cross_attn.q_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.2.0.cross_attn.cross_attn.q_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.2.0.cross_attn.cross_attn.k_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.2.0.cross_attn.cross_attn.k_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.2.0.cross_attn.cross_attn.v_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.2.0.cross_attn.cross_attn.v_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.2.0.cross_attn.cross_attn.out_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.2.0.cross_attn.cross_attn.out_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.2.0.cross_attn.text_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.2.0.cross_attn.text_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.3.0.conv.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.3.0.conv.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.4.0.timestep_proj.1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.4.0.timestep_proj.1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.4.0.conv1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.4.0.conv1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.4.0.norm1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.4.0.norm1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.4.0.conv2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.4.0.conv2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.4.0.norm2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.4.0.norm2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.4.0.skip_connection.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.4.0.skip_connection.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.4.0.cross_attn.norm.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.4.0.cross_attn.norm.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.4.0.cross_attn.cross_attn.q_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.4.0.cross_attn.cross_attn.q_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.4.0.cross_attn.cross_attn.k_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.4.0.cross_attn.cross_attn.k_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.4.0.cross_attn.cross_attn.v_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.4.0.cross_attn.cross_attn.v_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.4.0.cross_attn.cross_attn.out_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.4.0.cross_attn.cross_attn.out_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.4.0.cross_attn.text_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.4.0.cross_attn.text_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.5.0.timestep_proj.1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.5.0.timestep_proj.1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.5.0.conv1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.5.0.conv1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.5.0.norm1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.5.0.norm1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.5.0.conv2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.5.0.conv2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.5.0.norm2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.5.0.norm2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.5.0.skip_connection.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.5.0.skip_connection.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.5.0.cross_attn.norm.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.5.0.cross_attn.norm.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.5.0.cross_attn.cross_attn.q_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.5.0.cross_attn.cross_attn.q_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.5.0.cross_attn.cross_attn.k_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.5.0.cross_attn.cross_attn.k_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.5.0.cross_attn.cross_attn.v_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.5.0.cross_attn.cross_attn.v_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.5.0.cross_attn.cross_attn.out_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.5.0.cross_attn.cross_attn.out_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.5.0.cross_attn.text_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.5.0.cross_attn.text_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.6.0.timestep_proj.1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.6.0.timestep_proj.1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.6.0.conv1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.6.0.conv1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.6.0.norm1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.6.0.norm1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.6.0.conv2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.6.0.conv2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.6.0.norm2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.6.0.norm2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.6.0.skip_connection.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.6.0.skip_connection.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.6.0.cross_attn.norm.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.6.0.cross_attn.norm.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.6.0.cross_attn.cross_attn.q_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.6.0.cross_attn.cross_attn.q_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.6.0.cross_attn.cross_attn.k_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.6.0.cross_attn.cross_attn.k_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.6.0.cross_attn.cross_attn.v_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.6.0.cross_attn.cross_attn.v_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.6.0.cross_attn.cross_attn.out_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.6.0.cross_attn.cross_attn.out_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.6.0.cross_attn.text_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.6.0.cross_attn.text_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.7.0.conv.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.7.0.conv.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.8.0.timestep_proj.1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.8.0.timestep_proj.1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.8.0.conv1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.8.0.conv1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.8.0.norm1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.8.0.norm1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.8.0.conv2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.8.0.conv2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.8.0.norm2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.8.0.norm2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.8.0.skip_connection.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.8.0.skip_connection.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.8.0.cross_attn.norm.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.8.0.cross_attn.norm.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.8.0.cross_attn.cross_attn.q_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.8.0.cross_attn.cross_attn.q_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.8.0.cross_attn.cross_attn.k_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.8.0.cross_attn.cross_attn.k_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.8.0.cross_attn.cross_attn.v_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.8.0.cross_attn.cross_attn.v_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.8.0.cross_attn.cross_attn.out_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.8.0.cross_attn.cross_attn.out_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.8.0.cross_attn.text_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.8.0.cross_attn.text_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.9.0.timestep_proj.1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.9.0.timestep_proj.1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.9.0.conv1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.9.0.conv1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.9.0.norm1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.9.0.norm1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.9.0.conv2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.9.0.conv2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.9.0.norm2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.9.0.norm2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.9.0.skip_connection.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.9.0.skip_connection.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.9.0.cross_attn.norm.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.9.0.cross_attn.norm.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.9.0.cross_attn.cross_attn.q_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.9.0.cross_attn.cross_attn.q_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.9.0.cross_attn.cross_attn.k_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.9.0.cross_attn.cross_attn.k_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.9.0.cross_attn.cross_attn.v_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.9.0.cross_attn.cross_attn.v_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.9.0.cross_attn.cross_attn.out_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.9.0.cross_attn.cross_attn.out_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.9.0.cross_attn.text_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.9.0.cross_attn.text_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.10.0.timestep_proj.1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.10.0.timestep_proj.1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.10.0.conv1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.10.0.conv1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.10.0.norm1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.10.0.norm1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.10.0.conv2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.10.0.conv2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.10.0.norm2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.10.0.norm2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.10.0.skip_connection.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.10.0.skip_connection.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.10.0.cross_attn.norm.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.10.0.cross_attn.norm.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.10.0.cross_attn.cross_attn.q_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.10.0.cross_attn.cross_attn.q_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.10.0.cross_attn.cross_attn.k_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.10.0.cross_attn.cross_attn.k_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.10.0.cross_attn.cross_attn.v_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.10.0.cross_attn.cross_attn.v_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.10.0.cross_attn.cross_attn.out_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.10.0.cross_attn.cross_attn.out_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.10.0.cross_attn.text_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.10.0.cross_attn.text_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.11.0.conv.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.11.0.conv.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.12.0.timestep_proj.1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.12.0.timestep_proj.1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.12.0.conv1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.12.0.conv1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.12.0.norm1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.12.0.norm1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.12.0.conv2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.12.0.conv2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.12.0.norm2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.12.0.norm2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.12.0.skip_connection.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.12.0.skip_connection.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.12.0.cross_attn.norm.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.12.0.cross_attn.norm.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.12.0.cross_attn.cross_attn.q_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.12.0.cross_attn.cross_attn.q_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.12.0.cross_attn.cross_attn.k_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.12.0.cross_attn.cross_attn.k_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.12.0.cross_attn.cross_attn.v_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.12.0.cross_attn.cross_attn.v_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.12.0.cross_attn.cross_attn.out_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.12.0.cross_attn.cross_attn.out_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.12.0.cross_attn.text_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.12.0.cross_attn.text_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.13.0.timestep_proj.1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.13.0.timestep_proj.1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.13.0.conv1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.13.0.conv1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.13.0.norm1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.13.0.norm1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.13.0.conv2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.13.0.conv2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.13.0.norm2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.13.0.norm2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.13.0.skip_connection.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.13.0.skip_connection.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.13.0.cross_attn.norm.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.13.0.cross_attn.norm.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.13.0.cross_attn.cross_attn.q_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.13.0.cross_attn.cross_attn.q_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.13.0.cross_attn.cross_attn.k_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.13.0.cross_attn.cross_attn.k_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.13.0.cross_attn.cross_attn.v_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.13.0.cross_attn.cross_attn.v_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.13.0.cross_attn.cross_attn.out_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.13.0.cross_attn.cross_attn.out_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.13.0.cross_attn.text_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.13.0.cross_attn.text_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.14.0.timestep_proj.1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.14.0.timestep_proj.1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.14.0.conv1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.14.0.conv1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.14.0.norm1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.14.0.norm1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.14.0.conv2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.14.0.conv2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.14.0.norm2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.14.0.norm2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.14.0.skip_connection.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.14.0.skip_connection.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.14.0.cross_attn.norm.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.14.0.cross_attn.norm.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.14.0.cross_attn.cross_attn.q_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.14.0.cross_attn.cross_attn.q_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.14.0.cross_attn.cross_attn.k_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.14.0.cross_attn.cross_attn.k_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.14.0.cross_attn.cross_attn.v_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.14.0.cross_attn.cross_attn.v_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.14.0.cross_attn.cross_attn.out_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.14.0.cross_attn.cross_attn.out_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.14.0.cross_attn.text_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.14.0.cross_attn.text_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "conv_out.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "conv_out.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        }
+      },
+      "temporal_modules": {
+        "bottleneck.layers.0.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "bottleneck.layers.0.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "bottleneck.layers.1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "bottleneck.layers.1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "bottleneck.layers.3.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "bottleneck.layers.3.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "bottleneck.layers.4.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "bottleneck.layers.4.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "low_res.layers.0.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "low_res.layers.0.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "low_res.layers.1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "low_res.layers.1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "low_res.layers.3.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "low_res.layers.3.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "low_res.layers.4.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "low_res.layers.4.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        }
+      },
+      "fusion_modules": {
+        "bottleneck.gate": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "low_res.gate": {
+          "max_diff": 0.0,
+          "unchanged": true
+        }
+      }
+    },
+    "checkpoint_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\smoke_test\\checkpoint_smoke_test_B.pt"
+  },
+  "experiment_C": {
+    "losses": [
+      1.8972164392471313,
+      1.1776381731033325,
+      1.2239460945129395,
+      1.181533932685852,
+      1.2171467542648315,
+      1.2161723375320435,
+      1.2724958658218384,
+      1.1691569089889526,
+      1.259552001953125,
+      1.2153605222702026
+    ],
+    "optimizer_step_count": 10,
+    "timing": {
+      "data_loading": [
+        0.00164794921875,
+        0.003743410110473633,
+        0.0022606849670410156,
+        0.003253459930419922,
+        0.002125263214111328,
+        0.0041887760162353516,
+        0.0033941268920898438,
+        0.001954793930053711,
+        0.0016124248504638672,
+        0.0019555091857910156
+      ],
+      "forward_pass": [
+        4.158002138137817,
+        4.313755989074707,
+        4.35187840461731,
+        4.204453229904175,
+        6.511112689971924,
+        218.37934589385986,
+        4.126680850982666,
+        4.106497764587402,
+        4.0906596183776855,
+        4.5426247119903564
+      ],
+      "backward_pass": [
+        4.4009926319122314,
+        4.86220121383667,
+        4.5709288120269775,
+        4.132685661315918,
+        8.052069664001465,
+        83.23101997375488,
+        4.403010845184326,
+        4.240785360336304,
+        4.279775381088257,
+        4.720242738723755
+      ],
+      "optimizer_step": [
+        0.003644227981567383,
+        0.0018608570098876953,
+        0.0033011436462402344,
+        0.0018723011016845703,
+        0.006027698516845703,
+        0.003944873809814453,
+        0.002519369125366211,
+        0.0018167495727539062,
+        0.0023725032806396484,
+        0.002233266830444336
+      ],
+      "total_step": [
+        8.567177295684814,
+        9.189913749694824,
+        8.93356966972351,
+        8.34870457649231,
+        14.577508211135864,
+        301.62886357307434,
+        8.5422203540802,
+        8.355723857879639,
+        8.378887414932251,
+        9.271375894546509
+      ],
+      "peak_ram_gb": 10.315132141113281
+    },
+    "parameter_comparison": {
+      "motion_emb": {
+        "max_diff": 0.0018950514495372772,
+        "unchanged": false
+      },
+      "appearance_emb": {
+        "max_diff": 0.0,
+        "unchanged": true
+      },
+      "spatial_unet": {
+        "conv_in.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "conv_in.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.0.0.timestep_proj.1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.0.0.timestep_proj.1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.0.0.conv1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.0.0.conv1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.0.0.norm1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.0.0.norm1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.0.0.conv2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.0.0.conv2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.0.0.norm2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.0.0.norm2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.0.0.cross_attn.norm.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.0.0.cross_attn.norm.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.0.0.cross_attn.cross_attn.q_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.0.0.cross_attn.cross_attn.q_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.0.0.cross_attn.cross_attn.k_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.0.0.cross_attn.cross_attn.k_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.0.0.cross_attn.cross_attn.v_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.0.0.cross_attn.cross_attn.v_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.0.0.cross_attn.cross_attn.out_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.0.0.cross_attn.cross_attn.out_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.0.0.cross_attn.text_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.0.0.cross_attn.text_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.1.0.timestep_proj.1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.1.0.timestep_proj.1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.1.0.conv1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.1.0.conv1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.1.0.norm1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.1.0.norm1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.1.0.conv2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.1.0.conv2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.1.0.norm2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.1.0.norm2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.1.0.cross_attn.norm.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.1.0.cross_attn.norm.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.1.0.cross_attn.cross_attn.q_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.1.0.cross_attn.cross_attn.q_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.1.0.cross_attn.cross_attn.k_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.1.0.cross_attn.cross_attn.k_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.1.0.cross_attn.cross_attn.v_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.1.0.cross_attn.cross_attn.v_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.1.0.cross_attn.cross_attn.out_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.1.0.cross_attn.cross_attn.out_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.1.0.cross_attn.text_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.1.0.cross_attn.text_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.2.0.conv.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.2.0.conv.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.3.0.timestep_proj.1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.3.0.timestep_proj.1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.3.0.conv1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.3.0.conv1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.3.0.norm1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.3.0.norm1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.3.0.conv2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.3.0.conv2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.3.0.norm2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.3.0.norm2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.3.0.skip_connection.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.3.0.skip_connection.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.3.0.cross_attn.norm.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.3.0.cross_attn.norm.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.3.0.cross_attn.cross_attn.q_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.3.0.cross_attn.cross_attn.q_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.3.0.cross_attn.cross_attn.k_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.3.0.cross_attn.cross_attn.k_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.3.0.cross_attn.cross_attn.v_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.3.0.cross_attn.cross_attn.v_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.3.0.cross_attn.cross_attn.out_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.3.0.cross_attn.cross_attn.out_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.3.0.cross_attn.text_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.3.0.cross_attn.text_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.4.0.timestep_proj.1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.4.0.timestep_proj.1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.4.0.conv1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.4.0.conv1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.4.0.norm1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.4.0.norm1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.4.0.conv2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.4.0.conv2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.4.0.norm2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.4.0.norm2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.4.0.cross_attn.norm.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.4.0.cross_attn.norm.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.4.0.cross_attn.cross_attn.q_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.4.0.cross_attn.cross_attn.q_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.4.0.cross_attn.cross_attn.k_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.4.0.cross_attn.cross_attn.k_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.4.0.cross_attn.cross_attn.v_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.4.0.cross_attn.cross_attn.v_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.4.0.cross_attn.cross_attn.out_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.4.0.cross_attn.cross_attn.out_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.4.0.cross_attn.text_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.4.0.cross_attn.text_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.5.0.conv.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.5.0.conv.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.6.0.timestep_proj.1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.6.0.timestep_proj.1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.6.0.conv1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.6.0.conv1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.6.0.norm1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.6.0.norm1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.6.0.conv2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.6.0.conv2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.6.0.norm2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.6.0.norm2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.6.0.cross_attn.norm.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.6.0.cross_attn.norm.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.6.0.cross_attn.cross_attn.q_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.6.0.cross_attn.cross_attn.q_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.6.0.cross_attn.cross_attn.k_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.6.0.cross_attn.cross_attn.k_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.6.0.cross_attn.cross_attn.v_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.6.0.cross_attn.cross_attn.v_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.6.0.cross_attn.cross_attn.out_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.6.0.cross_attn.cross_attn.out_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.6.0.cross_attn.text_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.6.0.cross_attn.text_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.7.0.timestep_proj.1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.7.0.timestep_proj.1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.7.0.conv1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.7.0.conv1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.7.0.norm1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.7.0.norm1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.7.0.conv2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.7.0.conv2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.7.0.norm2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.7.0.norm2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.7.0.cross_attn.norm.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.7.0.cross_attn.norm.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.7.0.cross_attn.cross_attn.q_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.7.0.cross_attn.cross_attn.q_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.7.0.cross_attn.cross_attn.k_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.7.0.cross_attn.cross_attn.k_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.7.0.cross_attn.cross_attn.v_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.7.0.cross_attn.cross_attn.v_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.7.0.cross_attn.cross_attn.out_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.7.0.cross_attn.cross_attn.out_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.7.0.cross_attn.text_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.7.0.cross_attn.text_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.8.0.conv.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.8.0.conv.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.9.0.timestep_proj.1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.9.0.timestep_proj.1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.9.0.conv1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.9.0.conv1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.9.0.norm1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.9.0.norm1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.9.0.conv2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.9.0.conv2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.9.0.norm2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.9.0.norm2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.9.0.cross_attn.norm.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.9.0.cross_attn.norm.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.9.0.cross_attn.cross_attn.q_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.9.0.cross_attn.cross_attn.q_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.9.0.cross_attn.cross_attn.k_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.9.0.cross_attn.cross_attn.k_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.9.0.cross_attn.cross_attn.v_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.9.0.cross_attn.cross_attn.v_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.9.0.cross_attn.cross_attn.out_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.9.0.cross_attn.cross_attn.out_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.9.0.cross_attn.text_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.9.0.cross_attn.text_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.10.0.timestep_proj.1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.10.0.timestep_proj.1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.10.0.conv1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.10.0.conv1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.10.0.norm1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.10.0.norm1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.10.0.conv2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.10.0.conv2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.10.0.norm2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.10.0.norm2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.10.0.cross_attn.norm.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.10.0.cross_attn.norm.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.10.0.cross_attn.cross_attn.q_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.10.0.cross_attn.cross_attn.q_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.10.0.cross_attn.cross_attn.k_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.10.0.cross_attn.cross_attn.k_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.10.0.cross_attn.cross_attn.v_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.10.0.cross_attn.cross_attn.v_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.10.0.cross_attn.cross_attn.out_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.10.0.cross_attn.cross_attn.out_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.10.0.cross_attn.text_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "down_blocks.10.0.cross_attn.text_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "middle_block.timestep_proj.1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "middle_block.timestep_proj.1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "middle_block.conv1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "middle_block.conv1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "middle_block.norm1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "middle_block.norm1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "middle_block.conv2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "middle_block.conv2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "middle_block.norm2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "middle_block.norm2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "middle_block.cross_attn.norm.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "middle_block.cross_attn.norm.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "middle_block.cross_attn.cross_attn.q_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "middle_block.cross_attn.cross_attn.q_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "middle_block.cross_attn.cross_attn.k_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "middle_block.cross_attn.cross_attn.k_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "middle_block.cross_attn.cross_attn.v_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "middle_block.cross_attn.cross_attn.v_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "middle_block.cross_attn.cross_attn.out_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "middle_block.cross_attn.cross_attn.out_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "middle_block.cross_attn.text_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "middle_block.cross_attn.text_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.0.0.timestep_proj.1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.0.0.timestep_proj.1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.0.0.conv1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.0.0.conv1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.0.0.norm1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.0.0.norm1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.0.0.conv2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.0.0.conv2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.0.0.norm2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.0.0.norm2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.0.0.skip_connection.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.0.0.skip_connection.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.0.0.cross_attn.norm.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.0.0.cross_attn.norm.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.0.0.cross_attn.cross_attn.q_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.0.0.cross_attn.cross_attn.q_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.0.0.cross_attn.cross_attn.k_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.0.0.cross_attn.cross_attn.k_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.0.0.cross_attn.cross_attn.v_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.0.0.cross_attn.cross_attn.v_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.0.0.cross_attn.cross_attn.out_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.0.0.cross_attn.cross_attn.out_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.0.0.cross_attn.text_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.0.0.cross_attn.text_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.1.0.timestep_proj.1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.1.0.timestep_proj.1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.1.0.conv1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.1.0.conv1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.1.0.norm1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.1.0.norm1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.1.0.conv2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.1.0.conv2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.1.0.norm2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.1.0.norm2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.1.0.skip_connection.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.1.0.skip_connection.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.1.0.cross_attn.norm.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.1.0.cross_attn.norm.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.1.0.cross_attn.cross_attn.q_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.1.0.cross_attn.cross_attn.q_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.1.0.cross_attn.cross_attn.k_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.1.0.cross_attn.cross_attn.k_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.1.0.cross_attn.cross_attn.v_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.1.0.cross_attn.cross_attn.v_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.1.0.cross_attn.cross_attn.out_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.1.0.cross_attn.cross_attn.out_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.1.0.cross_attn.text_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.1.0.cross_attn.text_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.2.0.timestep_proj.1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.2.0.timestep_proj.1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.2.0.conv1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.2.0.conv1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.2.0.norm1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.2.0.norm1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.2.0.conv2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.2.0.conv2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.2.0.norm2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.2.0.norm2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.2.0.skip_connection.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.2.0.skip_connection.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.2.0.cross_attn.norm.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.2.0.cross_attn.norm.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.2.0.cross_attn.cross_attn.q_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.2.0.cross_attn.cross_attn.q_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.2.0.cross_attn.cross_attn.k_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.2.0.cross_attn.cross_attn.k_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.2.0.cross_attn.cross_attn.v_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.2.0.cross_attn.cross_attn.v_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.2.0.cross_attn.cross_attn.out_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.2.0.cross_attn.cross_attn.out_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.2.0.cross_attn.text_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.2.0.cross_attn.text_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.3.0.conv.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.3.0.conv.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.4.0.timestep_proj.1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.4.0.timestep_proj.1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.4.0.conv1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.4.0.conv1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.4.0.norm1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.4.0.norm1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.4.0.conv2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.4.0.conv2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.4.0.norm2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.4.0.norm2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.4.0.skip_connection.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.4.0.skip_connection.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.4.0.cross_attn.norm.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.4.0.cross_attn.norm.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.4.0.cross_attn.cross_attn.q_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.4.0.cross_attn.cross_attn.q_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.4.0.cross_attn.cross_attn.k_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.4.0.cross_attn.cross_attn.k_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.4.0.cross_attn.cross_attn.v_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.4.0.cross_attn.cross_attn.v_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.4.0.cross_attn.cross_attn.out_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.4.0.cross_attn.cross_attn.out_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.4.0.cross_attn.text_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.4.0.cross_attn.text_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.5.0.timestep_proj.1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.5.0.timestep_proj.1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.5.0.conv1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.5.0.conv1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.5.0.norm1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.5.0.norm1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.5.0.conv2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.5.0.conv2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.5.0.norm2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.5.0.norm2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.5.0.skip_connection.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.5.0.skip_connection.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.5.0.cross_attn.norm.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.5.0.cross_attn.norm.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.5.0.cross_attn.cross_attn.q_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.5.0.cross_attn.cross_attn.q_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.5.0.cross_attn.cross_attn.k_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.5.0.cross_attn.cross_attn.k_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.5.0.cross_attn.cross_attn.v_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.5.0.cross_attn.cross_attn.v_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.5.0.cross_attn.cross_attn.out_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.5.0.cross_attn.cross_attn.out_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.5.0.cross_attn.text_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.5.0.cross_attn.text_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.6.0.timestep_proj.1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.6.0.timestep_proj.1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.6.0.conv1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.6.0.conv1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.6.0.norm1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.6.0.norm1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.6.0.conv2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.6.0.conv2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.6.0.norm2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.6.0.norm2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.6.0.skip_connection.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.6.0.skip_connection.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.6.0.cross_attn.norm.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.6.0.cross_attn.norm.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.6.0.cross_attn.cross_attn.q_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.6.0.cross_attn.cross_attn.q_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.6.0.cross_attn.cross_attn.k_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.6.0.cross_attn.cross_attn.k_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.6.0.cross_attn.cross_attn.v_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.6.0.cross_attn.cross_attn.v_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.6.0.cross_attn.cross_attn.out_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.6.0.cross_attn.cross_attn.out_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.6.0.cross_attn.text_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.6.0.cross_attn.text_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.7.0.conv.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.7.0.conv.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.8.0.timestep_proj.1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.8.0.timestep_proj.1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.8.0.conv1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.8.0.conv1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.8.0.norm1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.8.0.norm1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.8.0.conv2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.8.0.conv2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.8.0.norm2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.8.0.norm2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.8.0.skip_connection.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.8.0.skip_connection.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.8.0.cross_attn.norm.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.8.0.cross_attn.norm.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.8.0.cross_attn.cross_attn.q_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.8.0.cross_attn.cross_attn.q_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.8.0.cross_attn.cross_attn.k_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.8.0.cross_attn.cross_attn.k_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.8.0.cross_attn.cross_attn.v_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.8.0.cross_attn.cross_attn.v_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.8.0.cross_attn.cross_attn.out_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.8.0.cross_attn.cross_attn.out_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.8.0.cross_attn.text_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.8.0.cross_attn.text_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.9.0.timestep_proj.1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.9.0.timestep_proj.1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.9.0.conv1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.9.0.conv1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.9.0.norm1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.9.0.norm1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.9.0.conv2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.9.0.conv2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.9.0.norm2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.9.0.norm2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.9.0.skip_connection.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.9.0.skip_connection.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.9.0.cross_attn.norm.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.9.0.cross_attn.norm.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.9.0.cross_attn.cross_attn.q_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.9.0.cross_attn.cross_attn.q_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.9.0.cross_attn.cross_attn.k_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.9.0.cross_attn.cross_attn.k_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.9.0.cross_attn.cross_attn.v_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.9.0.cross_attn.cross_attn.v_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.9.0.cross_attn.cross_attn.out_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.9.0.cross_attn.cross_attn.out_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.9.0.cross_attn.text_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.9.0.cross_attn.text_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.10.0.timestep_proj.1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.10.0.timestep_proj.1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.10.0.conv1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.10.0.conv1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.10.0.norm1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.10.0.norm1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.10.0.conv2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.10.0.conv2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.10.0.norm2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.10.0.norm2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.10.0.skip_connection.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.10.0.skip_connection.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.10.0.cross_attn.norm.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.10.0.cross_attn.norm.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.10.0.cross_attn.cross_attn.q_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.10.0.cross_attn.cross_attn.q_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.10.0.cross_attn.cross_attn.k_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.10.0.cross_attn.cross_attn.k_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.10.0.cross_attn.cross_attn.v_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.10.0.cross_attn.cross_attn.v_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.10.0.cross_attn.cross_attn.out_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.10.0.cross_attn.cross_attn.out_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.10.0.cross_attn.text_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.10.0.cross_attn.text_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.11.0.conv.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.11.0.conv.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.12.0.timestep_proj.1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.12.0.timestep_proj.1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.12.0.conv1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.12.0.conv1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.12.0.norm1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.12.0.norm1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.12.0.conv2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.12.0.conv2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.12.0.norm2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.12.0.norm2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.12.0.skip_connection.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.12.0.skip_connection.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.12.0.cross_attn.norm.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.12.0.cross_attn.norm.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.12.0.cross_attn.cross_attn.q_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.12.0.cross_attn.cross_attn.q_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.12.0.cross_attn.cross_attn.k_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.12.0.cross_attn.cross_attn.k_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.12.0.cross_attn.cross_attn.v_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.12.0.cross_attn.cross_attn.v_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.12.0.cross_attn.cross_attn.out_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.12.0.cross_attn.cross_attn.out_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.12.0.cross_attn.text_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.12.0.cross_attn.text_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.13.0.timestep_proj.1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.13.0.timestep_proj.1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.13.0.conv1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.13.0.conv1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.13.0.norm1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.13.0.norm1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.13.0.conv2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.13.0.conv2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.13.0.norm2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.13.0.norm2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.13.0.skip_connection.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.13.0.skip_connection.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.13.0.cross_attn.norm.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.13.0.cross_attn.norm.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.13.0.cross_attn.cross_attn.q_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.13.0.cross_attn.cross_attn.q_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.13.0.cross_attn.cross_attn.k_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.13.0.cross_attn.cross_attn.k_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.13.0.cross_attn.cross_attn.v_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.13.0.cross_attn.cross_attn.v_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.13.0.cross_attn.cross_attn.out_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.13.0.cross_attn.cross_attn.out_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.13.0.cross_attn.text_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.13.0.cross_attn.text_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.14.0.timestep_proj.1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.14.0.timestep_proj.1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.14.0.conv1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.14.0.conv1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.14.0.norm1.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.14.0.norm1.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.14.0.conv2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.14.0.conv2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.14.0.norm2.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.14.0.norm2.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.14.0.skip_connection.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.14.0.skip_connection.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.14.0.cross_attn.norm.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.14.0.cross_attn.norm.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.14.0.cross_attn.cross_attn.q_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.14.0.cross_attn.cross_attn.q_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.14.0.cross_attn.cross_attn.k_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.14.0.cross_attn.cross_attn.k_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.14.0.cross_attn.cross_attn.v_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.14.0.cross_attn.cross_attn.v_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.14.0.cross_attn.cross_attn.out_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.14.0.cross_attn.cross_attn.out_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.14.0.cross_attn.text_proj.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "up_blocks.14.0.cross_attn.text_proj.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "conv_out.weight": {
+          "max_diff": 0.0,
+          "unchanged": true
+        },
+        "conv_out.bias": {
+          "max_diff": 0.0,
+          "unchanged": true
+        }
+      },
+      "temporal_modules": {
+        "bottleneck.layers.0.weight": {
+          "max_diff": 0.00038373470306396484,
+          "unchanged": false
+        },
+        "bottleneck.layers.0.bias": {
+          "max_diff": 0.00023512914776802063,
+          "unchanged": false
+        },
+        "bottleneck.layers.1.weight": {
+          "max_diff": 0.0001919269561767578,
+          "unchanged": false
+        },
+        "bottleneck.layers.1.bias": {
+          "max_diff": 0.00016764611063990742,
+          "unchanged": false
+        },
+        "bottleneck.layers.3.weight": {
+          "max_diff": 0.0005502514541149139,
+          "unchanged": false
+        },
+        "bottleneck.layers.3.bias": {
+          "max_diff": 0.00039086490869522095,
+          "unchanged": false
+        },
+        "bottleneck.layers.4.weight": {
+          "max_diff": 0.0002167224884033203,
+          "unchanged": false
+        },
+        "bottleneck.layers.4.bias": {
+          "max_diff": 0.00014691115939058363,
+          "unchanged": false
+        },
+        "low_res.layers.0.weight": {
+          "max_diff": 0.0020299777388572693,
+          "unchanged": false
+        },
+        "low_res.layers.0.bias": {
+          "max_diff": 0.0020082469563931227,
+          "unchanged": false
+        },
+        "low_res.layers.1.weight": {
+          "max_diff": 0.0020284056663513184,
+          "unchanged": false
+        },
+        "low_res.layers.1.bias": {
+          "max_diff": 0.0020148924086242914,
+          "unchanged": false
+        },
+        "low_res.layers.3.weight": {
+          "max_diff": 0.0020263083279132843,
+          "unchanged": false
+        },
+        "low_res.layers.3.bias": {
+          "max_diff": 0.001997135579586029,
+          "unchanged": false
+        },
+        "low_res.layers.4.weight": {
+          "max_diff": 0.001997828483581543,
+          "unchanged": false
+        },
+        "low_res.layers.4.bias": {
+          "max_diff": 0.0020187555346637964,
+          "unchanged": false
+        }
+      },
+      "fusion_modules": {
+        "bottleneck.gate": {
+          "max_diff": 6.008148193359375e-05,
+          "unchanged": false
+        },
+        "low_res.gate": {
+          "max_diff": 0.0020461082458496094,
+          "unchanged": false
+        }
+      }
+    },
+    "checkpoint_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\smoke_test\\checkpoint_smoke_test_C.pt"
+  }
+}

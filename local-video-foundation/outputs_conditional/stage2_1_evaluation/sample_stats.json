@@ -1,0 +1,87 @@
+[
+  {
+    "pair": 1,
+    "prompt1": "A small red circle on a blue background.",
+    "prompt2": "A small blue circle on a red background.",
+    "stats1": {
+      "mean": 0.177850142121315,
+      "std": 0.8045896291732788,
+      "min": -1.0,
+      "max": 1.0
+    },
+    "stats2": {
+      "mean": 0.5821860432624817,
+      "std": 0.5620520114898682,
+      "min": -1.0,
+      "max": 1.0
+    }
+  },
+  {
+    "pair": 2,
+    "prompt1": "A large green triangle near the center.",
+    "prompt2": "A large green triangle near the left.",
+    "stats1": {
+      "mean": -0.2655002772808075,
+      "std": 0.7267147302627563,
+      "min": -1.0,
+      "max": 1.0
+    },
+    "stats2": {
+      "mean": -0.41402313113212585,
+      "std": 0.7353181838989258,
+      "min": -1.0,
+      "max": 1.0
+    }
+  },
+  {
+    "pair": 3,
+    "prompt1": "A yellow square on a white background.",
+    "prompt2": "A yellow square on a black background.",
+    "stats1": {
+      "mean": 0.9033469557762146,
+      "std": 0.2861597537994385,
+      "min": -1.0,
+      "max": 1.0
+    },
+    "stats2": {
+      "mean": 0.13758410513401031,
+      "std": 0.7275551557540894,
+      "min": -1.0,
+      "max": 1.0
+    }
+  },
+  {
+    "pair": 4,
+    "prompt1": "A small red circle in the center.",
+    "prompt2": "A large red circle in the center.",
+    "stats1": {
+      "mean": 0.36688241362571716,
+      "std": 0.7328413128852844,
+      "min": -1.0,
+      "max": 1.0
+    },
+    "stats2": {
+      "mean": 0.20848245918750763,
+      "std": 0.8848745822906494,
+      "min": -1.0,
+      "max": 1.0
+    }
+  },
+  {
+    "pair": 5,
+    "prompt1": "A green triangle on the left.",
+    "prompt2": "A green triangle on the right.",
+    "stats1": {
+      "mean": 0.30544236302375793,
+      "std": 0.842530369758606,
+      "min": -1.0,
+      "max": 1.0
+    },
+    "stats2": {
+      "mean": 0.4466668665409088,
+      "std": 0.7934737205505371,
+      "min": -1.0,
+      "max": 1.0
+    }
+  }
+]

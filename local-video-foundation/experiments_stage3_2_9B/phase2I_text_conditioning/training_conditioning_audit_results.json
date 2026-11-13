@@ -1,0 +1,30 @@
+{
+  "script_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\stage3_2_9b_experiment.py",
+  "findings": {
+    "tokenizer_loaded": true,
+    "tokenizer_load_code": "tokenizer = SimpleTokenizer.load(self.tokenizer_path)",
+    "text_encoder_created": true,
+    "text_encoder_create_code": "text_encoder = TextEncoder(\n            vocab_size=actual_vocab_size,\n            d_model=256,\n            n_heads=4,\n            n_layers=4,\n            d_ff=512,\n            max_seq_len=64,\n            dropout=0.0\n        )",
+    "split_encoder_created": true,
+    "split_encoder_create_code": "split_encoder = load_from_standard_encoder(\n            text_encoder,\n            motion_vocab_size=40,\n            freeze_transformer=True\n        )",
+    "caption_tokenization": true,
+    "tokenization_code": "for caption in captions:\n                    token_ids, mask = tokenizer.encode(caption, max_length=64)",
+    "text_encoding": true,
+    "text_encoding_code": "text_emb, text_mask = model.text_encoder(token_ids, mask)",
+    "random_embeddings_used": false,
+    "text_conditioning_passed": true,
+    "model_forward_code": "predicted_noise = model(xt, t, text_emb, text_mask)",
+    "diffusion_noise_random": true,
+    "noise_generation_code": "noise = torch.randn_like(x0)"
+  },
+  "conditioning_path": {
+    "step_1_caption_source": "Dataset: batch[\"caption\"]",
+    "step_2_tokenization": "tokenizer.encode(caption, max_length=64)",
+    "step_3_token_ids": "torch.tensor(token_ids_list)",
+    "step_4_attention_mask": "torch.tensor(mask_list, dtype=torch.float)",
+    "step_5_text_encoding": "model.text_encoder(token_ids, mask)",
+    "step_6_model_forward": "model(xt, t, text_emb, text_mask)",
+    "step_7_loss_computation": "mse_loss(predicted_noise, noise)"
+  },
+  "classification": "VALID TEXT CONDITIONING"
+}

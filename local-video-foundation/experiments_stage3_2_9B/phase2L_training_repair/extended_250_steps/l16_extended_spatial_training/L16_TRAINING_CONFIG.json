@@ -1,0 +1,20 @@
+{
+  "init": "stage2_motion_expanded ckpt (sha 9a75aadc...; spatial-equivalent to ref a7f5142e)",
+  "trainable": "ConditionalUNet only",
+  "frozen": "TextEncoder eval mode, requires_grad False, bit-identity checked each ckpt",
+  "opt": "AdamW lr2e-4 wd0.01 NEW optimizer (warm-start)",
+  "bs": 4,
+  "steps": 2000,
+  "threads": 8,
+  "ckpt_every": 250,
+  "eval_at": [
+    0,
+    250,
+    500,
+    1000,
+    1500,
+    2000
+  ],
+  "val": "16 fixed imgs, fixed noise/timesteps",
+  "objective": "eps MSE linear beta"
+}

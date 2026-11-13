@@ -1,0 +1,183 @@
+{
+  "configurations": {
+    "trained": {
+      "gate_values": {
+        "bottleneck_gate": 0.010049584321677685,
+        "low_res_gate": 0.01027901191264391
+      },
+      "prompts": {
+        "A red object moving left": {
+          "motion_activation": 7.450580596923828e-09,
+          "note": "Simplified evaluation - full motion metrics require DDIM generation"
+        },
+        "A red object moving right": {
+          "motion_activation": 1.4901161193847656e-08,
+          "note": "Simplified evaluation - full motion metrics require DDIM generation"
+        },
+        "A blue object moving upward": {
+          "motion_activation": 1.1175870895385742e-08,
+          "note": "Simplified evaluation - full motion metrics require DDIM generation"
+        },
+        "A blue object moving downward": {
+          "motion_activation": 0.0,
+          "note": "Simplified evaluation - full motion metrics require DDIM generation"
+        },
+        "A red object remaining stationary": {
+          "motion_activation": -3.725290298461914e-09,
+          "note": "Simplified evaluation - full motion metrics require DDIM generation"
+        }
+      }
+    },
+    "0.01": {
+      "gate_values": {
+        "bottleneck_gate": 0.010001189075410366,
+        "low_res_gate": 0.010001189075410366
+      },
+      "prompts": {
+        "A red object moving left": {
+          "motion_activation": 7.450580596923828e-09,
+          "note": "Simplified evaluation - full motion metrics require DDIM generation"
+        },
+        "A red object moving right": {
+          "motion_activation": 1.4901161193847656e-08,
+          "note": "Simplified evaluation - full motion metrics require DDIM generation"
+        },
+        "A blue object moving upward": {
+          "motion_activation": 1.1175870895385742e-08,
+          "note": "Simplified evaluation - full motion metrics require DDIM generation"
+        },
+        "A blue object moving downward": {
+          "motion_activation": 0.0,
+          "note": "Simplified evaluation - full motion metrics require DDIM generation"
+        },
+        "A red object remaining stationary": {
+          "motion_activation": -3.725290298461914e-09,
+          "note": "Simplified evaluation - full motion metrics require DDIM generation"
+        }
+      }
+    },
+    "0.10": {
+      "gate_values": {
+        "bottleneck_gate": 0.10002021491527557,
+        "low_res_gate": 0.10002021491527557
+      },
+      "prompts": {
+        "A red object moving left": {
+          "motion_activation": 7.450580596923828e-09,
+          "note": "Simplified evaluation - full motion metrics require DDIM generation"
+        },
+        "A red object moving right": {
+          "motion_activation": 1.4901161193847656e-08,
+          "note": "Simplified evaluation - full motion metrics require DDIM generation"
+        },
+        "A blue object moving upward": {
+          "motion_activation": 1.1175870895385742e-08,
+          "note": "Simplified evaluation - full motion metrics require DDIM generation"
+        },
+        "A blue object moving downward": {
+          "motion_activation": 0.0,
+          "note": "Simplified evaluation - full motion metrics require DDIM generation"
+        },
+        "A red object remaining stationary": {
+          "motion_activation": -3.725290298461914e-09,
+          "note": "Simplified evaluation - full motion metrics require DDIM generation"
+        }
+      }
+    },
+    "0.25": {
+      "gate_values": {
+        "bottleneck_gate": 0.24992729723453522,
+        "low_res_gate": 0.24992729723453522
+      },
+      "prompts": {
+        "A red object moving left": {
+          "motion_activation": 7.450580596923828e-09,
+          "note": "Simplified evaluation - full motion metrics require DDIM generation"
+        },
+        "A red object moving right": {
+          "motion_activation": 1.4901161193847656e-08,
+          "note": "Simplified evaluation - full motion metrics require DDIM generation"
+        },
+        "A blue object moving upward": {
+          "motion_activation": 1.1175870895385742e-08,
+          "note": "Simplified evaluation - full motion metrics require DDIM generation"
+        },
+        "A blue object moving downward": {
+          "motion_activation": 0.0,
+          "note": "Simplified evaluation - full motion metrics require DDIM generation"
+        },
+        "A red object remaining stationary": {
+          "motion_activation": -3.725290298461914e-09,
+          "note": "Simplified evaluation - full motion metrics require DDIM generation"
+        }
+      }
+    },
+    "0.50": {
+      "gate_values": {
+        "bottleneck_gate": 0.5,
+        "low_res_gate": 0.5
+      },
+      "prompts": {
+        "A red object moving left": {
+          "motion_activation": 7.450580596923828e-09,
+          "note": "Simplified evaluation - full motion metrics require DDIM generation"
+        },
+        "A red object moving right": {
+          "motion_activation": 1.4901161193847656e-08,
+          "note": "Simplified evaluation - full motion metrics require DDIM generation"
+        },
+        "A blue object moving upward": {
+          "motion_activation": 1.1175870895385742e-08,
+          "note": "Simplified evaluation - full motion metrics require DDIM generation"
+        },
+        "A blue object moving downward": {
+          "motion_activation": 0.0,
+          "note": "Simplified evaluation - full motion metrics require DDIM generation"
+        },
+        "A red object remaining stationary": {
+          "motion_activation": -3.725290298461914e-09,
+          "note": "Simplified evaluation - full motion metrics require DDIM generation"
+        }
+      }
+    },
+    "zero": {
+      "gate_values": {
+        "bottleneck_gate": 4.539787187241018e-05,
+        "low_res_gate": 4.539787187241018e-05
+      },
+      "prompts": {
+        "A red object moving left": {
+          "motion_activation": 7.450580596923828e-09,
+          "note": "Simplified evaluation - full motion metrics require DDIM generation"
+        },
+        "A red object moving right": {
+          "motion_activation": 1.4901161193847656e-08,
+          "note": "Simplified evaluation - full motion metrics require DDIM generation"
+        },
+        "A blue object moving upward": {
+          "motion_activation": 1.1175870895385742e-08,
+          "note": "Simplified evaluation - full motion metrics require DDIM generation"
+        },
+        "A blue object moving downward": {
+          "motion_activation": 0.0,
+          "note": "Simplified evaluation - full motion metrics require DDIM generation"
+        },
+        "A red object remaining stationary": {
+          "motion_activation": -3.725290298461914e-09,
+          "note": "Simplified evaluation - full motion metrics require DDIM generation"
+        }
+      }
+    }
+  },
+  "summary": {},
+  "spatial_reference": {
+    "gate_values": {
+      "bottleneck_gate": 0.010049584321677685,
+      "low_res_gate": 0.01027901191264391
+    },
+    "note": "Temporal processing disabled"
+  },
+  "motion_reference": {
+    "note": "Experiment B checkpoint (motion embeddings only, temporal disabled)"
+  }
+}

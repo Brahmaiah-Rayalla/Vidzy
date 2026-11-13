@@ -1,0 +1,28 @@
+{
+  "stage": "3.2.9G",
+  "date": "2026-11-03",
+  "checkpoint_hashes": {
+    "stage_2_1_spatial": {
+      "path": "checkpoints_conditional/checkpoint_final.pt",
+      "sha256": "a7f5142e133c6aeadc656967639eab046a7a8f922e3201a6feda4496a544d57c",
+      "verified": true
+    },
+    "experiment_B": {
+      "path": "experiments_stage3_2_9B/phase2C/checkpoints/checkpoint_phase2c_B.pt",
+      "sha256": "27eef3c7afec90a0cfaf32384f6535d271b9369ba7baaba51f17669fd3b0ff14",
+      "verified": true
+    },
+    "experiment_C": {
+      "path": "experiments_stage3_2_9B/phase2C/checkpoints/checkpoint_phase2c_C.pt",
+      "sha256": "cc71317860e152b818413c67a7e0304079a86e6e243c6e5e5d9559cec21499f5",
+      "verified": true
+    }
+  },
+  "protection": {
+    "original_checkpoints_readonly": true,
+    "no_training_in_this_stage": true,
+    "no_checkpoint_modification": true,
+    "no_fusion_gate_changes": true,
+    "inference_only_except_gradient_diagnostics": true
+  }
+}

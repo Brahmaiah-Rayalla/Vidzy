@@ -1,0 +1,38 @@
+{
+  "summary": {},
+  "c1_final": {
+    "step": 99,
+    "loss": 1.144010066986084,
+    "bottleneck_gate": 0.010082864202558994,
+    "low_res_gate": 0.010266407392919064,
+    "motion_grad_norm": 0.02930915728211403,
+    "temporal_grad_norm": 0.008370525398568418,
+    "fusion_grad_norm": 0.010671784499681536
+  },
+  "c25_final": {
+    "step": 99,
+    "loss": 0.9424901604652405,
+    "bottleneck_gate": 0.25407910346984863,
+    "low_res_gate": 0.2544783651828766,
+    "motion_grad_norm": 0.02930702269077301,
+    "temporal_grad_norm": 0.1836992058750866,
+    "fusion_grad_norm": 0.16325375384599283
+  },
+  "comparison": {
+    "loss_improvement_percent": 17.615221433474925,
+    "c1_loss": 1.144010066986084,
+    "c25_loss": 0.9424901604652405,
+    "c1_gate_avg": 0.010174635797739029,
+    "c25_gate_avg": 0.2542787343263626
+  },
+  "classification": {
+    "classification": "DENOISING IMPROVEMENT ONLY",
+    "rationale": "C25 shows ~18% lower loss than C1, but gate movement remains minimal (< 1% change). This suggests the benefit comes from initialization rather than learning."
+  },
+  "gate_progression": {
+    "c1_bottleneck_change_percent": 0.8286067177018842,
+    "c1_lowres_change_percent": 2.671209477201129,
+    "c25_bottleneck_change_percent": 1.6759244191486073,
+    "c25_lowres_change_percent": 1.8360508987229522
+  }
+}

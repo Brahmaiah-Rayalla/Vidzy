@@ -1,0 +1,28 @@
+{
+  "experiment_B": {
+    "baseline_median": 3.8644834756851196,
+    "optimized_median": 3.1218093633651733,
+    "improvement": 1.2378986113102615,
+    "baseline_100_steps": 386.44834756851196,
+    "optimized_100_steps": 312.18093633651733
+  },
+  "experiment_C": {
+    "baseline_median": 8.567177295684814,
+    "optimized_median": 6.834577679634094,
+    "improvement": 1.2535050002011945,
+    "baseline_100_steps": 856.7177295684814,
+    "optimized_100_steps": 683.4577679634094
+  },
+  "overall": {
+    "baseline_total": 1243.1660771369934,
+    "optimized_total": 995.6387042999268,
+    "improvement": 1.248611641721093,
+    "time_saved": 247.52737283706665
+  },
+  "outlier_analysis": {
+    "baseline_outlier": true,
+    "baseline_outlier_probability": 0.1,
+    "optimized_outlier": false,
+    "optimized_outlier_probability": 0.0
+  }
+}

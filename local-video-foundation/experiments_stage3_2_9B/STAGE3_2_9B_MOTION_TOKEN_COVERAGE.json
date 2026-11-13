@@ -1,0 +1,3712 @@
+{
+  "tokenizer_info": {
+    "vocab_size": 82,
+    "appearance_vocab_size": 42,
+    "motion_vocab_size": 40,
+    "total_vocab_size": 82
+  },
+  "prompt_tests": [
+    {
+      "prompt": "A red object moving left.",
+      "token_ids": [
+        3,
+        33,
+        79,
+        42,
+        27,
+        5,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "decoded_tokens": [
+        "a",
+        "red",
+        "object",
+        "moving",
+        "left",
+        ".",
+        "<EOS>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>"
+      ],
+      "appearance_tokens": [
+        {
+          "position": 0,
+          "token_id": 3,
+          "word": "a"
+        },
+        {
+          "position": 1,
+          "token_id": 33,
+          "word": "red"
+        },
+        {
+          "position": 4,
+          "token_id": 27,
+          "word": "left"
+        },
+        {
+          "position": 5,
+          "token_id": 5,
+          "word": "."
+        },
+        {
+          "position": 6,
+          "token_id": 2,
+          "word": "<EOS>"
+        },
+        {
+          "position": 7,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 8,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 9,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 10,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 11,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 12,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 13,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 14,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 15,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 16,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 17,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 18,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 19,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 20,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 21,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 22,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 23,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 24,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 25,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 26,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 27,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 28,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 29,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 30,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 31,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 32,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 33,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 34,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 35,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 36,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 37,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 38,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 39,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 40,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 41,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 42,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 43,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 44,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 45,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 46,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 47,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 48,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 49,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 50,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 51,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 52,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 53,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 54,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 55,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 56,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 57,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 58,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 59,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 60,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 61,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 62,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 63,
+          "token_id": 0,
+          "word": "<PAD>"
+        }
+      ],
+      "motion_tokens": [
+        {
+          "position": 2,
+          "token_id": 79,
+          "word": "object"
+        },
+        {
+          "position": 3,
+          "token_id": 42,
+          "word": "moving"
+        }
+      ],
+      "unk_tokens": [],
+      "has_motion_tokens": true,
+      "has_unk_tokens": false
+    },
+    {
+      "prompt": "A blue object moving right.",
+      "token_ids": [
+        3,
+        38,
+        79,
+        42,
+        36,
+        5,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "decoded_tokens": [
+        "a",
+        "blue",
+        "object",
+        "moving",
+        "right",
+        ".",
+        "<EOS>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>"
+      ],
+      "appearance_tokens": [
+        {
+          "position": 0,
+          "token_id": 3,
+          "word": "a"
+        },
+        {
+          "position": 1,
+          "token_id": 38,
+          "word": "blue"
+        },
+        {
+          "position": 4,
+          "token_id": 36,
+          "word": "right"
+        },
+        {
+          "position": 5,
+          "token_id": 5,
+          "word": "."
+        },
+        {
+          "position": 6,
+          "token_id": 2,
+          "word": "<EOS>"
+        },
+        {
+          "position": 7,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 8,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 9,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 10,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 11,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 12,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 13,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 14,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 15,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 16,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 17,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 18,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 19,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 20,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 21,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 22,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 23,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 24,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 25,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 26,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 27,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 28,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 29,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 30,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 31,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 32,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 33,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 34,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 35,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 36,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 37,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 38,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 39,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 40,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 41,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 42,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 43,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 44,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 45,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 46,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 47,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 48,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 49,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 50,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 51,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 52,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 53,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 54,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 55,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 56,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 57,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 58,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 59,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 60,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 61,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 62,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 63,
+          "token_id": 0,
+          "word": "<PAD>"
+        }
+      ],
+      "motion_tokens": [
+        {
+          "position": 2,
+          "token_id": 79,
+          "word": "object"
+        },
+        {
+          "position": 3,
+          "token_id": 42,
+          "word": "moving"
+        }
+      ],
+      "unk_tokens": [],
+      "has_motion_tokens": true,
+      "has_unk_tokens": false
+    },
+    {
+      "prompt": "An object moving upward.",
+      "token_ids": [
+        1,
+        79,
+        42,
+        49,
+        5,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "decoded_tokens": [
+        "<UNK>",
+        "object",
+        "moving",
+        "upward",
+        ".",
+        "<EOS>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>"
+      ],
+      "appearance_tokens": [
+        {
+          "position": 0,
+          "token_id": 1,
+          "word": "<UNK>"
+        },
+        {
+          "position": 4,
+          "token_id": 5,
+          "word": "."
+        },
+        {
+          "position": 5,
+          "token_id": 2,
+          "word": "<EOS>"
+        },
+        {
+          "position": 6,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 7,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 8,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 9,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 10,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 11,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 12,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 13,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 14,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 15,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 16,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 17,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 18,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 19,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 20,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 21,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 22,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 23,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 24,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 25,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 26,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 27,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 28,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 29,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 30,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 31,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 32,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 33,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 34,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 35,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 36,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 37,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 38,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 39,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 40,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 41,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 42,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 43,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 44,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 45,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 46,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 47,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 48,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 49,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 50,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 51,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 52,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 53,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 54,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 55,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 56,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 57,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 58,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 59,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 60,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 61,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 62,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 63,
+          "token_id": 0,
+          "word": "<PAD>"
+        }
+      ],
+      "motion_tokens": [
+        {
+          "position": 1,
+          "token_id": 79,
+          "word": "object"
+        },
+        {
+          "position": 2,
+          "token_id": 42,
+          "word": "moving"
+        },
+        {
+          "position": 3,
+          "token_id": 49,
+          "word": "upward"
+        }
+      ],
+      "unk_tokens": [],
+      "has_motion_tokens": true,
+      "has_unk_tokens": false
+    },
+    {
+      "prompt": "An object moving downward.",
+      "token_ids": [
+        1,
+        79,
+        42,
+        50,
+        5,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "decoded_tokens": [
+        "<UNK>",
+        "object",
+        "moving",
+        "downward",
+        ".",
+        "<EOS>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>"
+      ],
+      "appearance_tokens": [
+        {
+          "position": 0,
+          "token_id": 1,
+          "word": "<UNK>"
+        },
+        {
+          "position": 4,
+          "token_id": 5,
+          "word": "."
+        },
+        {
+          "position": 5,
+          "token_id": 2,
+          "word": "<EOS>"
+        },
+        {
+          "position": 6,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 7,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 8,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 9,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 10,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 11,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 12,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 13,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 14,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 15,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 16,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 17,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 18,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 19,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 20,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 21,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 22,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 23,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 24,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 25,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 26,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 27,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 28,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 29,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 30,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 31,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 32,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 33,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 34,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 35,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 36,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 37,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 38,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 39,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 40,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 41,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 42,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 43,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 44,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 45,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 46,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 47,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 48,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 49,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 50,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 51,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 52,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 53,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 54,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 55,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 56,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 57,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 58,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 59,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 60,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 61,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 62,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 63,
+          "token_id": 0,
+          "word": "<PAD>"
+        }
+      ],
+      "motion_tokens": [
+        {
+          "position": 1,
+          "token_id": 79,
+          "word": "object"
+        },
+        {
+          "position": 2,
+          "token_id": 42,
+          "word": "moving"
+        },
+        {
+          "position": 3,
+          "token_id": 50,
+          "word": "downward"
+        }
+      ],
+      "unk_tokens": [],
+      "has_motion_tokens": true,
+      "has_unk_tokens": false
+    },
+    {
+      "prompt": "An object moving slowly.",
+      "token_ids": [
+        1,
+        79,
+        42,
+        56,
+        5,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "decoded_tokens": [
+        "<UNK>",
+        "object",
+        "moving",
+        "slowly",
+        ".",
+        "<EOS>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>"
+      ],
+      "appearance_tokens": [
+        {
+          "position": 0,
+          "token_id": 1,
+          "word": "<UNK>"
+        },
+        {
+          "position": 4,
+          "token_id": 5,
+          "word": "."
+        },
+        {
+          "position": 5,
+          "token_id": 2,
+          "word": "<EOS>"
+        },
+        {
+          "position": 6,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 7,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 8,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 9,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 10,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 11,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 12,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 13,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 14,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 15,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 16,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 17,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 18,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 19,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 20,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 21,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 22,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 23,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 24,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 25,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 26,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 27,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 28,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 29,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 30,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 31,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 32,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 33,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 34,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 35,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 36,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 37,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 38,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 39,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 40,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 41,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 42,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 43,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 44,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 45,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 46,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 47,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 48,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 49,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 50,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 51,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 52,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 53,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 54,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 55,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 56,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 57,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 58,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 59,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 60,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 61,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 62,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 63,
+          "token_id": 0,
+          "word": "<PAD>"
+        }
+      ],
+      "motion_tokens": [
+        {
+          "position": 1,
+          "token_id": 79,
+          "word": "object"
+        },
+        {
+          "position": 2,
+          "token_id": 42,
+          "word": "moving"
+        },
+        {
+          "position": 3,
+          "token_id": 56,
+          "word": "slowly"
+        }
+      ],
+      "unk_tokens": [],
+      "has_motion_tokens": true,
+      "has_unk_tokens": false
+    },
+    {
+      "prompt": "An object moving quickly.",
+      "token_ids": [
+        1,
+        79,
+        42,
+        57,
+        5,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "decoded_tokens": [
+        "<UNK>",
+        "object",
+        "moving",
+        "quickly",
+        ".",
+        "<EOS>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>"
+      ],
+      "appearance_tokens": [
+        {
+          "position": 0,
+          "token_id": 1,
+          "word": "<UNK>"
+        },
+        {
+          "position": 4,
+          "token_id": 5,
+          "word": "."
+        },
+        {
+          "position": 5,
+          "token_id": 2,
+          "word": "<EOS>"
+        },
+        {
+          "position": 6,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 7,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 8,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 9,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 10,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 11,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 12,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 13,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 14,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 15,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 16,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 17,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 18,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 19,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 20,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 21,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 22,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 23,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 24,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 25,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 26,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 27,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 28,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 29,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 30,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 31,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 32,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 33,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 34,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 35,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 36,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 37,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 38,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 39,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 40,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 41,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 42,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 43,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 44,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 45,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 46,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 47,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 48,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 49,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 50,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 51,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 52,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 53,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 54,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 55,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 56,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 57,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 58,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 59,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 60,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 61,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 62,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 63,
+          "token_id": 0,
+          "word": "<PAD>"
+        }
+      ],
+      "motion_tokens": [
+        {
+          "position": 1,
+          "token_id": 79,
+          "word": "object"
+        },
+        {
+          "position": 2,
+          "token_id": 42,
+          "word": "moving"
+        },
+        {
+          "position": 3,
+          "token_id": 57,
+          "word": "quickly"
+        }
+      ],
+      "unk_tokens": [],
+      "has_motion_tokens": true,
+      "has_unk_tokens": false
+    },
+    {
+      "prompt": "An object bouncing.",
+      "token_ids": [
+        1,
+        79,
+        61,
+        5,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "decoded_tokens": [
+        "<UNK>",
+        "object",
+        "bouncing",
+        ".",
+        "<EOS>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>"
+      ],
+      "appearance_tokens": [
+        {
+          "position": 0,
+          "token_id": 1,
+          "word": "<UNK>"
+        },
+        {
+          "position": 3,
+          "token_id": 5,
+          "word": "."
+        },
+        {
+          "position": 4,
+          "token_id": 2,
+          "word": "<EOS>"
+        },
+        {
+          "position": 5,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 6,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 7,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 8,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 9,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 10,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 11,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 12,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 13,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 14,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 15,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 16,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 17,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 18,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 19,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 20,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 21,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 22,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 23,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 24,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 25,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 26,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 27,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 28,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 29,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 30,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 31,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 32,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 33,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 34,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 35,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 36,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 37,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 38,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 39,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 40,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 41,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 42,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 43,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 44,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 45,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 46,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 47,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 48,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 49,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 50,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 51,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 52,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 53,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 54,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 55,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 56,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 57,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 58,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 59,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 60,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 61,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 62,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 63,
+          "token_id": 0,
+          "word": "<PAD>"
+        }
+      ],
+      "motion_tokens": [
+        {
+          "position": 1,
+          "token_id": 79,
+          "word": "object"
+        },
+        {
+          "position": 2,
+          "token_id": 61,
+          "word": "bouncing"
+        }
+      ],
+      "unk_tokens": [],
+      "has_motion_tokens": true,
+      "has_unk_tokens": false
+    },
+    {
+      "prompt": "A stationary object.",
+      "token_ids": [
+        3,
+        43,
+        79,
+        5,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "decoded_tokens": [
+        "a",
+        "stationary",
+        "object",
+        ".",
+        "<EOS>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>",
+        "<PAD>"
+      ],
+      "appearance_tokens": [
+        {
+          "position": 0,
+          "token_id": 3,
+          "word": "a"
+        },
+        {
+          "position": 3,
+          "token_id": 5,
+          "word": "."
+        },
+        {
+          "position": 4,
+          "token_id": 2,
+          "word": "<EOS>"
+        },
+        {
+          "position": 5,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 6,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 7,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 8,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 9,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 10,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 11,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 12,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 13,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 14,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 15,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 16,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 17,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 18,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 19,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 20,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 21,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 22,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 23,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 24,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 25,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 26,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 27,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 28,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 29,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 30,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 31,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 32,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 33,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 34,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 35,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 36,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 37,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 38,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 39,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 40,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 41,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 42,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 43,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 44,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 45,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 46,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 47,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 48,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 49,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 50,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 51,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 52,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 53,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 54,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 55,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 56,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 57,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 58,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 59,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 60,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 61,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 62,
+          "token_id": 0,
+          "word": "<PAD>"
+        },
+        {
+          "position": 63,
+          "token_id": 0,
+          "word": "<PAD>"
+        }
+      ],
+      "motion_tokens": [
+        {
+          "position": 1,
+          "token_id": 43,
+          "word": "stationary"
+        },
+        {
+          "position": 2,
+          "token_id": 79,
+          "word": "object"
+        }
+      ],
+      "unk_tokens": [],
+      "has_motion_tokens": true,
+      "has_unk_tokens": false
+    }
+  ],
+  "coverage_summary": {
+    "total_prompts_tested": 8,
+    "prompts_with_motion_tokens": 8,
+    "prompts_with_unk_tokens": 0,
+    "motion_token_coverage_rate": 1.0
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "init": "L25 ckpt_2000",
+  "opt": "new AdamW warm-start",
+  "bs": "1->4"
+}

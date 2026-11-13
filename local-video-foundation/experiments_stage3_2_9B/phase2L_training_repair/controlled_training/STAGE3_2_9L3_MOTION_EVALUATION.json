@@ -1,0 +1,12 @@
+{
+  "status": "NOT_EVALUATED",
+  "note": "Motion evaluation requires inference pipeline and generated samples. This is a placeholder for future evaluation.",
+  "planned_evaluations": [
+    "Direction accuracy",
+    "Object-centre displacement",
+    "Direction consistency",
+    "Stationary drift",
+    "Object detection rate",
+    "Shape and colour preservation"
+  ]
+}

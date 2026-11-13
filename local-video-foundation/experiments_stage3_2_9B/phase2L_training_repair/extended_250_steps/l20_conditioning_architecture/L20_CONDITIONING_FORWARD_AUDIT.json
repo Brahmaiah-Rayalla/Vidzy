@@ -1,0 +1,86 @@
+{
+  "A": {
+    "On white, there is a medium light_gray t": {
+      "norm_entropy": 0.9999837875366211,
+      "pmax": 0.06355941295623779,
+      "film_gamma_std": 0.0,
+      "film_param_rms": 0.0
+    },
+    "On white, there is a medium cream square": {
+      "norm_entropy": 0.99998539686203,
+      "pmax": 0.06352496147155762,
+      "film_gamma_std": 0.0,
+      "film_param_rms": 0.0
+    },
+    "A orange circle in the bottom, large in ": {
+      "norm_entropy": 0.9999847412109375,
+      "pmax": 0.06770690530538559,
+      "film_gamma_std": 0.0,
+      "film_param_rms": 0.0
+    },
+    "On light_gray, there is a medium pink tr": {
+      "norm_entropy": 0.9999826550483704,
+      "pmax": 0.0636335015296936,
+      "film_gamma_std": 0.0,
+      "film_param_rms": 0.0
+    },
+    "A cream triangle in the bottom, large in": {
+      "norm_entropy": 0.9999829530715942,
+      "pmax": 0.0677269920706749,
+      "film_gamma_std": 0.0,
+      "film_param_rms": 0.0
+    },
+    "On a cream background, there is a medium": {
+      "norm_entropy": 0.9999841451644897,
+      "pmax": 0.07811357080936432,
+      "film_gamma_std": 0.0,
+      "film_param_rms": 0.0
+    },
+    "A medium light_gray triangle on a light_": {
+      "norm_entropy": 0.9999827146530151,
+      "pmax": 0.10142242163419724,
+      "film_gamma_std": 0.0,
+      "film_param_rms": 0.0
+    },
+    "A blue square in the right, medium in si": {
+      "norm_entropy": 0.9999828934669495,
+      "pmax": 0.06772106885910034,
+      "film_gamma_std": 0.0,
+      "film_param_rms": 0.0
+    }
+  },
+  "B": {
+    "On white, there is a medium light_gray t": {
+      "film_param_rms": 0.0,
+      "pooled_rms": 0.46750307083129883
+    },
+    "On white, there is a medium cream square": {
+      "film_param_rms": 0.0,
+      "pooled_rms": 0.4688917398452759
+    },
+    "A orange circle in the bottom, large in ": {
+      "film_param_rms": 0.0,
+      "pooled_rms": 0.5126888751983643
+    },
+    "On light_gray, there is a medium pink tr": {
+      "film_param_rms": 0.0,
+      "pooled_rms": 0.43798911571502686
+    },
+    "A cream triangle in the bottom, large in": {
+      "film_param_rms": 0.0,
+      "pooled_rms": 0.5250453352928162
+    },
+    "On a cream background, there is a medium": {
+      "film_param_rms": 0.0,
+      "pooled_rms": 0.4847230017185211
+    },
+    "A medium light_gray triangle on a light_": {
+      "film_param_rms": 0.0,
+      "pooled_rms": 0.4831376373767853
+    },
+    "A blue square in the right, medium in si": {
+      "film_param_rms": 0.0,
+      "pooled_rms": 0.5099829435348511
+    }
+  }
+}

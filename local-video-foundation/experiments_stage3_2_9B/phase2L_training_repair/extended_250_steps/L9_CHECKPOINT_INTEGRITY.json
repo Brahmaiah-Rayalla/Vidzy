@@ -1,0 +1,73 @@
+{
+  "L7_C1_step_100": {
+    "path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\gate25_training\\C1\\checkpoint_step_000100.pt",
+    "exists": true,
+    "sha256": "23c99694a2c523570d9d2547f57b405d6fc728a5989facce39a946e144e15550",
+    "loadable": true,
+    "keys": [
+      "model_state_dict",
+      "optimizer_state_dict",
+      "config",
+      "experiment",
+      "gate_init",
+      "step"
+    ],
+    "total_parameters": 11708997
+  },
+  "L7_C25_step_100": {
+    "path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\gate25_training\\C25\\checkpoint_step_000100.pt",
+    "exists": true,
+    "sha256": "33506e9087fd5c473e14b5249f6b3138b8ebdc3c09c5d726406ccc8470a46ac9",
+    "loadable": true,
+    "keys": [
+      "model_state_dict",
+      "optimizer_state_dict",
+      "config",
+      "experiment",
+      "gate_init",
+      "step"
+    ],
+    "total_parameters": 11708997
+  },
+  "L8_C1_step_150": {
+    "path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\extended_250_steps\\C1\\checkpoint_step_000150.pt",
+    "exists": true,
+    "sha256": "5928b151fb062262184cb99fe2f671f1aba93d055d0030c51b05d2600877b353",
+    "loadable": true,
+    "keys": [
+      "model_state_dict",
+      "optimizer_state_dict",
+      "step",
+      "experiment"
+    ],
+    "total_parameters": 11708997
+  },
+  "L8_C1_step_200": {
+    "path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\extended_250_steps\\C1\\checkpoint_step_000200.pt",
+    "exists": true,
+    "sha256": "59de322d5b096a03d7e1d06ae1b6f4b99ddb0699267876d98e66f281a976b78d",
+    "loadable": true,
+    "keys": [
+      "model_state_dict",
+      "optimizer_state_dict",
+      "step",
+      "experiment"
+    ],
+    "total_parameters": 11708997
+  },
+  "stage2_spatial": {
+    "path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_7\\checkpoints\\checkpoint_stage2_spatial.pt",
+    "exists": true,
+    "sha256": "a7f5142e133c6aeadc656967639eab046a7a8f922e3201a6feda4496a544d57c",
+    "loadable": true,
+    "keys": [
+      "step",
+      "model_state_dict",
+      "text_encoder_state_dict",
+      "optimizer_state_dict",
+      "config",
+      "seed"
+    ],
+    "total_parameters": 9439171
+  }
+}

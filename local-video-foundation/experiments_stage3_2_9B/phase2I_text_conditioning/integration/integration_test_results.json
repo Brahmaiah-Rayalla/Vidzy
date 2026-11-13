@@ -1,0 +1,90 @@
+{
+  "test_adapter_loading": {
+    "A": {
+      "loaded": true,
+      "has_text_encoder": false,
+      "has_tokenizer": false,
+      "has_encode_method": false,
+      "error": null
+    },
+    "B": {
+      "loaded": true,
+      "has_text_encoder": true,
+      "has_tokenizer": true,
+      "has_encode_method": true,
+      "error": null
+    },
+    "C": {
+      "loaded": true,
+      "has_text_encoder": true,
+      "has_tokenizer": true,
+      "has_encode_method": true,
+      "error": null
+    }
+  },
+  "test_text_encoding": {
+    "success": true,
+    "embeddings": {
+      "Red object moving left": {
+        "mean": 4.59868460893631e-05,
+        "std": 0.9928293228149414,
+        "min": -4.292743682861328,
+        "max": 3.0252161026000977
+      },
+      "Blue object moving right": {
+        "mean": 8.751824498176575e-05,
+        "std": 0.9928165674209595,
+        "min": -4.286520957946777,
+        "max": 3.1433067321777344
+      },
+      "Stationary object": {
+        "mean": 0.00013705343008041382,
+        "std": 0.9926984310150146,
+        "min": -4.220444202423096,
+        "max": 3.008615016937256
+      }
+    },
+    "different_prompts": false,
+    "deterministic": true,
+    "error": null
+  },
+  "test_model_prediction_sensitivity": {
+    "success": true,
+    "predictions": {
+      "Red object moving left": {
+        "mean": -0.009171952493488789,
+        "std": 1.0290848016738892
+      },
+      "Blue object moving right": {
+        "mean": -0.008552693761885166,
+        "std": 1.023755431175232
+      }
+    },
+    "predictions_differ": false,
+    "error": null
+  },
+  "test_checkpoint_integrity": {
+    "success": true,
+    "results": {
+      "stage_2_1": {
+        "path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\checkpoints_conditional\\checkpoint_final.pt",
+        "actual_hash": "a7f5142e133c6aeadc656967639eab046a7a8f922e3201a6feda4496a544d57c",
+        "expected_hash": "a7f5142e133c6aeadc656967639eab046a7a8f922e3201a6feda4496a544d57c",
+        "matches": true
+      },
+      "experiment_B": {
+        "path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2C\\checkpoints\\checkpoint_phase2c_B.pt",
+        "actual_hash": "27eef3c7afec90a0cfaf32384f6535d271b9369ba7baaba51f17669fd3b0ff14",
+        "expected_hash": "27eef3c7afec90a0cfaf32384f6535d271b9369ba7baaba51f17669fd3b0ff14",
+        "matches": true
+      },
+      "experiment_C": {
+        "path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2C\\checkpoints\\checkpoint_phase2c_C.pt",
+        "actual_hash": "cc71317860e152b818413c67a7e0304079a86e6e243c6e5e5d9559cec21499f5",
+        "expected_hash": "cc71317860e152b818413c67a7e0304079a86e6e243c6e5e5d9559cec21499f5",
+        "matches": true
+      }
+    },
+    "all_match": true
+  }
+}

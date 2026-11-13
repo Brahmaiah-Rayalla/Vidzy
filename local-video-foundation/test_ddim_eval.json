@@ -1,0 +1,13 @@
+{
+  "avg_frame_diff": 90.44865451388888,
+  "max_frame_diff": 255.0,
+  "temporal_smoothness": 96.09034936581938,
+  "avg_brightness": 105.75303649902344,
+  "contrast": 111.80908242679844,
+  "saturation": 87.05662476639323,
+  "avg_motion": 198.7397375134067,
+  "max_motion": 441.6729559300637,
+  "motion_consistency": 0.06986245824611172,
+  "avg_pairwise_diff": 81.90360310872396,
+  "std_pairwise_diff": 32.05627446536054
+}

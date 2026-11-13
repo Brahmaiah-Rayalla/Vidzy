@@ -1,0 +1,10 @@
+{
+  "init": "hybrid",
+  "trainable": "full UNet+tokproj+conv_text (cross_attn frozen)",
+  "bs": 4,
+  "lr": 0.0001,
+  "wd": 0.01,
+  "steps": 10000,
+  "obj": "eps-MSE",
+  "te": "frozen"
+}

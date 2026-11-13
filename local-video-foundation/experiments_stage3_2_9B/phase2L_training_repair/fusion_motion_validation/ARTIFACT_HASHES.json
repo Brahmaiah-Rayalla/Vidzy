@@ -1,0 +1,37 @@
+{
+  "stage2_spatial_checkpoint": {
+    "path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_7\\checkpoints\\checkpoint_stage2_spatial.pt",
+    "sha256": "a7f5142e133c6aeadc656967639eab046a7a8f922e3201a6feda4496a544d57c",
+    "exists": true
+  },
+  "stage2_motion_expanded_checkpoint": {
+    "path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_7\\checkpoints\\checkpoint_stage2_motion_expanded.pt",
+    "sha256": "9a75aadc6bae18b9083797fa4bf2424f58fdf73118eac620e259e092096fa28a",
+    "exists": true
+  },
+  "experiment_B_step_100": {
+    "path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\controlled_training\\experiment_B\\checkpoints\\checkpoint_step_000100.pt",
+    "sha256": "8b60e1640597d042d158d0d2ba4389324b275faf42329de52c2201886bc6bced",
+    "exists": true
+  },
+  "experiment_C_step_100": {
+    "path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\controlled_training\\experiment_C\\checkpoints\\checkpoint_step_000100.pt",
+    "sha256": "c2dc17c93fbd855552fc473d4074236a2c0545bd187697a024ce49f801e7ea59",
+    "exists": true
+  },
+  "tokenizer": {
+    "path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_7\\checkpoints\\tokenizer_motion_expanded.json",
+    "sha256": "9227a1001b4d3503fa59729c04a26a01307d4e0a050b579e858ee8a809d679e8",
+    "exists": true
+  },
+  "text_encoder_split": {
+    "path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_7\\video_foundation\\models\\text_encoder_split.py",
+    "sha256": "0e5b90ba9df87d0c5e1a9ad1dde246eacb7e72c145db7588c88cb8c8e74e0789",
+    "exists": true
+  },
+  "video_unet_fixed": {
+    "path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_7\\video_foundation\\models\\video_unet_fixed.py",
+    "sha256": "999e206cf226c63eee798832aaad8e3e72450225db663ce20dd93f9b0105797e",
+    "exists": true
+  }
+}

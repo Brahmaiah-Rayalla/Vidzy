@@ -1,0 +1,27 @@
+{
+  "outlier_step": 6,
+  "outlier_time": 301.62886357307434,
+  "median_time": 8.750373482704163,
+  "slowdown_factor": 34.4703987971792,
+  "mean_time": 38.579394459724426,
+  "std_dev": 92.44523346223767,
+  "outlier_breakdown": {
+    "data_loading": 0.0041887760162353516,
+    "forward_pass": 218.37934589385986,
+    "backward_pass": 83.23101997375488,
+    "optimizer_step": 0.003944873809814453
+  },
+  "normal_step_comparison": {
+    "step": 5,
+    "data_loading": 0.002125263214111328,
+    "forward_pass": 6.511112689971924,
+    "backward_pass": 8.052069664001465,
+    "optimizer_step": 0.006027698516845703
+  },
+  "slowdown_breakdown": {
+    "forward_slowdown": 33.53948185080506,
+    "backward_slowdown": 10.336599588284404
+  },
+  "experiment_b_median": 3.8644834756851196,
+  "temporal_overhead": 2.2643060936242825
+}

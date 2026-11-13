@@ -1,0 +1,29 @@
+{
+  "rgb_weight_bit_identical": true,
+  "rgb_bias_bit_identical": true,
+  "baselines": {
+    "native_crossattn_vs_L21zero": 0.061101481318473816,
+    "L21_zero_vs_correct": 0.05593858286738396,
+    "correct_vs_wrong": 0.048918742686510086,
+    "native_vs_correct": 0.08914530277252197
+  },
+  "gradient_audit": {
+    "groups": {
+      "tokproj": 0.33954894728958607,
+      "conv_in_weight": 0.32349538803100586,
+      "conv_in_bias": 0.029007703065872192,
+      "other_unet": 3.9645521076559604,
+      "conv_in_text_slice_norm": 0.3188339173793793,
+      "conv_in_rgb_slice_norm": 0.05471985787153244
+    },
+    "tokproj_nonzero": true,
+    "conv_in_nonzero": true,
+    "text_slice_grad_norm": 0.3188339173793793,
+    "rgb_slice_grad_norm": 0.05471985787153244,
+    "loss": 0.018788514658808708
+  },
+  "ablation": {
+    "correct_vs_zeroed_pred_diff": 0.05580959841609001
+  },
+  "te_bit_identical": true
+}

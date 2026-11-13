@@ -1,0 +1,57 @@
+{
+  "C1": {
+    "step_100": {
+      "raw": {
+        "bottleneck": -4.5867838859558105,
+        "low_res": -4.568558692932129
+      },
+      "activated": {
+        "bottleneck": 0.010082864202558994,
+        "low_res": 0.010266407392919064
+      }
+    },
+    "step_150": {
+      "raw": {
+        "bottleneck": -4.578608989715576,
+        "low_res": -4.553038597106934
+      },
+      "activated": {
+        "bottleneck": 0.01016478706151247,
+        "low_res": 0.010425311513245106
+      }
+    },
+    "step_200": {
+      "raw": {
+        "bottleneck": -4.5684099197387695,
+        "low_res": -4.538163185119629
+      },
+      "activated": {
+        "bottleneck": 0.010267918929457664,
+        "low_res": 0.01057989802211523
+      }
+    },
+    "change_100_to_150": {
+      "bottleneck_percent": 0.8124959069932155,
+      "low_res_percent": 1.5478064939799814
+    },
+    "change_100_to_200": {
+      "bottleneck_percent": 1.8353388797173722,
+      "low_res_percent": 3.0535572688493486
+    }
+  },
+  "C25": {
+    "step_100": {
+      "raw": {
+        "bottleneck": -1.0769739151000977,
+        "low_res": -1.0748683214187622
+      },
+      "activated": {
+        "bottleneck": 0.25407910346984863,
+        "low_res": 0.2544783651828766
+      }
+    },
+    "step_150": "NOT_AVAILABLE",
+    "step_200": "NOT_AVAILABLE",
+    "note": "C25 checkpoints for steps 150 and 200 were not generated in L.8"
+  }
+}

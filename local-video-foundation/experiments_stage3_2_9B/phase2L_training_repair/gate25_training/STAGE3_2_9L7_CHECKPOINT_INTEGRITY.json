@@ -1,0 +1,42 @@
+{
+  "C1_step_25": {
+    "path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\gate25_training\\C1\\checkpoint_step_000025.pt",
+    "sha256": "e6f6395cf65adc2751b6230c981b50d4c0d90b9f6d9a05271c4107c0da5cbf69",
+    "exists": true
+  },
+  "C1_step_50": {
+    "path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\gate25_training\\C1\\checkpoint_step_000050.pt",
+    "sha256": "e3c478f23516feafd4238951ffd9c4f4f48e6ce8013fe2651904cd19386af4d8",
+    "exists": true
+  },
+  "C1_step_75": {
+    "path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\gate25_training\\C1\\checkpoint_step_000075.pt",
+    "sha256": "19030561e4b8cb8a6072911504ab46f04b30b38bc6c2f77e53343b19e110be48",
+    "exists": true
+  },
+  "C1_step_100": {
+    "path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\gate25_training\\C1\\checkpoint_step_000100.pt",
+    "sha256": "23c99694a2c523570d9d2547f57b405d6fc728a5989facce39a946e144e15550",
+    "exists": true
+  },
+  "C25_step_25": {
+    "path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\gate25_training\\C25\\checkpoint_step_000025.pt",
+    "sha256": "6a76d3279a95642db99da9afecb48dc74632e8a3fe8c44785ee1ee4b734762e2",
+    "exists": true
+  },
+  "C25_step_50": {
+    "path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\gate25_training\\C25\\checkpoint_step_000050.pt",
+    "sha256": "56785510d08200e38f194363476d2f94905c3d957e8ac997cb117cca40267eb2",
+    "exists": true
+  },
+  "C25_step_75": {
+    "path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\gate25_training\\C25\\checkpoint_step_000075.pt",
+    "sha256": "b5e65ac6664ac954db29d72d42ffa81c792875b7ab753c8e046db5c98c415e48",
+    "exists": true
+  },
+  "C25_step_100": {
+    "path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\gate25_training\\C25\\checkpoint_step_000100.pt",
+    "sha256": "33506e9087fd5c473e14b5249f6b3138b8ebdc3c09c5d726406ccc8470a46ac9",
+    "exists": true
+  }
+}

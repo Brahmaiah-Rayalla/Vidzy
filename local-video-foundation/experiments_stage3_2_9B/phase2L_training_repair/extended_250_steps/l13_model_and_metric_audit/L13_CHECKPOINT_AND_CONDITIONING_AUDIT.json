@@ -1,0 +1,112 @@
+{
+  "checkpoints": {
+    "stage2_spatial_ckpt": {
+      "path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_7\\checkpoints\\checkpoint_stage2_motion_expanded.pt",
+      "sha256": "9a75aadc6bae18b9083797fa4bf2424f58fdf73118eac620e259e092096fa28a",
+      "size_mb": 139.5,
+      "keys": [
+        "step",
+        "model_state_dict",
+        "text_encoder_state_dict",
+        "optimizer_state_dict",
+        "config",
+        "seed",
+        "vocab_size"
+      ],
+      "gate_params": {},
+      "n_state_tensors": 504,
+      "text_encoder_vocab": 82,
+      "step": 1000,
+      "experiment": null,
+      "gate_init": null
+    },
+    "stage2_spatial_alt": {
+      "path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_7\\checkpoints\\checkpoint_stage2_spatial.pt",
+      "sha256": "a7f5142e133c6aeadc656967639eab046a7a8f922e3201a6feda4496a544d57c",
+      "size_mb": 139.5
+    },
+    "C1_250": {
+      "path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\extended_250_steps\\recovery_l10\\C1\\checkpoint_step_000250.pt",
+      "sha256": "72a785361df3c5aede885b9308c73b27c57055f7c93369f275dde0dc734e3cd1",
+      "size_mb": 48.2,
+      "keys": [
+        "model_state_dict",
+        "optimizer_state_dict",
+        "step",
+        "experiment",
+        "recovery"
+      ],
+      "gate_params": {
+        "fusion_modules.bottleneck.gate": -4.557628154754639,
+        "fusion_modules.low_res.gate": -4.523617267608643
+      },
+      "n_state_tensors": 589,
+      "step": 250,
+      "experiment": "C1",
+      "gate_init": null
+    },
+    "C25_250": {
+      "path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\extended_250_steps\\recovery_l10\\C25\\checkpoint_step_000250.pt",
+      "sha256": "7642e01dffa44bb869b0790fb08b7508d8c5b5a310ed638f7cd4d535128ac5ce",
+      "size_mb": 48.2,
+      "keys": [
+        "model_state_dict",
+        "optimizer_state_dict",
+        "step",
+        "experiment",
+        "recovery"
+      ],
+      "gate_params": {
+        "fusion_modules.bottleneck.gate": -1.0409202575683594,
+        "fusion_modules.low_res.gate": -1.0322657823562622
+      },
+      "n_state_tensors": 589,
+      "step": 250,
+      "experiment": "C25",
+      "gate_init": null
+    },
+    "tokenizer": {
+      "path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_7\\checkpoints\\tokenizer_motion_expanded.json",
+      "sha256": "9227a1001b4d3503fa59729c04a26a01307d4e0a050b579e858ee8a809d679e8",
+      "size_mb": 0.0
+    },
+    "cond_final": {
+      "path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\checkpoints_conditional\\checkpoint_final.pt",
+      "sha256": "a7f5142e133c6aeadc656967639eab046a7a8f922e3201a6feda4496a544d57c",
+      "size_mb": 139.5
+    }
+  },
+  "conditioning": {
+    "tokenizer": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_7\\checkpoints\\tokenizer_motion_expanded.json",
+    "vocab_prompts": {
+      "A red circle on a white background": {
+        "unk_count": 0,
+        "n_tokens": 8
+      },
+      "A blue square on a white background": {
+        "unk_count": 0,
+        "n_tokens": 8
+      },
+      "A yellow triangle on a white background": {
+        "unk_count": 0,
+        "n_tokens": 8
+      },
+      "A green circle at the center": {
+        "unk_count": 1,
+        "n_tokens": 7
+      },
+      "A red square on a white background": {
+        "unk_count": 0,
+        "n_tokens": 8
+      },
+      "A medium blue circle slowly moving from left to right on a white background.": {
+        "unk_count": 2,
+        "n_tokens": 16
+      }
+    },
+    "note": "original_vocab_size=42 for split encoder; motion_vocab_size=40; freeze_transformer=True"
+  },
+  "forward_signature": "VideoUNetFixed.forward(x[B,C,T,H,W], timesteps[B], text_emb[B,S,D], text_mask[B,S])",
+  "stage2_reference_sha256_expected": "a7f5142e133c6aeadc656967639eab046a7a8f922e3201a6feda4496a544d57c",
+  "stage2_reference_sha256_match": false
+}

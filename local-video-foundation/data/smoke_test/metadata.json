@@ -1,0 +1,209 @@
+[
+  {
+    "image_path": "data/smoke_test\\image_00000.png",
+    "caption": "A orange triangle in the left, small in size, on white.",
+    "scene_params": {
+      "bg_color": "white",
+      "objects": [
+        {
+          "shape": "triangle",
+          "color": "orange",
+          "size": "small",
+          "position": "left",
+          "x": 8,
+          "y": 16,
+          "size_pixels": 9
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/smoke_test\\image_00001.png",
+    "caption": "On white, there is a small red circle and a large orange triangle.",
+    "scene_params": {
+      "bg_color": "white",
+      "objects": [
+        {
+          "shape": "circle",
+          "color": "red",
+          "size": "small",
+          "position": "left",
+          "x": 9,
+          "y": 35,
+          "size_pixels": 9
+        },
+        {
+          "shape": "triangle",
+          "color": "orange",
+          "size": "large",
+          "position": "bottom",
+          "x": 28,
+          "y": 50,
+          "size_pixels": 22
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/smoke_test\\image_00002.png",
+    "caption": "On a white background, there is a medium pink triangle.",
+    "scene_params": {
+      "bg_color": "white",
+      "objects": [
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "size": "medium",
+          "position": "right",
+          "x": 46,
+          "y": 49,
+          "size_pixels": 16
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/smoke_test\\image_00003.png",
+    "caption": "A medium green square positioned in the right on white.",
+    "scene_params": {
+      "bg_color": "white",
+      "objects": [
+        {
+          "shape": "square",
+          "color": "green",
+          "size": "medium",
+          "position": "right",
+          "x": 52,
+          "y": 43,
+          "size_pixels": 16
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/smoke_test\\image_00004.png",
+    "caption": "On a light_yellow background, there is a large green square.",
+    "scene_params": {
+      "bg_color": "light_yellow",
+      "objects": [
+        {
+          "shape": "square",
+          "color": "green",
+          "size": "large",
+          "position": "right",
+          "x": 55,
+          "y": 36,
+          "size_pixels": 22
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/smoke_test\\image_00005.png",
+    "caption": "A green triangle of small size on light_yellow.",
+    "scene_params": {
+      "bg_color": "light_yellow",
+      "objects": [
+        {
+          "shape": "triangle",
+          "color": "green",
+          "size": "small",
+          "position": "left",
+          "x": 16,
+          "y": 50,
+          "size_pixels": 9
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/smoke_test\\image_00006.png",
+    "caption": "A cyan square in the right and a orange triangle in the center on white.",
+    "scene_params": {
+      "bg_color": "white",
+      "objects": [
+        {
+          "shape": "square",
+          "color": "cyan",
+          "size": "large",
+          "position": "right",
+          "x": 46,
+          "y": 26,
+          "size_pixels": 22
+        },
+        {
+          "shape": "triangle",
+          "color": "orange",
+          "size": "large",
+          "position": "center",
+          "x": 34,
+          "y": 25,
+          "size_pixels": 22
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/smoke_test\\image_00007.png",
+    "caption": "A medium pink square on a light_gray background.",
+    "scene_params": {
+      "bg_color": "light_gray",
+      "objects": [
+        {
+          "shape": "square",
+          "color": "pink",
+          "size": "medium",
+          "position": "bottom",
+          "x": 21,
+          "y": 48,
+          "size_pixels": 16
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/smoke_test\\image_00008.png",
+    "caption": "On a light_gray background, there is a medium pink square.",
+    "scene_params": {
+      "bg_color": "light_gray",
+      "objects": [
+        {
+          "shape": "square",
+          "color": "pink",
+          "size": "medium",
+          "position": "center",
+          "x": 26,
+          "y": 40,
+          "size_pixels": 16
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/smoke_test\\image_00009.png",
+    "caption": "A light_yellow square in the top and a white triangle in the right on light_gray.",
+    "scene_params": {
+      "bg_color": "light_gray",
+      "objects": [
+        {
+          "shape": "square",
+          "color": "light_yellow",
+          "size": "large",
+          "position": "top",
+          "x": 18,
+          "y": 8,
+          "size_pixels": 22
+        },
+        {
+          "shape": "triangle",
+          "color": "white",
+          "size": "large",
+          "position": "right",
+          "x": 54,
+          "y": 29,
+          "size_pixels": 22
+        }
+      ]
+    }
+  }
+]

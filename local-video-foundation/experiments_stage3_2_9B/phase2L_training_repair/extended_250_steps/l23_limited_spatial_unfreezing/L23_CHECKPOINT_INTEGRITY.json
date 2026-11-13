@@ -1,0 +1,8 @@
+{
+  "stage2": "untouched",
+  "L21_L22": "untouched",
+  "ckpts": [
+    "A_step{50,100,250,500}.pt",
+    "B_step{...}.pt"
+  ]
+}

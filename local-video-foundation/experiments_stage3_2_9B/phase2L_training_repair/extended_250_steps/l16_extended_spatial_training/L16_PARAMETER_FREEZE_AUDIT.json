@@ -1,0 +1,10 @@
+{
+  "assertions": [
+    "all su params requires_grad=True",
+    "all te params requires_grad=False",
+    "te.eval() throughout",
+    "only su params in optimizer",
+    "te bit-identity verified at each checkpoint via state_dict clone compare"
+  ],
+  "te_params_frozen": true
+}

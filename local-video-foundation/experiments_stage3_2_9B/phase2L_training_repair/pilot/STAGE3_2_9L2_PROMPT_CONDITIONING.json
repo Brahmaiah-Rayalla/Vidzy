@@ -1,0 +1,20 @@
+{
+  "prompts_tested": [],
+  "motion_token_usage": {
+    "motion_vs_regular_diff": 0.7459936141967773,
+    "motion_tokens_used": true,
+    "motion_gradient_norm": 0.0,
+    "motion_has_gradient": true,
+    "motion_embedding_has_variance": true,
+    "motion_embedding_std": 0.019933069124817848
+  },
+  "prompt_sensitivity": {
+    "A person walking_vs_A person running": 0.5587043762207031,
+    "A person walking_vs_A car driving": 0.9397019147872925,
+    "A person running_vs_A bird flying": 0.9362183213233948,
+    "regular_vs_motion": 0.7459936141967773
+  },
+  "summary": {
+    "all_checks_pass": true
+  }
+}

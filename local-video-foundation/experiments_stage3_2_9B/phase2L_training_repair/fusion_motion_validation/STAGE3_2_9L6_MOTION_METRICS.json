@@ -1,0 +1,1 @@
+{"note": "Motion metrics (direction accuracy, displacement, stationary control, appearance preservation) require full DDIM generation and object tracking. This diagnostic stage used simplified text embedding activation metrics. Deferring to future stage with proper inference infrastructure.", "status": "DEFERRED"}

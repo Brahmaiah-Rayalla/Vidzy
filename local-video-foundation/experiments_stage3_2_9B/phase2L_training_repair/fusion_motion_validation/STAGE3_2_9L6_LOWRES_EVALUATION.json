@@ -1,0 +1,1 @@
+{"note": "Detailed low-resolution gate evaluation with full DDIM generation and motion metrics requires full inference infrastructure. This diagnostic stage used simplified metrics. Deferring to future stage with proper DDIM pipeline.", "status": "DEFERRED"}

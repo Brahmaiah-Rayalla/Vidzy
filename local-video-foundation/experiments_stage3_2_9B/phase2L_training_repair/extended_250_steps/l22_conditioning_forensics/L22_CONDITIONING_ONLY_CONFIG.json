@@ -1,0 +1,8 @@
+{
+  "init": "L21 A_step750",
+  "trainable": "tokproj + conv_in.weight[:,3:]",
+  "frozen": "all else incl RGB conv slice+bias",
+  "opt": "AdamW lr1e-4",
+  "steps": 500,
+  "bs": 1
+}

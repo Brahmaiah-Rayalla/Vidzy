@@ -1,0 +1,6 @@
+{
+  "total_wall_min": 43.4,
+  "train_step_s": 0.5,
+  "sampling_overhead": "~35min of 43 total (12 DDIM gens x 5 checkpoints)",
+  "train_only_min": 8
+}

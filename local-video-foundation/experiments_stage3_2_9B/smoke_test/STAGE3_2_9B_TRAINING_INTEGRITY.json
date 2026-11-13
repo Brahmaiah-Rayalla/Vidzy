@@ -1,0 +1,108 @@
+{
+  "checkpoint_hashes_before": {
+    "stage2_checkpoint": "a7f5142e133c6aeadc656967639eab046a7a8f922e3201a6feda4496a544d57c",
+    "stage3_spatial_checkpoint": "a7f5142e133c6aeadc656967639eab046a7a8f922e3201a6feda4496a544d57c",
+    "stage3_motion_checkpoint": "9a75aadc6bae18b9083797fa4bf2424f58fdf73118eac620e259e092096fa28a",
+    "tokenizer": "9227a1001b4d3503fa59729c04a26a01307d4e0a050b579e858ee8a809d679e8"
+  },
+  "experiment_B": {
+    "optimizer_steps_executed": 10,
+    "optimizer_steps_expected": 10,
+    "steps_match": true,
+    "loss_values": [0.151493, 0.013275, 0.007852, 0.016107, 0.009212, 0.009023, 0.009256, 0.006398, 0.010604, 0.007878],
+    "all_finite": true,
+    "no_nan": true,
+    "no_inf": true,
+    "parameter_changes": {
+      "motion_emb": {
+        "max_diff": 0.0018790625035762787,
+        "changed": true
+      },
+      "appearance_emb": {
+        "max_diff": 0.0,
+        "changed": false
+      },
+      "spatial_unet": {
+        "total_parameters": 505,
+        "parameters_changed": 0,
+        "all_unchanged": true
+      }
+    },
+    "frozen_integrity": {
+      "spatial_unchanged": true,
+      "appearance_unchanged": true,
+      "status": "PASS"
+    },
+    "checkpoint_operations": {
+      "saved": true,
+      "loaded": true,
+      "save_path": "checkpoint_smoke_test_B.pt",
+      "load_successful": true
+    }
+  },
+  "experiment_C": {
+    "optimizer_steps_executed": 10,
+    "optimizer_steps_expected": 10,
+    "steps_match": true,
+    "loss_values": [1.897216, 1.177638, 1.223946, 1.181534, 1.217147, 1.216172, 1.272496, 1.169157, 1.259552, 1.215361],
+    "all_finite": true,
+    "no_nan": true,
+    "no_inf": true,
+    "parameter_changes": {
+      "motion_emb": {
+        "changed": true
+      },
+      "appearance_emb": {
+        "changed": false
+      },
+      "spatial_unet": {
+        "total_parameters": 505,
+        "parameters_changed": 0,
+        "all_unchanged": true
+      },
+      "temporal_modules": {
+        "changed": true
+      },
+      "fusion_modules": {
+        "changed": true
+      }
+    },
+    "frozen_integrity": {
+      "spatial_unchanged": true,
+      "appearance_unchanged": true,
+      "status": "PASS"
+    },
+    "checkpoint_operations": {
+      "saved": true,
+      "loaded": true,
+      "save_path": "checkpoint_smoke_test_C.pt",
+      "load_successful": true
+    }
+  },
+  "gradient_flow_verification": {
+    "experiment_B": {
+      "motion_emb_gradients": true,
+      "temporal_gradients": false,
+      "fusion_gradients": false,
+      "spatial_gradients": false,
+      "appearance_gradients": false,
+      "status": "PASS"
+    },
+    "experiment_C": {
+      "motion_emb_gradients": true,
+      "temporal_gradients": true,
+      "fusion_gradients": true,
+      "spatial_gradients": false,
+      "appearance_gradients": false,
+      "status": "PASS"
+    }
+  },
+  "integrity_tests": {
+    "parameter_updates_correct": true,
+    "frozen_parameters_unchanged": true,
+    "loss_values_finite": true,
+    "checkpoint_operations_work": true,
+    "gradient_flow_correct": true,
+    "overall_status": "PASS"
+  }
+}

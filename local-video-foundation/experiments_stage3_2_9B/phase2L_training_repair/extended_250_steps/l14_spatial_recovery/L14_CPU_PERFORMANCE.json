@@ -1,0 +1,6 @@
+{
+  "probe": "200 steps unet+text_encoder, batch1, 64x64",
+  "step_time_s": "0.5-0.6",
+  "total_probe_min": 2.6,
+  "baseline_gen": "12 images ~1min"
+}

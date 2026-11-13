@@ -1,0 +1,10 @@
+{
+  "checkpoint_path": "../checkpoints_conditional/checkpoint_final.pt",
+  "zero_prediction_mse": 1.0113410949707031,
+  "model_mse": 0.13122707605361938,
+  "improvement_over_zero": 87.02444934689213,
+  "correlation": 0.9412333965301514,
+  "model_better_than_zero": true,
+  "missing_keys": 0,
+  "unexpected_keys": 0
+}

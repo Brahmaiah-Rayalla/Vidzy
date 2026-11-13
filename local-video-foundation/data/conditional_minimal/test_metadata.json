@@ -1,0 +1,128 @@
+[
+  {
+    "image_path": "data/conditional_minimal\\image_00027.png",
+    "caption": "A large yellow square and a medium light_gray triangle on light_yellow.",
+    "scene_params": {
+      "bg_color": "light_yellow",
+      "objects": [
+        {
+          "shape": "square",
+          "color": "yellow",
+          "size": "large",
+          "position": "right",
+          "x": 47,
+          "y": 27,
+          "size_pixels": 22
+        },
+        {
+          "shape": "triangle",
+          "color": "light_gray",
+          "size": "medium",
+          "position": "top",
+          "x": 24,
+          "y": 16,
+          "size_pixels": 16
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/conditional_minimal\\image_00017.png",
+    "caption": "A small purple circle on a light_gray background.",
+    "scene_params": {
+      "bg_color": "light_gray",
+      "objects": [
+        {
+          "shape": "circle",
+          "color": "purple",
+          "size": "small",
+          "position": "bottom",
+          "x": 34,
+          "y": 52,
+          "size_pixels": 9
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/conditional_minimal\\image_00049.png",
+    "caption": "A light_gray triangle in the bottom and a orange square in the top on light_blue.",
+    "scene_params": {
+      "bg_color": "light_blue",
+      "objects": [
+        {
+          "shape": "triangle",
+          "color": "light_gray",
+          "size": "small",
+          "position": "bottom",
+          "x": 27,
+          "y": 44,
+          "size_pixels": 9
+        },
+        {
+          "shape": "square",
+          "color": "orange",
+          "size": "medium",
+          "position": "top",
+          "x": 33,
+          "y": 15,
+          "size_pixels": 16
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/conditional_minimal\\image_00031.png",
+    "caption": "On light_gray, there is a medium cyan triangle and a small red square.",
+    "scene_params": {
+      "bg_color": "light_gray",
+      "objects": [
+        {
+          "shape": "triangle",
+          "color": "cyan",
+          "size": "medium",
+          "position": "center",
+          "x": 24,
+          "y": 30,
+          "size_pixels": 16
+        },
+        {
+          "shape": "square",
+          "color": "red",
+          "size": "small",
+          "position": "right",
+          "x": 54,
+          "y": 37,
+          "size_pixels": 9
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/conditional_minimal\\image_00014.png",
+    "caption": "A large white circle and a medium purple circle on light_gray.",
+    "scene_params": {
+      "bg_color": "light_gray",
+      "objects": [
+        {
+          "shape": "circle",
+          "color": "white",
+          "size": "large",
+          "position": "center",
+          "x": 33,
+          "y": 31,
+          "size_pixels": 22
+        },
+        {
+          "shape": "circle",
+          "color": "purple",
+          "size": "medium",
+          "position": "left",
+          "x": 7,
+          "y": 46,
+          "size_pixels": 16
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,24 @@
+{
+  "algorithm": "sha256",
+  "files": {
+    "L13_BOTTLENECK_FUSION_AUDIT.json": "674186a47ec0af328fba284e6d651a21d58ada91671afd42d3628ae0fa27f2c6",
+    "L13_BOTTLENECK_FUSION_AUDIT.md": "8ada3282b3482f6f17a7a3d5dad07118cacfec84cb7ca09a6d5bfca04cf13fd2",
+    "L13_CHECKPOINT_AND_CONDITIONING_AUDIT.json": "beeeed8e1bca1de8159867f6c09cad5ec2f513ad4e675fe6a569682bcd18fc82",
+    "L13_DATASET_GROUND_TRUTH_AUDIT.json": "73defdd6d41c65c8a2677553c4f15056dec3942e4b736670df49c59d59db4f01",
+    "L13_DETECTOR_CALIBRATION.json": "b742ec11d6440283f78173107dc9822437e1c9e22bfcfa14447b4369e7a7499d",
+    "L13_GLOBAL_MOTION_CALIBRATION.json": "2089d14adaed60e57becd5a79bf1a629b73d20bdf0b6a02b3965a56a3ee35245",
+    "L13_LOWRES_FUSION_AUDIT.json": "bd26598fc779e15fbc2fe1a30b2ab3a5ead1d74968a9527f5d017dcb60df5acb",
+    "l13_phase1_3.py": "deff4218a0f233891bac3e1c8d87843ce5ca33d9902cb45d92f45cdc68f0bb94",
+    "l13_phase2_threeway.py": "bbf16bab68e710f7710717c01d8294fa7693a47a21c92e00e2e44e52035258e3",
+    "l13_phase4_5.py": "089699edd31bff23316c501494cb686f889a542395c31aca579d0139e61475e7",
+    "L13_SPATIAL_QUALITY_METRICS.json": "b426b73303c1f21a6c813a8638a017b1c5c8a8e66c69d0d39f5d41c9f423bf57",
+    "L13_THREE_WAY_RAW.json": "bf68bd472630b6fdc6afbc6c1dec8337e4669226193f2f7f38494955db1b4805",
+    "L13_THREE_WAY_SPATIAL_COMPARISON.md": "d3d08765d28a6ede0af702120f2f015af3d9cbd3e8aa1afc2973f258a7459c1e",
+    "L13_TRAINING_READINESS_RECOMMENDATION.md": "91d5b95cf875c175a74a8baac786fc9d3586641fb8bf2d8ac7a3d6be6eda0692",
+    "STAGE3_2_9L13_FINAL_REPORT.md": "03540d99911db14502ae5cefabb869a14fd4b9df6b7476ffeb32b1bf3d09f6a9",
+    "_skipped_binary_dirs": {
+      "three_way": "images+npz preserved on disk",
+      "gt_examples": "contact sheets preserved"
+    }
+  }
+}

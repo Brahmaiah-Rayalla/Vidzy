@@ -1,0 +1,65 @@
+{
+  "experiment_B": {
+    "final_motion_delta_max": 0.0,
+    "final_motion_delta_mean": 0.0,
+    "motion_delta_progression": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "experiment_C": {
+    "final_motion_delta_max": 0.0,
+    "final_motion_delta_mean": 0.0,
+    "final_temporal_delta_max": 0.0,
+    "final_temporal_delta_mean": 0.0,
+    "final_fusion_delta_max": 0.0,
+    "final_fusion_delta_mean": 0.0,
+    "motion_delta_progression": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "temporal_delta_progression": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "fusion_delta_progression": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "comparison": {
+    "motion_delta_difference": 0.0
+  }
+}

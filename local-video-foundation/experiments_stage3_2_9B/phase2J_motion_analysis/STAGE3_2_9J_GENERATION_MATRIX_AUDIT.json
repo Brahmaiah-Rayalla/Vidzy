@@ -1,0 +1,1197 @@
+{
+  "expected_count": 36,
+  "configs": [
+    "B",
+    "C",
+    "D"
+  ],
+  "seeds": [
+    42,
+    123,
+    456
+  ],
+  "prompts": [
+    "A red object moving left",
+    "A red object moving right",
+    "A blue object moving diagonally",
+    "A yellow object remaining stationary"
+  ],
+  "videos": {
+    "B_seed42_prompt0": {
+      "config": "B",
+      "seed": 42,
+      "prompt_idx": 0,
+      "prompt": "A red object moving left",
+      "video_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\B\\seed_42\\prompt_00\\video.gif",
+      "metadata_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\B\\seed_42\\prompt_00\\metadata.json",
+      "video_hash": "8594a8a704f921552290b65fa8fcdca9bad6bc0a3285c32fab101e280baa894f",
+      "metadata": {
+        "config_name": "B",
+        "checkpoint_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2C\\checkpoints\\checkpoint_phase2c_B.pt",
+        "prompt": "A red object moving left",
+        "seed": 42,
+        "enable_temporal": false,
+        "sampling_steps": 25,
+        "total_time": 41.51447248458862,
+        "avg_step_time": 1.7297696868578594,
+        "text_conditioning": "CORRECTED",
+        "video_shape": [
+          1,
+          3,
+          16,
+          64,
+          64
+        ],
+        "video_mean": 0.5555970668792725,
+        "video_std": 0.45076194405555725
+      },
+      "metadata_valid": true
+    },
+    "B_seed42_prompt1": {
+      "config": "B",
+      "seed": 42,
+      "prompt_idx": 1,
+      "prompt": "A red object moving right",
+      "video_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\B\\seed_42\\prompt_01\\video.gif",
+      "metadata_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\B\\seed_42\\prompt_01\\metadata.json",
+      "video_hash": "e571996ed5557096871e22d6e9f2437d1898aedef95b619570c2c67980aa9d15",
+      "metadata": {
+        "config_name": "B",
+        "checkpoint_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2C\\checkpoints\\checkpoint_phase2c_B.pt",
+        "prompt": "A red object moving right",
+        "seed": 42,
+        "enable_temporal": false,
+        "sampling_steps": 25,
+        "total_time": 43.67324471473694,
+        "avg_step_time": 1.8197185297807057,
+        "text_conditioning": "CORRECTED",
+        "video_shape": [
+          1,
+          3,
+          16,
+          64,
+          64
+        ],
+        "video_mean": 0.5252328515052795,
+        "video_std": 0.4550873637199402
+      },
+      "metadata_valid": true
+    },
+    "B_seed42_prompt2": {
+      "config": "B",
+      "seed": 42,
+      "prompt_idx": 2,
+      "prompt": "A blue object moving diagonally",
+      "video_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\B\\seed_42\\prompt_02\\video.gif",
+      "metadata_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\B\\seed_42\\prompt_02\\metadata.json",
+      "video_hash": "00cdd4d0656622a6504d6f759893d6dd6fbea0954ca19b7d3bc5b9ef41a2327c",
+      "metadata": {
+        "config_name": "B",
+        "checkpoint_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2C\\checkpoints\\checkpoint_phase2c_B.pt",
+        "prompt": "A blue object moving diagonally",
+        "seed": 42,
+        "enable_temporal": false,
+        "sampling_steps": 25,
+        "total_time": 45.725759983062744,
+        "avg_step_time": 1.905239999294281,
+        "text_conditioning": "CORRECTED",
+        "video_shape": [
+          1,
+          3,
+          16,
+          64,
+          64
+        ],
+        "video_mean": 0.557749330997467,
+        "video_std": 0.45634153485298157
+      },
+      "metadata_valid": true
+    },
+    "B_seed42_prompt3": {
+      "config": "B",
+      "seed": 42,
+      "prompt_idx": 3,
+      "prompt": "A yellow object remaining stationary",
+      "video_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\B\\seed_42\\prompt_03\\video.gif",
+      "metadata_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\B\\seed_42\\prompt_03\\metadata.json",
+      "video_hash": "485c8fd5299a5ab9b4393d186e651899c46faf9496a2bb226cb0dea042d89fc8",
+      "metadata": {
+        "config_name": "B",
+        "checkpoint_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2C\\checkpoints\\checkpoint_phase2c_B.pt",
+        "prompt": "A yellow object remaining stationary",
+        "seed": 42,
+        "enable_temporal": false,
+        "sampling_steps": 25,
+        "total_time": 44.662039041519165,
+        "avg_step_time": 1.860918293396632,
+        "text_conditioning": "CORRECTED",
+        "video_shape": [
+          1,
+          3,
+          16,
+          64,
+          64
+        ],
+        "video_mean": 0.5536118149757385,
+        "video_std": 0.4537622928619385
+      },
+      "metadata_valid": true
+    },
+    "B_seed123_prompt0": {
+      "config": "B",
+      "seed": 123,
+      "prompt_idx": 0,
+      "prompt": "A red object moving left",
+      "video_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\B\\seed_123\\prompt_00\\video.gif",
+      "metadata_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\B\\seed_123\\prompt_00\\metadata.json",
+      "video_hash": "960b88ec32297d2898fcbedd905761f78d17d98eda9125bff77a3fc01f9d0615",
+      "metadata": {
+        "config_name": "B",
+        "checkpoint_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2C\\checkpoints\\checkpoint_phase2c_B.pt",
+        "prompt": "A red object moving left",
+        "seed": 123,
+        "enable_temporal": false,
+        "sampling_steps": 25,
+        "total_time": 44.235246419906616,
+        "avg_step_time": 1.843135267496109,
+        "text_conditioning": "CORRECTED",
+        "video_shape": [
+          1,
+          3,
+          16,
+          64,
+          64
+        ],
+        "video_mean": 0.491182804107666,
+        "video_std": 0.4587516188621521
+      },
+      "metadata_valid": true
+    },
+    "B_seed123_prompt1": {
+      "config": "B",
+      "seed": 123,
+      "prompt_idx": 1,
+      "prompt": "A red object moving right",
+      "video_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\B\\seed_123\\prompt_01\\video.gif",
+      "metadata_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\B\\seed_123\\prompt_01\\metadata.json",
+      "video_hash": "7d4652a33ac907898bc9950ddfa93c1d14377f80ac7f5ab92440cc341c12fe3c",
+      "metadata": {
+        "config_name": "B",
+        "checkpoint_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2C\\checkpoints\\checkpoint_phase2c_B.pt",
+        "prompt": "A red object moving right",
+        "seed": 123,
+        "enable_temporal": false,
+        "sampling_steps": 25,
+        "total_time": 44.52983522415161,
+        "avg_step_time": 1.8554098010063171,
+        "text_conditioning": "CORRECTED",
+        "video_shape": [
+          1,
+          3,
+          16,
+          64,
+          64
+        ],
+        "video_mean": 0.4680882394313812,
+        "video_std": 0.4612274467945099
+      },
+      "metadata_valid": true
+    },
+    "B_seed123_prompt2": {
+      "config": "B",
+      "seed": 123,
+      "prompt_idx": 2,
+      "prompt": "A blue object moving diagonally",
+      "video_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\B\\seed_123\\prompt_02\\video.gif",
+      "metadata_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\B\\seed_123\\prompt_02\\metadata.json",
+      "video_hash": "cb865ecd5730a1b02c3fb4295834693ae5b030949988d742e69b1f052f034584",
+      "metadata": {
+        "config_name": "B",
+        "checkpoint_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2C\\checkpoints\\checkpoint_phase2c_B.pt",
+        "prompt": "A blue object moving diagonally",
+        "seed": 123,
+        "enable_temporal": false,
+        "sampling_steps": 25,
+        "total_time": 46.36682724952698,
+        "avg_step_time": 1.9319511353969574,
+        "text_conditioning": "CORRECTED",
+        "video_shape": [
+          1,
+          3,
+          16,
+          64,
+          64
+        ],
+        "video_mean": 0.5002877116203308,
+        "video_std": 0.4592265486717224
+      },
+      "metadata_valid": true
+    },
+    "B_seed123_prompt3": {
+      "config": "B",
+      "seed": 123,
+      "prompt_idx": 3,
+      "prompt": "A yellow object remaining stationary",
+      "video_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\B\\seed_123\\prompt_03\\video.gif",
+      "metadata_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\B\\seed_123\\prompt_03\\metadata.json",
+      "video_hash": "f66a8c51e32d2898561e8e700803abe52219e781c5c969120460956bad0105f9",
+      "metadata": {
+        "config_name": "B",
+        "checkpoint_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2C\\checkpoints\\checkpoint_phase2c_B.pt",
+        "prompt": "A yellow object remaining stationary",
+        "seed": 123,
+        "enable_temporal": false,
+        "sampling_steps": 25,
+        "total_time": 45.264951944351196,
+        "avg_step_time": 1.8860396643479664,
+        "text_conditioning": "CORRECTED",
+        "video_shape": [
+          1,
+          3,
+          16,
+          64,
+          64
+        ],
+        "video_mean": 0.4903445243835449,
+        "video_std": 0.456070214509964
+      },
+      "metadata_valid": true
+    },
+    "B_seed456_prompt0": {
+      "config": "B",
+      "seed": 456,
+      "prompt_idx": 0,
+      "prompt": "A red object moving left",
+      "video_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\B\\seed_456\\prompt_00\\video.gif",
+      "metadata_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\B\\seed_456\\prompt_00\\metadata.json",
+      "video_hash": "ac9d8c9b34cb56a6f2bdbfd231c7d359838033c272c00237e2d0228ac7d758fb",
+      "metadata": {
+        "config_name": "B",
+        "checkpoint_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2C\\checkpoints\\checkpoint_phase2c_B.pt",
+        "prompt": "A red object moving left",
+        "seed": 456,
+        "enable_temporal": false,
+        "sampling_steps": 25,
+        "total_time": 45.558100938797,
+        "avg_step_time": 1.8982542057832081,
+        "text_conditioning": "CORRECTED",
+        "video_shape": [
+          1,
+          3,
+          16,
+          64,
+          64
+        ],
+        "video_mean": 0.55657559633255,
+        "video_std": 0.44134458899497986
+      },
+      "metadata_valid": true
+    },
+    "B_seed456_prompt1": {
+      "config": "B",
+      "seed": 456,
+      "prompt_idx": 1,
+      "prompt": "A red object moving right",
+      "video_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\B\\seed_456\\prompt_01\\video.gif",
+      "metadata_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\B\\seed_456\\prompt_01\\metadata.json",
+      "video_hash": "62fb168eea2f925cd12d49bc0ffd21f6913a89f3315fe660dccc24b646491db8",
+      "metadata": {
+        "config_name": "B",
+        "checkpoint_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2C\\checkpoints\\checkpoint_phase2c_B.pt",
+        "prompt": "A red object moving right",
+        "seed": 456,
+        "enable_temporal": false,
+        "sampling_steps": 25,
+        "total_time": 51.901580810546875,
+        "avg_step_time": 2.1625658671061196,
+        "text_conditioning": "CORRECTED",
+        "video_shape": [
+          1,
+          3,
+          16,
+          64,
+          64
+        ],
+        "video_mean": 0.5235255360603333,
+        "video_std": 0.4478301703929901
+      },
+      "metadata_valid": true
+    },
+    "B_seed456_prompt2": {
+      "config": "B",
+      "seed": 456,
+      "prompt_idx": 2,
+      "prompt": "A blue object moving diagonally",
+      "video_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\B\\seed_456\\prompt_02\\video.gif",
+      "metadata_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\B\\seed_456\\prompt_02\\metadata.json",
+      "video_hash": "26cfa0122fe2b9ac6f51b63539b9304caf73346f54317606d43da5fb9f6c3dbe",
+      "metadata": {
+        "config_name": "B",
+        "checkpoint_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2C\\checkpoints\\checkpoint_phase2c_B.pt",
+        "prompt": "A blue object moving diagonally",
+        "seed": 456,
+        "enable_temporal": false,
+        "sampling_steps": 25,
+        "total_time": 47.474217891693115,
+        "avg_step_time": 1.9780924121538799,
+        "text_conditioning": "CORRECTED",
+        "video_shape": [
+          1,
+          3,
+          16,
+          64,
+          64
+        ],
+        "video_mean": 0.5581064820289612,
+        "video_std": 0.44715428352355957
+      },
+      "metadata_valid": true
+    },
+    "B_seed456_prompt3": {
+      "config": "B",
+      "seed": 456,
+      "prompt_idx": 3,
+      "prompt": "A yellow object remaining stationary",
+      "video_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\B\\seed_456\\prompt_03\\video.gif",
+      "metadata_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\B\\seed_456\\prompt_03\\metadata.json",
+      "video_hash": "31b924307ba76fc0e4ef750e1292838af298e13ae7c6da5e1e5326778deb6df0",
+      "metadata": {
+        "config_name": "B",
+        "checkpoint_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2C\\checkpoints\\checkpoint_phase2c_B.pt",
+        "prompt": "A yellow object remaining stationary",
+        "seed": 456,
+        "enable_temporal": false,
+        "sampling_steps": 25,
+        "total_time": 44.08210730552673,
+        "avg_step_time": 1.836754471063614,
+        "text_conditioning": "CORRECTED",
+        "video_shape": [
+          1,
+          3,
+          16,
+          64,
+          64
+        ],
+        "video_mean": 0.554655134677887,
+        "video_std": 0.44432124495506287
+      },
+      "metadata_valid": true
+    },
+    "C_seed42_prompt0": {
+      "config": "C",
+      "seed": 42,
+      "prompt_idx": 0,
+      "prompt": "A red object moving left",
+      "video_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\C\\seed_42\\prompt_00\\video.gif",
+      "metadata_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\C\\seed_42\\prompt_00\\metadata.json",
+      "video_hash": "5fa2e2b1e6907b789616b93ce30c5f3d8405c2e178235c5f0059cf309e3efa89",
+      "metadata": {
+        "config_name": "C",
+        "checkpoint_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2C\\checkpoints\\checkpoint_phase2c_C.pt",
+        "prompt": "A red object moving left",
+        "seed": 42,
+        "enable_temporal": true,
+        "sampling_steps": 25,
+        "total_time": 89.13933825492859,
+        "avg_step_time": 3.714139093955358,
+        "text_conditioning": "CORRECTED",
+        "video_shape": [
+          1,
+          3,
+          16,
+          64,
+          64
+        ],
+        "video_mean": 0.5568077564239502,
+        "video_std": 0.45071297883987427
+      },
+      "metadata_valid": true
+    },
+    "C_seed42_prompt1": {
+      "config": "C",
+      "seed": 42,
+      "prompt_idx": 1,
+      "prompt": "A red object moving right",
+      "video_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\C\\seed_42\\prompt_01\\video.gif",
+      "metadata_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\C\\seed_42\\prompt_01\\metadata.json",
+      "video_hash": "a6bbf0578c31115c52a2ef82d7e41e58fbe8b5fee2bb8b7b32885e24267ffc8f",
+      "metadata": {
+        "config_name": "C",
+        "checkpoint_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2C\\checkpoints\\checkpoint_phase2c_C.pt",
+        "prompt": "A red object moving right",
+        "seed": 42,
+        "enable_temporal": true,
+        "sampling_steps": 25,
+        "total_time": 89.74835085868835,
+        "avg_step_time": 3.7395146191120148,
+        "text_conditioning": "CORRECTED",
+        "video_shape": [
+          1,
+          3,
+          16,
+          64,
+          64
+        ],
+        "video_mean": 0.5264960527420044,
+        "video_std": 0.4552045166492462
+      },
+      "metadata_valid": true
+    },
+    "C_seed42_prompt2": {
+      "config": "C",
+      "seed": 42,
+      "prompt_idx": 2,
+      "prompt": "A blue object moving diagonally",
+      "video_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\C\\seed_42\\prompt_02\\video.gif",
+      "metadata_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\C\\seed_42\\prompt_02\\metadata.json",
+      "video_hash": "7946dcbb850c2579480f9501816dc8bd6d0d829954ca818058a84f9a723912c8",
+      "metadata": {
+        "config_name": "C",
+        "checkpoint_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2C\\checkpoints\\checkpoint_phase2c_C.pt",
+        "prompt": "A blue object moving diagonally",
+        "seed": 42,
+        "enable_temporal": true,
+        "sampling_steps": 25,
+        "total_time": 91.23624467849731,
+        "avg_step_time": 3.801510194937388,
+        "text_conditioning": "CORRECTED",
+        "video_shape": [
+          1,
+          3,
+          16,
+          64,
+          64
+        ],
+        "video_mean": 0.5584407448768616,
+        "video_std": 0.45621511340141296
+      },
+      "metadata_valid": true
+    },
+    "C_seed42_prompt3": {
+      "config": "C",
+      "seed": 42,
+      "prompt_idx": 3,
+      "prompt": "A yellow object remaining stationary",
+      "video_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\C\\seed_42\\prompt_03\\video.gif",
+      "metadata_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\C\\seed_42\\prompt_03\\metadata.json",
+      "video_hash": "45ed1808256772a499ea2bb0779ed971bea3ee35dcc87900795843619effacfb",
+      "metadata": {
+        "config_name": "C",
+        "checkpoint_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2C\\checkpoints\\checkpoint_phase2c_C.pt",
+        "prompt": "A yellow object remaining stationary",
+        "seed": 42,
+        "enable_temporal": true,
+        "sampling_steps": 25,
+        "total_time": 89.72041368484497,
+        "avg_step_time": 3.738350570201874,
+        "text_conditioning": "CORRECTED",
+        "video_shape": [
+          1,
+          3,
+          16,
+          64,
+          64
+        ],
+        "video_mean": 0.5542483925819397,
+        "video_std": 0.45358940958976746
+      },
+      "metadata_valid": true
+    },
+    "C_seed123_prompt0": {
+      "config": "C",
+      "seed": 123,
+      "prompt_idx": 0,
+      "prompt": "A red object moving left",
+      "video_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\C\\seed_123\\prompt_00\\video.gif",
+      "metadata_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\C\\seed_123\\prompt_00\\metadata.json",
+      "video_hash": "38b00148aa06c61ea8b565111c8fd9315537d88926acfe159249fb93d05cb842",
+      "metadata": {
+        "config_name": "C",
+        "checkpoint_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2C\\checkpoints\\checkpoint_phase2c_C.pt",
+        "prompt": "A red object moving left",
+        "seed": 123,
+        "enable_temporal": true,
+        "sampling_steps": 25,
+        "total_time": 89.57623600959778,
+        "avg_step_time": 3.732343167066574,
+        "text_conditioning": "CORRECTED",
+        "video_shape": [
+          1,
+          3,
+          16,
+          64,
+          64
+        ],
+        "video_mean": 0.4930087625980377,
+        "video_std": 0.45902878046035767
+      },
+      "metadata_valid": true
+    },
+    "C_seed123_prompt1": {
+      "config": "C",
+      "seed": 123,
+      "prompt_idx": 1,
+      "prompt": "A red object moving right",
+      "video_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\C\\seed_123\\prompt_01\\video.gif",
+      "metadata_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\C\\seed_123\\prompt_01\\metadata.json",
+      "video_hash": "520deea2ae3346396acd78227fca30cf629526fbef66bb2dd70a2cec0f8fb1d1",
+      "metadata": {
+        "config_name": "C",
+        "checkpoint_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2C\\checkpoints\\checkpoint_phase2c_C.pt",
+        "prompt": "A red object moving right",
+        "seed": 123,
+        "enable_temporal": true,
+        "sampling_steps": 25,
+        "total_time": 91.89361333847046,
+        "avg_step_time": 3.8289005557696023,
+        "text_conditioning": "CORRECTED",
+        "video_shape": [
+          1,
+          3,
+          16,
+          64,
+          64
+        ],
+        "video_mean": 0.4699775278568268,
+        "video_std": 0.46148139238357544
+      },
+      "metadata_valid": true
+    },
+    "C_seed123_prompt2": {
+      "config": "C",
+      "seed": 123,
+      "prompt_idx": 2,
+      "prompt": "A blue object moving diagonally",
+      "video_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\C\\seed_123\\prompt_02\\video.gif",
+      "metadata_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\C\\seed_123\\prompt_02\\metadata.json",
+      "video_hash": "ccaf0f7a9e40637a000d6ba83cfc8ed0ca2f5bb0e20514493d6b2892b4b91e7b",
+      "metadata": {
+        "config_name": "C",
+        "checkpoint_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2C\\checkpoints\\checkpoint_phase2c_C.pt",
+        "prompt": "A blue object moving diagonally",
+        "seed": 123,
+        "enable_temporal": true,
+        "sampling_steps": 25,
+        "total_time": 89.9616367816925,
+        "avg_step_time": 3.748401532570521,
+        "text_conditioning": "CORRECTED",
+        "video_shape": [
+          1,
+          3,
+          16,
+          64,
+          64
+        ],
+        "video_mean": 0.5016379952430725,
+        "video_std": 0.45949992537498474
+      },
+      "metadata_valid": true
+    },
+    "C_seed123_prompt3": {
+      "config": "C",
+      "seed": 123,
+      "prompt_idx": 3,
+      "prompt": "A yellow object remaining stationary",
+      "video_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\C\\seed_123\\prompt_03\\video.gif",
+      "metadata_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\C\\seed_123\\prompt_03\\metadata.json",
+      "video_hash": "55ed9010141244cb06a15ff40af8f02c16d803dade8b3feb563db6079f80a666",
+      "metadata": {
+        "config_name": "C",
+        "checkpoint_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2C\\checkpoints\\checkpoint_phase2c_C.pt",
+        "prompt": "A yellow object remaining stationary",
+        "seed": 123,
+        "enable_temporal": true,
+        "sampling_steps": 25,
+        "total_time": 89.46742486953735,
+        "avg_step_time": 3.7278093695640564,
+        "text_conditioning": "CORRECTED",
+        "video_shape": [
+          1,
+          3,
+          16,
+          64,
+          64
+        ],
+        "video_mean": 0.49182048439979553,
+        "video_std": 0.4564317464828491
+      },
+      "metadata_valid": true
+    },
+    "C_seed456_prompt0": {
+      "config": "C",
+      "seed": 456,
+      "prompt_idx": 0,
+      "prompt": "A red object moving left",
+      "video_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\C\\seed_456\\prompt_00\\video.gif",
+      "metadata_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\C\\seed_456\\prompt_00\\metadata.json",
+      "video_hash": "7ec313da23d9ebc1b62b75654559e0d48a532ef2e75435936e3786edee783fad",
+      "metadata": {
+        "config_name": "C",
+        "checkpoint_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2C\\checkpoints\\checkpoint_phase2c_C.pt",
+        "prompt": "A red object moving left",
+        "seed": 456,
+        "enable_temporal": true,
+        "sampling_steps": 25,
+        "total_time": 89.56750226020813,
+        "avg_step_time": 3.7319792608420053,
+        "text_conditioning": "CORRECTED",
+        "video_shape": [
+          1,
+          3,
+          16,
+          64,
+          64
+        ],
+        "video_mean": 0.5586379170417786,
+        "video_std": 0.4419088363647461
+      },
+      "metadata_valid": true
+    },
+    "C_seed456_prompt1": {
+      "config": "C",
+      "seed": 456,
+      "prompt_idx": 1,
+      "prompt": "A red object moving right",
+      "video_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\C\\seed_456\\prompt_01\\video.gif",
+      "metadata_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\C\\seed_456\\prompt_01\\metadata.json",
+      "video_hash": "d6633beb90d80465dc13150534ffc4090945b2e25a84c8875dac6f992867619f",
+      "metadata": {
+        "config_name": "C",
+        "checkpoint_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2C\\checkpoints\\checkpoint_phase2c_C.pt",
+        "prompt": "A red object moving right",
+        "seed": 456,
+        "enable_temporal": true,
+        "sampling_steps": 25,
+        "total_time": 88.4711766242981,
+        "avg_step_time": 3.6862990260124207,
+        "text_conditioning": "CORRECTED",
+        "video_shape": [
+          1,
+          3,
+          16,
+          64,
+          64
+        ],
+        "video_mean": 0.525838315486908,
+        "video_std": 0.4483432471752167
+      },
+      "metadata_valid": true
+    },
+    "C_seed456_prompt2": {
+      "config": "C",
+      "seed": 456,
+      "prompt_idx": 2,
+      "prompt": "A blue object moving diagonally",
+      "video_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\C\\seed_456\\prompt_02\\video.gif",
+      "metadata_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\C\\seed_456\\prompt_02\\metadata.json",
+      "video_hash": "93812ddfaa0d81d24897a7647a67492cf01877230f9b9efb66533f34c7030a06",
+      "metadata": {
+        "config_name": "C",
+        "checkpoint_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2C\\checkpoints\\checkpoint_phase2c_C.pt",
+        "prompt": "A blue object moving diagonally",
+        "seed": 456,
+        "enable_temporal": true,
+        "sampling_steps": 25,
+        "total_time": 229.87793564796448,
+        "avg_step_time": 9.578247318665186,
+        "text_conditioning": "CORRECTED",
+        "video_shape": [
+          1,
+          3,
+          16,
+          64,
+          64
+        ],
+        "video_mean": 0.5595197677612305,
+        "video_std": 0.4474314749240875
+      },
+      "metadata_valid": true
+    },
+    "C_seed456_prompt3": {
+      "config": "C",
+      "seed": 456,
+      "prompt_idx": 3,
+      "prompt": "A yellow object remaining stationary",
+      "video_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\C\\seed_456\\prompt_03\\video.gif",
+      "metadata_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\C\\seed_456\\prompt_03\\metadata.json",
+      "video_hash": "2a5385fd9841285c1a95ff83aafb7f9c0ebe36ca010af6131e05f6e445a46a33",
+      "metadata": {
+        "config_name": "C",
+        "checkpoint_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2C\\checkpoints\\checkpoint_phase2c_C.pt",
+        "prompt": "A yellow object remaining stationary",
+        "seed": 456,
+        "enable_temporal": true,
+        "sampling_steps": 25,
+        "total_time": 98.33013534545898,
+        "avg_step_time": 4.097088972727458,
+        "text_conditioning": "CORRECTED",
+        "video_shape": [
+          1,
+          3,
+          16,
+          64,
+          64
+        ],
+        "video_mean": 0.5563399195671082,
+        "video_std": 0.444708913564682
+      },
+      "metadata_valid": true
+    },
+    "D_seed42_prompt0": {
+      "config": "D",
+      "seed": 42,
+      "prompt_idx": 0,
+      "prompt": "A red object moving left",
+      "video_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\D\\seed_42\\prompt_00\\video.gif",
+      "metadata_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\D\\seed_42\\prompt_00\\metadata.json",
+      "video_hash": "8594a8a704f921552290b65fa8fcdca9bad6bc0a3285c32fab101e280baa894f",
+      "metadata": {
+        "config_name": "D",
+        "checkpoint_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2C\\checkpoints\\checkpoint_phase2c_C.pt",
+        "prompt": "A red object moving left",
+        "seed": 42,
+        "enable_temporal": false,
+        "sampling_steps": 25,
+        "total_time": 57.858232498168945,
+        "avg_step_time": 2.410759687423706,
+        "text_conditioning": "CORRECTED",
+        "video_shape": [
+          1,
+          3,
+          16,
+          64,
+          64
+        ],
+        "video_mean": 0.5555970668792725,
+        "video_std": 0.45076194405555725
+      },
+      "metadata_valid": true
+    },
+    "D_seed42_prompt1": {
+      "config": "D",
+      "seed": 42,
+      "prompt_idx": 1,
+      "prompt": "A red object moving right",
+      "video_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\D\\seed_42\\prompt_01\\video.gif",
+      "metadata_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\D\\seed_42\\prompt_01\\metadata.json",
+      "video_hash": "e571996ed5557096871e22d6e9f2437d1898aedef95b619570c2c67980aa9d15",
+      "metadata": {
+        "config_name": "D",
+        "checkpoint_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2C\\checkpoints\\checkpoint_phase2c_C.pt",
+        "prompt": "A red object moving right",
+        "seed": 42,
+        "enable_temporal": false,
+        "sampling_steps": 25,
+        "total_time": 55.503528118133545,
+        "avg_step_time": 2.312647004922231,
+        "text_conditioning": "CORRECTED",
+        "video_shape": [
+          1,
+          3,
+          16,
+          64,
+          64
+        ],
+        "video_mean": 0.5252328515052795,
+        "video_std": 0.4550873637199402
+      },
+      "metadata_valid": true
+    },
+    "D_seed42_prompt2": {
+      "config": "D",
+      "seed": 42,
+      "prompt_idx": 2,
+      "prompt": "A blue object moving diagonally",
+      "video_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\D\\seed_42\\prompt_02\\video.gif",
+      "metadata_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\D\\seed_42\\prompt_02\\metadata.json",
+      "video_hash": "00cdd4d0656622a6504d6f759893d6dd6fbea0954ca19b7d3bc5b9ef41a2327c",
+      "metadata": {
+        "config_name": "D",
+        "checkpoint_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2C\\checkpoints\\checkpoint_phase2c_C.pt",
+        "prompt": "A blue object moving diagonally",
+        "seed": 42,
+        "enable_temporal": false,
+        "sampling_steps": 25,
+        "total_time": 46.28305530548096,
+        "avg_step_time": 1.9284606377283733,
+        "text_conditioning": "CORRECTED",
+        "video_shape": [
+          1,
+          3,
+          16,
+          64,
+          64
+        ],
+        "video_mean": 0.557749330997467,
+        "video_std": 0.45634153485298157
+      },
+      "metadata_valid": true
+    },
+    "D_seed42_prompt3": {
+      "config": "D",
+      "seed": 42,
+      "prompt_idx": 3,
+      "prompt": "A yellow object remaining stationary",
+      "video_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\D\\seed_42\\prompt_03\\video.gif",
+      "metadata_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\D\\seed_42\\prompt_03\\metadata.json",
+      "video_hash": "485c8fd5299a5ab9b4393d186e651899c46faf9496a2bb226cb0dea042d89fc8",
+      "metadata": {
+        "config_name": "D",
+        "checkpoint_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2C\\checkpoints\\checkpoint_phase2c_C.pt",
+        "prompt": "A yellow object remaining stationary",
+        "seed": 42,
+        "enable_temporal": false,
+        "sampling_steps": 25,
+        "total_time": 50.51724863052368,
+        "avg_step_time": 2.1048853596051535,
+        "text_conditioning": "CORRECTED",
+        "video_shape": [
+          1,
+          3,
+          16,
+          64,
+          64
+        ],
+        "video_mean": 0.5536118149757385,
+        "video_std": 0.4537622928619385
+      },
+      "metadata_valid": true
+    },
+    "D_seed123_prompt0": {
+      "config": "D",
+      "seed": 123,
+      "prompt_idx": 0,
+      "prompt": "A red object moving left",
+      "video_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\D\\seed_123\\prompt_00\\video.gif",
+      "metadata_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\D\\seed_123\\prompt_00\\metadata.json",
+      "video_hash": "960b88ec32297d2898fcbedd905761f78d17d98eda9125bff77a3fc01f9d0615",
+      "metadata": {
+        "config_name": "D",
+        "checkpoint_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2C\\checkpoints\\checkpoint_phase2c_C.pt",
+        "prompt": "A red object moving left",
+        "seed": 123,
+        "enable_temporal": false,
+        "sampling_steps": 25,
+        "total_time": 50.646708488464355,
+        "avg_step_time": 2.1102795203526816,
+        "text_conditioning": "CORRECTED",
+        "video_shape": [
+          1,
+          3,
+          16,
+          64,
+          64
+        ],
+        "video_mean": 0.491182804107666,
+        "video_std": 0.4587516188621521
+      },
+      "metadata_valid": true
+    },
+    "D_seed123_prompt1": {
+      "config": "D",
+      "seed": 123,
+      "prompt_idx": 1,
+      "prompt": "A red object moving right",
+      "video_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\D\\seed_123\\prompt_01\\video.gif",
+      "metadata_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\D\\seed_123\\prompt_01\\metadata.json",
+      "video_hash": "7d4652a33ac907898bc9950ddfa93c1d14377f80ac7f5ab92440cc341c12fe3c",
+      "metadata": {
+        "config_name": "D",
+        "checkpoint_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2C\\checkpoints\\checkpoint_phase2c_C.pt",
+        "prompt": "A red object moving right",
+        "seed": 123,
+        "enable_temporal": false,
+        "sampling_steps": 25,
+        "total_time": 48.413716554641724,
+        "avg_step_time": 2.0172381897767386,
+        "text_conditioning": "CORRECTED",
+        "video_shape": [
+          1,
+          3,
+          16,
+          64,
+          64
+        ],
+        "video_mean": 0.4680882394313812,
+        "video_std": 0.4612274467945099
+      },
+      "metadata_valid": true
+    },
+    "D_seed123_prompt2": {
+      "config": "D",
+      "seed": 123,
+      "prompt_idx": 2,
+      "prompt": "A blue object moving diagonally",
+      "video_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\D\\seed_123\\prompt_02\\video.gif",
+      "metadata_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\D\\seed_123\\prompt_02\\metadata.json",
+      "video_hash": "cb865ecd5730a1b02c3fb4295834693ae5b030949988d742e69b1f052f034584",
+      "metadata": {
+        "config_name": "D",
+        "checkpoint_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2C\\checkpoints\\checkpoint_phase2c_C.pt",
+        "prompt": "A blue object moving diagonally",
+        "seed": 123,
+        "enable_temporal": false,
+        "sampling_steps": 25,
+        "total_time": 47.37169098854065,
+        "avg_step_time": 1.9738204578558605,
+        "text_conditioning": "CORRECTED",
+        "video_shape": [
+          1,
+          3,
+          16,
+          64,
+          64
+        ],
+        "video_mean": 0.5002877116203308,
+        "video_std": 0.4592265486717224
+      },
+      "metadata_valid": true
+    },
+    "D_seed123_prompt3": {
+      "config": "D",
+      "seed": 123,
+      "prompt_idx": 3,
+      "prompt": "A yellow object remaining stationary",
+      "video_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\D\\seed_123\\prompt_03\\video.gif",
+      "metadata_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\D\\seed_123\\prompt_03\\metadata.json",
+      "video_hash": "f66a8c51e32d2898561e8e700803abe52219e781c5c969120460956bad0105f9",
+      "metadata": {
+        "config_name": "D",
+        "checkpoint_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2C\\checkpoints\\checkpoint_phase2c_C.pt",
+        "prompt": "A yellow object remaining stationary",
+        "seed": 123,
+        "enable_temporal": false,
+        "sampling_steps": 25,
+        "total_time": 46.88824677467346,
+        "avg_step_time": 1.9536769489447277,
+        "text_conditioning": "CORRECTED",
+        "video_shape": [
+          1,
+          3,
+          16,
+          64,
+          64
+        ],
+        "video_mean": 0.4903445243835449,
+        "video_std": 0.456070214509964
+      },
+      "metadata_valid": true
+    },
+    "D_seed456_prompt0": {
+      "config": "D",
+      "seed": 456,
+      "prompt_idx": 0,
+      "prompt": "A red object moving left",
+      "video_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\D\\seed_456\\prompt_00\\video.gif",
+      "metadata_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\D\\seed_456\\prompt_00\\metadata.json",
+      "video_hash": "ac9d8c9b34cb56a6f2bdbfd231c7d359838033c272c00237e2d0228ac7d758fb",
+      "metadata": {
+        "config_name": "D",
+        "checkpoint_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2C\\checkpoints\\checkpoint_phase2c_C.pt",
+        "prompt": "A red object moving left",
+        "seed": 456,
+        "enable_temporal": false,
+        "sampling_steps": 25,
+        "total_time": 47.12436628341675,
+        "avg_step_time": 1.9635152618090312,
+        "text_conditioning": "CORRECTED",
+        "video_shape": [
+          1,
+          3,
+          16,
+          64,
+          64
+        ],
+        "video_mean": 0.55657559633255,
+        "video_std": 0.44134458899497986
+      },
+      "metadata_valid": true
+    },
+    "D_seed456_prompt1": {
+      "config": "D",
+      "seed": 456,
+      "prompt_idx": 1,
+      "prompt": "A red object moving right",
+      "video_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\D\\seed_456\\prompt_01\\video.gif",
+      "metadata_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\D\\seed_456\\prompt_01\\metadata.json",
+      "video_hash": "62fb168eea2f925cd12d49bc0ffd21f6913a89f3315fe660dccc24b646491db8",
+      "metadata": {
+        "config_name": "D",
+        "checkpoint_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2C\\checkpoints\\checkpoint_phase2c_C.pt",
+        "prompt": "A red object moving right",
+        "seed": 456,
+        "enable_temporal": false,
+        "sampling_steps": 25,
+        "total_time": 48.651618003845215,
+        "avg_step_time": 2.0271507501602173,
+        "text_conditioning": "CORRECTED",
+        "video_shape": [
+          1,
+          3,
+          16,
+          64,
+          64
+        ],
+        "video_mean": 0.5235255360603333,
+        "video_std": 0.4478301703929901
+      },
+      "metadata_valid": true
+    },
+    "D_seed456_prompt2": {
+      "config": "D",
+      "seed": 456,
+      "prompt_idx": 2,
+      "prompt": "A blue object moving diagonally",
+      "video_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\D\\seed_456\\prompt_02\\video.gif",
+      "metadata_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\D\\seed_456\\prompt_02\\metadata.json",
+      "video_hash": "26cfa0122fe2b9ac6f51b63539b9304caf73346f54317606d43da5fb9f6c3dbe",
+      "metadata": {
+        "config_name": "D",
+        "checkpoint_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2C\\checkpoints\\checkpoint_phase2c_C.pt",
+        "prompt": "A blue object moving diagonally",
+        "seed": 456,
+        "enable_temporal": false,
+        "sampling_steps": 25,
+        "total_time": 47.29584884643555,
+        "avg_step_time": 1.9706603686014812,
+        "text_conditioning": "CORRECTED",
+        "video_shape": [
+          1,
+          3,
+          16,
+          64,
+          64
+        ],
+        "video_mean": 0.5581064820289612,
+        "video_std": 0.44715428352355957
+      },
+      "metadata_valid": true
+    },
+    "D_seed456_prompt3": {
+      "config": "D",
+      "seed": 456,
+      "prompt_idx": 3,
+      "prompt": "A yellow object remaining stationary",
+      "video_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\D\\seed_456\\prompt_03\\video.gif",
+      "metadata_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\outputs_evaluation\\D\\seed_456\\prompt_03\\metadata.json",
+      "video_hash": "31b924307ba76fc0e4ef750e1292838af298e13ae7c6da5e1e5326778deb6df0",
+      "metadata": {
+        "config_name": "D",
+        "checkpoint_path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2C\\checkpoints\\checkpoint_phase2c_C.pt",
+        "prompt": "A yellow object remaining stationary",
+        "seed": 456,
+        "enable_temporal": false,
+        "sampling_steps": 25,
+        "total_time": 49.30243945121765,
+        "avg_step_time": 2.054268310467402,
+        "text_conditioning": "CORRECTED",
+        "video_shape": [
+          1,
+          3,
+          16,
+          64,
+          64
+        ],
+        "video_mean": 0.554655134677887,
+        "video_std": 0.44432124495506287
+      },
+      "metadata_valid": true
+    }
+  },
+  "missing": [],
+  "duplicate_hashes": [
+    {
+      "hash": "8594a8a704f921552290b65fa8fcdca9bad6bc0a3285c32fab101e280baa894f",
+      "keys": [
+        "B_seed42_prompt0",
+        "D_seed42_prompt0"
+      ]
+    },
+    {
+      "hash": "e571996ed5557096871e22d6e9f2437d1898aedef95b619570c2c67980aa9d15",
+      "keys": [
+        "B_seed42_prompt1",
+        "D_seed42_prompt1"
+      ]
+    },
+    {
+      "hash": "00cdd4d0656622a6504d6f759893d6dd6fbea0954ca19b7d3bc5b9ef41a2327c",
+      "keys": [
+        "B_seed42_prompt2",
+        "D_seed42_prompt2"
+      ]
+    },
+    {
+      "hash": "485c8fd5299a5ab9b4393d186e651899c46faf9496a2bb226cb0dea042d89fc8",
+      "keys": [
+        "B_seed42_prompt3",
+        "D_seed42_prompt3"
+      ]
+    },
+    {
+      "hash": "960b88ec32297d2898fcbedd905761f78d17d98eda9125bff77a3fc01f9d0615",
+      "keys": [
+        "B_seed123_prompt0",
+        "D_seed123_prompt0"
+      ]
+    },
+    {
+      "hash": "7d4652a33ac907898bc9950ddfa93c1d14377f80ac7f5ab92440cc341c12fe3c",
+      "keys": [
+        "B_seed123_prompt1",
+        "D_seed123_prompt1"
+      ]
+    },
+    {
+      "hash": "cb865ecd5730a1b02c3fb4295834693ae5b030949988d742e69b1f052f034584",
+      "keys": [
+        "B_seed123_prompt2",
+        "D_seed123_prompt2"
+      ]
+    },
+    {
+      "hash": "f66a8c51e32d2898561e8e700803abe52219e781c5c969120460956bad0105f9",
+      "keys": [
+        "B_seed123_prompt3",
+        "D_seed123_prompt3"
+      ]
+    },
+    {
+      "hash": "ac9d8c9b34cb56a6f2bdbfd231c7d359838033c272c00237e2d0228ac7d758fb",
+      "keys": [
+        "B_seed456_prompt0",
+        "D_seed456_prompt0"
+      ]
+    },
+    {
+      "hash": "62fb168eea2f925cd12d49bc0ffd21f6913a89f3315fe660dccc24b646491db8",
+      "keys": [
+        "B_seed456_prompt1",
+        "D_seed456_prompt1"
+      ]
+    },
+    {
+      "hash": "26cfa0122fe2b9ac6f51b63539b9304caf73346f54317606d43da5fb9f6c3dbe",
+      "keys": [
+        "B_seed456_prompt2",
+        "D_seed456_prompt2"
+      ]
+    },
+    {
+      "hash": "31b924307ba76fc0e4ef750e1292838af298e13ae7c6da5e1e5326778deb6df0",
+      "keys": [
+        "B_seed456_prompt3",
+        "D_seed456_prompt3"
+      ]
+    }
+  ],
+  "metadata_issues": [],
+  "integrity_issues": [],
+  "summary": {
+    "total_found": 36,
+    "total_missing": 0,
+    "total_metadata_issues": 0,
+    "total_duplicate_hashes": 12,
+    "success": true
+  }
+}

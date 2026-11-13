@@ -1,0 +1,8 @@
+{
+  "trainable_params": 298696,
+  "frozen_unet_params": 9437443,
+  "trainable_tensors": 4,
+  "rgb_slice_frozen_via_hook": true,
+  "conv_bias_frozen": true,
+  "te_frozen": true
+}

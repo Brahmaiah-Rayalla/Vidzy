@@ -1,0 +1,5 @@
+{
+  "unet": "Stage2.1",
+  "rgb_conv": "Stage2.1 bit-identical",
+  "cond_conv": "N(0,0.02)"
+}

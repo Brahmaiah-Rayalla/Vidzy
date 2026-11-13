@@ -1,0 +1,15 @@
+{
+  "single_timestep": {
+    "loss_B": 2.6906909942626953,
+    "loss_C": 9.151639938354492,
+    "difference": 6.460948944091797,
+    "ratio": 3.4012229415671826
+  },
+  "multi_timestep": {
+    "mean_loss_B": 0.7965523987542837,
+    "mean_loss_C": 3.5086870193481445,
+    "mean_difference": 2.7121346205938606,
+    "mean_ratio": 4.404841445252474
+  },
+  "conclusion": "Loss function is IDENTICAL. Loss difference is due to model architecture."
+}

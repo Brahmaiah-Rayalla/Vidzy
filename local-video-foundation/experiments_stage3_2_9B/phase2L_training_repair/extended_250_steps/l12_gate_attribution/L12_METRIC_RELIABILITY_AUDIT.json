@@ -1,0 +1,1340 @@
+{
+  "results": {
+    "C1": {
+      "left_to_right": {
+        "motion_metrics_summary": {
+          "temporal_activity": 0.11400552839040756,
+          "displacement_px": 24.496131094082592,
+          "direction_vector": [
+            -7.699124628891731,
+            -23.254761201252375
+          ]
+        },
+        "detection": {
+          "available": true,
+          "color_prior": "blue",
+          "frames_detected": 2,
+          "detection_rate": 0.125,
+          "mask_mass_mean": 3416.25,
+          "mask_mass_std": 1127.6956870095762,
+          "color_centroid_displacement_px": null,
+          "color_direction_cosine": null
+        },
+        "detection_per_frame": [
+          {
+            "frame": 0,
+            "mask_mass": 3071,
+            "detected": false
+          },
+          {
+            "frame": 1,
+            "mask_mass": 1990,
+            "detected": false
+          },
+          {
+            "frame": 2,
+            "mask_mass": 761,
+            "detected": true
+          },
+          {
+            "frame": 3,
+            "mask_mass": 4096,
+            "detected": false
+          },
+          {
+            "frame": 4,
+            "mask_mass": 4096,
+            "detected": false
+          },
+          {
+            "frame": 5,
+            "mask_mass": 4096,
+            "detected": false
+          },
+          {
+            "frame": 6,
+            "mask_mass": 3990,
+            "detected": false
+          },
+          {
+            "frame": 7,
+            "mask_mass": 4096,
+            "detected": false
+          },
+          {
+            "frame": 8,
+            "mask_mass": 980,
+            "detected": true
+          },
+          {
+            "frame": 9,
+            "mask_mass": 4096,
+            "detected": false
+          },
+          {
+            "frame": 10,
+            "mask_mass": 4096,
+            "detected": false
+          },
+          {
+            "frame": 11,
+            "mask_mass": 4096,
+            "detected": false
+          },
+          {
+            "frame": 12,
+            "mask_mass": 4096,
+            "detected": false
+          },
+          {
+            "frame": 13,
+            "mask_mass": 4096,
+            "detected": false
+          },
+          {
+            "frame": 14,
+            "mask_mass": 2908,
+            "detected": false
+          },
+          {
+            "frame": 15,
+            "mask_mass": 4096,
+            "detected": false
+          }
+        ],
+        "color_vs_diff_centroid_cosine": null
+      },
+      "right_to_left": {
+        "motion_metrics_summary": {
+          "temporal_activity": 0.09944465756416321,
+          "displacement_px": 19.228453686472953,
+          "direction_vector": [
+            17.993388039652835,
+            6.780222564732931
+          ]
+        },
+        "detection": {
+          "available": true,
+          "color_prior": "pink",
+          "frames_detected": 0,
+          "detection_rate": 0.0,
+          "mask_mass_mean": 0.0,
+          "mask_mass_std": 0.0,
+          "color_centroid_displacement_px": null,
+          "color_direction_cosine": null
+        },
+        "detection_per_frame": [
+          {
+            "frame": 0,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 1,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 2,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 3,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 4,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 5,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 6,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 7,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 8,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 9,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 10,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 11,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 12,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 13,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 14,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 15,
+            "mask_mass": 0,
+            "detected": false
+          }
+        ],
+        "color_vs_diff_centroid_cosine": null
+      },
+      "top_to_bottom": {
+        "motion_metrics_summary": {
+          "temporal_activity": 0.16852393746376038,
+          "displacement_px": 21.643102811207548,
+          "direction_vector": [
+            10.651427831338019,
+            -18.840673672942216
+          ]
+        },
+        "detection": {
+          "available": true,
+          "color_prior": "pink",
+          "frames_detected": 0,
+          "detection_rate": 0.0,
+          "mask_mass_mean": 0.0,
+          "mask_mass_std": 0.0,
+          "color_centroid_displacement_px": null,
+          "color_direction_cosine": null
+        },
+        "detection_per_frame": [
+          {
+            "frame": 0,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 1,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 2,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 3,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 4,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 5,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 6,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 7,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 8,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 9,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 10,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 11,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 12,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 13,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 14,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 15,
+            "mask_mass": 0,
+            "detected": false
+          }
+        ],
+        "color_vs_diff_centroid_cosine": null
+      },
+      "bottom_to_top": {
+        "motion_metrics_summary": {
+          "temporal_activity": 0.134649857878685,
+          "displacement_px": 21.25675625803341,
+          "direction_vector": [
+            -13.676007632714963,
+            -16.273183519009567
+          ]
+        },
+        "detection": {
+          "available": true,
+          "color_prior": "white",
+          "frames_detected": 0,
+          "detection_rate": 0.0,
+          "mask_mass_mean": 0.0,
+          "mask_mass_std": 0.0,
+          "color_centroid_displacement_px": null,
+          "color_direction_cosine": null
+        },
+        "detection_per_frame": [
+          {
+            "frame": 0,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 1,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 2,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 3,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 4,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 5,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 6,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 7,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 8,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 9,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 10,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 11,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 12,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 13,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 14,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 15,
+            "mask_mass": 0,
+            "detected": false
+          }
+        ],
+        "color_vs_diff_centroid_cosine": null
+      },
+      "diagonal": {
+        "motion_metrics_summary": {
+          "temporal_activity": 0.07964450865983963,
+          "displacement_px": 15.67110688503092,
+          "direction_vector": [
+            -15.577193618467842,
+            -1.7130761730957076
+          ]
+        },
+        "detection": {
+          "available": true,
+          "color_prior": "purple",
+          "frames_detected": 0,
+          "detection_rate": 0.0,
+          "mask_mass_mean": 0.0,
+          "mask_mass_std": 0.0,
+          "color_centroid_displacement_px": null,
+          "color_direction_cosine": null
+        },
+        "detection_per_frame": [
+          {
+            "frame": 0,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 1,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 2,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 3,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 4,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 5,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 6,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 7,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 8,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 9,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 10,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 11,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 12,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 13,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 14,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 15,
+            "mask_mass": 0,
+            "detected": false
+          }
+        ],
+        "color_vs_diff_centroid_cosine": null
+      },
+      "stationary": {
+        "motion_metrics_summary": {
+          "temporal_activity": 0.13104501366615295,
+          "displacement_px": 5.627171162814363,
+          "direction_vector": [
+            5.610628103591807,
+            -0.4311700114749968
+          ]
+        },
+        "detection": {
+          "available": true,
+          "color_prior": "cyan",
+          "frames_detected": 0,
+          "detection_rate": 0.0,
+          "mask_mass_mean": 2555.375,
+          "mask_mass_std": 1628.9566014400139,
+          "color_centroid_displacement_px": null,
+          "color_direction_cosine": null
+        },
+        "detection_per_frame": [
+          {
+            "frame": 0,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 1,
+            "mask_mass": 3096,
+            "detected": false
+          },
+          {
+            "frame": 2,
+            "mask_mass": 4042,
+            "detected": false
+          },
+          {
+            "frame": 3,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 4,
+            "mask_mass": 2676,
+            "detected": false
+          },
+          {
+            "frame": 5,
+            "mask_mass": 3710,
+            "detected": false
+          },
+          {
+            "frame": 6,
+            "mask_mass": 2248,
+            "detected": false
+          },
+          {
+            "frame": 7,
+            "mask_mass": 4047,
+            "detected": false
+          },
+          {
+            "frame": 8,
+            "mask_mass": 4096,
+            "detected": false
+          },
+          {
+            "frame": 9,
+            "mask_mass": 4063,
+            "detected": false
+          },
+          {
+            "frame": 10,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 11,
+            "mask_mass": 4096,
+            "detected": false
+          },
+          {
+            "frame": 12,
+            "mask_mass": 3851,
+            "detected": false
+          },
+          {
+            "frame": 13,
+            "mask_mass": 3334,
+            "detected": false
+          },
+          {
+            "frame": 14,
+            "mask_mass": 1627,
+            "detected": false
+          },
+          {
+            "frame": 15,
+            "mask_mass": 0,
+            "detected": false
+          }
+        ],
+        "color_vs_diff_centroid_cosine": null
+      }
+    },
+    "C25": {
+      "left_to_right": {
+        "motion_metrics_summary": {
+          "temporal_activity": 0.23274746537208557,
+          "displacement_px": 5.662975908404489,
+          "direction_vector": [
+            -3.9745875281839744,
+            -4.033850532676446
+          ]
+        },
+        "detection": {
+          "available": true,
+          "color_prior": "blue",
+          "frames_detected": 4,
+          "detection_rate": 0.25,
+          "mask_mass_mean": 2637.3125,
+          "mask_mass_std": 1726.9431707047427,
+          "color_centroid_displacement_px": 1.662745612333257,
+          "color_direction_cosine": 0.6421381629228692
+        },
+        "detection_per_frame": [
+          {
+            "frame": 0,
+            "mask_mass": 191,
+            "detected": true
+          },
+          {
+            "frame": 1,
+            "mask_mass": 4096,
+            "detected": false
+          },
+          {
+            "frame": 2,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 3,
+            "mask_mass": 4095,
+            "detected": false
+          },
+          {
+            "frame": 4,
+            "mask_mass": 4096,
+            "detected": false
+          },
+          {
+            "frame": 5,
+            "mask_mass": 3868,
+            "detected": false
+          },
+          {
+            "frame": 6,
+            "mask_mass": 4096,
+            "detected": false
+          },
+          {
+            "frame": 7,
+            "mask_mass": 1997,
+            "detected": false
+          },
+          {
+            "frame": 8,
+            "mask_mass": 3096,
+            "detected": false
+          },
+          {
+            "frame": 9,
+            "mask_mass": 284,
+            "detected": true
+          },
+          {
+            "frame": 10,
+            "mask_mass": 4096,
+            "detected": false
+          },
+          {
+            "frame": 11,
+            "mask_mass": 3576,
+            "detected": false
+          },
+          {
+            "frame": 12,
+            "mask_mass": 4096,
+            "detected": false
+          },
+          {
+            "frame": 13,
+            "mask_mass": 260,
+            "detected": true
+          },
+          {
+            "frame": 14,
+            "mask_mass": 4096,
+            "detected": false
+          },
+          {
+            "frame": 15,
+            "mask_mass": 254,
+            "detected": true
+          }
+        ],
+        "color_vs_diff_centroid_cosine": -0.9967443916258828
+      },
+      "right_to_left": {
+        "motion_metrics_summary": {
+          "temporal_activity": 0.2744014859199524,
+          "displacement_px": 37.743041594711976,
+          "direction_vector": [
+            -37.41593917198263,
+            -4.958294535286722
+          ]
+        },
+        "detection": {
+          "available": true,
+          "color_prior": "pink",
+          "frames_detected": 0,
+          "detection_rate": 0.0,
+          "mask_mass_mean": 0.0,
+          "mask_mass_std": 0.0,
+          "color_centroid_displacement_px": null,
+          "color_direction_cosine": null
+        },
+        "detection_per_frame": [
+          {
+            "frame": 0,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 1,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 2,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 3,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 4,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 5,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 6,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 7,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 8,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 9,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 10,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 11,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 12,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 13,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 14,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 15,
+            "mask_mass": 0,
+            "detected": false
+          }
+        ],
+        "color_vs_diff_centroid_cosine": null
+      },
+      "top_to_bottom": {
+        "motion_metrics_summary": {
+          "temporal_activity": 0.2379767745733261,
+          "displacement_px": 0.1543683793701646,
+          "direction_vector": [
+            0.11653220053400304,
+            0.1012415072392443
+          ]
+        },
+        "detection": {
+          "available": true,
+          "color_prior": "pink",
+          "frames_detected": 0,
+          "detection_rate": 0.0,
+          "mask_mass_mean": 0.0,
+          "mask_mass_std": 0.0,
+          "color_centroid_displacement_px": null,
+          "color_direction_cosine": null
+        },
+        "detection_per_frame": [
+          {
+            "frame": 0,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 1,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 2,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 3,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 4,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 5,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 6,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 7,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 8,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 9,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 10,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 11,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 12,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 13,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 14,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 15,
+            "mask_mass": 0,
+            "detected": false
+          }
+        ],
+        "color_vs_diff_centroid_cosine": null
+      },
+      "bottom_to_top": {
+        "motion_metrics_summary": {
+          "temporal_activity": 0.2463407814502716,
+          "displacement_px": 5.3772935224154,
+          "direction_vector": [
+            -0.9638632674140482,
+            -5.290203514794165
+          ]
+        },
+        "detection": {
+          "available": true,
+          "color_prior": "white",
+          "frames_detected": 0,
+          "detection_rate": 0.0,
+          "mask_mass_mean": 0.0,
+          "mask_mass_std": 0.0,
+          "color_centroid_displacement_px": null,
+          "color_direction_cosine": null
+        },
+        "detection_per_frame": [
+          {
+            "frame": 0,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 1,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 2,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 3,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 4,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 5,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 6,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 7,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 8,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 9,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 10,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 11,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 12,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 13,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 14,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 15,
+            "mask_mass": 0,
+            "detected": false
+          }
+        ],
+        "color_vs_diff_centroid_cosine": null
+      },
+      "diagonal": {
+        "motion_metrics_summary": {
+          "temporal_activity": 0.28370600938796997,
+          "displacement_px": 48.12071088197268,
+          "direction_vector": [
+            3.420647107670316,
+            47.998979042800386
+          ]
+        },
+        "detection": {
+          "available": true,
+          "color_prior": "purple",
+          "frames_detected": 0,
+          "detection_rate": 0.0,
+          "mask_mass_mean": 0.0,
+          "mask_mass_std": 0.0,
+          "color_centroid_displacement_px": null,
+          "color_direction_cosine": null
+        },
+        "detection_per_frame": [
+          {
+            "frame": 0,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 1,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 2,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 3,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 4,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 5,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 6,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 7,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 8,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 9,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 10,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 11,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 12,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 13,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 14,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 15,
+            "mask_mass": 0,
+            "detected": false
+          }
+        ],
+        "color_vs_diff_centroid_cosine": null
+      },
+      "stationary": {
+        "motion_metrics_summary": {
+          "temporal_activity": 0.31316617131233215,
+          "displacement_px": 20.50651850438561,
+          "direction_vector": [
+            -13.922755024764527,
+            -15.055703028789573
+          ]
+        },
+        "detection": {
+          "available": true,
+          "color_prior": "cyan",
+          "frames_detected": 2,
+          "detection_rate": 0.125,
+          "mask_mass_mean": 1325.75,
+          "mask_mass_std": 1832.4761424094995,
+          "color_centroid_displacement_px": null,
+          "color_direction_cosine": null
+        },
+        "detection_per_frame": [
+          {
+            "frame": 0,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 1,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 2,
+            "mask_mass": 4096,
+            "detected": false
+          },
+          {
+            "frame": 3,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 4,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 5,
+            "mask_mass": 1034,
+            "detected": true
+          },
+          {
+            "frame": 6,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 7,
+            "mask_mass": 4096,
+            "detected": false
+          },
+          {
+            "frame": 8,
+            "mask_mass": 88,
+            "detected": true
+          },
+          {
+            "frame": 9,
+            "mask_mass": 1,
+            "detected": false
+          },
+          {
+            "frame": 10,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 11,
+            "mask_mass": 4096,
+            "detected": false
+          },
+          {
+            "frame": 12,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 13,
+            "mask_mass": 3820,
+            "detected": false
+          },
+          {
+            "frame": 14,
+            "mask_mass": 0,
+            "detected": false
+          },
+          {
+            "frame": 15,
+            "mask_mass": 3981,
+            "detected": false
+          }
+        ],
+        "color_vs_diff_centroid_cosine": null
+      }
+    }
+  },
+  "reliability_tiers": {
+    "C1": {
+      "left_to_right": {
+        "tier": "UNRELIABLE_TRACKING",
+        "detection_rate": 0.125,
+        "mask_mass_mean": 3416.25,
+        "color_direction_cosine": null,
+        "color_displacement_px": null
+      },
+      "right_to_left": {
+        "tier": "UNRELIABLE_TRACKING",
+        "detection_rate": 0.0,
+        "mask_mass_mean": 0.0,
+        "color_direction_cosine": null,
+        "color_displacement_px": null
+      },
+      "top_to_bottom": {
+        "tier": "UNRELIABLE_TRACKING",
+        "detection_rate": 0.0,
+        "mask_mass_mean": 0.0,
+        "color_direction_cosine": null,
+        "color_displacement_px": null
+      },
+      "bottom_to_top": {
+        "tier": "UNRELIABLE_TRACKING",
+        "detection_rate": 0.0,
+        "mask_mass_mean": 0.0,
+        "color_direction_cosine": null,
+        "color_displacement_px": null
+      },
+      "diagonal": {
+        "tier": "UNRELIABLE_TRACKING",
+        "detection_rate": 0.0,
+        "mask_mass_mean": 0.0,
+        "color_direction_cosine": null,
+        "color_displacement_px": null
+      },
+      "stationary": {
+        "tier": "UNRELIABLE_TRACKING",
+        "detection_rate": 0.0,
+        "mask_mass_mean": 2555.375,
+        "color_direction_cosine": null,
+        "color_displacement_px": null
+      }
+    },
+    "C25": {
+      "left_to_right": {
+        "tier": "LOW_CONFIDENCE_TRACKING",
+        "detection_rate": 0.25,
+        "mask_mass_mean": 2637.3125,
+        "color_direction_cosine": 0.6421381629228692,
+        "color_displacement_px": 1.662745612333257
+      },
+      "right_to_left": {
+        "tier": "UNRELIABLE_TRACKING",
+        "detection_rate": 0.0,
+        "mask_mass_mean": 0.0,
+        "color_direction_cosine": null,
+        "color_displacement_px": null
+      },
+      "top_to_bottom": {
+        "tier": "UNRELIABLE_TRACKING",
+        "detection_rate": 0.0,
+        "mask_mass_mean": 0.0,
+        "color_direction_cosine": null,
+        "color_displacement_px": null
+      },
+      "bottom_to_top": {
+        "tier": "UNRELIABLE_TRACKING",
+        "detection_rate": 0.0,
+        "mask_mass_mean": 0.0,
+        "color_direction_cosine": null,
+        "color_displacement_px": null
+      },
+      "diagonal": {
+        "tier": "UNRELIABLE_TRACKING",
+        "detection_rate": 0.0,
+        "mask_mass_mean": 0.0,
+        "color_direction_cosine": null,
+        "color_displacement_px": null
+      },
+      "stationary": {
+        "tier": "UNRELIABLE_TRACKING",
+        "detection_rate": 0.125,
+        "mask_mass_mean": 1325.75,
+        "color_direction_cosine": null,
+        "color_displacement_px": null
+      }
+    }
+  },
+  "methodology_notes": [
+    "Generic diff-centroid tracks the largest temporal-change region vs the temporal median - it does NOT verify an object is present; it can lock onto background flicker or texture drift.",
+    "Color-mask detection uses prompt color priors (blue/pink/white/purple/cyan) with plausible mass range 15px..35% of frame. Generated videos are abstract; detection rates measure color-presence, not semantic objecthood.",
+    "color_direction_cosine compares color-mask displacement vs expected direction - supporting evidence only.",
+    "Contact sheets saved under reliability/contact_sheets/."
+  ]
+}

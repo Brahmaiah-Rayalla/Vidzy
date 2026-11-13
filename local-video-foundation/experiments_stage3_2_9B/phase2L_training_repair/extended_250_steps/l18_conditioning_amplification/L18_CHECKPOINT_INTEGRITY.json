@@ -1,0 +1,8 @@
+{
+  "stage2": "untouched",
+  "ckpts": [
+    "A_step{100,250,500,750}.pt",
+    "B_step{100,250,500,750}.pt"
+  ],
+  "te_frozen_bit_identical": true
+}

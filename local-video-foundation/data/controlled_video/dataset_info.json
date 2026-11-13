@@ -1,0 +1,45 @@
+{
+  "num_videos": 32,
+  "num_frames": 16,
+  "image_size": 64,
+  "trajectories": [
+    {
+      "name": "red_circle_left_to_right",
+      "shape": "circle",
+      "color": "red",
+      "motion": "left_to_right",
+      "size_adj": "medium",
+      "speed_adj": "quickly",
+      "bg_color": "black"
+    },
+    {
+      "name": "red_circle_right_to_left",
+      "shape": "circle",
+      "color": "red",
+      "motion": "right_to_left",
+      "size_adj": "medium",
+      "speed_adj": "quickly",
+      "bg_color": "black"
+    },
+    {
+      "name": "blue_square_diagonal",
+      "shape": "square",
+      "color": "blue",
+      "motion": "diagonal_down_right",
+      "size_adj": "medium",
+      "speed_adj": "quickly",
+      "bg_color": "black"
+    },
+    {
+      "name": "yellow_circle_stationary",
+      "shape": "circle",
+      "color": "yellow",
+      "motion": "stationary",
+      "size_adj": "medium",
+      "speed_adj": "slowly",
+      "bg_color": "black"
+    }
+  ],
+  "examples_per_trajectory": 8,
+  "seed": 42
+}

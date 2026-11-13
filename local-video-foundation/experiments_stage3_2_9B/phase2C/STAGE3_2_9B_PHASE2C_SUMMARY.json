@@ -1,0 +1,104 @@
+{
+  "phase": "2C",
+  "date": "2026-11-02",
+  "status": "COMPLETE",
+  "classification": "INCONCLUSIVE",
+  "training": {
+    "experiment_A": {
+      "status": "BASELINE",
+      "steps": 0,
+      "trainable_params": 0,
+      "checkpoint_hash": "a7f5142e133c6aeadc656967639eab046a7a8f922e3201a6feda4496a544d57c"
+    },
+    "experiment_B": {
+      "status": "COMPLETE",
+      "configuration": "motion_embeddings_only",
+      "steps": 100,
+      "trainable_params": 10240,
+      "loss_range": [0.0051, 0.2194],
+      "final_loss": 0.006957,
+      "checkpoint_hash": "27eef3c7afec90a0cfaf32384f6535d271b9369ba7baaba51f17669fd3b0ff14",
+      "timing": {
+        "total_seconds": 354,
+        "median_step_time": 3.31,
+        "mean_step_time": 3.54,
+        "p90_step_time": 3.82,
+        "max_step_time": 941.87,
+        "outlier_count": 1,
+        "outlier_rate": 0.01
+      },
+      "gradient_norms": {
+        "median": 0.0003,
+        "range": [0.0002, 0.0026]
+      }
+    },
+    "experiment_C": {
+      "status": "COMPLETE",
+      "configuration": "motion_plus_temporal",
+      "steps": 100,
+      "trainable_params": 134274,
+      "loss_range": [1.128, 1.577],
+      "final_loss": 1.177136,
+      "checkpoint_hash": "cc71317860e152b818413c67a7e0304079a86e6e243c6e5e5d9559cec21499f5",
+      "timing": {
+        "total_seconds": 762,
+        "median_step_time": 7.09,
+        "mean_step_time": 7.62,
+        "p90_step_time": 7.86,
+        "max_step_time": 12.01,
+        "outlier_count": 0,
+        "outlier_rate": 0.0
+      },
+      "gradient_norms": {
+        "median": 0.0148,
+        "range": [0.0120, 0.0418]
+      },
+      "fusion_gates": {
+        "bottleneck_gate_start": 0.0100,
+        "bottleneck_gate_end": 0.0101,
+        "low_res_gate_start": 0.0100,
+        "low_res_gate_end": 0.0103
+      }
+    }
+  },
+  "performance": {
+    "total_time_seconds": 1116,
+    "total_time_minutes": 18.6,
+    "phase2b_estimate_minutes": 16.6,
+    "over_estimate_percent": 12,
+    "peak_memory_gb": 10.4,
+    "cpu_threads": 8,
+    "cpu_frequency_mhz": [1200, 2701]
+  },
+  "integrity": {
+    "spatial_params_frozen": true,
+    "optimizer_step_counts": {
+      "experiment_B": 100,
+      "experiment_C": 100
+    },
+    "checkpoint_hashes_verified": true
+  },
+  "classification_rationale": [
+    "Insufficient training steps (100) for temporal learning convergence",
+    "Fusion gates remained at initialization values (0.01) in Experiment C",
+    "Higher loss in Experiment C vs Experiment B but not conclusive due to different parameter counts",
+    "No generative evaluation performed due to time constraints",
+    "Stable gradients indicate sound training dynamics but insufficient for quality assessment"
+  ],
+  "recommendations": [
+    "Extend training to 1000+ steps for temporal convergence",
+    "Generate comparison videos from both checkpoints",
+    "Adjust fusion gate initialization to 0.5 for earlier activation",
+    "Implement comprehensive video evaluation metrics",
+    "Expand motion tokenizer for better coverage"
+  ],
+  "deliverables": {
+    "performance_report": "STAGE3_2_9B_PHASE2C_PERFORMANCE_REPORT.md",
+    "final_report": "STAGE3_2_9B_PHASE2C_FINAL_REPORT.md",
+    "training_results": "phase2c_pilot_results.json",
+    "checkpoints": {
+      "experiment_B": "checkpoints/experiment_B_final.pt",
+      "experiment_C": "checkpoints/experiment_C_final.pt"
+    }
+  }
+}

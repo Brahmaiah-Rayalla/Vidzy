@@ -1,0 +1,11 @@
+{
+  "algorithm": "sha256",
+  "files": {
+    "L11_C1_C25_COMPARISON.json": "b3db1cf794aa1bc907659fdabef7cecae19b774f70e9cf1b7c2de6b9882bcab2",
+    "L11_DDIM_INFRASTRUCTURE_AUDIT.md": "4478e398cdcefc9fc6721333e3803ee63138eec97a0e229e0575f7b992ee52e2",
+    "L11_INFERENCE_SMOKE_TEST.json": "d6ae76148a2cbbd41505ce64118e2c61e5bc301438bfe78d5d69aae7be76abca",
+    "L11_MOTION_EVALUATION.json": "686b4d08a560273cc27664e3ae7e7f5cd7fc4cc1843b18f4aa36d42220efb85f",
+    "run_l11_evaluation.py": "1ba72a1332bdfe38f0da0bb047e124e4c9ddecfece778a03a8ae56ee89710cd9",
+    "STAGE3_2_9L11_FINAL_REPORT.md": "1e50e16a561ba8145136f7813e5cca54355f3b8c15f99827e03e7583324ab9f3"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "On white, there is a medium li": {
+    "full_rms": 0.6131017208099365,
+    "zero_text_rms": 0.5983420610427856,
+    "text_effect": 0.08561404794454575
+  },
+  "On white, there is a medium cr": {
+    "full_rms": 0.6137634515762329,
+    "zero_text_rms": 0.5983420610427856,
+    "text_effect": 0.10597343742847443
+  }
+}

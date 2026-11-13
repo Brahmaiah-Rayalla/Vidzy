@@ -1,0 +1,102 @@
+{
+  "experiment_B": {
+    "step_25": {
+      "loaded": true,
+      "has_model_state": true,
+      "has_optimizer_state": true,
+      "has_config": true,
+      "has_experiment": true,
+      "num_parameters": 589
+    },
+    "step_50": {
+      "loaded": true,
+      "has_model_state": true,
+      "has_optimizer_state": true,
+      "has_config": true,
+      "has_experiment": true,
+      "num_parameters": 589
+    },
+    "step_75": {
+      "loaded": true,
+      "has_model_state": true,
+      "has_optimizer_state": true,
+      "has_config": true,
+      "has_experiment": true,
+      "num_parameters": 589
+    },
+    "step_100": {
+      "loaded": true,
+      "has_model_state": true,
+      "has_optimizer_state": true,
+      "has_config": true,
+      "has_experiment": true,
+      "num_parameters": 589
+    }
+  },
+  "experiment_C": {
+    "step_25": {
+      "loaded": true,
+      "has_model_state": true,
+      "has_optimizer_state": true,
+      "has_config": true,
+      "has_experiment": true,
+      "num_parameters": 589,
+      "temporal_params": 16,
+      "fusion_params": 2
+    },
+    "step_50": {
+      "loaded": true,
+      "has_model_state": true,
+      "has_optimizer_state": true,
+      "has_config": true,
+      "has_experiment": true,
+      "num_parameters": 589,
+      "temporal_params": 16,
+      "fusion_params": 2
+    },
+    "step_75": {
+      "loaded": true,
+      "has_model_state": true,
+      "has_optimizer_state": true,
+      "has_config": true,
+      "has_experiment": true,
+      "num_parameters": 589,
+      "temporal_params": 16,
+      "fusion_params": 2
+    },
+    "step_100": {
+      "loaded": true,
+      "has_model_state": true,
+      "has_optimizer_state": true,
+      "has_config": true,
+      "has_experiment": true,
+      "num_parameters": 589,
+      "temporal_params": 16,
+      "fusion_params": 2
+    }
+  },
+  "comparison": {
+    "key_match": {
+      "common_keys": 589,
+      "b_only_keys": 0,
+      "c_only_keys": 0,
+      "keys_match": true
+    },
+    "motion_embedding": {
+      "max_diff": 0.11638890206813812,
+      "mean_diff": 0.022598501294851303,
+      "differ": true
+    },
+    "spatial_integrity": {
+      "max_diff": 0.0,
+      "identical": true
+    }
+  },
+  "summary": {
+    "all_B_loaded": true,
+    "all_C_loaded": true,
+    "keys_match": true,
+    "spatial_identical": true,
+    "all_checks_pass": true
+  }
+}

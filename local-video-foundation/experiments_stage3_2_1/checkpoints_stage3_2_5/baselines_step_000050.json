@@ -1,0 +1,10 @@
+{
+  "zero_mse": 1.0002914667129517,
+  "frame_independent_mse": 0.010808180086314678,
+  "frame_independent_correlation": 0.9961079359054565,
+  "temporal_mse": 0.10414428263902664,
+  "temporal_correlation": 0.9573337435722351,
+  "bottleneck_gate": 0.5014861822128296,
+  "low_res_gate": 0.5014116168022156,
+  "temporal_improvement_pct": -863.5690912561141
+}

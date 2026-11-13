@@ -1,0 +1,10 @@
+{
+  "audit": {
+    "objective": "eps-prediction",
+    "train_forward": "xt=sqrt(abars[t])*x0+sqrt(1-abars[t])*eps; loss=MSE(pred,eps)",
+    "ddim_update": "x_prev=sqrt(a_prev)*(x-sqrt(1-a_t)*eps)/sqrt(a_t)+sqrt(1-a_prev)*eps",
+    "math_check_max_err": 2.384185791015625e-07,
+    "consistent": true
+  },
+  "notes": "parameterization eps both sides; schedule identical (linear 0.0001-0.02,1000); timestep indexing ts[i]->ts[i+1] consistent"
+}

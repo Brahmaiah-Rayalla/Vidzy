@@ -1,0 +1,27 @@
+{
+  "stage2_spatial_checkpoint": {
+    "path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_7\\checkpoints\\checkpoint_stage2_spatial.pt",
+    "sha256": "a7f5142e133c6aeadc656967639eab046a7a8f922e3201a6feda4496a544d57c",
+    "exists": true
+  },
+  "stage2_motion_expanded_checkpoint": {
+    "path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_7\\checkpoints\\checkpoint_stage2_motion_expanded.pt",
+    "sha256": "9a75aadc6bae18b9083797fa4bf2424f58fdf73118eac620e259e092096fa28a",
+    "exists": true
+  },
+  "tokenizer_motion_expanded": {
+    "path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_7\\checkpoints\\tokenizer_motion_expanded.json",
+    "sha256": "9227a1001b4d3503fa59729c04a26a01307d4e0a050b579e858ee8a809d679e8",
+    "exists": true
+  },
+  "text_encoder_split": {
+    "path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_7\\video_foundation\\models\\text_encoder_split.py",
+    "sha256": "0e5b90ba9df87d0c5e1a9ad1dde246eacb7e72c145db7588c88cb8c8e74e0789",
+    "exists": true
+  },
+  "video_unet_fixed": {
+    "path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_7\\video_foundation\\models\\video_unet_fixed.py",
+    "sha256": "999e206cf226c63eee798832aaad8e3e72450225db663ce20dd93f9b0105797e",
+    "exists": true
+  }
+}

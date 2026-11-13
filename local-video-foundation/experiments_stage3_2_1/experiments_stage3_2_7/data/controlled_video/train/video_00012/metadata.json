@@ -1,0 +1,84 @@
+{
+  "shape": "circle",
+  "color": "yellow",
+  "motion": "stationary",
+  "size_adjective": "medium",
+  "speed_adjective": "slowly",
+  "background_color": "gray",
+  "object_size": 32,
+  "velocity": 0.7017192023353962,
+  "start_position": [
+    32.0,
+    32.0
+  ],
+  "trajectory": [
+    [
+      32.0,
+      32.0
+    ],
+    [
+      32.0,
+      32.0
+    ],
+    [
+      32.0,
+      32.0
+    ],
+    [
+      32.0,
+      32.0
+    ],
+    [
+      32.0,
+      32.0
+    ],
+    [
+      32.0,
+      32.0
+    ],
+    [
+      32.0,
+      32.0
+    ],
+    [
+      32.0,
+      32.0
+    ],
+    [
+      32.0,
+      32.0
+    ],
+    [
+      32.0,
+      32.0
+    ],
+    [
+      32.0,
+      32.0
+    ],
+    [
+      32.0,
+      32.0
+    ],
+    [
+      32.0,
+      32.0
+    ],
+    [
+      32.0,
+      32.0
+    ],
+    [
+      32.0,
+      32.0
+    ],
+    [
+      32.0,
+      32.0
+    ]
+  ],
+  "num_frames": 16,
+  "image_size": 64,
+  "trajectory_id": 3,
+  "trajectory_name": "yellow_circle_stationary"
+}

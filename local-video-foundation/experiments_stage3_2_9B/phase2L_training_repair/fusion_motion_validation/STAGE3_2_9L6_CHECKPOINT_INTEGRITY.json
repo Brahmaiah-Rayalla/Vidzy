@@ -1,0 +1,7 @@
+{
+  "checkpoint": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\controlled_training\\experiment_C\\checkpoints\\checkpoint_step_000100.pt",
+  "hash_after": "c2dc17c93fbd855552fc473d4074236a2c0545bd187697a024ce49f801e7ea59",
+  "expected_hash": "c2dc17c93fbd855552fc473d4074236a2c0545bd187697a024ce49f801e7ea59",
+  "hash_match": true,
+  "status": "PASS"
+}

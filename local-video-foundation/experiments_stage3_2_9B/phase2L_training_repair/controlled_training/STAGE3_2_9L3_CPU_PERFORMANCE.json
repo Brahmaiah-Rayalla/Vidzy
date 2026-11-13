@@ -1,0 +1,30 @@
+{
+  "experiment_B": {
+    "total_time": 1194.3990182876587,
+    "mean_step_time": 11.943990182876586,
+    "median_step_time": 3.4102208614349365,
+    "p90_step_time": 3.8589261293411257,
+    "max_step_time": 852.5162043571472,
+    "min_step_time": 2.794393539428711,
+    "outlier_count": 1,
+    "peak_ram_mb": 2127.5234375,
+    "mean_ram_mb": 2086.5729296875,
+    "cpu_threads": 8
+  },
+  "experiment_C": {
+    "total_time": 3062.3929646015167,
+    "mean_step_time": 30.623929646015167,
+    "median_step_time": 7.2108999490737915,
+    "p90_step_time": 7.798108339309692,
+    "max_step_time": 2344.046667575836,
+    "min_step_time": 6.681227207183838,
+    "outlier_count": 1,
+    "peak_ram_mb": 3189.14453125,
+    "mean_ram_mb": 2984.748984375,
+    "cpu_threads": 8
+  },
+  "comparison": {
+    "time_ratio": 2.56396138787178,
+    "ram_ratio": 1.430455145807924
+  }
+}

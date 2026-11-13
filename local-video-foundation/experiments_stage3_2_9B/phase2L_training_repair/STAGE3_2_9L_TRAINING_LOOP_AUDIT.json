@@ -1,0 +1,64 @@
+{
+  "experiment_B": {
+    "model_config": {
+      "enable_temporal_processing": false,
+      "use_temporal": true,
+      "spatial_frozen": true
+    },
+    "motion_embedding": {
+      "parameter_count": 1,
+      "total_parameters": 10240,
+      "all_trainable": true,
+      "parameter_names": [
+        "motion_emb.0"
+      ]
+    },
+    "optimizer": {
+      "parameter_count": 1,
+      "optimizer_param_ids_match_motion": true,
+      "spatial_in_optimizer": false
+    }
+  },
+  "experiment_C": {
+    "model_config": {
+      "enable_temporal_processing": true,
+      "use_temporal": true,
+      "spatial_frozen": true
+    },
+    "temporal_modules": {
+      "parameter_count": 16,
+      "total_parameters": 124032,
+      "all_trainable": true
+    },
+    "fusion_modules": {
+      "parameter_count": 2,
+      "total_parameters": 2,
+      "all_trainable": true
+    },
+    "motion_embedding": {
+      "parameter_count": 1,
+      "total_parameters": 10240,
+      "all_trainable": true
+    },
+    "optimizer": {
+      "parameter_count": 19,
+      "expected_parameter_count": 19,
+      "all_trainable_in_optimizer": true,
+      "spatial_in_optimizer": false
+    },
+    "gate_values": {
+      "bottleneck_gate": 0.010001189075410366,
+      "low_res_gate": 0.010001189075410366
+    }
+  },
+  "findings": [],
+  "gradient_flow": {
+    "total_parameters": 654,
+    "parameters_with_gradient": 20,
+    "parameters_without_gradient": 634,
+    "motion_embedding_has_grad": true,
+    "temporal_has_grad": true,
+    "fusion_has_grad": true,
+    "spatial_has_grad": false
+  }
+}

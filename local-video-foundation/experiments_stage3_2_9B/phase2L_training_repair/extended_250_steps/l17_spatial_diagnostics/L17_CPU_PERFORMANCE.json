@@ -1,0 +1,7 @@
+{
+  "sensitivity_min": 2,
+  "overfit_min": 27.7,
+  "steps": 1000,
+  "bs": 1,
+  "step_s": 1.6
+}

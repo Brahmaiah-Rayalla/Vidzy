@@ -1,0 +1,20 @@
+{
+  "Experiment_A": {
+    "exists": true,
+    "hash": "a7f5142e133c6aeadc656967639eab046a7a8f922e3201a6feda4496a544d57c",
+    "expected": "a7f5142e133c6aeadc656967639eab046a7a8f922e3201a6feda4496a544d57c",
+    "match": true
+  },
+  "Experiment_B": {
+    "exists": true,
+    "hash": "27eef3c7afec90a0cfaf32384f6535d271b9369ba7baaba51f17669fd3b0ff14",
+    "expected": "27eef3c7afec90a0cfaf32384f6535d271b9369ba7baaba51f17669fd3b0ff14",
+    "match": true
+  },
+  "Experiment_C": {
+    "exists": true,
+    "hash": "cc71317860e152b818413c67a7e0304079a86e6e243c6e5e5d9559cec21499f5",
+    "expected": "cc71317860e152b818413c67a7e0304079a86e6e243c6e5e5d9559cec21499f5",
+    "match": true
+  }
+}

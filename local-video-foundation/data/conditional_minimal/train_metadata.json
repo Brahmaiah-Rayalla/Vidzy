@@ -1,0 +1,893 @@
+[
+  {
+    "image_path": "data/conditional_minimal\\image_00041.png",
+    "caption": "A small white square and a large gray triangle on light_yellow.",
+    "scene_params": {
+      "bg_color": "light_yellow",
+      "objects": [
+        {
+          "shape": "square",
+          "color": "white",
+          "size": "small",
+          "position": "right",
+          "x": 48,
+          "y": 29,
+          "size_pixels": 9
+        },
+        {
+          "shape": "triangle",
+          "color": "gray",
+          "size": "large",
+          "position": "right",
+          "x": 50,
+          "y": 29,
+          "size_pixels": 22
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/conditional_minimal\\image_00002.png",
+    "caption": "On a white background, there is a medium pink triangle.",
+    "scene_params": {
+      "bg_color": "white",
+      "objects": [
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "size": "medium",
+          "position": "right",
+          "x": 46,
+          "y": 49,
+          "size_pixels": 16
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/conditional_minimal\\image_00018.png",
+    "caption": "A small green circle positioned in the right on white.",
+    "scene_params": {
+      "bg_color": "white",
+      "objects": [
+        {
+          "shape": "circle",
+          "color": "green",
+          "size": "small",
+          "position": "right",
+          "x": 45,
+          "y": 21,
+          "size_pixels": 9
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/conditional_minimal\\image_00030.png",
+    "caption": "On a cream background, there is a large light_gray circle.",
+    "scene_params": {
+      "bg_color": "cream",
+      "objects": [
+        {
+          "shape": "circle",
+          "color": "light_gray",
+          "size": "large",
+          "position": "left",
+          "x": 9,
+          "y": 36,
+          "size_pixels": 22
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/conditional_minimal\\image_00022.png",
+    "caption": "A medium orange circle and a small green triangle on light_gray.",
+    "scene_params": {
+      "bg_color": "light_gray",
+      "objects": [
+        {
+          "shape": "circle",
+          "color": "orange",
+          "size": "medium",
+          "position": "left",
+          "x": 17,
+          "y": 15,
+          "size_pixels": 16
+        },
+        {
+          "shape": "triangle",
+          "color": "green",
+          "size": "small",
+          "position": "bottom",
+          "x": 44,
+          "y": 57,
+          "size_pixels": 9
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/conditional_minimal\\image_00009.png",
+    "caption": "A light_yellow square in the top and a white triangle in the right on light_gray.",
+    "scene_params": {
+      "bg_color": "light_gray",
+      "objects": [
+        {
+          "shape": "square",
+          "color": "light_yellow",
+          "size": "large",
+          "position": "top",
+          "x": 18,
+          "y": 8,
+          "size_pixels": 22
+        },
+        {
+          "shape": "triangle",
+          "color": "white",
+          "size": "large",
+          "position": "right",
+          "x": 54,
+          "y": 29,
+          "size_pixels": 22
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/conditional_minimal\\image_00019.png",
+    "caption": "A large light_yellow triangle positioned in the bottom on light_gray.",
+    "scene_params": {
+      "bg_color": "light_gray",
+      "objects": [
+        {
+          "shape": "triangle",
+          "color": "light_yellow",
+          "size": "large",
+          "position": "bottom",
+          "x": 30,
+          "y": 54,
+          "size_pixels": 22
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/conditional_minimal\\image_00003.png",
+    "caption": "A medium green square positioned in the right on white.",
+    "scene_params": {
+      "bg_color": "white",
+      "objects": [
+        {
+          "shape": "square",
+          "color": "green",
+          "size": "medium",
+          "position": "right",
+          "x": 52,
+          "y": 43,
+          "size_pixels": 16
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/conditional_minimal\\image_00038.png",
+    "caption": "A light_gray square in the top and a black square in the right on white.",
+    "scene_params": {
+      "bg_color": "white",
+      "objects": [
+        {
+          "shape": "square",
+          "color": "light_gray",
+          "size": "medium",
+          "position": "top",
+          "x": 36,
+          "y": 12,
+          "size_pixels": 16
+        },
+        {
+          "shape": "square",
+          "color": "black",
+          "size": "small",
+          "position": "right",
+          "x": 45,
+          "y": 29,
+          "size_pixels": 9
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/conditional_minimal\\image_00011.png",
+    "caption": "On light_blue, there is a large cyan triangle and a large light_gray circle.",
+    "scene_params": {
+      "bg_color": "light_blue",
+      "objects": [
+        {
+          "shape": "triangle",
+          "color": "cyan",
+          "size": "large",
+          "position": "right",
+          "x": 57,
+          "y": 45,
+          "size_pixels": 22
+        },
+        {
+          "shape": "circle",
+          "color": "light_gray",
+          "size": "large",
+          "position": "center",
+          "x": 35,
+          "y": 32,
+          "size_pixels": 22
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/conditional_minimal\\image_00015.png",
+    "caption": "A large cream circle and a medium blue triangle on white.",
+    "scene_params": {
+      "bg_color": "white",
+      "objects": [
+        {
+          "shape": "circle",
+          "color": "cream",
+          "size": "large",
+          "position": "left",
+          "x": 8,
+          "y": 31,
+          "size_pixels": 22
+        },
+        {
+          "shape": "triangle",
+          "color": "blue",
+          "size": "medium",
+          "position": "bottom",
+          "x": 46,
+          "y": 50,
+          "size_pixels": 16
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/conditional_minimal\\image_00000.png",
+    "caption": "A orange triangle in the left, small in size, on white.",
+    "scene_params": {
+      "bg_color": "white",
+      "objects": [
+        {
+          "shape": "triangle",
+          "color": "orange",
+          "size": "small",
+          "position": "left",
+          "x": 8,
+          "y": 16,
+          "size_pixels": 9
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/conditional_minimal\\image_00007.png",
+    "caption": "A medium pink square on a light_gray background.",
+    "scene_params": {
+      "bg_color": "light_gray",
+      "objects": [
+        {
+          "shape": "square",
+          "color": "pink",
+          "size": "medium",
+          "position": "bottom",
+          "x": 21,
+          "y": 48,
+          "size_pixels": 16
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/conditional_minimal\\image_00026.png",
+    "caption": "A yellow triangle in the bottom, large in size, on light_blue.",
+    "scene_params": {
+      "bg_color": "light_blue",
+      "objects": [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "size": "large",
+          "position": "bottom",
+          "x": 14,
+          "y": 45,
+          "size_pixels": 22
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/conditional_minimal\\image_00016.png",
+    "caption": "A medium orange triangle on a light_yellow background.",
+    "scene_params": {
+      "bg_color": "light_yellow",
+      "objects": [
+        {
+          "shape": "triangle",
+          "color": "orange",
+          "size": "medium",
+          "position": "right",
+          "x": 50,
+          "y": 32,
+          "size_pixels": 16
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/conditional_minimal\\image_00046.png",
+    "caption": "A light_blue triangle in the bottom and a blue square in the top on cream.",
+    "scene_params": {
+      "bg_color": "cream",
+      "objects": [
+        {
+          "shape": "triangle",
+          "color": "light_blue",
+          "size": "large",
+          "position": "bottom",
+          "x": 29,
+          "y": 56,
+          "size_pixels": 22
+        },
+        {
+          "shape": "square",
+          "color": "blue",
+          "size": "large",
+          "position": "top",
+          "x": 30,
+          "y": 16,
+          "size_pixels": 22
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/conditional_minimal\\image_00013.png",
+    "caption": "A light_yellow triangle of small size on light_yellow.",
+    "scene_params": {
+      "bg_color": "light_yellow",
+      "objects": [
+        {
+          "shape": "triangle",
+          "color": "light_yellow",
+          "size": "small",
+          "position": "right",
+          "x": 55,
+          "y": 32,
+          "size_pixels": 9
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/conditional_minimal\\image_00036.png",
+    "caption": "A yellow circle in the left and a light_blue circle in the right on cream.",
+    "scene_params": {
+      "bg_color": "cream",
+      "objects": [
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "size": "small",
+          "position": "left",
+          "x": 11,
+          "y": 23,
+          "size_pixels": 9
+        },
+        {
+          "shape": "circle",
+          "color": "light_blue",
+          "size": "medium",
+          "position": "right",
+          "x": 53,
+          "y": 28,
+          "size_pixels": 16
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/conditional_minimal\\image_00042.png",
+    "caption": "A large blue triangle and a small pink triangle on light_yellow.",
+    "scene_params": {
+      "bg_color": "light_yellow",
+      "objects": [
+        {
+          "shape": "triangle",
+          "color": "blue",
+          "size": "large",
+          "position": "center",
+          "x": 27,
+          "y": 35,
+          "size_pixels": 22
+        },
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "size": "small",
+          "position": "left",
+          "x": 15,
+          "y": 21,
+          "size_pixels": 9
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/conditional_minimal\\image_00020.png",
+    "caption": "A medium gray circle on a light_gray background.",
+    "scene_params": {
+      "bg_color": "light_gray",
+      "objects": [
+        {
+          "shape": "circle",
+          "color": "gray",
+          "size": "medium",
+          "position": "right",
+          "x": 50,
+          "y": 30,
+          "size_pixels": 16
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/conditional_minimal\\image_00023.png",
+    "caption": "A cyan square in the top and a pink circle in the top on light_gray.",
+    "scene_params": {
+      "bg_color": "light_gray",
+      "objects": [
+        {
+          "shape": "square",
+          "color": "cyan",
+          "size": "small",
+          "position": "top",
+          "x": 47,
+          "y": 8,
+          "size_pixels": 9
+        },
+        {
+          "shape": "circle",
+          "color": "pink",
+          "size": "medium",
+          "position": "top",
+          "x": 23,
+          "y": 15,
+          "size_pixels": 16
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/conditional_minimal\\image_00028.png",
+    "caption": "A black triangle in the center and a purple circle in the left on white.",
+    "scene_params": {
+      "bg_color": "white",
+      "objects": [
+        {
+          "shape": "triangle",
+          "color": "black",
+          "size": "small",
+          "position": "center",
+          "x": 32,
+          "y": 32,
+          "size_pixels": 9
+        },
+        {
+          "shape": "circle",
+          "color": "purple",
+          "size": "small",
+          "position": "left",
+          "x": 11,
+          "y": 18,
+          "size_pixels": 9
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/conditional_minimal\\image_00006.png",
+    "caption": "A cyan square in the right and a orange triangle in the center on white.",
+    "scene_params": {
+      "bg_color": "white",
+      "objects": [
+        {
+          "shape": "square",
+          "color": "cyan",
+          "size": "large",
+          "position": "right",
+          "x": 46,
+          "y": 26,
+          "size_pixels": 22
+        },
+        {
+          "shape": "triangle",
+          "color": "orange",
+          "size": "large",
+          "position": "center",
+          "x": 34,
+          "y": 25,
+          "size_pixels": 22
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/conditional_minimal\\image_00039.png",
+    "caption": "A small pink square on a light_yellow background.",
+    "scene_params": {
+      "bg_color": "light_yellow",
+      "objects": [
+        {
+          "shape": "square",
+          "color": "pink",
+          "size": "small",
+          "position": "right",
+          "x": 52,
+          "y": 38,
+          "size_pixels": 9
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/conditional_minimal\\image_00012.png",
+    "caption": "On a cream background, there is a small pink square.",
+    "scene_params": {
+      "bg_color": "cream",
+      "objects": [
+        {
+          "shape": "square",
+          "color": "pink",
+          "size": "small",
+          "position": "top",
+          "x": 12,
+          "y": 15,
+          "size_pixels": 9
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/conditional_minimal\\image_00037.png",
+    "caption": "A medium light_yellow circle on a cream background.",
+    "scene_params": {
+      "bg_color": "cream",
+      "objects": [
+        {
+          "shape": "circle",
+          "color": "light_yellow",
+          "size": "medium",
+          "position": "left",
+          "x": 13,
+          "y": 50,
+          "size_pixels": 16
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/conditional_minimal\\image_00033.png",
+    "caption": "A orange circle of medium size on light_blue.",
+    "scene_params": {
+      "bg_color": "light_blue",
+      "objects": [
+        {
+          "shape": "circle",
+          "color": "orange",
+          "size": "medium",
+          "position": "center",
+          "x": 39,
+          "y": 26,
+          "size_pixels": 16
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/conditional_minimal\\image_00032.png",
+    "caption": "A medium light_gray triangle and a large blue triangle on light_gray.",
+    "scene_params": {
+      "bg_color": "light_gray",
+      "objects": [
+        {
+          "shape": "triangle",
+          "color": "light_gray",
+          "size": "medium",
+          "position": "bottom",
+          "x": 13,
+          "y": 45,
+          "size_pixels": 16
+        },
+        {
+          "shape": "triangle",
+          "color": "blue",
+          "size": "large",
+          "position": "center",
+          "x": 38,
+          "y": 33,
+          "size_pixels": 22
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/conditional_minimal\\image_00047.png",
+    "caption": "On cream, there is a medium yellow triangle and a medium pink square.",
+    "scene_params": {
+      "bg_color": "cream",
+      "objects": [
+        {
+          "shape": "triangle",
+          "color": "yellow",
+          "size": "medium",
+          "position": "top",
+          "x": 15,
+          "y": 10,
+          "size_pixels": 16
+        },
+        {
+          "shape": "square",
+          "color": "pink",
+          "size": "medium",
+          "position": "bottom",
+          "x": 15,
+          "y": 46,
+          "size_pixels": 16
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/conditional_minimal\\image_00044.png",
+    "caption": "A medium light_gray triangle on a light_yellow background.",
+    "scene_params": {
+      "bg_color": "light_yellow",
+      "objects": [
+        {
+          "shape": "triangle",
+          "color": "light_gray",
+          "size": "medium",
+          "position": "top",
+          "x": 28,
+          "y": 8,
+          "size_pixels": 16
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/conditional_minimal\\image_00004.png",
+    "caption": "On a light_yellow background, there is a large green square.",
+    "scene_params": {
+      "bg_color": "light_yellow",
+      "objects": [
+        {
+          "shape": "square",
+          "color": "green",
+          "size": "large",
+          "position": "right",
+          "x": 55,
+          "y": 36,
+          "size_pixels": 22
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/conditional_minimal\\image_00045.png",
+    "caption": "A blue circle in the bottom and a white circle in the top on white.",
+    "scene_params": {
+      "bg_color": "white",
+      "objects": [
+        {
+          "shape": "circle",
+          "color": "blue",
+          "size": "large",
+          "position": "bottom",
+          "x": 30,
+          "y": 51,
+          "size_pixels": 22
+        },
+        {
+          "shape": "circle",
+          "color": "white",
+          "size": "small",
+          "position": "top",
+          "x": 38,
+          "y": 19,
+          "size_pixels": 9
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/conditional_minimal\\image_00005.png",
+    "caption": "A green triangle of small size on light_yellow.",
+    "scene_params": {
+      "bg_color": "light_yellow",
+      "objects": [
+        {
+          "shape": "triangle",
+          "color": "green",
+          "size": "small",
+          "position": "left",
+          "x": 16,
+          "y": 50,
+          "size_pixels": 9
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/conditional_minimal\\image_00035.png",
+    "caption": "On cream, there is a large light_blue triangle and a small pink circle.",
+    "scene_params": {
+      "bg_color": "cream",
+      "objects": [
+        {
+          "shape": "triangle",
+          "color": "light_blue",
+          "size": "large",
+          "position": "left",
+          "x": 9,
+          "y": 43,
+          "size_pixels": 22
+        },
+        {
+          "shape": "circle",
+          "color": "pink",
+          "size": "small",
+          "position": "top",
+          "x": 21,
+          "y": 16,
+          "size_pixels": 9
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/conditional_minimal\\image_00040.png",
+    "caption": "A pink triangle in the top and a cyan circle in the top on cream.",
+    "scene_params": {
+      "bg_color": "cream",
+      "objects": [
+        {
+          "shape": "triangle",
+          "color": "pink",
+          "size": "medium",
+          "position": "top",
+          "x": 39,
+          "y": 13,
+          "size_pixels": 16
+        },
+        {
+          "shape": "circle",
+          "color": "cyan",
+          "size": "large",
+          "position": "top",
+          "x": 38,
+          "y": 17,
+          "size_pixels": 22
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/conditional_minimal\\image_00043.png",
+    "caption": "A medium yellow circle positioned in the bottom on light_gray.",
+    "scene_params": {
+      "bg_color": "light_gray",
+      "objects": [
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "size": "medium",
+          "position": "bottom",
+          "x": 45,
+          "y": 45,
+          "size_pixels": 16
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/conditional_minimal\\image_00034.png",
+    "caption": "A light_yellow triangle in the bottom and a light_blue circle in the left on white.",
+    "scene_params": {
+      "bg_color": "white",
+      "objects": [
+        {
+          "shape": "triangle",
+          "color": "light_yellow",
+          "size": "medium",
+          "position": "bottom",
+          "x": 41,
+          "y": 56,
+          "size_pixels": 16
+        },
+        {
+          "shape": "circle",
+          "color": "light_blue",
+          "size": "small",
+          "position": "left",
+          "x": 17,
+          "y": 13,
+          "size_pixels": 9
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/conditional_minimal\\image_00008.png",
+    "caption": "On a light_gray background, there is a medium pink square.",
+    "scene_params": {
+      "bg_color": "light_gray",
+      "objects": [
+        {
+          "shape": "square",
+          "color": "pink",
+          "size": "medium",
+          "position": "center",
+          "x": 26,
+          "y": 40,
+          "size_pixels": 16
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/conditional_minimal\\image_00029.png",
+    "caption": "A light_blue triangle of large size on cream.",
+    "scene_params": {
+      "bg_color": "cream",
+      "objects": [
+        {
+          "shape": "triangle",
+          "color": "light_blue",
+          "size": "large",
+          "position": "right",
+          "x": 56,
+          "y": 16,
+          "size_pixels": 22
+        }
+      ]
+    }
+  },
+  {
+    "image_path": "data/conditional_minimal\\image_00010.png",
+    "caption": "A large blue circle and a large yellow circle on light_blue.",
+    "scene_params": {
+      "bg_color": "light_blue",
+      "objects": [
+        {
+          "shape": "circle",
+          "color": "blue",
+          "size": "large",
+          "position": "top",
+          "x": 16,
+          "y": 7,
+          "size_pixels": 22
+        },
+        {
+          "shape": "circle",
+          "color": "yellow",
+          "size": "large",
+          "position": "left",
+          "x": 16,
+          "y": 29,
+          "size_pixels": 22
+        }
+      ]
+    }
+  }
+]

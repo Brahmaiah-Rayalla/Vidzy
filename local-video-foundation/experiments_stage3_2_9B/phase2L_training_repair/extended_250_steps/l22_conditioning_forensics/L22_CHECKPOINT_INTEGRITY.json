@@ -1,0 +1,8 @@
+{
+  "stage2": "untouched",
+  "L21": "untouched (copied init)",
+  "cond_ckpts": [
+    "cond_step{50,100,250,500}.pt"
+  ],
+  "rgb_conv_unchanged": false
+}

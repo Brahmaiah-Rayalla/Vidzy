@@ -1,0 +1,15 @@
+{
+  "checkpoint": "checkpoints_video_smoke/checkpoint_step_000010.pt",
+  "num_frames": 16,
+  "image_size": 64,
+  "device": "cpu",
+  "forward_pass": {
+    "avg_time": 1.7774974505106609,
+    "passes_per_second": 0.5625887112877197
+  },
+  "ddim_sampling_10_steps": {
+    "avg_time": 52.12244188785553,
+    "time_per_step": 5.212244188785553,
+    "fps": 0.30696950143711477
+  }
+}

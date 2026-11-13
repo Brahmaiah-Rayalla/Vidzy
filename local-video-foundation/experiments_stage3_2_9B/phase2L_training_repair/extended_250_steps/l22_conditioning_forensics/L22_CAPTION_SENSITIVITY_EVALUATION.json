@@ -1,0 +1,8 @@
+{
+  "final": {
+    "swap_mean_abs": 0.010599538683891296,
+    "swap_cos": 0.9999209642410278,
+    "zero_ablate": 0.07563977688550949
+  },
+  "per_stage_trace": "see L22_ENCODER_FEATURE_TRACE"
+}

@@ -1,0 +1,5 @@
+{
+  "rgb": "bit-identical from L27",
+  "cond": "color slices duplicated to shape pairs +0.001 shape offset",
+  "rest": "L27 su state"
+}

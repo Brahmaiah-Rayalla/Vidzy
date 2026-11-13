@@ -1,0 +1,9 @@
+{
+  "ckpts": [
+    "checkpoints/step{0..2000}.pt every 250 with optimizer state"
+  ],
+  "te_bit_identical_all_steps": true,
+  "stage2_original": "untouched",
+  "l14_l15": "untouched",
+  "hashes": "in L16_ARTIFACT_HASHES.json"
+}

@@ -1,0 +1,870 @@
+{
+  "implementation": {
+    "file": "experiments_stage3_2_7/video_foundation/models/video_unet_fixed.py",
+    "gate_mechanism": "FeatureLevelTemporalFusion stores raw logit; forward applies sigmoid. In _forward_with_temporal: fused = temporal + sigmoid(gate) * (temporal_processed - temporal); fused features injected into spatial decoder via injected_features.",
+    "gate_placement": {
+      "bottleneck": "spatial UNet bottleneck features, 128 channels",
+      "low_res": "spatial UNet low-res features, 64 channels"
+    },
+    "independence": "Two independent scalar gates; each scales its own temporal residual before decoder injection.",
+    "near_zero_bypass": "If BOTH activated gates < 0.001, forward() routes to _forward_frame_independent (true identity path)."
+  },
+  "native_gates": {
+    "C1": {
+      "bottleneck": {
+        "raw_logit": -4.557628154754639,
+        "activated": 0.010378069244325161
+      },
+      "low_res": {
+        "raw_logit": -4.523617267608643,
+        "activated": 0.010733253322541714
+      }
+    },
+    "C25": {
+      "bottleneck": {
+        "raw_logit": -1.0409202575683594,
+        "activated": 0.2609724700450897
+      },
+      "low_res": {
+        "raw_logit": -1.0322657823562622,
+        "activated": 0.26264506578445435
+      }
+    }
+  },
+  "runtime_measurements": {
+    "C25_native": {
+      "requested": {
+        "bottleneck": null,
+        "low_res": null
+      },
+      "actual_gates": {
+        "bottleneck": {
+          "raw_logit": -1.0409202575683594,
+          "activated": 0.2609724700450897
+        },
+        "low_res": {
+          "raw_logit": -1.0322657823562622,
+          "activated": 0.26264506578445435
+        }
+      },
+      "prompt": "stationary",
+      "forward_passes": [
+        {
+          "t": 999,
+          "gates": {
+            "bottleneck": {
+              "raw_logit": -1.0409202575683594,
+              "activated": 0.2609724700450897
+            },
+            "low_res": {
+              "raw_logit": -1.0322657823562622,
+              "activated": 0.26264506578445435
+            }
+          },
+          "eps_std": 1.8926810026168823,
+          "bottleneck": {
+            "temporal_feature_norm": 517.68603515625,
+            "residual_norm": 290.488525390625,
+            "residual_rel_to_feature": 0.5611287355422974,
+            "gated_delta_norm": 75.80943298339844,
+            "gated_delta_rel": 0.14643901586532593
+          },
+          "low_res": {
+            "temporal_feature_norm": 1410.345947265625,
+            "residual_norm": 1414.253662109375,
+            "residual_rel_to_feature": 1.0027707815170288,
+            "gated_delta_norm": 371.375,
+            "gated_delta_rel": 0.2633219063282013
+          }
+        },
+        {
+          "t": 499,
+          "gates": {
+            "bottleneck": {
+              "raw_logit": -1.0409202575683594,
+              "activated": 0.2609724700450897
+            },
+            "low_res": {
+              "raw_logit": -1.0322657823562622,
+              "activated": 0.26264506578445435
+            }
+          },
+          "eps_std": 1.9373915195465088,
+          "bottleneck": {
+            "temporal_feature_norm": 495.1672668457031,
+            "residual_norm": 295.09649658203125,
+            "residual_rel_to_feature": 0.5959531664848328,
+            "gated_delta_norm": 77.01203155517578,
+            "gated_delta_rel": 0.15552730858325958
+          },
+          "low_res": {
+            "temporal_feature_norm": 1411.703369140625,
+            "residual_norm": 1410.1658935546875,
+            "residual_rel_to_feature": 0.9989109039306641,
+            "gated_delta_norm": 370.2940673828125,
+            "gated_delta_rel": 0.26230302453041077
+          }
+        },
+        {
+          "t": 0,
+          "gates": {
+            "bottleneck": {
+              "raw_logit": -1.0409202575683594,
+              "activated": 0.2609724700450897
+            },
+            "low_res": {
+              "raw_logit": -1.0322657823562622,
+              "activated": 0.26264506578445435
+            }
+          },
+          "eps_std": 3.4074883460998535,
+          "bottleneck": {
+            "temporal_feature_norm": 458.99713134765625,
+            "residual_norm": 266.33880615234375,
+            "residual_rel_to_feature": 0.5802624821662903,
+            "gated_delta_norm": 69.50707244873047,
+            "gated_delta_rel": 0.15143246948719025
+          },
+          "low_res": {
+            "temporal_feature_norm": 1869.1365966796875,
+            "residual_norm": 1353.3717041015625,
+            "residual_rel_to_feature": 0.7240625023841858,
+            "gated_delta_norm": 355.36614990234375,
+            "gated_delta_rel": 0.19012315571308136
+          }
+        }
+      ]
+    },
+    "C25_10_10": {
+      "requested": {
+        "bottleneck": 0.1,
+        "low_res": 0.1
+      },
+      "actual_gates": {
+        "bottleneck": {
+          "raw_logit": -2.1972246170043945,
+          "activated": 0.10000000149011612
+        },
+        "low_res": {
+          "raw_logit": -2.1972246170043945,
+          "activated": 0.10000000149011612
+        }
+      },
+      "prompt": "stationary",
+      "forward_passes": [
+        {
+          "t": 999,
+          "gates": {
+            "bottleneck": {
+              "raw_logit": -2.1972246170043945,
+              "activated": 0.10000000149011612
+            },
+            "low_res": {
+              "raw_logit": -2.1972246170043945,
+              "activated": 0.10000000149011612
+            }
+          },
+          "eps_std": 2.0218639373779297,
+          "bottleneck": {
+            "temporal_feature_norm": 517.4209594726562,
+            "residual_norm": 290.4792175292969,
+            "residual_rel_to_feature": 0.5613982677459717,
+            "gated_delta_norm": 29.047941207885742,
+            "gated_delta_rel": 0.056139860302209854
+          },
+          "low_res": {
+            "temporal_feature_norm": 1410.625732421875,
+            "residual_norm": 1414.233154296875,
+            "residual_rel_to_feature": 1.0025572776794434,
+            "gated_delta_norm": 141.40223693847656,
+            "gated_delta_rel": 0.1002407893538475
+          }
+        },
+        {
+          "t": 499,
+          "gates": {
+            "bottleneck": {
+              "raw_logit": -2.1972246170043945,
+              "activated": 0.10000000149011612
+            },
+            "low_res": {
+              "raw_logit": -2.1972246170043945,
+              "activated": 0.10000000149011612
+            }
+          },
+          "eps_std": 2.066882848739624,
+          "bottleneck": {
+            "temporal_feature_norm": 495.15814208984375,
+            "residual_norm": 295.1342468261719,
+            "residual_rel_to_feature": 0.5960403680801392,
+            "gated_delta_norm": 29.513444900512695,
+            "gated_delta_rel": 0.05960407853126526
+          },
+          "low_res": {
+            "temporal_feature_norm": 1411.710205078125,
+            "residual_norm": 1410.18701171875,
+            "residual_rel_to_feature": 0.9989210367202759,
+            "gated_delta_norm": 140.9951629638672,
+            "gated_delta_rel": 0.09987542778253555
+          }
+        },
+        {
+          "t": 0,
+          "gates": {
+            "bottleneck": {
+              "raw_logit": -2.1972246170043945,
+              "activated": 0.10000000149011612
+            },
+            "low_res": {
+              "raw_logit": -2.1972246170043945,
+              "activated": 0.10000000149011612
+            }
+          },
+          "eps_std": 3.532780408859253,
+          "bottleneck": {
+            "temporal_feature_norm": 458.99713134765625,
+            "residual_norm": 266.33880615234375,
+            "residual_rel_to_feature": 0.5802624821662903,
+            "gated_delta_norm": 26.63389015197754,
+            "gated_delta_rel": 0.0580262653529644
+          },
+          "low_res": {
+            "temporal_feature_norm": 1869.1365966796875,
+            "residual_norm": 1353.3717041015625,
+            "residual_rel_to_feature": 0.7240625023841858,
+            "gated_delta_norm": 135.31112670898438,
+            "gated_delta_rel": 0.07239231467247009
+          }
+        }
+      ]
+    },
+    "C25_25_10": {
+      "requested": {
+        "bottleneck": 0.25,
+        "low_res": 0.1
+      },
+      "actual_gates": {
+        "bottleneck": {
+          "raw_logit": -1.0986123085021973,
+          "activated": 0.25
+        },
+        "low_res": {
+          "raw_logit": -2.1972246170043945,
+          "activated": 0.10000000149011612
+        }
+      },
+      "prompt": "stationary",
+      "forward_passes": [
+        {
+          "t": 999,
+          "gates": {
+            "bottleneck": {
+              "raw_logit": -1.0986123085021973,
+              "activated": 0.25
+            },
+            "low_res": {
+              "raw_logit": -2.1972246170043945,
+              "activated": 0.10000000149011612
+            }
+          },
+          "eps_std": 2.0216128826141357,
+          "bottleneck": {
+            "temporal_feature_norm": 517.7831420898438,
+            "residual_norm": 290.4032897949219,
+            "residual_rel_to_feature": 0.5608589053153992,
+            "gated_delta_norm": 72.60082244873047,
+            "gated_delta_rel": 0.1402147263288498
+          },
+          "low_res": {
+            "temporal_feature_norm": 1410.4747314453125,
+            "residual_norm": 1414.20751953125,
+            "residual_rel_to_feature": 1.0026464462280273,
+            "gated_delta_norm": 141.39891052246094,
+            "gated_delta_rel": 0.10024916380643845
+          }
+        },
+        {
+          "t": 499,
+          "gates": {
+            "bottleneck": {
+              "raw_logit": -1.0986123085021973,
+              "activated": 0.25
+            },
+            "low_res": {
+              "raw_logit": -2.1972246170043945,
+              "activated": 0.10000000149011612
+            }
+          },
+          "eps_std": 2.0666663646698,
+          "bottleneck": {
+            "temporal_feature_norm": 495.2673645019531,
+            "residual_norm": 295.10955810546875,
+            "residual_rel_to_feature": 0.5958591103553772,
+            "gated_delta_norm": 73.77738952636719,
+            "gated_delta_rel": 0.1489647775888443
+          },
+          "low_res": {
+            "temporal_feature_norm": 1411.6402587890625,
+            "residual_norm": 1410.1748046875,
+            "residual_rel_to_feature": 0.998961865901947,
+            "gated_delta_norm": 140.9943084716797,
+            "gated_delta_rel": 0.09987977147102356
+          }
+        },
+        {
+          "t": 0,
+          "gates": {
+            "bottleneck": {
+              "raw_logit": -1.0986123085021973,
+              "activated": 0.25
+            },
+            "low_res": {
+              "raw_logit": -2.1972246170043945,
+              "activated": 0.10000000149011612
+            }
+          },
+          "eps_std": 3.5327811241149902,
+          "bottleneck": {
+            "temporal_feature_norm": 458.99713134765625,
+            "residual_norm": 266.33880615234375,
+            "residual_rel_to_feature": 0.5802624821662903,
+            "gated_delta_norm": 66.58470153808594,
+            "gated_delta_rel": 0.14506562054157257
+          },
+          "low_res": {
+            "temporal_feature_norm": 1869.1365966796875,
+            "residual_norm": 1353.3717041015625,
+            "residual_rel_to_feature": 0.7240625023841858,
+            "gated_delta_norm": 135.31112670898438,
+            "gated_delta_rel": 0.07239231467247009
+          }
+        }
+      ]
+    },
+    "C25_10_25": {
+      "requested": {
+        "bottleneck": 0.1,
+        "low_res": 0.25
+      },
+      "actual_gates": {
+        "bottleneck": {
+          "raw_logit": -2.1972246170043945,
+          "activated": 0.10000000149011612
+        },
+        "low_res": {
+          "raw_logit": -1.0986123085021973,
+          "activated": 0.25
+        }
+      },
+      "prompt": "stationary",
+      "forward_passes": [
+        {
+          "t": 999,
+          "gates": {
+            "bottleneck": {
+              "raw_logit": -2.1972246170043945,
+              "activated": 0.10000000149011612
+            },
+            "low_res": {
+              "raw_logit": -1.0986123085021973,
+              "activated": 0.25
+            }
+          },
+          "eps_std": 1.9030883312225342,
+          "bottleneck": {
+            "temporal_feature_norm": 517.4027099609375,
+            "residual_norm": 290.52142333984375,
+            "residual_rel_to_feature": 0.5614995956420898,
+            "gated_delta_norm": 29.05215835571289,
+            "gated_delta_rel": 0.05614999309182167
+          },
+          "low_res": {
+            "temporal_feature_norm": 1410.51708984375,
+            "residual_norm": 1414.289306640625,
+            "residual_rel_to_feature": 1.0026743412017822,
+            "gated_delta_norm": 353.57232666015625,
+            "gated_delta_rel": 0.25066858530044556
+          }
+        },
+        {
+          "t": 499,
+          "gates": {
+            "bottleneck": {
+              "raw_logit": -2.1972246170043945,
+              "activated": 0.10000000149011612
+            },
+            "low_res": {
+              "raw_logit": -1.0986123085021973,
+              "activated": 0.25
+            }
+          },
+          "eps_std": 1.9472123384475708,
+          "bottleneck": {
+            "temporal_feature_norm": 495.1863098144531,
+            "residual_norm": 295.0978088378906,
+            "residual_rel_to_feature": 0.5959329009056091,
+            "gated_delta_norm": 29.509803771972656,
+            "gated_delta_rel": 0.059593334794044495
+          },
+          "low_res": {
+            "temporal_feature_norm": 1411.654296875,
+            "residual_norm": 1410.1734619140625,
+            "residual_rel_to_feature": 0.9989510178565979,
+            "gated_delta_norm": 352.5433654785156,
+            "gated_delta_rel": 0.24973775446414948
+          }
+        },
+        {
+          "t": 0,
+          "gates": {
+            "bottleneck": {
+              "raw_logit": -2.1972246170043945,
+              "activated": 0.10000000149011612
+            },
+            "low_res": {
+              "raw_logit": -1.0986123085021973,
+              "activated": 0.25
+            }
+          },
+          "eps_std": 3.417191982269287,
+          "bottleneck": {
+            "temporal_feature_norm": 458.99713134765625,
+            "residual_norm": 266.33880615234375,
+            "residual_rel_to_feature": 0.5802624821662903,
+            "gated_delta_norm": 26.63389015197754,
+            "gated_delta_rel": 0.0580262653529644
+          },
+          "low_res": {
+            "temporal_feature_norm": 1869.1365966796875,
+            "residual_norm": 1353.3717041015625,
+            "residual_rel_to_feature": 0.7240625023841858,
+            "gated_delta_norm": 338.3429260253906,
+            "gated_delta_rel": 0.18101562559604645
+          }
+        }
+      ]
+    },
+    "C25_25_0": {
+      "requested": {
+        "bottleneck": 0.25,
+        "low_res": 0.0
+      },
+      "actual_gates": {
+        "bottleneck": {
+          "raw_logit": -1.0986123085021973,
+          "activated": 0.25
+        },
+        "low_res": {
+          "raw_logit": -15.0,
+          "activated": 3.0590223332183086e-07
+        }
+      },
+      "prompt": "stationary",
+      "forward_passes": [
+        {
+          "t": 999,
+          "gates": {
+            "bottleneck": {
+              "raw_logit": -1.0986123085021973,
+              "activated": 0.25
+            },
+            "low_res": {
+              "raw_logit": -15.0,
+              "activated": 3.0590223332183086e-07
+            }
+          },
+          "eps_std": 2.101529598236084,
+          "bottleneck": {
+            "temporal_feature_norm": 517.4010009765625,
+            "residual_norm": 290.44451904296875,
+            "residual_rel_to_feature": 0.5613528490066528,
+            "gated_delta_norm": 72.61112976074219,
+            "gated_delta_rel": 0.1403382122516632
+          },
+          "low_res": {
+            "temporal_feature_norm": 1410.430419921875,
+            "residual_norm": 1414.3134765625,
+            "residual_rel_to_feature": 1.0027531385421753,
+            "gated_delta_norm": 0.0004326271591708064,
+            "gated_delta_rel": 3.067341367568588e-07
+          }
+        },
+        {
+          "t": 499,
+          "gates": {
+            "bottleneck": {
+              "raw_logit": -1.0986123085021973,
+              "activated": 0.25
+            },
+            "low_res": {
+              "raw_logit": -15.0,
+              "activated": 3.0590223332183086e-07
+            }
+          },
+          "eps_std": 2.1471915245056152,
+          "bottleneck": {
+            "temporal_feature_norm": 495.33270263671875,
+            "residual_norm": 295.08294677734375,
+            "residual_rel_to_feature": 0.5957267880439758,
+            "gated_delta_norm": 73.77073669433594,
+            "gated_delta_rel": 0.14893169701099396
+          },
+          "low_res": {
+            "temporal_feature_norm": 1411.661865234375,
+            "residual_norm": 1410.1494140625,
+            "residual_rel_to_feature": 0.9989286065101624,
+            "gated_delta_norm": 0.0004313478711992502,
+            "gated_delta_rel": 3.055603201573831e-07
+          }
+        },
+        {
+          "t": 0,
+          "gates": {
+            "bottleneck": {
+              "raw_logit": -1.0986123085021973,
+              "activated": 0.25
+            },
+            "low_res": {
+              "raw_logit": -15.0,
+              "activated": 3.0590223332183086e-07
+            }
+          },
+          "eps_std": 3.6102945804595947,
+          "bottleneck": {
+            "temporal_feature_norm": 458.99713134765625,
+            "residual_norm": 266.33880615234375,
+            "residual_rel_to_feature": 0.5802624821662903,
+            "gated_delta_norm": 66.58470153808594,
+            "gated_delta_rel": 0.14506562054157257
+          },
+          "low_res": {
+            "temporal_feature_norm": 1869.1365966796875,
+            "residual_norm": 1353.3717041015625,
+            "residual_rel_to_feature": 0.7240625023841858,
+            "gated_delta_norm": 0.00041396424057893455,
+            "gated_delta_rel": 2.2147351330659149e-07
+          }
+        }
+      ]
+    },
+    "C25_0_25": {
+      "requested": {
+        "bottleneck": 0.0,
+        "low_res": 0.25
+      },
+      "actual_gates": {
+        "bottleneck": {
+          "raw_logit": -15.0,
+          "activated": 3.0590223332183086e-07
+        },
+        "low_res": {
+          "raw_logit": -1.0986123085021973,
+          "activated": 0.25
+        }
+      },
+      "prompt": "stationary",
+      "forward_passes": [
+        {
+          "t": 999,
+          "gates": {
+            "bottleneck": {
+              "raw_logit": -15.0,
+              "activated": 3.0590223332183086e-07
+            },
+            "low_res": {
+              "raw_logit": -1.0986123085021973,
+              "activated": 0.25
+            }
+          },
+          "eps_std": 1.9029422998428345,
+          "bottleneck": {
+            "temporal_feature_norm": 517.2027587890625,
+            "residual_norm": 290.4322509765625,
+            "residual_rel_to_feature": 0.5615442991256714,
+            "gated_delta_norm": 8.884386625140905e-05,
+            "gated_delta_rel": 1.7177762856590562e-07
+          },
+          "low_res": {
+            "temporal_feature_norm": 1410.5218505859375,
+            "residual_norm": 1414.238525390625,
+            "residual_rel_to_feature": 1.0026350021362305,
+            "gated_delta_norm": 353.55963134765625,
+            "gated_delta_rel": 0.2506587505340576
+          }
+        },
+        {
+          "t": 499,
+          "gates": {
+            "bottleneck": {
+              "raw_logit": -15.0,
+              "activated": 3.0590223332183086e-07
+            },
+            "low_res": {
+              "raw_logit": -1.0986123085021973,
+              "activated": 0.25
+            }
+          },
+          "eps_std": 1.9472283124923706,
+          "bottleneck": {
+            "temporal_feature_norm": 495.12579345703125,
+            "residual_norm": 295.15228271484375,
+            "residual_rel_to_feature": 0.59611576795578,
+            "gated_delta_norm": 9.028773638419807e-05,
+            "gated_delta_rel": 1.823531192712835e-07
+          },
+          "low_res": {
+            "temporal_feature_norm": 1411.6744384765625,
+            "residual_norm": 1410.15869140625,
+            "residual_rel_to_feature": 0.9989262819290161,
+            "gated_delta_norm": 352.5396728515625,
+            "gated_delta_rel": 0.24973157048225403
+          }
+        },
+        {
+          "t": 0,
+          "gates": {
+            "bottleneck": {
+              "raw_logit": -15.0,
+              "activated": 3.0590223332183086e-07
+            },
+            "low_res": {
+              "raw_logit": -1.0986123085021973,
+              "activated": 0.25
+            }
+          },
+          "eps_std": 3.417191505432129,
+          "bottleneck": {
+            "temporal_feature_norm": 458.99713134765625,
+            "residual_norm": 266.33880615234375,
+            "residual_rel_to_feature": 0.5802624821662903,
+            "gated_delta_norm": 8.14736049505882e-05,
+            "gated_delta_rel": 1.7750352299117367e-07
+          },
+          "low_res": {
+            "temporal_feature_norm": 1869.1365966796875,
+            "residual_norm": 1353.3717041015625,
+            "residual_rel_to_feature": 0.7240625023841858,
+            "gated_delta_norm": 338.3429260253906,
+            "gated_delta_rel": 0.18101562559604645
+          }
+        }
+      ]
+    },
+    "C25_native_left_to_right": {
+      "requested": {
+        "bottleneck": null,
+        "low_res": null
+      },
+      "actual_gates": {
+        "bottleneck": {
+          "raw_logit": -1.0409202575683594,
+          "activated": 0.2609724700450897
+        },
+        "low_res": {
+          "raw_logit": -1.0322657823562622,
+          "activated": 0.26264506578445435
+        }
+      },
+      "prompt": "left_to_right",
+      "forward_passes": [
+        {
+          "t": 999,
+          "gates": {
+            "bottleneck": {
+              "raw_logit": -1.0409202575683594,
+              "activated": 0.2609724700450897
+            },
+            "low_res": {
+              "raw_logit": -1.0322657823562622,
+              "activated": 0.26264506578445435
+            }
+          },
+          "eps_std": 1.89862060546875,
+          "bottleneck": {
+            "temporal_feature_norm": 519.897705078125,
+            "residual_norm": 290.5235290527344,
+            "residual_rel_to_feature": 0.5588090419769287,
+            "gated_delta_norm": 75.81859588623047,
+            "gated_delta_rel": 0.14583368599414825
+          },
+          "low_res": {
+            "temporal_feature_norm": 1414.7117919921875,
+            "residual_norm": 1414.133544921875,
+            "residual_rel_to_feature": 0.9995912909507751,
+            "gated_delta_norm": 371.3473815917969,
+            "gated_delta_rel": 0.26248976588249207
+          }
+        },
+        {
+          "t": 499,
+          "gates": {
+            "bottleneck": {
+              "raw_logit": -1.0409202575683594,
+              "activated": 0.2609724700450897
+            },
+            "low_res": {
+              "raw_logit": -1.0322657823562622,
+              "activated": 0.26264506578445435
+            }
+          },
+          "eps_std": 1.9443514347076416,
+          "bottleneck": {
+            "temporal_feature_norm": 498.00872802734375,
+            "residual_norm": 295.21539306640625,
+            "residual_rel_to_feature": 0.5927916169166565,
+            "gated_delta_norm": 77.04308319091797,
+            "gated_delta_rel": 0.15470227599143982
+          },
+          "low_res": {
+            "temporal_feature_norm": 1415.6962890625,
+            "residual_norm": 1409.8475341796875,
+            "residual_rel_to_feature": 0.9958686232566833,
+            "gated_delta_norm": 370.21063232421875,
+            "gated_delta_rel": 0.26150426268577576
+          }
+        },
+        {
+          "t": 0,
+          "gates": {
+            "bottleneck": {
+              "raw_logit": -1.0409202575683594,
+              "activated": 0.2609724700450897
+            },
+            "low_res": {
+              "raw_logit": -1.0322657823562622,
+              "activated": 0.26264506578445435
+            }
+          },
+          "eps_std": 3.411777973175049,
+          "bottleneck": {
+            "temporal_feature_norm": 458.8092346191406,
+            "residual_norm": 267.80230712890625,
+            "residual_rel_to_feature": 0.5836898684501648,
+            "gated_delta_norm": 69.88898468017578,
+            "gated_delta_rel": 0.15232689678668976
+          },
+          "low_res": {
+            "temporal_feature_norm": 1868.655029296875,
+            "residual_norm": 1352.6956787109375,
+            "residual_rel_to_feature": 0.7238873243331909,
+            "gated_delta_norm": 355.19110107421875,
+            "gated_delta_rel": 0.1900784820318222
+          }
+        }
+      ]
+    },
+    "C25_0_25_left_to_right": {
+      "requested": {
+        "bottleneck": 0.0,
+        "low_res": 0.25
+      },
+      "actual_gates": {
+        "bottleneck": {
+          "raw_logit": -15.0,
+          "activated": 3.0590223332183086e-07
+        },
+        "low_res": {
+          "raw_logit": -1.0986123085021973,
+          "activated": 0.25
+        }
+      },
+      "prompt": "left_to_right",
+      "forward_passes": [
+        {
+          "t": 999,
+          "gates": {
+            "bottleneck": {
+              "raw_logit": -15.0,
+              "activated": 3.0590223332183086e-07
+            },
+            "low_res": {
+              "raw_logit": -1.0986123085021973,
+              "activated": 0.25
+            }
+          },
+          "eps_std": 1.9077544212341309,
+          "bottleneck": {
+            "temporal_feature_norm": 520.3082275390625,
+            "residual_norm": 290.4532165527344,
+            "residual_rel_to_feature": 0.5582329630851746,
+            "gated_delta_norm": 8.885032730177045e-05,
+            "gated_delta_rel": 1.7076479252864374e-07
+          },
+          "low_res": {
+            "temporal_feature_norm": 1414.3919677734375,
+            "residual_norm": 1414.1080322265625,
+            "residual_rel_to_feature": 0.9997992515563965,
+            "gated_delta_norm": 353.5270080566406,
+            "gated_delta_rel": 0.24994981288909912
+          }
+        },
+        {
+          "t": 499,
+          "gates": {
+            "bottleneck": {
+              "raw_logit": -15.0,
+              "activated": 3.0590223332183086e-07
+            },
+            "low_res": {
+              "raw_logit": -1.0986123085021973,
+              "activated": 0.25
+            }
+          },
+          "eps_std": 1.9542800188064575,
+          "bottleneck": {
+            "temporal_feature_norm": 497.57366943359375,
+            "residual_norm": 295.3129577636719,
+            "residual_rel_to_feature": 0.5935059785842896,
+            "gated_delta_norm": 9.033690730575472e-05,
+            "gated_delta_rel": 1.8155483871851175e-07
+          },
+          "low_res": {
+            "temporal_feature_norm": 1415.63720703125,
+            "residual_norm": 1409.8822021484375,
+            "residual_rel_to_feature": 0.9959346652030945,
+            "gated_delta_norm": 352.4705505371094,
+            "gated_delta_rel": 0.24898366630077362
+          }
+        },
+        {
+          "t": 0,
+          "gates": {
+            "bottleneck": {
+              "raw_logit": -15.0,
+              "activated": 3.0590223332183086e-07
+            },
+            "low_res": {
+              "raw_logit": -1.0986123085021973,
+              "activated": 0.25
+            }
+          },
+          "eps_std": 3.4214742183685303,
+          "bottleneck": {
+            "temporal_feature_norm": 458.8092346191406,
+            "residual_norm": 267.80230712890625,
+            "residual_rel_to_feature": 0.5836898684501648,
+            "gated_delta_norm": 8.192133100237697e-05,
+            "gated_delta_rel": 1.7855205669548013e-07
+          },
+          "low_res": {
+            "temporal_feature_norm": 1868.655029296875,
+            "residual_norm": 1352.6956787109375,
+            "residual_rel_to_feature": 0.7238873243331909,
+            "gated_delta_norm": 338.1739196777344,
+            "gated_delta_rel": 0.18097183108329773
+          }
+        }
+      ]
+    }
+  },
+  "post_restore_gates": {
+    "bottleneck": {
+      "raw_logit": -1.0409202575683594,
+      "activated": 0.2609724700450897
+    },
+    "low_res": {
+      "raw_logit": -1.0322657823562622,
+      "activated": 0.26264506578445435
+    }
+  }
+}

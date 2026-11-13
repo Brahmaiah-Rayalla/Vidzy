@@ -1,0 +1,7 @@
+{
+  "armA_best_mse_mean": 0.144,
+  "armB_best": 0.204,
+  "recognizable": "partial - min mse 0.018",
+  "vs_L17": 0.13,
+  "vs_L20": 0.24
+}

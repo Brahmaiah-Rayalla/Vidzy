@@ -1,0 +1,8 @@
+{
+  "balanced": true,
+  "per_class_train": 200,
+  "per_class_val": 50,
+  "masks": true,
+  "positions": "16+r..48-r",
+  "radius": "8-16"
+}

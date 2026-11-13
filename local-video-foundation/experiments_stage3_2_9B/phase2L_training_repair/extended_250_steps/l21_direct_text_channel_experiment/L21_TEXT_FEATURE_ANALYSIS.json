@@ -1,0 +1,5 @@
+{
+  "channels_per_example": 512,
+  "padding_zeroed": true,
+  "token_identity_preserved": "per-position, no pooling"
+}

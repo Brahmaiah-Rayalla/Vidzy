@@ -1,0 +1,7 @@
+{
+  "unet_trainable_params": 9439171,
+  "te_params_frozen": true,
+  "te_all_requires_grad_false": true,
+  "assertions": "all su params requires_grad=True; all te params requires_grad=False; te in eval()",
+  "temporal_modules": "none present"
+}

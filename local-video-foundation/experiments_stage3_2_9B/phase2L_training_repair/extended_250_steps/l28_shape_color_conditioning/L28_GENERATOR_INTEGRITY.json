@@ -1,0 +1,5 @@
+{
+  "L27": "untouched (read-only load)",
+  "stage2": "untouched",
+  "ckpts": "ckpt_{1000..10000}.pt"
+}

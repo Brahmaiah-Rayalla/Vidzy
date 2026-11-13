@@ -1,0 +1,76 @@
+{
+  "indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "pairs": [
+    {
+      "idx": 0,
+      "caption": "On white, there is a medium light_gray triangle and a large light_yellow square.",
+      "image_path": "data/text_image\\image_00994.png",
+      "sha256": "4a6cf7aad73ecf53730a8e66025e84a8d2d7a63f7e381302847d71879d19f6f2"
+    },
+    {
+      "idx": 1,
+      "caption": "On white, there is a medium cream square and a small gray square.",
+      "image_path": "data/text_image\\image_00690.png",
+      "sha256": "4fa82f87c7842b7c3b808f5357294a568fcd4a4811b18825d752bd62ad66ea6d"
+    },
+    {
+      "idx": 2,
+      "caption": "A orange circle in the bottom, large in size, on white.",
+      "image_path": "data/text_image\\image_00319.png",
+      "sha256": "3c3626a4d1aa69f2c4fa257f854328b9c85fd2aa744009d4689ad572f2afee83"
+    },
+    {
+      "idx": 3,
+      "caption": "A pink circle of medium size on light_gray.",
+      "image_path": "data/text_image\\image_00048.png",
+      "sha256": "42ba73c585abb30c4897d5c83dd88b7e16e594a8cca214582f14d454bd2ccc93"
+    },
+    {
+      "idx": 4,
+      "caption": "A small white square on a light_gray background.",
+      "image_path": "data/text_image\\image_00079.png",
+      "sha256": "c61ecc02cdea7dacbfe0a827e4269bce6eb65be4275c0ff0b5b64f4c542fd958"
+    },
+    {
+      "idx": 5,
+      "caption": "On light_gray, there is a medium pink triangle and a large purple circle.",
+      "image_path": "data/text_image\\image_00743.png",
+      "sha256": "59ae54a6dbd3d47370ff2c6939bec0677b8b0fb04c4e698ac215d9b2e81a0e5f"
+    },
+    {
+      "idx": 6,
+      "caption": "On light_yellow, there is a large black triangle and a small green square.",
+      "image_path": "data/text_image\\image_00403.png",
+      "sha256": "e27d2ba297bb1844f8a74694e7b09229e214b2f3e78b383c5750480183641e26"
+    },
+    {
+      "idx": 7,
+      "caption": "A yellow circle in the left and a red triangle in the right on light_yellow.",
+      "image_path": "data/text_image\\image_00024.png",
+      "sha256": "acbcb34a95d9900afdb441dd2c50ae799894e3dc8235f1c03eb6e4f3ad23f4c5"
+    },
+    {
+      "idx": 8,
+      "caption": "A red triangle in the bottom and a light_blue circle in the right on light_blue.",
+      "image_path": "data/text_image\\image_00236.png",
+      "sha256": "e668396abd19d880c119cabaae407da935204e0a92379ca15605070252f25928"
+    },
+    {
+      "idx": 9,
+      "caption": "A light_blue circle in the center, large in size, on white.",
+      "image_path": "data/text_image\\image_00392.png",
+      "sha256": "fb9b44a8ca95480548a6ec21049d8e47d04e6da72ceb72ec52bb571336ebe764"
+    }
+  ]
+}

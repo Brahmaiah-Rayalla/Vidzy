@@ -1,0 +1,90 @@
+{
+  "direction_accuracy": {
+    "recalculated": {
+      "correct_count": 7,
+      "total_count": 36,
+      "accuracy": 0.19444444444444445
+    },
+    "reported": {
+      "accuracy": 0.19444444444444445
+    },
+    "match": true,
+    "B_accuracy": {
+      "correct": 2,
+      "total": 12,
+      "accuracy": 0.16666666666666666
+    },
+    "C_accuracy": {
+      "correct": 3,
+      "total": 12,
+      "accuracy": 0.25
+    },
+    "D_accuracy": {
+      "correct": 2,
+      "total": 12,
+      "accuracy": 0.16666666666666666
+    },
+    "prompt_0_accuracy": {
+      "correct": 0,
+      "total": 9,
+      "accuracy": 0.0
+    },
+    "prompt_1_accuracy": {
+      "correct": 7,
+      "total": 9,
+      "accuracy": 0.7777777777777778
+    },
+    "prompt_2_accuracy": {
+      "correct": 0,
+      "total": 9,
+      "accuracy": 0.0
+    },
+    "prompt_3_accuracy": {
+      "correct": 0,
+      "total": 9,
+      "accuracy": 0.0
+    },
+    "seed_42_accuracy": {
+      "correct": 1,
+      "total": 12,
+      "accuracy": 0.08333333333333333
+    },
+    "seed_123_accuracy": {
+      "correct": 3,
+      "total": 12,
+      "accuracy": 0.25
+    },
+    "seed_456_accuracy": {
+      "correct": 3,
+      "total": 12,
+      "accuracy": 0.25
+    }
+  },
+  "stationary_control": {
+    "recalculated": {
+      "mean_drift": 25.488747534374298,
+      "count": 9,
+      "min": 11.60598774533825,
+      "max": 64.14531683293515
+    },
+    "reported": {
+      "mean_drift": 25.488747534374298
+    },
+    "match": true,
+    "threshold_verification": {
+      "threshold": 5.0,
+      "stationary_below_threshold": 0,
+      "total_stationary": 9,
+      "stationary_rate": 0.0
+    }
+  },
+  "verification": {
+    "total_videos": 36,
+    "expected_total": 36,
+    "count_match": true,
+    "mean_displacement": 26.771584184821318,
+    "median_displacement": 23.814512130262933,
+    "overall_success": true
+  },
+  "discrepancies": []
+}

@@ -1,0 +1,47 @@
+{
+  "bottleneck_temporal": {
+    "name": "bottleneck_temporal",
+    "shape": [
+      1,
+      16,
+      128,
+      8,
+      8
+    ],
+    "mean": 0.8765151500701904,
+    "std": 1.2923989295959473,
+    "rms": 1.5615934133529663,
+    "max_abs": 8.127842903137207
+  },
+  "low_res_temporal": {
+    "name": "low_res_temporal",
+    "shape": [
+      1,
+      16,
+      64,
+      64,
+      64
+    ],
+    "mean": 0.37050750851631165,
+    "std": 0.7516397833824158,
+    "rms": 0.8379965424537659,
+    "max_abs": 5.132106781005859
+  },
+  "spatial_input_rms": 1.0017893314361572,
+  "ratios": {
+    "bottleneck_temporal_over_spatial": 1.5588041960022456,
+    "low_res_temporal_over_spatial": 0.8364997671241124
+  },
+  "gate_values": {
+    "bottleneck_gate": 0.010049584321677685,
+    "low_res_gate": 0.01027901191264391
+  },
+  "gated_residual_rms": {
+    "bottleneck": 0.01569336468366711,
+    "low_res": 0.008613776442636667
+  },
+  "gated_residual_over_spatial": {
+    "bottleneck": 0.015665334208709556,
+    "low_res": 0.008598391071192608
+  }
+}

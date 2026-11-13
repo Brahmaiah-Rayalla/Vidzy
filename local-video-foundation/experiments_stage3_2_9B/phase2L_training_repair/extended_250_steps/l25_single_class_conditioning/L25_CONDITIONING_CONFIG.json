@@ -1,0 +1,5 @@
+{
+  "type": "onehot3",
+  "channels": 3,
+  "broadcast": "64x64"
+}

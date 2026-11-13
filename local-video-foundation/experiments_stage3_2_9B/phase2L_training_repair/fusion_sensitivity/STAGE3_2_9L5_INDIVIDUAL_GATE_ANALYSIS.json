@@ -1,0 +1,34 @@
+{
+  "bottleneck_gate": {
+    "initial_activated": 0.010000995360314846,
+    "final_activated": 0.010049584321677685,
+    "parameter_change": 4.8588961362838745e-05,
+    "percentage_change": 0.4858412549179414,
+    "initial_raw_logit": -4.595019313641522,
+    "final_raw_logit": -4.590123584078322,
+    "raw_parameter_change": 0.0048957295632003905
+  },
+  "low_res_gate": {
+    "initial_activated": 0.01000326219946146,
+    "final_activated": 0.01027901191264391,
+    "parameter_change": 0.00027574971318244934,
+    "percentage_change": 2.7565978746142905,
+    "initial_raw_logit": -4.5947903882302015,
+    "final_raw_logit": -4.567318935231895,
+    "raw_parameter_change": 0.027471452998306667
+  },
+  "fusion_gradients": {
+    "initial_norm": 2.818656705949607e-05,
+    "mean_norm": 0.005793950269301573,
+    "final_norm": 0.011091522426767142,
+    "std_norm": 0.0034321906953616375,
+    "min_norm": 2.818656705949607e-05,
+    "max_norm": 0.011865835087050414
+  },
+  "gradient_scale": {
+    "initial_relative_to_raw": 6.13415638446107e-06,
+    "mean_relative_to_raw": 0.0012609196771166356,
+    "final_relative_to_raw": 0.002413814103857854
+  },
+  "adam_state": "NOT_AVAILABLE - Optimizer state not saved in historical logs"
+}

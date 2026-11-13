@@ -1,0 +1,947 @@
+{
+  "pass1_seed_scheme": "torch.Generator().manual_seed(1000 + prompt_index)",
+  "sampling": {
+    "num_timesteps": 1000,
+    "sampling_steps": 25,
+    "beta_start": 0.0001,
+    "beta_end": 0.02,
+    "frames": 16,
+    "resolution": 64
+  },
+  "configs": {
+    "C1_native": {
+      "checkpoint": "C1",
+      "requested_gates": {
+        "bottleneck": null,
+        "low_res": null
+      },
+      "actual_gates": {
+        "bottleneck": {
+          "raw_logit": -4.557628154754639,
+          "activated": 0.010378069244325161
+        },
+        "low_res": {
+          "raw_logit": -4.523617267608643,
+          "activated": 0.010733253322541714
+        }
+      },
+      "summary": {
+        "direction_matches": 1,
+        "direction_partial": 0,
+        "directional_prompts": 5,
+        "mean_direction_cosine": -0.4263618527803067,
+        "mean_global_translation_cosine": 0.018202809464151194,
+        "global_translation_matches_0.5": 2,
+        "mean_temporal_activity": 0.1192419022321701,
+        "mean_displacement_px": 20.435601428501393,
+        "stationary_displacement_px": 5.512976307029839,
+        "stationary_centroid_jitter_px": 25.004390717717417,
+        "stationary_global_net_translation_px": 3.1622776601683795,
+        "mean_straightness": 0.07765903451505471,
+        "mean_abrupt_ratio": 1.8310116885366305,
+        "mean_detection_rate": 0.020833333333333332,
+        "min_detection_rate": 0.0
+      }
+    },
+    "C25_native": {
+      "checkpoint": "C25",
+      "requested_gates": {
+        "bottleneck": null,
+        "low_res": null
+      },
+      "actual_gates": {
+        "bottleneck": {
+          "raw_logit": -1.0409202575683594,
+          "activated": 0.2609724700450897
+        },
+        "low_res": {
+          "raw_logit": -1.0322657823562622,
+          "activated": 0.26264506578445435
+        }
+      },
+      "summary": {
+        "direction_matches": 4,
+        "direction_partial": 0,
+        "directional_prompts": 5,
+        "mean_direction_cosine": 0.5444983645342949,
+        "mean_global_translation_cosine": 0.05256483033992273,
+        "global_translation_matches_0.5": 2,
+        "mean_temporal_activity": 0.25499452352523805,
+        "mean_displacement_px": 19.440109008591932,
+        "stationary_displacement_px": 20.513812769065183,
+        "stationary_centroid_jitter_px": 16.752026820955212,
+        "stationary_global_net_translation_px": 46.61544808322666,
+        "mean_straightness": 0.05855437743720269,
+        "mean_abrupt_ratio": 1.642511469892772,
+        "mean_detection_rate": 0.0625,
+        "min_detection_rate": 0.0
+      }
+    },
+    "C25_10_10": {
+      "checkpoint": "C25",
+      "requested_gates": {
+        "bottleneck": 0.1,
+        "low_res": 0.1
+      },
+      "actual_gates": {
+        "bottleneck": {
+          "raw_logit": -2.1972246170043945,
+          "activated": 0.10000000149011612
+        },
+        "low_res": {
+          "raw_logit": -2.1972246170043945,
+          "activated": 0.10000000149011612
+        }
+      },
+      "summary": {
+        "direction_matches": 3,
+        "direction_partial": 0,
+        "directional_prompts": 5,
+        "mean_direction_cosine": 0.12982462990782231,
+        "mean_global_translation_cosine": 0.12273242142301506,
+        "global_translation_matches_0.5": 3,
+        "mean_temporal_activity": 0.1449879840016365,
+        "mean_displacement_px": 13.441546373793244,
+        "stationary_displacement_px": 22.59918338397821,
+        "stationary_centroid_jitter_px": 16.15704620712391,
+        "stationary_global_net_translation_px": 59.22837157984339,
+        "mean_straightness": 0.056894945399771114,
+        "mean_abrupt_ratio": 2.1474058470584603,
+        "mean_detection_rate": 0.03125,
+        "min_detection_rate": 0.0
+      }
+    },
+    "C25_25_10": {
+      "checkpoint": "C25",
+      "requested_gates": {
+        "bottleneck": 0.25,
+        "low_res": 0.1
+      },
+      "actual_gates": {
+        "bottleneck": {
+          "raw_logit": -1.0986123085021973,
+          "activated": 0.25
+        },
+        "low_res": {
+          "raw_logit": -2.1972246170043945,
+          "activated": 0.10000000149011612
+        }
+      },
+      "summary": {
+        "direction_matches": 3,
+        "direction_partial": 0,
+        "directional_prompts": 5,
+        "mean_direction_cosine": 0.12978198935618204,
+        "mean_global_translation_cosine": 0.1203962320641139,
+        "global_translation_matches_0.5": 3,
+        "mean_temporal_activity": 0.14499238580465318,
+        "mean_displacement_px": 13.440672913211918,
+        "stationary_displacement_px": 22.600815241551835,
+        "stationary_centroid_jitter_px": 16.160584627025603,
+        "stationary_global_net_translation_px": 59.43904440685432,
+        "mean_straightness": 0.05689518835321487,
+        "mean_abrupt_ratio": 2.1476051351952057,
+        "mean_detection_rate": 0.03125,
+        "min_detection_rate": 0.0
+      }
+    },
+    "C25_10_25": {
+      "checkpoint": "C25",
+      "requested_gates": {
+        "bottleneck": 0.1,
+        "low_res": 0.25
+      },
+      "actual_gates": {
+        "bottleneck": {
+          "raw_logit": -2.1972246170043945,
+          "activated": 0.10000000149011612
+        },
+        "low_res": {
+          "raw_logit": -1.0986123085021973,
+          "activated": 0.25
+        }
+      },
+      "summary": {
+        "direction_matches": 3,
+        "direction_partial": 0,
+        "directional_prompts": 5,
+        "mean_direction_cosine": 0.3769418705429895,
+        "mean_global_translation_cosine": -0.2431582766549934,
+        "global_translation_matches_0.5": 1,
+        "mean_temporal_activity": 0.24730168879032136,
+        "mean_displacement_px": 18.513388655383757,
+        "stationary_displacement_px": 21.044966562719463,
+        "stationary_centroid_jitter_px": 19.18340101998485,
+        "stationary_global_net_translation_px": 35.608987629529715,
+        "mean_straightness": 0.05700770591508357,
+        "mean_abrupt_ratio": 1.6327567250180401,
+        "mean_detection_rate": 0.0625,
+        "min_detection_rate": 0.0
+      }
+    },
+    "C25_25_0": {
+      "checkpoint": "C25",
+      "requested_gates": {
+        "bottleneck": 0.25,
+        "low_res": 0.0
+      },
+      "actual_gates": {
+        "bottleneck": {
+          "raw_logit": -1.0986123085021973,
+          "activated": 0.25
+        },
+        "low_res": {
+          "raw_logit": -15.0,
+          "activated": 3.0590223332183086e-07
+        }
+      },
+      "summary": {
+        "direction_matches": 1,
+        "direction_partial": 0,
+        "directional_prompts": 5,
+        "mean_direction_cosine": -0.33059660308743566,
+        "mean_global_translation_cosine": -0.01195455603543687,
+        "global_translation_matches_0.5": 1,
+        "mean_temporal_activity": 0.11830231696367263,
+        "mean_displacement_px": 22.529053565955472,
+        "stationary_displacement_px": 0.408295268580279,
+        "stationary_centroid_jitter_px": 19.122107452534067,
+        "stationary_global_net_translation_px": 64.28841264178172,
+        "mean_straightness": 0.09224193900172958,
+        "mean_abrupt_ratio": 2.143142440806198,
+        "mean_detection_rate": 0.010416666666666666,
+        "min_detection_rate": 0.0
+      }
+    },
+    "C25_0_25": {
+      "checkpoint": "C25",
+      "requested_gates": {
+        "bottleneck": 0.0,
+        "low_res": 0.25
+      },
+      "actual_gates": {
+        "bottleneck": {
+          "raw_logit": -15.0,
+          "activated": 3.0590223332183086e-07
+        },
+        "low_res": {
+          "raw_logit": -1.0986123085021973,
+          "activated": 0.25
+        }
+      },
+      "summary": {
+        "direction_matches": 3,
+        "direction_partial": 0,
+        "directional_prompts": 5,
+        "mean_direction_cosine": 0.3766058259894792,
+        "mean_global_translation_cosine": -0.2431582766549934,
+        "global_translation_matches_0.5": 1,
+        "mean_temporal_activity": 0.24729930162429808,
+        "mean_displacement_px": 18.513338646629176,
+        "stationary_displacement_px": 21.045538677335905,
+        "stationary_centroid_jitter_px": 19.184455136004804,
+        "stationary_global_net_translation_px": 35.608987629529715,
+        "mean_straightness": 0.05700653969968743,
+        "mean_abrupt_ratio": 1.632716470265515,
+        "mean_detection_rate": 0.0625,
+        "min_detection_rate": 0.0
+      }
+    }
+  },
+  "per_prompt": {
+    "C1_native": {
+      "left_to_right": {
+        "temporal_activity": 0.11401917040348053,
+        "displacement_px": 24.46166621659003,
+        "direction_cosine": -0.31170276781086637,
+        "direction_class": "DIRECTION_MISMATCH",
+        "global_direction_cosine": -0.4287444523171484,
+        "global_net_translation": [
+          -28.0,
+          -59.0
+        ],
+        "detection_rate": 0.125,
+        "straightness": 0.10197552558726519,
+        "abrupt_ratio": 2.1982343907071
+      },
+      "right_to_left": {
+        "temporal_activity": 0.09925225377082825,
+        "displacement_px": 19.395323736543688,
+        "direction_cosine": -0.9335673257774657,
+        "direction_class": "DIRECTION_MISMATCH",
+        "global_direction_cosine": 0.5407575913134987,
+        "global_net_translation": [
+          -18.0,
+          -28.0
+        ],
+        "detection_rate": 0.0,
+        "straightness": 0.08586157128145408,
+        "abrupt_ratio": 1.8325001453332597
+      },
+      "top_to_bottom": {
+        "temporal_activity": 0.16854453086853027,
+        "displacement_px": 21.49203837893303,
+        "direction_cosine": -0.8721087190456177,
+        "direction_class": "DIRECTION_MISMATCH",
+        "global_direction_cosine": -0.5038710255240862,
+        "global_net_translation": [
+          -12.0,
+          -7.0
+        ],
+        "detection_rate": 0.0,
+        "straightness": 0.07427002770367373,
+        "abrupt_ratio": 1.6491600364478944
+      },
+      "bottom_to_top": {
+        "temporal_activity": 0.13487166166305542,
+        "displacement_px": 21.275279406267398,
+        "direction_cosine": 0.7647686362656293,
+        "direction_class": "DIRECTION_MATCH",
+        "global_direction_cosine": 0.9363291775690445,
+        "global_net_translation": [
+          -21.0,
+          -56.0
+        ],
+        "detection_rate": 0.0,
+        "straightness": 0.06303793564111876,
+        "abrupt_ratio": 1.7022461202948918
+      },
+      "diagonal": {
+        "temporal_activity": 0.07952189445495605,
+        "displacement_px": 15.553699404172818,
+        "direction_cosine": -0.7791990875332128,
+        "direction_class": "DIRECTION_MISMATCH",
+        "global_direction_cosine": -0.45345724372055257,
+        "global_net_translation": [
+          14.0,
+          -43.0
+        ],
+        "detection_rate": 0.0,
+        "straightness": 0.0631501123617618,
+        "abrupt_ratio": 1.7729177499000073
+      },
+      "stationary": {
+        "temporal_activity": 0.13099487125873566,
+        "displacement_px": 5.512976307029839,
+        "direction_cosine": null,
+        "direction_class": "STATIONARY_EXPECTED",
+        "global_direction_cosine": null,
+        "global_net_translation": [
+          -1.0,
+          -3.0
+        ],
+        "detection_rate": 0.0,
+        "straightness": 0.014698688640374127,
+        "abrupt_ratio": 1.5350214937180433
+      }
+    },
+    "C25_native": {
+      "left_to_right": {
+        "temporal_activity": 0.2326352298259735,
+        "displacement_px": 5.567864710702254,
+        "direction_cosine": -0.6879133189670051,
+        "direction_class": "DIRECTION_MISMATCH",
+        "global_direction_cosine": -0.19611613513818404,
+        "global_net_translation": [
+          -5.0,
+          -25.0
+        ],
+        "detection_rate": 0.25,
+        "straightness": 0.019091705027186535,
+        "abrupt_ratio": 1.6692304605651465
+      },
+      "right_to_left": {
+        "temporal_activity": 0.27445611357688904,
+        "displacement_px": 37.89219076456186,
+        "direction_cosine": 0.9915221350875584,
+        "direction_class": "DIRECTION_MATCH",
+        "global_direction_cosine": -0.9927956130099675,
+        "global_net_translation": [
+          58.0,
+          7.0
+        ],
+        "detection_rate": 0.0,
+        "straightness": 0.12184464567895051,
+        "abrupt_ratio": 1.7951836944851474
+      },
+      "top_to_bottom": {
+        "temporal_activity": 0.23795689642429352,
+        "displacement_px": 0.1539621798075586,
+        "direction_cosine": 0.6779288861049163,
+        "direction_class": "DIRECTION_MATCH",
+        "global_direction_cosine": 0.5339929913879817,
+        "global_net_translation": [
+          -19.0,
+          12.0
+        ],
+        "detection_rate": 0.0,
+        "straightness": 0.0006626577022092793,
+        "abrupt_ratio": 1.5683482023144908
+      },
+      "bottom_to_top": {
+        "temporal_activity": 0.24630345404148102,
+        "displacement_px": 5.451280085470223,
+        "direction_cosine": 0.985227461249707,
+        "direction_class": "DIRECTION_MATCH",
+        "global_direction_cosine": 0.9912279006826347,
+        "global_net_translation": [
+          2.0,
+          -15.0
+        ],
+        "detection_rate": 0.0,
+        "straightness": 0.02157107856825084,
+        "abrupt_ratio": 1.7331194278090387
+      },
+      "diagonal": {
+        "temporal_activity": 0.2836209237575531,
+        "displacement_px": 48.13524730241777,
+        "direction_cosine": 0.7557266591962976,
+        "direction_class": "DIRECTION_MATCH",
+        "global_direction_cosine": -0.07348499222285126,
+        "global_net_translation": [
+          44.0,
+          -51.0
+        ],
+        "detection_rate": 0.0,
+        "straightness": 0.12960180020941625,
+        "abrupt_ratio": 1.446675564290038
+      },
+      "stationary": {
+        "temporal_activity": 0.31312569975852966,
+        "displacement_px": 20.513812769065183,
+        "direction_cosine": null,
+        "direction_class": "STATIONARY_EXPECTED",
+        "global_direction_cosine": null,
+        "global_net_translation": [
+          27.0,
+          -38.0
+        ],
+        "detection_rate": 0.125,
+        "straightness": 0.08163713755680926,
+        "abrupt_ratio": 1.6922459354079573
+      }
+    },
+    "C25_10_10": {
+      "left_to_right": {
+        "temporal_activity": 0.11436652392148972,
+        "displacement_px": 9.610269927526245,
+        "direction_cosine": 0.9957270075327355,
+        "direction_class": "DIRECTION_MATCH",
+        "global_direction_cosine": -0.6436951488689946,
+        "global_net_translation": [
+          -90.0,
+          -107.0
+        ],
+        "detection_rate": 0.0625,
+        "straightness": 0.049818585816418216,
+        "abrupt_ratio": 2.8713885992112624
+      },
+      "right_to_left": {
+        "temporal_activity": 0.13713903725147247,
+        "displacement_px": 28.759586775018814,
+        "direction_cosine": 0.9650532524867168,
+        "direction_class": "DIRECTION_MATCH",
+        "global_direction_cosine": 0.9341547768303842,
+        "global_net_translation": [
+          -89.0,
+          -34.0
+        ],
+        "detection_rate": 0.0,
+        "straightness": 0.09404524959278375,
+        "abrupt_ratio": 1.4905191299812912
+      },
+      "top_to_bottom": {
+        "temporal_activity": 0.17489129304885864,
+        "displacement_px": 3.0943458178823264,
+        "direction_cosine": -0.9713340548021924,
+        "direction_class": "DIRECTION_MISMATCH",
+        "global_direction_cosine": 0.6858011464970941,
+        "global_net_translation": [
+          -52.0,
+          49.0
+        ],
+        "detection_rate": 0.0,
+        "straightness": 0.013651918752327678,
+        "abrupt_ratio": 2.317000596267507
+      },
+      "bottom_to_top": {
+        "temporal_activity": 0.13915203511714935,
+        "displacement_px": 17.360385250512415,
+        "direction_cosine": 0.6207438940571532,
+        "direction_class": "DIRECTION_MATCH",
+        "global_direction_cosine": 0.6368814469962913,
+        "global_net_translation": [
+          -46.0,
+          -38.0
+        ],
+        "detection_rate": 0.0,
+        "straightness": 0.07239466266854579,
+        "abrupt_ratio": 1.9307186690708102
+      },
+      "diagonal": {
+        "temporal_activity": 0.15939103066921234,
+        "displacement_px": 8.383144098026419,
+        "direction_cosine": -0.9610669497353018,
+        "direction_class": "DIRECTION_MISMATCH",
+        "global_direction_cosine": -0.9994801143396997,
+        "global_net_translation": [
+          -45.0,
+          -48.0
+        ],
+        "detection_rate": 0.0,
+        "straightness": 0.054564310168780106,
+        "abrupt_ratio": 2.1274022407614295
+      },
+      "stationary": {
+        "temporal_activity": 0.12291435152292252,
+        "displacement_px": 22.59918338397821,
+        "direction_cosine": null,
+        "direction_class": "STATIONARY_EXPECTED",
+        "global_direction_cosine": null,
+        "global_net_translation": [
+          -12.0,
+          -58.0
+        ],
+        "detection_rate": 0.125,
+        "straightness": 0.09324799881640848,
+        "abrupt_ratio": 1.6415400022145057
+      }
+    },
+    "C25_25_10": {
+      "left_to_right": {
+        "temporal_activity": 0.11437008529901505,
+        "displacement_px": 9.614003925546045,
+        "direction_cosine": 0.9957051574965603,
+        "direction_class": "DIRECTION_MATCH",
+        "global_direction_cosine": -0.647855051899472,
+        "global_net_translation": [
+          -91.0,
+          -107.0
+        ],
+        "detection_rate": 0.0625,
+        "straightness": 0.04984392100474357,
+        "abrupt_ratio": 2.8714306230672175
+      },
+      "right_to_left": {
+        "temporal_activity": 0.1371501088142395,
+        "displacement_px": 28.75946813542314,
+        "direction_cosine": 0.9649947570988627,
+        "direction_class": "DIRECTION_MATCH",
+        "global_direction_cosine": 0.9341547768303842,
+        "global_net_translation": [
+          -89.0,
+          -34.0
+        ],
+        "detection_rate": 0.0,
+        "straightness": 0.09404247961105222,
+        "abrupt_ratio": 1.4905819891680268
+      },
+      "top_to_bottom": {
+        "temporal_activity": 0.17489829659461975,
+        "displacement_px": 3.0959652324895663,
+        "direction_cosine": -0.9711994487133687,
+        "direction_class": "DIRECTION_MISMATCH",
+        "global_direction_cosine": 0.6782801027330658,
+        "global_net_translation": [
+          -52.0,
+          48.0
+        ],
+        "detection_rate": 0.0,
+        "straightness": 0.013660244189808168,
+        "abrupt_ratio": 2.316729082303159
+      },
+      "bottom_to_top": {
+        "temporal_activity": 0.1391550600528717,
+        "displacement_px": 17.35964882037209,
+        "direction_cosine": 0.6209323712747022,
+        "direction_class": "DIRECTION_MATCH",
+        "global_direction_cosine": 0.6368814469962913,
+        "global_net_translation": [
+          -46.0,
+          -38.0
+        ],
+        "detection_rate": 0.0,
+        "straightness": 0.07239790930362426,
+        "abrupt_ratio": 1.930638489734274
+      },
+      "diagonal": {
+        "temporal_activity": 0.15938837826251984,
+        "displacement_px": 8.374278452228745,
+        "direction_cosine": -0.9615228903758463,
+        "direction_class": "DIRECTION_MISMATCH",
+        "global_direction_cosine": -0.9994801143396997,
+        "global_net_translation": [
+          -45.0,
+          -48.0
+        ],
+        "detection_rate": 0.0,
+        "straightness": 0.05453138765684619,
+        "abrupt_ratio": 2.12864549170335
+      },
+      "stationary": {
+        "temporal_activity": 0.12292362749576569,
+        "displacement_px": 22.600815241551835,
+        "direction_cosine": null,
+        "direction_class": "STATIONARY_EXPECTED",
+        "global_direction_cosine": null,
+        "global_net_translation": [
+          -13.0,
+          -58.0
+        ],
+        "detection_rate": 0.125,
+        "straightness": 0.09323431366361229,
+        "abrupt_ratio": 1.641390871634453
+      }
+    },
+    "C25_10_25": {
+      "left_to_right": {
+        "temporal_activity": 0.22353079915046692,
+        "displacement_px": 7.2448243000293715,
+        "direction_cosine": -0.8084084839388203,
+        "direction_class": "DIRECTION_MISMATCH",
+        "global_direction_cosine": -0.8274757743917583,
+        "global_net_translation": [
+          -28.0,
+          -19.0
+        ],
+        "detection_rate": 0.25,
+        "straightness": 0.024012678710926806,
+        "abrupt_ratio": 1.5183319707583842
+      },
+      "right_to_left": {
+        "temporal_activity": 0.26448172330856323,
+        "displacement_px": 37.67460232577321,
+        "direction_cosine": 0.9947064891220265,
+        "direction_class": "DIRECTION_MATCH",
+        "global_direction_cosine": -0.9989685402102997,
+        "global_net_translation": [
+          22.0,
+          -1.0
+        ],
+        "detection_rate": 0.0,
+        "straightness": 0.12438133253478703,
+        "abrupt_ratio": 1.8720689426399049
+      },
+      "top_to_bottom": {
+        "temporal_activity": 0.233103409409523,
+        "displacement_px": 0.1325838530162451,
+        "direction_cosine": -0.05781770259767341,
+        "direction_class": "DIRECTION_MISMATCH",
+        "global_direction_cosine": -0.42808634473904467,
+        "global_net_translation": [
+          -19.0,
+          -9.0
+        ],
+        "detection_rate": 0.0,
+        "straightness": 0.0005496222087397801,
+        "abrupt_ratio": 1.5445621979761588
+      },
+      "bottom_to_top": {
+        "temporal_activity": 0.23699134588241577,
+        "displacement_px": 5.033475658834223,
+        "direction_cosine": 0.9997782745395598,
+        "direction_class": "DIRECTION_MATCH",
+        "global_direction_cosine": 0.9922778767136677,
+        "global_net_translation": [
+          -2.0,
+          -16.0
+        ],
+        "detection_rate": 0.0,
+        "straightness": 0.01926385251631017,
+        "abrupt_ratio": 1.741670304424662
+      },
+      "diagonal": {
+        "temporal_activity": 0.2784011662006378,
+        "displacement_px": 42.481457139265736,
+        "direction_cosine": 0.7564507755898547,
+        "direction_class": "DIRECTION_MATCH",
+        "global_direction_cosine": 0.04646139935246819,
+        "global_net_translation": [
+          45.0,
+          -41.0
+        ],
+        "detection_rate": 0.0,
+        "straightness": 0.11683104360465411,
+        "abrupt_ratio": 1.4871502092910913
+      },
+      "stationary": {
+        "temporal_activity": 0.3022700250148773,
+        "displacement_px": 21.044966562719463,
+        "direction_cosine": null,
+        "direction_class": "STATIONARY_EXPECTED",
+        "global_direction_cosine": null,
+        "global_net_translation": [
+          22.0,
+          -28.0
+        ],
+        "detection_rate": 0.125,
+        "straightness": 0.07313602887133265,
+        "abrupt_ratio": 1.7218538986663976
+      }
+    },
+    "C25_25_0": {
+      "left_to_right": {
+        "temporal_activity": 0.11030996590852737,
+        "displacement_px": 23.821764956011357,
+        "direction_cosine": -0.3556978705931109,
+        "direction_class": "DIRECTION_MISMATCH",
+        "global_direction_cosine": -0.5633368246415098,
+        "global_net_translation": [
+          -45.0,
+          -66.0
+        ],
+        "detection_rate": 0.0,
+        "straightness": 0.09914713654208397,
+        "abrupt_ratio": 2.121139260068453
+      },
+      "right_to_left": {
+        "temporal_activity": 0.08518048375844955,
+        "displacement_px": 18.26828176396373,
+        "direction_cosine": -0.8719389239915574,
+        "direction_class": "DIRECTION_MISMATCH",
+        "global_direction_cosine": 0.8746053270384585,
+        "global_net_translation": [
+          -92.0,
+          -51.0
+        ],
+        "detection_rate": 0.0,
+        "straightness": 0.09884796371416146,
+        "abrupt_ratio": 2.8856601027861006
+      },
+      "top_to_bottom": {
+        "temporal_activity": 0.16233281791210175,
+        "displacement_px": 35.99306383202898,
+        "direction_cosine": -0.7433749292529704,
+        "direction_class": "DIRECTION_MISMATCH",
+        "global_direction_cosine": -0.3406487770499215,
+        "global_net_translation": [
+          -69.0,
+          -25.0
+        ],
+        "detection_rate": 0.0,
+        "straightness": 0.11788482986288921,
+        "abrupt_ratio": 1.7812903734144367
+      },
+      "bottom_to_top": {
+        "temporal_activity": 0.1363091766834259,
+        "displacement_px": 18.33379979290206,
+        "direction_cosine": 0.790722973450944,
+        "direction_class": "DIRECTION_MATCH",
+        "global_direction_cosine": 0.46574643283262235,
+        "global_net_translation": [
+          -57.0,
+          -30.0
+        ],
+        "detection_rate": 0.0,
+        "straightness": 0.05585505481260581,
+        "abrupt_ratio": 1.738966502573748
+      },
+      "diagonal": {
+        "temporal_activity": 0.09737914055585861,
+        "displacement_px": 16.22835748487124,
+        "direction_cosine": -0.4726942650504837,
+        "direction_class": "DIRECTION_MISMATCH",
+        "global_direction_cosine": -0.49613893835683387,
+        "global_net_translation": [
+          6.0,
+          -22.0
+        ],
+        "detection_rate": 0.0,
+        "straightness": 0.08947471007690741,
+        "abrupt_ratio": 2.1886559651882522
+      },
+      "stationary": {
+        "temporal_activity": 0.1047167032957077,
+        "displacement_px": 0.408295268580279,
+        "direction_cosine": null,
+        "direction_class": "STATIONARY_EXPECTED",
+        "global_direction_cosine": null,
+        "global_net_translation": [
+          -17.0,
+          -62.0
+        ],
+        "detection_rate": 0.0625,
+        "straightness": 0.0014234667721423895,
+        "abrupt_ratio": 1.7100561705361528
+      }
+    },
+    "C25_0_25": {
+      "left_to_right": {
+        "temporal_activity": 0.22353005409240723,
+        "displacement_px": 7.2413846902621115,
+        "direction_cosine": -0.8089910217688948,
+        "direction_class": "DIRECTION_MISMATCH",
+        "global_direction_cosine": -0.8274757743917583,
+        "global_net_translation": [
+          -28.0,
+          -19.0
+        ],
+        "detection_rate": 0.25,
+        "straightness": 0.024004562266472573,
+        "abrupt_ratio": 1.5179684404349139
+      },
+      "right_to_left": {
+        "temporal_activity": 0.2644757032394409,
+        "displacement_px": 37.673411907331335,
+        "direction_cosine": 0.9947189783566945,
+        "direction_class": "DIRECTION_MATCH",
+        "global_direction_cosine": -0.9989685402102997,
+        "global_net_translation": [
+          22.0,
+          -1.0
+        ],
+        "detection_rate": 0.0,
+        "straightness": 0.12439874858534823,
+        "abrupt_ratio": 1.8722411804323948
+      },
+      "top_to_bottom": {
+        "temporal_activity": 0.23310115933418274,
+        "displacement_px": 0.13280728275062234,
+        "direction_cosine": -0.058969314845954156,
+        "direction_class": "DIRECTION_MISMATCH",
+        "global_direction_cosine": -0.42808634473904467,
+        "global_net_translation": [
+          -19.0,
+          -9.0
+        ],
+        "detection_rate": 0.0,
+        "straightness": 0.0005505151476259106,
+        "abrupt_ratio": 1.5445356962100567
+      },
+      "bottom_to_top": {
+        "temporal_activity": 0.23698776960372925,
+        "displacement_px": 5.035240543495585,
+        "direction_cosine": 0.999776305422437,
+        "direction_class": "DIRECTION_MATCH",
+        "global_direction_cosine": 0.9922778767136677,
+        "global_net_translation": [
+          -2.0,
+          -16.0
+        ],
+        "detection_rate": 0.0,
+        "straightness": 0.01926939262363142,
+        "abrupt_ratio": 1.7415698054847444
+      },
+      "diagonal": {
+        "temporal_activity": 0.27840182185173035,
+        "displacement_px": 42.48384880930624,
+        "direction_cosine": 0.7564941827831138,
+        "direction_class": "DIRECTION_MATCH",
+        "global_direction_cosine": 0.04646139935246819,
+        "global_net_translation": [
+          45.0,
+          -41.0
+        ],
+        "detection_rate": 0.0,
+        "straightness": 0.11680947987535904,
+        "abrupt_ratio": 1.4872672287654651
+      },
+      "stationary": {
+        "temporal_activity": 0.302265465259552,
+        "displacement_px": 21.045538677335905,
+        "direction_cosine": null,
+        "direction_class": "STATIONARY_EXPECTED",
+        "global_direction_cosine": null,
+        "global_net_translation": [
+          22.0,
+          -28.0
+        ],
+        "detection_rate": 0.125,
+        "straightness": 0.07313399843132466,
+        "abrupt_ratio": 1.7215313186077341
+      }
+    }
+  },
+  "multiseed": {
+    "C25_native": {
+      "direction_matches": 2.0,
+      "mean_direction_cosine": 0.07832582865946844,
+      "mean_global_translation_cosine": 0.007139665965822918,
+      "mean_temporal_activity": 0.2509649023413658,
+      "stationary_displacement_px": 22.464134854502028,
+      "stationary_global_net_translation_px": 46.78523738660691,
+      "mean_detection_rate": 0.0625,
+      "per_seed": {
+        "base_2000": {
+          "direction_matches": 2,
+          "direction_partial": 0,
+          "directional_prompts": 5,
+          "mean_direction_cosine": -0.07643350896905554,
+          "mean_global_translation_cosine": -0.07232325836947502,
+          "global_translation_matches_0.5": 1,
+          "mean_temporal_activity": 0.24049446284770964,
+          "mean_displacement_px": 18.353635144961874,
+          "stationary_displacement_px": 22.454822917756726,
+          "stationary_centroid_jitter_px": 17.976876262098433,
+          "stationary_global_net_translation_px": 32.01562118716424,
+          "mean_straightness": 0.08085831351295437,
+          "mean_abrupt_ratio": 1.8890974148632647,
+          "mean_detection_rate": 0.052083333333333336,
+          "min_detection_rate": 0.0
+        },
+        "base_3000": {
+          "direction_matches": 2,
+          "direction_partial": 2,
+          "directional_prompts": 5,
+          "mean_direction_cosine": 0.23308516628799242,
+          "mean_global_translation_cosine": 0.08660259030112086,
+          "global_translation_matches_0.5": 2,
+          "mean_temporal_activity": 0.261435341835022,
+          "mean_displacement_px": 23.906345684726073,
+          "stationary_displacement_px": 22.473446791247333,
+          "stationary_centroid_jitter_px": 24.56120892228044,
+          "stationary_global_net_translation_px": 61.554853586049575,
+          "mean_straightness": 0.11313764585898638,
+          "mean_abrupt_ratio": 1.9725860281180778,
+          "mean_detection_rate": 0.07291666666666667,
+          "min_detection_rate": 0.0
+        }
+      }
+    },
+    "C25_10_10": {
+      "direction_matches": 1.5,
+      "mean_direction_cosine": 0.11396118280434576,
+      "mean_global_translation_cosine": -0.18246094251526496,
+      "mean_temporal_activity": 0.13769851028919222,
+      "stationary_displacement_px": 6.122301783300135,
+      "stationary_global_net_translation_px": 142.41886098399004,
+      "mean_detection_rate": 0.03125,
+      "per_seed": {
+        "base_2000": {
+          "direction_matches": 2,
+          "direction_partial": 2,
+          "directional_prompts": 5,
+          "mean_direction_cosine": 0.39551687317577555,
+          "mean_global_translation_cosine": -0.18999969260559743,
+          "global_translation_matches_0.5": 2,
+          "mean_temporal_activity": 0.12875420302152635,
+          "mean_displacement_px": 14.13955234688552,
+          "stationary_displacement_px": 8.386524816391256,
+          "stationary_centroid_jitter_px": 14.433882385895009,
+          "stationary_global_net_translation_px": 137.90576492663388,
+          "mean_straightness": 0.05923641199517501,
+          "mean_abrupt_ratio": 2.0233675632127275,
+          "mean_detection_rate": 0.041666666666666664,
+          "min_detection_rate": 0.0
+        },
+        "base_3000": {
+          "direction_matches": 1,
+          "direction_partial": 1,
+          "directional_prompts": 5,
+          "mean_direction_cosine": -0.16759450756708402,
+          "mean_global_translation_cosine": -0.1749221924249325,
+          "global_translation_matches_0.5": 2,
+          "mean_temporal_activity": 0.14664281755685807,
+          "mean_displacement_px": 24.07504826950509,
+          "stationary_displacement_px": 3.8580787502090144,
+          "stationary_centroid_jitter_px": 13.574553706985512,
+          "stationary_global_net_translation_px": 146.93195704134618,
+          "mean_straightness": 0.09373461941964648,
+          "mean_abrupt_ratio": 1.842151608071633,
+          "mean_detection_rate": 0.020833333333333332,
+          "min_detection_rate": 0.0
+        }
+      }
+    }
+  }
+}

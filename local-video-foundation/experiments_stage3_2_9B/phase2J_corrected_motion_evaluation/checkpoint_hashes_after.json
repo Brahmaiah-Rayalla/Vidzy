@@ -1,0 +1,27 @@
+{
+  "stage": "3.2.9H.2",
+  "date": "2026-11-03",
+  "phase": "after_text_conditioning_integration",
+  "checkpoint_hashes": {
+    "stage_2_1": {
+      "path": "checkpoints_conditional/checkpoint_final.pt",
+      "sha256": "a7f5142e133c6aeadc656967639eab046a7a8f922e3201a6feda4496a544d57c",
+      "verified": true
+    },
+    "experiment_B": {
+      "path": "experiments_stage3_2_9B/phase2C/checkpoints/checkpoint_phase2c_B.pt",
+      "sha256": "27eef3c7afec90a0cfaf32384f6535d271b9369ba7baaba51f17669fd3b0ff14",
+      "verified": true
+    },
+    "experiment_C": {
+      "path": "experiments_stage3_2_9B/phase2C/checkpoints/checkpoint_phase2c_C.pt",
+      "sha256": "cc71317860e152b818413c67a7e0304079a86e6e243c6e5e5d9559cec21499f5",
+      "verified": true
+    }
+  },
+  "stage_3_2_9h2_status": "INTEGRATION_COMPLETE",
+  "text_conditioning": "CORRECTED",
+  "integration_tests": "PASS",
+  "video_generation": "VERIFIED",
+  "notes": "Checkpoints unchanged from Stage 3.2.9H baseline. Only inference pipeline was modified to use actual text encoding."
+}

@@ -1,0 +1,126 @@
+{
+  "hardware": {
+    "cpu": {
+      "processor": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel",
+      "cpu_count_physical": 4,
+      "cpu_count_logical": 8,
+      "cpu_freq_max_mhz": 2701.0,
+      "cpu_freq_current_mhz": 900.0
+    },
+    "memory": {
+      "total_gb": 15.650993347167969,
+      "available_gb": 7.229095458984375,
+      "percent_used": 53.8
+    },
+    "pytorch": {
+      "version": "2.7.1+cpu",
+      "cuda_available": false,
+      "cuda_version": null,
+      "device_count": 0,
+      "intel_xpu_available": false
+    },
+    "threads": {
+      "num_threads": 4,
+      "num_interop_threads": 4
+    },
+    "execution_device": {
+      "type": "cpu",
+      "index": null
+    }
+  },
+  "experiment_B": {
+    "config": {
+      "batch_size": 1,
+      "num_steps": 10,
+      "image_size": 64,
+      "num_frames": 16,
+      "trainable_params": 10240
+    },
+    "timing": {
+      "data_loading_median_s": 0.004,
+      "forward_pass_median_s": 2.00,
+      "backward_pass_median_s": 1.86,
+      "optimizer_step_median_s": 0.0005,
+      "total_step_median_s": 3.92,
+      "total_time_10_steps_s": 39.2,
+      "peak_ram_gb": 10.40
+    },
+    "timing_breakdown_percent": {
+      "data_loading": 0.1,
+      "text_encoding": 0.0,
+      "forward_pass": 51.0,
+      "backward_pass": 47.4,
+      "optimizer_step": 0.01
+    },
+    "estimates": {
+      "median_step_time_s": 3.92,
+      "estimated_100_steps_s": 392,
+      "estimated_100_steps_min": 6.53,
+      "with_10_percent_overhead_s": 431,
+      "with_10_percent_overhead_min": 7.18,
+      "with_20_percent_buffer_s": 475,
+      "with_20_percent_buffer_min": 7.92
+    }
+  },
+  "experiment_C": {
+    "config": {
+      "batch_size": 1,
+      "num_steps": 10,
+      "image_size": 64,
+      "num_frames": 16,
+      "trainable_params": 134274
+    },
+    "timing": {
+      "data_loading_median_s": 0.003,
+      "forward_pass_median_s": 4.31,
+      "backward_pass_median_s": 4.40,
+      "optimizer_step_median_s": 0.003,
+      "total_step_median_s": 8.54,
+      "total_time_10_steps_s": 85.4,
+      "peak_ram_gb": 10.40
+    },
+    "timing_breakdown_percent": {
+      "data_loading": 0.03,
+      "text_encoding": 0.0,
+      "forward_pass": 50.5,
+      "backward_pass": 51.5,
+      "optimizer_step": 0.04
+    },
+    "outlier": {
+      "step_number": 6,
+      "forward_pass_s": 218.38,
+      "backward_pass_s": 83.23,
+      "total_step_s": 301.63,
+      "slowdown_factor": 35.3
+    },
+    "estimates": {
+      "median_step_time_s": 8.54,
+      "estimated_100_steps_s": 854,
+      "estimated_100_steps_min": 14.23,
+      "with_10_percent_overhead_s": 939,
+      "with_10_percent_overhead_min": 15.65,
+      "with_20_percent_buffer_s": 1127,
+      "with_20_percent_buffer_min": 18.78
+    }
+  },
+  "combined_estimates": {
+    "median_total_s": 1246,
+    "median_total_min": 20.77,
+    "with_10_percent_overhead_s": 1370,
+    "with_10_percent_overhead_min": 22.83,
+    "with_20_percent_buffer_s": 1602,
+    "with_20_percent_buffer_min": 26.70
+  },
+  "bottlenecks": {
+    "primary": "Forward and backward pass (98%+ of time)",
+    "temporal_overhead_factor": 2.18,
+    "non_bottlenecks": ["Data loading", "Text encoding", "Optimizer step"],
+    "cpu_throttling": "Running at 900 MHz vs 2701 MHz max"
+  },
+  "risks": {
+    "outlier_probability": 0.1,
+    "outlier_slowdown_factor": 35.3,
+    "thermal_throttling": true,
+    "memory_pressure": "66% of total RAM used"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "arch": "Linear256-256-6 masked-mean pooled TE",
+  "init": "L27 adapter feature layers + expanded output",
+  "te": "frozen"
+}

@@ -1,0 +1,7 @@
+{
+  "n_queries": 8,
+  "d": 256,
+  "k_v_proj": "Linear 256->256",
+  "context": "concat nq*256 -> MLP -> per-block FiLM heads (zero-init)",
+  "params": "queries+k/v/mlp+heads"
+}

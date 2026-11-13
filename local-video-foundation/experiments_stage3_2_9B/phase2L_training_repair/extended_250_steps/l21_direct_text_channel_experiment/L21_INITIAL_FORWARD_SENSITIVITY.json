@@ -1,0 +1,22 @@
+{
+  "On white, there is a medium li": {
+    "text_vs_zero": 0.07134845107793808,
+    "text_vs_swap": 0.058696288615465164,
+    "eps_std": 1.0525925159454346
+  },
+  "On white, there is a medium cr": {
+    "text_vs_zero": 0.07602177560329437,
+    "text_vs_swap": 0.058696288615465164,
+    "eps_std": 1.0310027599334717
+  },
+  "A orange circle in the bottom,": {
+    "text_vs_zero": 0.061679963022470474,
+    "text_vs_swap": 0.051899101585149765,
+    "eps_std": 1.0477782487869263
+  },
+  "On light_gray, there is a medi": {
+    "text_vs_zero": 0.06601288169622421,
+    "text_vs_swap": 0.0271287951618433,
+    "eps_std": 1.0454602241516113
+  }
+}

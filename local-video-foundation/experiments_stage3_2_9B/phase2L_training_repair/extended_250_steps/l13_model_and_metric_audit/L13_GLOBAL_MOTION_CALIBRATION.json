@@ -1,0 +1,71 @@
+{
+  "per_video": {
+    "stationary": {
+      "net_translation": [
+        0.0,
+        0.0
+      ],
+      "cosine_vs_expected": null,
+      "gt_disp": [
+        0.0,
+        0.0
+      ]
+    },
+    "left_to_right": {
+      "net_translation": [
+        15.0,
+        0.0
+      ],
+      "cosine_vs_expected": 1.0,
+      "gt_disp": [
+        15.0,
+        0.0
+      ]
+    },
+    "right_to_left": {
+      "net_translation": [
+        -45.0,
+        0.0
+      ],
+      "cosine_vs_expected": 1.0,
+      "gt_disp": [
+        -45.0,
+        0.0
+      ]
+    },
+    "top_to_bottom": {
+      "net_translation": [
+        0.0,
+        15.0
+      ],
+      "cosine_vs_expected": 1.0,
+      "gt_disp": [
+        0.0,
+        15.0
+      ]
+    },
+    "bottom_to_top": {
+      "net_translation": [
+        0.0,
+        -30.0
+      ],
+      "cosine_vs_expected": 1.0,
+      "gt_disp": [
+        0.0,
+        -30.0
+      ]
+    },
+    "diagonal": {
+      "net_translation": [
+        30.0,
+        30.0
+      ],
+      "cosine_vs_expected": 1.0,
+      "gt_disp": [
+        30.0,
+        30.0
+      ]
+    }
+  },
+  "note": "block-matching global translation vs GT trajectory displacement"
+}

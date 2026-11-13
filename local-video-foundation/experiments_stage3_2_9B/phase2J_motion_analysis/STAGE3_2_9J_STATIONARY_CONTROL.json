@@ -1,0 +1,74 @@
+{
+  "B_seed42_prompt3": {
+    "config": "B",
+    "seed": 42,
+    "prompt": "A yellow object remaining stationary",
+    "displacement_magnitude": 15.781861352805844,
+    "drift": 15.781861352805844,
+    "stationary": false
+  },
+  "B_seed123_prompt3": {
+    "config": "B",
+    "seed": 123,
+    "prompt": "A yellow object remaining stationary",
+    "displacement_magnitude": 32.932278385543,
+    "drift": 32.932278385543,
+    "stationary": false
+  },
+  "B_seed456_prompt3": {
+    "config": "B",
+    "seed": 456,
+    "prompt": "A yellow object remaining stationary",
+    "displacement_magnitude": 11.694580554768521,
+    "drift": 11.694580554768521,
+    "stationary": false
+  },
+  "C_seed42_prompt3": {
+    "config": "C",
+    "seed": 42,
+    "prompt": "A yellow object remaining stationary",
+    "displacement_magnitude": 64.14531683293515,
+    "drift": 64.14531683293515,
+    "stationary": false
+  },
+  "C_seed123_prompt3": {
+    "config": "C",
+    "seed": 123,
+    "prompt": "A yellow object remaining stationary",
+    "displacement_magnitude": 32.829982644860564,
+    "drift": 32.829982644860564,
+    "stationary": false
+  },
+  "C_seed456_prompt3": {
+    "config": "C",
+    "seed": 456,
+    "prompt": "A yellow object remaining stationary",
+    "displacement_magnitude": 11.60598774533825,
+    "drift": 11.60598774533825,
+    "stationary": false
+  },
+  "D_seed42_prompt3": {
+    "config": "D",
+    "seed": 42,
+    "prompt": "A yellow object remaining stationary",
+    "displacement_magnitude": 15.781861352805844,
+    "drift": 15.781861352805844,
+    "stationary": false
+  },
+  "D_seed123_prompt3": {
+    "config": "D",
+    "seed": 123,
+    "prompt": "A yellow object remaining stationary",
+    "displacement_magnitude": 32.932278385543,
+    "drift": 32.932278385543,
+    "stationary": false
+  },
+  "D_seed456_prompt3": {
+    "config": "D",
+    "seed": 456,
+    "prompt": "A yellow object remaining stationary",
+    "displacement_magnitude": 11.694580554768521,
+    "drift": 11.694580554768521,
+    "stationary": false
+  }
+}

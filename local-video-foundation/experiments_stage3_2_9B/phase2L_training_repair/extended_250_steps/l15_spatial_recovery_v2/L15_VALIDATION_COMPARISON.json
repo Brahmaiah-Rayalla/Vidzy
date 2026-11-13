@@ -1,0 +1,9 @@
+{
+  "val_loss": {
+    "step100": 0.0287,
+    "step200": 0.0472,
+    "step350": 0.0259,
+    "step500": 0.024
+  },
+  "note": "val loss noisy, no clear improvement; step0 baseline val not recorded"
+}

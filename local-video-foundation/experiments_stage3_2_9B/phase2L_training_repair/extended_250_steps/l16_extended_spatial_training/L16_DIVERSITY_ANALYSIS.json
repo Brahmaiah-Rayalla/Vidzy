@@ -1,0 +1,15 @@
+{
+  "pairwise_diff": {
+    "step0": 0.152,
+    "step250": 0.123,
+    "step500": 0.158,
+    "step1000": 0.037,
+    "step1500": 0.164,
+    "step2000": 0.089
+  },
+  "overall_std": {
+    "step0": 0.365,
+    "step2000": 0.235
+  },
+  "verdict": "significant diversity loss; step1000 near-collapse recovered partially"
+}

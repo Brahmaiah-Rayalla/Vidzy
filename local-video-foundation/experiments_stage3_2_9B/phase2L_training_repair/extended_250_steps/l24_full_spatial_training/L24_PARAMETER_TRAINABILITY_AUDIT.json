@@ -1,0 +1,5 @@
+{
+  "trainable_params": 7982859,
+  "cross_attn": "frozen",
+  "te": "frozen"
+}

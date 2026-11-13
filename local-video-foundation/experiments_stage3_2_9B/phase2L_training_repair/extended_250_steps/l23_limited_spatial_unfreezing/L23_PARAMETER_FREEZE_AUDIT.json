@@ -1,0 +1,8 @@
+{
+  "rgb_branch": "excluded from optimizer entirely",
+  "frozen_params_not_in_opt": true,
+  "violations": {
+    "A": [],
+    "B": []
+  }
+}

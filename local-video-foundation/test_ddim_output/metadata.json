@@ -1,0 +1,9 @@
+{
+  "prompt": "A red circle moves from left to right.",
+  "num_frames": 16,
+  "image_size": 64,
+  "num_sampling_steps": 10,
+  "sampling_time": 15.761849880218506,
+  "seed": 42,
+  "checkpoint": "checkpoints_video_smoke/checkpoint_step_000010.pt"
+}

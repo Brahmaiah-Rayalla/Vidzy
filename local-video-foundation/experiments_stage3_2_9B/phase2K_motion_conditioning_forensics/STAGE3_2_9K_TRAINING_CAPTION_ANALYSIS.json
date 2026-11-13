@@ -1,0 +1,83 @@
+{
+  "caption_file": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_7\\data_synthetic\\train_metadata.json",
+  "total_captions": 176,
+  "motion_word_counts": {
+    "moving": 149,
+    "slow": 49,
+    "slowly": 49,
+    "diagonal": 32,
+    "right": 61,
+    "left": 61,
+    "quickly": 49,
+    "stationary": 27
+  },
+  "motion_caption_count": 176,
+  "sample_captions": [
+    {
+      "index": 0,
+      "text": "A large pink circle slowly moving from top to bottom on a light_yellow background.",
+      "has_motion": true,
+      "motion_type": "top_to_bottom"
+    },
+    {
+      "index": 1,
+      "text": "A small purple triangle moving diagonally on a black background.",
+      "has_motion": true,
+      "motion_type": "diagonal"
+    },
+    {
+      "index": 2,
+      "text": "A large pink triangle quickly moving from right to left on a white background.",
+      "has_motion": true,
+      "motion_type": "right_to_left"
+    },
+    {
+      "index": 3,
+      "text": "A small white square moving diagonally on a light_gray background.",
+      "has_motion": true,
+      "motion_type": "diagonal"
+    },
+    {
+      "index": 4,
+      "text": "A medium blue circle slowly moving from left to right on a white background.",
+      "has_motion": true,
+      "motion_type": "left_to_right"
+    },
+    {
+      "index": 5,
+      "text": "A medium purple triangle quickly moving from top to bottom on a black background.",
+      "has_motion": true,
+      "motion_type": "top_to_bottom"
+    },
+    {
+      "index": 6,
+      "text": "A medium cyan square on a gray background, remaining stationary.",
+      "has_motion": true,
+      "motion_type": "stationary"
+    },
+    {
+      "index": 7,
+      "text": "A medium orange triangle moving from right to left on a cream background.",
+      "has_motion": true,
+      "motion_type": "right_to_left"
+    },
+    {
+      "index": 8,
+      "text": "A small pink square slowly moving diagonally on a white background.",
+      "has_motion": true,
+      "motion_type": "diagonal"
+    },
+    {
+      "index": 9,
+      "text": "A medium white circle moving from bottom to top on a light_yellow background.",
+      "has_motion": true,
+      "motion_type": "bottom_to_top"
+    }
+  ],
+  "caption_length_stats": {
+    "mean": 12.551136363636363,
+    "min": 10,
+    "max": 14
+  },
+  "motion_caption_percentage": 100.0
+}

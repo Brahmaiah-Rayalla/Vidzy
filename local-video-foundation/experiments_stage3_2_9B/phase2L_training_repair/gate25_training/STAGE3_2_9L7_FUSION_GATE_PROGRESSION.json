@@ -1,0 +1,12 @@
+{
+  "c1_step_0": {"bottleneck_gate": 0.010000, "low_res_gate": 0.009999},
+  "c1_step_25": {"bottleneck_gate": 0.009999, "low_res_gate": 0.010030},
+  "c1_step_50": {"bottleneck_gate": 0.010017, "low_res_gate": 0.010111},
+  "c1_step_75": {"bottleneck_gate": 0.010039, "low_res_gate": 0.010172},
+  "c1_step_100": {"bottleneck_gate": 0.010083, "low_res_gate": 0.010266},
+  "c25_step_0": {"bottleneck_gate": 0.249891, "low_res_gate": 0.249890},
+  "c25_step_25": {"bottleneck_gate": 0.250277, "low_res_gate": 0.250175},
+  "c25_step_50": {"bottleneck_gate": 0.251542, "low_res_gate": 0.251655},
+  "c25_step_75": {"bottleneck_gate": 0.252503, "low_res_gate": 0.252770},
+  "c25_step_100": {"bottleneck_gate": 0.254079, "low_res_gate": 0.254478}
+}

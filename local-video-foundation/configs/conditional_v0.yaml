@@ -1,0 +1,59 @@
+# Configuration for Stage 2 Conditional Text-to-Image Model
+
+# Model architecture
+model:
+  image_size: 64
+  in_channels: 3
+  model_channels: 64
+  channel_mult: [1, 2, 2, 2]  # Multipliers for each resolution level
+  attention_resolutions: []  # No self-attention in this version
+  num_res_blocks: 2
+  dropout: 0.0
+  use_cross_attn: true  # Enable cross-attention for text conditioning
+  n_heads: 4  # Number of attention heads for cross-attention
+
+# Cross-attention
+n_heads: 4
+
+# Diffusion process
+diffusion:
+  num_timesteps: 1000
+  beta_start: 0.0001
+  beta_end: 0.02
+  beta_schedule: "linear"
+
+# Text encoder
+text_encoder:
+  vocab_size: 1000
+  min_freq: 2
+  d_model: 256
+  n_heads: 4
+  n_layers: 4
+  d_ff: 512
+  max_seq_len: 64
+  dropout: 0.1
+
+# Training
+training:
+  num_steps: 1000  # Pilot training on CPU
+  batch_size: 4  # Small for CPU
+  learning_rate: 0.0002
+  weight_decay: 0.01
+  seed: 42
+  save_interval: 250
+  log_interval: 50
+  sample_interval: 250
+  val_interval: 250
+
+# Dataset
+dataset:
+  num_images: 1000  # Pilot training dataset
+  image_size: 64
+  seed: 42
+  max_objects: 2
+
+# Inference
+inference:
+  num_samples: 4
+  sampling_steps: 100  # DDPM sampling steps
+  seed: 42

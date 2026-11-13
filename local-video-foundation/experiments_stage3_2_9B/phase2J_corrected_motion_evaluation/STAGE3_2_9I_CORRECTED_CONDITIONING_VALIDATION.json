@@ -1,0 +1,54 @@
+{
+  "stage": "3.2.9I",
+  "date": "2026-11-03",
+  "checks": {
+    "tokenizer_loaded": {
+      "passed": true,
+      "description": "Real tokenizer is loaded"
+    },
+    "text_encoder_loaded": {
+      "passed": true,
+      "description": "Trained TextEncoderSplit is loaded"
+    },
+    "encode_prompt_method": {
+      "passed": true,
+      "description": "Adapter has encode_prompt method"
+    },
+    "text_encoder_eval_mode": {
+      "passed": true,
+      "description": "Text encoder is in evaluation mode"
+    },
+    "text_encoding_deterministic": {
+      "passed": true,
+      "description": "Same prompt produces same embedding"
+    },
+    "seed_independent_encoding": {
+      "passed": true,
+      "description": "Prompt encoding independent of diffusion seed"
+    },
+    "embedding_metadata": {
+      "passed": true,
+      "description": "Text embedding metadata recorded",
+      "embedding_shape": [
+        1,
+        64,
+        256
+      ],
+      "embedding_mean": 2.081785351037979e-05,
+      "embedding_std": 0.9929909110069275,
+      "embedding_min": -4.071417331695557,
+      "embedding_max": 2.9812092781066895
+    },
+    "temporal_control": {
+      "passed": true,
+      "description": "Model has temporal control flags",
+      "has_use_temporal": true,
+      "has_enable_temporal_processing": false
+    },
+    "no_random_embeddings": {
+      "passed": true,
+      "description": "Text encoding does not use random embeddings"
+    }
+  },
+  "overall_passed": true
+}

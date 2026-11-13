@@ -1,0 +1,126 @@
+{
+  "experiment_B": {
+    "motion_embedding": {
+      "parameter_count": 1,
+      "total_parameters": 10240,
+      "all_have_grad": true,
+      "gradient_norms": [
+        0.01355309784412384
+      ],
+      "max_gradient_norm": 0.01355309784412384,
+      "parameters_changed": [
+        true
+      ],
+      "max_parameter_change": 0.007153972052037716,
+      "mean_parameter_change": 0.007153972052037716
+    },
+    "spatial": {
+      "parameter_count": 504,
+      "max_change": 0.0,
+      "mean_change": 0.0,
+      "any_changed": false
+    },
+    "appearance": {
+      "parameter_count": 1,
+      "max_change": 0.0,
+      "mean_change": 0.0,
+      "any_changed": false
+    },
+    "optimizer": {
+      "parameter_count": 1,
+      "all_gradients_finite": true
+    }
+  },
+  "experiment_C": {
+    "motion_embedding": {
+      "parameter_count": 1,
+      "total_parameters": 10240,
+      "all_have_grad": true,
+      "gradient_norms": [
+        0.05573379993438721
+      ],
+      "max_gradient_norm": 0.05573379993438721,
+      "parameters_changed": [
+        true
+      ],
+      "max_parameter_change": 0.0071550956927239895,
+      "mean_parameter_change": 0.0071550956927239895
+    },
+    "temporal_modules": {
+      "parameter_count": 16,
+      "total_parameters": 124032,
+      "all_have_grad": true,
+      "gradient_norms": [
+        1.547302872495493e-07,
+        5.758211685247261e-09,
+        4.744842740933564e-09,
+        4.093777761227102e-09,
+        1.4997385733295232e-07,
+        1.1191112925246216e-08,
+        5.617187603945695e-09,
+        4.191845981438291e-09,
+        0.006623540073633194,
+        0.0005205952911637723,
+        0.0002686508232727647,
+        0.00023246683122124523,
+        0.006727928761392832,
+        0.0005445275455713272,
+        0.0003279918455518782,
+        0.00019806678756140172
+      ],
+      "max_gradient_norm": 0.006727928761392832,
+      "parameters_changed": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "max_parameter_change": 0.02214585430920124,
+      "mean_parameter_change": 0.0037458494020938815
+    },
+    "fusion_modules": {
+      "parameter_count": 2,
+      "total_parameters": 2,
+      "all_have_grad": true,
+      "gradient_norms": [
+        6.819256714862831e-09,
+        0.0004612082557287067
+      ],
+      "max_gradient_norm": 0.0004612082557287067,
+      "parameters_changed": [
+        true,
+        true
+      ],
+      "max_parameter_change": 0.00019025802612304688,
+      "mean_parameter_change": 0.0001308917999267578
+    },
+    "spatial": {
+      "parameter_count": 504,
+      "max_change": 0.0,
+      "mean_change": 0.0,
+      "any_changed": false
+    },
+    "appearance": {
+      "parameter_count": 1,
+      "max_change": 0.0,
+      "mean_change": 0.0,
+      "any_changed": false
+    },
+    "optimizer": {
+      "parameter_count": 19,
+      "all_gradients_finite": true
+    }
+  }
+}

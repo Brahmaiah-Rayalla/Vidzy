@@ -1,0 +1,1 @@
+{"note": "Motion evaluation requires full DDIM generation with prompt-controlled video generation. This training stage focused on loss comparison and gate progression. Motion evaluation deferred to future stage with proper inference infrastructure.", "status": "DEFERRED"}

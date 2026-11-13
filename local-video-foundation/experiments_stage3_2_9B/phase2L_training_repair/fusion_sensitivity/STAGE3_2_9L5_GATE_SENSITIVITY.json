@@ -1,0 +1,224 @@
+{
+  "group1_bottleneck_only": [
+    {
+      "config": {
+        "label": "A",
+        "activation": 0.0,
+        "logit": -10.0
+      },
+      "loss": 5.270618915557861,
+      "gate_values": {
+        "bottleneck_gate": 4.539787187241018e-05,
+        "low_res_gate": 0.01027901191264391
+      }
+    },
+    {
+      "config": {
+        "label": "B",
+        "activation": 0.01,
+        "logit": -4.595
+      },
+      "loss": 5.261183738708496,
+      "gate_values": {
+        "bottleneck_gate": 0.010001189075410366,
+        "low_res_gate": 0.01027901191264391
+      }
+    },
+    {
+      "config": {
+        "label": "C",
+        "activation": 0.05,
+        "logit": -2.944
+      },
+      "loss": 5.279216289520264,
+      "gate_values": {
+        "bottleneck_gate": 0.05002085492014885,
+        "low_res_gate": 0.01027901191264391
+      }
+    },
+    {
+      "config": {
+        "label": "D",
+        "activation": 0.1,
+        "logit": -2.197
+      },
+      "loss": 5.258491516113281,
+      "gate_values": {
+        "bottleneck_gate": 0.10002021491527557,
+        "low_res_gate": 0.01027901191264391
+      }
+    },
+    {
+      "config": {
+        "label": "E",
+        "activation": 0.25,
+        "logit": -1.099
+      },
+      "loss": 5.245807647705078,
+      "gate_values": {
+        "bottleneck_gate": 0.24992729723453522,
+        "low_res_gate": 0.01027901191264391
+      }
+    },
+    {
+      "config": {
+        "label": "F",
+        "activation": 0.5,
+        "logit": 0.0
+      },
+      "loss": 5.259788990020752,
+      "gate_values": {
+        "bottleneck_gate": 0.5,
+        "low_res_gate": 0.01027901191264391
+      }
+    }
+  ],
+  "group2_low_res_only": [
+    {
+      "config": {
+        "label": "A",
+        "activation": 0.0,
+        "logit": -10.0
+      },
+      "loss": 5.285065174102783,
+      "gate_values": {
+        "bottleneck_gate": 0.010049584321677685,
+        "low_res_gate": 4.539787187241018e-05
+      }
+    },
+    {
+      "config": {
+        "label": "B",
+        "activation": 0.01,
+        "logit": -4.595
+      },
+      "loss": 5.279691696166992,
+      "gate_values": {
+        "bottleneck_gate": 0.010049584321677685,
+        "low_res_gate": 0.010001189075410366
+      }
+    },
+    {
+      "config": {
+        "label": "C",
+        "activation": 0.05,
+        "logit": -2.944
+      },
+      "loss": 5.1840739250183105,
+      "gate_values": {
+        "bottleneck_gate": 0.010049584321677685,
+        "low_res_gate": 0.05002085492014885
+      }
+    },
+    {
+      "config": {
+        "label": "D",
+        "activation": 0.1,
+        "logit": -2.197
+      },
+      "loss": 5.09105920791626,
+      "gate_values": {
+        "bottleneck_gate": 0.010049584321677685,
+        "low_res_gate": 0.10002021491527557
+      }
+    },
+    {
+      "config": {
+        "label": "E",
+        "activation": 0.25,
+        "logit": -1.099
+      },
+      "loss": 4.787947177886963,
+      "gate_values": {
+        "bottleneck_gate": 0.010049584321677685,
+        "low_res_gate": 0.24992729723453522
+      }
+    },
+    {
+      "config": {
+        "label": "F",
+        "activation": 0.5,
+        "logit": 0.0
+      },
+      "loss": 4.323410511016846,
+      "gate_values": {
+        "bottleneck_gate": 0.010049584321677685,
+        "low_res_gate": 0.5
+      }
+    }
+  ],
+  "group3_both_gates": [
+    {
+      "config": {
+        "label": "A",
+        "activation": 0.0,
+        "logit": -10.0
+      },
+      "loss": 2.0754716396331787,
+      "gate_values": {
+        "bottleneck_gate": 4.539787187241018e-05,
+        "low_res_gate": 4.539787187241018e-05
+      }
+    },
+    {
+      "config": {
+        "label": "B",
+        "activation": 0.01,
+        "logit": -4.595
+      },
+      "loss": 5.247053623199463,
+      "gate_values": {
+        "bottleneck_gate": 0.010001189075410366,
+        "low_res_gate": 0.010001189075410366
+      }
+    },
+    {
+      "config": {
+        "label": "C",
+        "activation": 0.05,
+        "logit": -2.944
+      },
+      "loss": 5.185629367828369,
+      "gate_values": {
+        "bottleneck_gate": 0.05002085492014885,
+        "low_res_gate": 0.05002085492014885
+      }
+    },
+    {
+      "config": {
+        "label": "D",
+        "activation": 0.1,
+        "logit": -2.197
+      },
+      "loss": 5.075516223907471,
+      "gate_values": {
+        "bottleneck_gate": 0.10002021491527557,
+        "low_res_gate": 0.10002021491527557
+      }
+    },
+    {
+      "config": {
+        "label": "E",
+        "activation": 0.25,
+        "logit": -1.099
+      },
+      "loss": 4.788357257843018,
+      "gate_values": {
+        "bottleneck_gate": 0.24992729723453522,
+        "low_res_gate": 0.24992729723453522
+      }
+    },
+    {
+      "config": {
+        "label": "F",
+        "activation": 0.5,
+        "logit": 0.0
+      },
+      "loss": 4.307608127593994,
+      "gate_values": {
+        "bottleneck_gate": 0.5,
+        "low_res_gate": 0.5
+      }
+    }
+  ]
+}

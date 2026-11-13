@@ -1,0 +1,25 @@
+{
+  "experiment_B": {
+    "reported_trainable_scalars": 134274,
+    "actual_optimizer_scalars": 10240,
+    "model_level_trainable_scalars": 134274,
+    "motion_embedding_scalars": 10240,
+    "temporal_scalars": 124032,
+    "fusion_scalars": 2,
+    "optimizer_parameter_count": 1,
+    "model_trainable_count": 19
+  },
+  "experiment_C": {
+    "reported_trainable_scalars": 134274,
+    "actual_optimizer_scalars": 134274,
+    "model_level_trainable_scalars": 134274,
+    "motion_embedding_scalars": 10240,
+    "temporal_scalars": 124032,
+    "fusion_scalars": 2,
+    "optimizer_parameter_count": 19,
+    "model_trainable_count": 19
+  },
+  "root_cause": "REPORTING BUG",
+  "explanation": "count_parameters() counts all trainable parameters in video_unet, but optimizer only contains specific parameter groups",
+  "historical_B_validity": "VALID - actual optimizer membership was correct (motion embeddings only)"
+}

@@ -1,0 +1,6 @@
+{
+  "val": "0.0123->0.0032 monotonic",
+  "diversity": "0.266->0.071 decline",
+  "caption_sens": "cos 0.9999 post-training",
+  "verdict": "unconditional denoising dominates"
+}

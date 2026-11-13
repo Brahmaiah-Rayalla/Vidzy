@@ -1,0 +1,200 @@
+{
+  "timestamp": "2026-11-04T00:36:11.209207",
+  "purpose": "Record SHA256 hashes before any modifications",
+  "checkpoints": {
+    "stage2_1_checkpoint": {
+      "path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_7\\checkpoints\\checkpoint_stage2_motion_expanded.pt",
+      "sha256": "9a75aadc6bae18b9083797fa4bf2424f58fdf73118eac620e259e092096fa28a",
+      "size_bytes": 139532880,
+      "exists": true
+    },
+    "experiment_B_checkpoint": {
+      "path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2C\\checkpoints\\checkpoint_phase2c_B.pt",
+      "sha256": "27eef3c7afec90a0cfaf32384f6535d271b9369ba7baaba51f17669fd3b0ff14",
+      "size_bytes": 47153661,
+      "exists": true
+    },
+    "experiment_C_checkpoint": {
+      "path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2C\\checkpoints\\checkpoint_phase2c_C.pt",
+      "sha256": "cc71317860e152b818413c67a7e0304079a86e6e243c6e5e5d9559cec21499f5",
+      "size_bytes": 48161039,
+      "exists": true
+    },
+    "tokenizer": {
+      "path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_7\\checkpoints\\tokenizer_motion_expanded.json",
+      "sha256": "9227a1001b4d3503fa59729c04a26a01307d4e0a050b579e858ee8a809d679e8",
+      "size_bytes": 4128,
+      "exists": true
+    }
+  },
+  "reports": {
+    "experiments_stage3_2_9B\\phase2K_motion_conditioning_forensics\\STAGE3_2_9K_B_D_EQUIVALENCE_REPORT.md": {
+      "sha256": "0532e9bbfacc4cfd2801ccd8ce211197fa110cc8299fe7cfda14a4e6f923f4cc",
+      "size_bytes": 5305
+    },
+    "experiments_stage3_2_9B\\phase2K_motion_conditioning_forensics\\STAGE3_2_9K_COMPREHENSIVE_REPORT.md": {
+      "sha256": "f2cb9a3b7b09a4fbd9609c0f97a4384b08811dbfd44fef6b81e96ad643c99f7c",
+      "size_bytes": 7980
+    },
+    "experiments_stage3_2_9B\\phase2K_motion_conditioning_forensics\\STAGE3_2_9K_EVALUATION_AUDIT.md": {
+      "sha256": "0674c7ddf7e8db65b77ef95b0dacf877f4f8f548b800b07cf42b9b5aa3ab2d91",
+      "size_bytes": 1010
+    },
+    "experiments_stage3_2_9B\\phase2K_motion_conditioning_forensics\\STAGE3_2_9K_MOTION_EMBEDDING_REPORT.md": {
+      "sha256": "2fa4fa03a2547936ca1c7e46d9d1aa002a623fbb3be7744e06cde72c92a933e5",
+      "size_bytes": 4341
+    },
+    "experiments_stage3_2_9B\\phase2K_motion_conditioning_forensics\\STAGE3_2_9K_B_D_EQUIVALENCE_AUDIT.json": {
+      "sha256": "ff2e785917186ef2d04d76533044fa8a5f28bb6f6d107bc73f17c2c98557cdb6",
+      "size_bytes": 316927
+    },
+    "experiments_stage3_2_9B\\phase2K_motion_conditioning_forensics\\STAGE3_2_9K_EVALUATION_AUDIT.json": {
+      "sha256": "24862f618c79b0e0b2928dce4dec1ed5ae790695b2f19123c3c270be73f8ffa7",
+      "size_bytes": 1977
+    },
+    "experiments_stage3_2_9B\\phase2K_motion_conditioning_forensics\\STAGE3_2_9K_MOTION_EMBEDDING_ANALYSIS.json": {
+      "sha256": "df464d21ef99c63383c0995ead8cd55026b815c950dd3e84ba7910309ef32363",
+      "size_bytes": 6786
+    },
+    "experiments_stage3_2_9B\\phase2K_motion_conditioning_forensics\\STAGE3_2_9K_TRAINING_CAPTION_ANALYSIS.json": {
+      "sha256": "0794d7de6e0908a9a324149303da20161b0fd10c8936a57dc525d1e5ed1b8365",
+      "size_bytes": 2446
+    },
+    "experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\STAGE3_2_9H2_FINAL_SUMMARY.md": {
+      "sha256": "9d5f84998128a83a44657c0289358ed4a38691cd6b486771ca897109558b6802",
+      "size_bytes": 9365
+    },
+    "experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\STAGE3_2_9H2_INTEGRATION_REPORT.md": {
+      "sha256": "0cfebe015358382406febe5d74493e3892c27b1ad36c8541e8b79692ecf4e492",
+      "size_bytes": 5939
+    },
+    "experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\STAGE3_2_9I_EVALUATION_REPORT.md": {
+      "sha256": "a7c799d44473ea499f631b8712f23b1b5609fbe24645df7e8f94ac9419782f63",
+      "size_bytes": 4476
+    },
+    "experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\STAGE3_2_9I_FINAL_SUMMARY.md": {
+      "sha256": "fa83f0e767b23653713e3ecedbccbf5d81355bfbfeca1c2ea53ff7e711c51cde",
+      "size_bytes": 4230
+    },
+    "experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\STAGE3_2_9I_PLAN.md": {
+      "sha256": "a426ed7c87a677f7cf882f4e419f79c5eeea698ca4125692e8086179ca611854",
+      "size_bytes": 2518
+    },
+    "experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\checkpoint_hashes_after.json": {
+      "sha256": "c0e3fd636915809561c4e92b40e4b0fce188d19d016aa2f267e46bcf07f7cc5e",
+      "size_bytes": 1046
+    },
+    "experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\integration_test_results.json": {
+      "sha256": "d5be51d625e7fbca31dc798788f4dd4e4f4bfa5e17b4b2e602e59b6fac12ee85",
+      "size_bytes": 2920
+    },
+    "experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\STAGE3_2_9I_CHECKPOINT_INTEGRITY.json": {
+      "sha256": "c28a01090b919bb8db1e8d53585c3922e6464510dc83c126f5bbd113beff896c",
+      "size_bytes": 866
+    },
+    "experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\STAGE3_2_9I_CORRECTED_CONDITIONING_VALIDATION.json": {
+      "sha256": "aed752e1225c3c08e2c31f7c9798111320b98210c734af6f4b6ec85ab6378ac4",
+      "size_bytes": 1532
+    },
+    "experiments_stage3_2_9B\\phase2J_corrected_motion_evaluation\\STAGE3_2_9I_PROMPT_MAPPING.json": {
+      "sha256": "f4d8b4ffcc4be7f18e472dfed0c517301ff38ef2310c396ced5cd9438f9501d8",
+      "size_bytes": 4801
+    },
+    "experiments_stage3_2_9B\\phase2I_text_conditioning\\STAGE3_2_9H_FINAL_REPORT.md": {
+      "sha256": "45a423279cfe0d802e146435098e8c0db8cbc370dce80d200ab515152e536b4c",
+      "size_bytes": 9230
+    },
+    "experiments_stage3_2_9B\\phase2I_text_conditioning\\STAGE3_2_9H_SUMMARY.md": {
+      "sha256": "230ef7893ff0ef2520886ef642b0448edc93765399022c399f2f8b9352ba6b62",
+      "size_bytes": 3929
+    },
+    "experiments_stage3_2_9B\\phase2I_text_conditioning\\STAGE3_2_9H_TRAINING_CONDITIONING_AUDIT.md": {
+      "sha256": "f7806416ab576e051d53ff7452825790cea2bb4682480d44b4016505469a7b8f",
+      "size_bytes": 3379
+    },
+    "experiments_stage3_2_9B\\phase2I_text_conditioning\\checkpoint_hashes_before.json": {
+      "sha256": "17e92203aeeb5d20fc0ba24ddf4d6c245274b1d2d13cddbbb42f89db0510df5a",
+      "size_bytes": 1076
+    },
+    "experiments_stage3_2_9B\\phase2I_text_conditioning\\STAGE3_2_9H_TEXT_ENCODING_VALIDATION.json": {
+      "sha256": "fa9b3f133671aeaba0354c33f7d98d9935bfea0d4223a70165f8fcf25825439d",
+      "size_bytes": 21297
+    },
+    "experiments_stage3_2_9B\\phase2I_text_conditioning\\training_conditioning_audit_results.json": {
+      "sha256": "97a6547b7cab25463c30e549357f0e32aed2a6369ce02b1d839f06a9af043b67",
+      "size_bytes": 1894
+    },
+    "experiments_stage3_2_9B\\phase2H_temporal_instrumentation\\STAGE3_2_9G_FINAL_REPORT.md": {
+      "sha256": "0cfed0ca6fce10012feb7aa5041789e8501e535b5e7a8e45e82be3072e5ce50d",
+      "size_bytes": 10188
+    },
+    "experiments_stage3_2_9B\\phase2H_temporal_instrumentation\\STAGE3_2_9G_SUMMARY.md": {
+      "sha256": "2dd1c598bae11040991dc7d7be67ef468b9282106575fb58a717d446309119f2",
+      "size_bytes": 6674
+    },
+    "experiments_stage3_2_9B\\phase2H_temporal_instrumentation\\checkpoint_hashes.json": {
+      "sha256": "7818ebd2cc3dbc1dacbe58e71f41029e94a252ab25fb7584c3908341f03acd09",
+      "size_bytes": 957
+    },
+    "experiments_stage3_2_9B\\phase2G_motion_evaluation\\STAGE3_2_9F_MOTION_EVALUATION_REPORT.md": {
+      "sha256": "fd86ee1846d292c6d9859487798b8b9f6d265d22c01e1636ed90efb66c3c1aba",
+      "size_bytes": 8099
+    },
+    "experiments_stage3_2_9B\\phase2G_motion_evaluation\\STAGE3_2_9F_SUMMARY.md": {
+      "sha256": "e4a8dfad1d86de00462136a7985e2dc1733a28923eada9d8ab61aed05b49335f",
+      "size_bytes": 6944
+    },
+    "experiments_stage3_2_9B\\phase2G_motion_evaluation\\STAGE3_2_9F_MOTION_METRICS.json": {
+      "sha256": "a292f0210cfe145dcd4e7f5e7c07571198ffed5a7a585204742dca88435b86cc",
+      "size_bytes": 3052
+    },
+    "experiments_stage3_2_9B\\phase2F_video_generation\\STAGE3_2_9E_DDIM_VALIDATION.md": {
+      "sha256": "e83c349a959780b6f86fcc7d076866ce780417ca3727ecd7b30d74cb891deb78",
+      "size_bytes": 3421
+    },
+    "experiments_stage3_2_9B\\phase2F_video_generation\\STAGE3_2_9E_FINAL_REPORT.md": {
+      "sha256": "b75d7f5a8080edf846908c485959b7bb027654e802222fb95cd21b48ac8ebce4",
+      "size_bytes": 5942
+    },
+    "experiments_stage3_2_9B\\phase2F_video_generation\\STAGE3_2_9E_CHECKPOINT_LOADING.json": {
+      "sha256": "0dbf6f4fd29b460b99ab46f2f318a1002fd488b64ddc4225b7fc9040d883e42a",
+      "size_bytes": 702
+    },
+    "experiments_stage3_2_9B\\phase2F_video_generation\\STAGE3_2_9E_CPU_PERFORMANCE.json": {
+      "sha256": "66f49a2704a7ff29ac157b3913f025d1765a5ad90a78a05ab74d07c923d100b7",
+      "size_bytes": 2427
+    },
+    "experiments_stage3_2_9B\\phase2F_video_generation\\STAGE3_2_9E_VIDEO_VALIDATION.json": {
+      "sha256": "ac289d40c832578734427c9a307f6c98912278f9ed27062c1fcd9ac4522ffe6b",
+      "size_bytes": 4975
+    },
+    "experiments_stage3_2_9B\\phase2E_inference_compatibility\\ARCHITECTURE_INVESTIGATION.md": {
+      "sha256": "7781a83e7e810e68bcad888f22bf5837d593364a44549b58a5776f566487802c",
+      "size_bytes": 5188
+    },
+    "experiments_stage3_2_9B\\phase2E_inference_compatibility\\STAGE3_2_9D_COMPLETION_REPORT.md": {
+      "sha256": "9545f25a140dba0bdadaee21474284441b063ca23fe3db643b1198003460794a",
+      "size_bytes": 5874
+    },
+    "experiments_stage3_2_9B\\phase2E_inference_compatibility\\checkpoint_verification.json": {
+      "sha256": "0dbf6f4fd29b460b99ab46f2f318a1002fd488b64ddc4225b7fc9040d883e42a",
+      "size_bytes": 702
+    },
+    "experiments_stage3_2_9B\\phase2C\\STAGE3_2_9B_PHASE2C_FINAL_REPORT.md": {
+      "sha256": "16d80a1ad98c904f281762014ca5dfb64b2ac5c304240abd233b49932a4b1475",
+      "size_bytes": 9198
+    },
+    "experiments_stage3_2_9B\\phase2C\\STAGE3_2_9B_PHASE2C_PERFORMANCE_REPORT.md": {
+      "sha256": "28cf26fcd2fe8108f8e64ad3a608ed574b8b408182b34fb0297db12048482868",
+      "size_bytes": 5525
+    },
+    "experiments_stage3_2_9B\\phase2C\\phase2c_pilot_results.json": {
+      "sha256": "aa8795d8ad74cbc5be3fd6ce86765570c5cf08fbbc72f7707f1c412feab7628e",
+      "size_bytes": 75142
+    },
+    "experiments_stage3_2_9B\\phase2C\\STAGE3_2_9B_PHASE2C_SUMMARY.json": {
+      "sha256": "a149effde8a7893e78d44b0c5041f9e6cf0fb3ab4c502b39bda22e63e90c1d59",
+      "size_bytes": 3383
+    }
+  }
+}

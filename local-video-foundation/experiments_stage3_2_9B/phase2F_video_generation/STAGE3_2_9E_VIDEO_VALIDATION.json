@@ -1,0 +1,213 @@
+{
+  "validation_timestamp": "2026-11-02",
+  "validation_summary": {
+    "total_samples": 13,
+    "valid_samples": 13,
+    "invalid_samples": 0,
+    "validation_rate": 1.0
+  },
+  "experiment_A": {
+    "name": "Spatial Reference",
+    "samples": 3,
+    "prompts": [
+      "A red circle on a white background",
+      "A blue square on a white background",
+      "A green object centered on a white background"
+    ],
+    "validation_results": [
+      {
+        "sample_id": 0,
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "frame_count": 16,
+        "resolution": "64x64",
+        "channels": 3,
+        "value_range": [0.0, 1.0],
+        "has_nan": false,
+        "has_inf": false
+      },
+      {
+        "sample_id": 1,
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "frame_count": 16,
+        "resolution": "64x64",
+        "channels": 3,
+        "value_range": [0.0, 1.0],
+        "has_nan": false,
+        "has_inf": false
+      },
+      {
+        "sample_id": 2,
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "frame_count": 16,
+        "resolution": "64x64",
+        "channels": 3,
+        "value_range": [0.0, 1.0],
+        "has_nan": false,
+        "has_inf": false
+      }
+    ]
+  },
+  "experiment_B": {
+    "name": "Motion-Conditioned (Temporal Disabled)",
+    "samples": 5,
+    "prompts": [
+      "Red object moving left",
+      "Red object moving right",
+      "Blue object moving upward",
+      "Blue object moving downward",
+      "Stationary object"
+    ],
+    "validation_results": [
+      {
+        "sample_id": 0,
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "frame_count": 16,
+        "resolution": "64x64",
+        "channels": 3,
+        "value_range": [0.0, 1.0],
+        "has_nan": false,
+        "has_inf": false
+      },
+      {
+        "sample_id": 1,
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "frame_count": 16,
+        "resolution": "64x64",
+        "channels": 3,
+        "value_range": [0.0, 1.0],
+        "has_nan": false,
+        "has_inf": false
+      },
+      {
+        "sample_id": 2,
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "frame_count": 16,
+        "resolution": "64x64",
+        "channels": 3,
+        "value_range": [0.0, 1.0],
+        "has_nan": false,
+        "has_inf": false
+      },
+      {
+        "sample_id": 3,
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "frame_count": 16,
+        "resolution": "64x64",
+        "channels": 3,
+        "value_range": [0.0, 1.0],
+        "has_nan": false,
+        "has_inf": false
+      },
+      {
+        "sample_id": 4,
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "frame_count": 16,
+        "resolution": "64x64",
+        "channels": 3,
+        "value_range": [0.0, 1.0],
+        "has_nan": false,
+        "has_inf": false
+      }
+    ]
+  },
+  "experiment_C": {
+    "name": "Temporal-Enabled",
+    "samples": 5,
+    "prompts": [
+      "Red object moving left",
+      "Red object moving right",
+      "Blue object moving upward",
+      "Blue object moving downward",
+      "Stationary object"
+    ],
+    "validation_results": [
+      {
+        "sample_id": 0,
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "frame_count": 16,
+        "resolution": "64x64",
+        "channels": 3,
+        "value_range": [0.0, 1.0],
+        "has_nan": false,
+        "has_inf": false
+      },
+      {
+        "sample_id": 1,
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "frame_count": 16,
+        "resolution": "64x64",
+        "channels": 3,
+        "value_range": [0.0, 1.0],
+        "has_nan": false,
+        "has_inf": false
+      },
+      {
+        "sample_id": 2,
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "frame_count": 16,
+        "resolution": "64x64",
+        "channels": 3,
+        "value_range": [0.0, 1.0],
+        "has_nan": false,
+        "has_inf": false
+      },
+      {
+        "sample_id": 3,
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "frame_count": 16,
+        "resolution": "64x64",
+        "channels": 3,
+        "value_range": [0.0, 1.0],
+        "has_nan": false,
+        "has_inf": false
+      },
+      {
+        "sample_id": 4,
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "frame_count": 16,
+        "resolution": "64x64",
+        "channels": 3,
+        "value_range": [0.0, 1.0],
+        "has_nan": false,
+        "has_inf": false
+      }
+    ]
+  },
+  "overall_validation": {
+    "all_valid": true,
+    "total_videos_generated": 13,
+    "total_frames_generated": 208,
+    "all_videos_16_frames": true,
+    "all_videos_64x64": true,
+    "all_videos_3_channels": true,
+    "no_nan_detected": true,
+    "no_inf_detected": true,
+    "all_valid_ranges": true
+  }
+}

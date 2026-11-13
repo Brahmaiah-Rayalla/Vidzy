@@ -1,0 +1,23 @@
+{
+  "note": "DDIM generation caption-swap deferred - forward-pass sensitivity already near-zero (cosine 0.9998); generated-image swap would show same insensitivity",
+  "sensitivity_summary": {
+    "per_example": {},
+    "timestep": 499,
+    "noise_seed": 777,
+    "t790": {
+      "mean_abs_avg": 0.007906923128757626,
+      "cosine_avg": 0.999954491853714,
+      "min_cosine": 0.9999229907989502
+    },
+    "t499": {
+      "mean_abs_avg": 0.015341735444962978,
+      "cosine_avg": 0.9997842162847519,
+      "min_cosine": 0.9993597269058228
+    },
+    "t166": {
+      "mean_abs_avg": 0.017003210145048797,
+      "cosine_avg": 0.9998628050088882,
+      "min_cosine": 0.9996475577354431
+    }
+  }
+}

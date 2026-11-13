@@ -1,0 +1,8 @@
+{
+  "stage2": "untouched",
+  "l16": "untouched",
+  "overfit_ckpts": [
+    "overfit_step{0,100,250,500,750,1000}.pt"
+  ],
+  "te_frozen": true
+}

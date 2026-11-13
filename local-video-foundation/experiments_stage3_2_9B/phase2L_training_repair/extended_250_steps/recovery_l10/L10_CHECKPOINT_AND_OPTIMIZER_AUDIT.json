@@ -1,0 +1,94 @@
+{
+  "L7_C1_step_100": {
+    "path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\gate25_training\\C1\\checkpoint_step_000100.pt",
+    "exists": true,
+    "loadable": true,
+    "keys": [
+      "model_state_dict",
+      "optimizer_state_dict",
+      "config",
+      "experiment",
+      "gate_init",
+      "step"
+    ],
+    "has_optimizer_state": true,
+    "has_training_step": true,
+    "step_number": 100,
+    "has_config": true,
+    "optimizer_keys": [
+      "state",
+      "param_groups"
+    ],
+    "config_keys": [
+      "num_steps",
+      "seed",
+      "lr",
+      "wd"
+    ]
+  },
+  "L7_C25_step_100": {
+    "path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\gate25_training\\C25\\checkpoint_step_000100.pt",
+    "exists": true,
+    "loadable": true,
+    "keys": [
+      "model_state_dict",
+      "optimizer_state_dict",
+      "config",
+      "experiment",
+      "gate_init",
+      "step"
+    ],
+    "has_optimizer_state": true,
+    "has_training_step": true,
+    "step_number": 100,
+    "has_config": true,
+    "optimizer_keys": [
+      "state",
+      "param_groups"
+    ],
+    "config_keys": [
+      "num_steps",
+      "seed",
+      "lr",
+      "wd"
+    ]
+  },
+  "L8_C1_step_150": {
+    "path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\extended_250_steps\\C1\\checkpoint_step_000150.pt",
+    "exists": true,
+    "loadable": true,
+    "keys": [
+      "model_state_dict",
+      "optimizer_state_dict",
+      "step",
+      "experiment"
+    ],
+    "has_optimizer_state": true,
+    "has_training_step": true,
+    "step_number": 150,
+    "has_config": false,
+    "optimizer_keys": [
+      "state",
+      "param_groups"
+    ]
+  },
+  "L8_C1_step_200": {
+    "path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\extended_250_steps\\C1\\checkpoint_step_000200.pt",
+    "exists": true,
+    "loadable": true,
+    "keys": [
+      "model_state_dict",
+      "optimizer_state_dict",
+      "step",
+      "experiment"
+    ],
+    "has_optimizer_state": true,
+    "has_training_step": true,
+    "step_number": 200,
+    "has_config": false,
+    "optimizer_keys": [
+      "state",
+      "param_groups"
+    ]
+  }
+}

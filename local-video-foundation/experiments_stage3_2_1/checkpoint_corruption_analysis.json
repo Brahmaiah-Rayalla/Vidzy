@@ -1,0 +1,10 @@
+{
+  "total_stage2_params": 504,
+  "matching_params": 0,
+  "mismatching_params": 504,
+  "missing_in_video": 0,
+  "extra_in_video": 0,
+  "max_diff": 0.3872607350349426,
+  "max_diff_key": "conv_in.weight",
+  "spatial_corrupted": true
+}

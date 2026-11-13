@@ -1,0 +1,7 @@
+A medium red circle slowly moves from left to right on a gray background.
+A medium yellow circle slowly remains stationary on a gray background.
+A medium yellow circle slowly remains stationary on a gray background.
+A medium red circle slowly moves from right to left on a gray background.
+A medium blue square slowly moves diagonally down and right on a gray background.
+A medium red circle slowly moves from left to right on a gray background.
+A medium red circle slowly moves from left to right on a gray background.

@@ -1,0 +1,9 @@
+{
+  "init": "stage2 ckpt",
+  "te": "frozen original",
+  "data": "L17 10-pair subset",
+  "opt": "AdamW lr1e-4 wd0.01 new",
+  "bs": 1,
+  "steps": 750,
+  "eval": "13-step DDIM approx, seeds 6000+j"
+}

@@ -1,0 +1,7 @@
+{
+  "unet": "Stage2.1 a7f5142e",
+  "rgb_conv": "Stage2.1",
+  "tokproj": "L21 A_step750",
+  "conv_text": "L21 A_step750",
+  "te": "frozen Stage2.1"
+}

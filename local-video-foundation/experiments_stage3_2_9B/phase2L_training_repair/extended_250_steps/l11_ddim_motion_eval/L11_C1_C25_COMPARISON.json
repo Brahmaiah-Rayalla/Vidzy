@@ -1,0 +1,163 @@
+{
+  "checkpoints": {
+    "C1": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\extended_250_steps\\recovery_l10\\C1\\checkpoint_step_000250.pt",
+    "C25": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\extended_250_steps\\recovery_l10\\C25\\checkpoint_step_000250.pt"
+  },
+  "gates": {
+    "C1": {
+      "bottleneck_gate": 0.010378069244325161,
+      "low_res_gate": 0.010733253322541714
+    },
+    "C25": {
+      "bottleneck_gate": 0.2609724700450897,
+      "low_res_gate": 0.26264506578445435
+    }
+  },
+  "sampling": {
+    "num_timesteps": 1000,
+    "sampling_steps": 25,
+    "beta_start": 0.0001,
+    "beta_end": 0.02,
+    "frames": 16,
+    "resolution": 64,
+    "noise": "fixed per prompt index (seed 1000+i), identical across models"
+  },
+  "per_prompt": {
+    "left_to_right": {
+      "caption": "A medium blue circle slowly moving from left to right on a white background.",
+      "C1": {
+        "temporal_activity": 0.11401917040348053,
+        "displacement_px": 24.46166621659003,
+        "path_length_px": 239.87781456107373,
+        "straightness": 0.10197552558726519,
+        "direction_cosine": -0.31170276781086637,
+        "direction_class": "DIRECTION_MISMATCH"
+      },
+      "C25": {
+        "temporal_activity": 0.2326352298259735,
+        "displacement_px": 5.567864710702254,
+        "path_length_px": 291.63789733675594,
+        "straightness": 0.019091705027186535,
+        "direction_cosine": -0.6879133189670051,
+        "direction_class": "DIRECTION_MISMATCH"
+      }
+    },
+    "right_to_left": {
+      "caption": "A large pink triangle quickly moving from right to left on a white background.",
+      "C1": {
+        "temporal_activity": 0.09925225377082825,
+        "displacement_px": 19.395323736543688,
+        "path_length_px": 225.89062192870722,
+        "straightness": 0.08586157128145408,
+        "direction_cosine": -0.9335673257774657,
+        "direction_class": "DIRECTION_MISMATCH"
+      },
+      "C25": {
+        "temporal_activity": 0.27445611357688904,
+        "displacement_px": 37.89219076456186,
+        "path_length_px": 310.9877381432444,
+        "straightness": 0.12184464567895051,
+        "direction_cosine": 0.9915221350875584,
+        "direction_class": "DIRECTION_MATCH"
+      }
+    },
+    "top_to_bottom": {
+      "caption": "A large pink circle slowly moving from top to bottom on a light_yellow background.",
+      "C1": {
+        "temporal_activity": 0.16854453086853027,
+        "displacement_px": 21.49203837893303,
+        "path_length_px": 289.3770077033368,
+        "straightness": 0.07427002770367373,
+        "direction_cosine": -0.8721087190456177,
+        "direction_class": "DIRECTION_MISMATCH"
+      },
+      "C25": {
+        "temporal_activity": 0.23795689642429352,
+        "displacement_px": 0.1539621798075586,
+        "path_length_px": 232.34043653948893,
+        "straightness": 0.0006626577022092793,
+        "direction_cosine": 0.6779288861049163,
+        "direction_class": "DIRECTION_MATCH"
+      }
+    },
+    "bottom_to_top": {
+      "caption": "A medium white circle moving from bottom to top on a light_yellow background.",
+      "C1": {
+        "temporal_activity": 0.13487166166305542,
+        "displacement_px": 21.275279406267398,
+        "path_length_px": 337.4996212977164,
+        "straightness": 0.06303793564111876,
+        "direction_cosine": 0.7647686362656293,
+        "direction_class": "DIRECTION_MATCH"
+      },
+      "C25": {
+        "temporal_activity": 0.24630345404148102,
+        "displacement_px": 5.451280085470223,
+        "path_length_px": 252.71244867160377,
+        "straightness": 0.02157107856825084,
+        "direction_cosine": 0.985227461249707,
+        "direction_class": "DIRECTION_MATCH"
+      }
+    },
+    "diagonal": {
+      "caption": "A small purple triangle moving diagonally on a black background.",
+      "C1": {
+        "temporal_activity": 0.07952189445495605,
+        "displacement_px": 15.553699404172818,
+        "path_length_px": 246.29725621186358,
+        "straightness": 0.0631501123617618,
+        "direction_cosine": -0.7791990875332128,
+        "direction_class": "DIRECTION_MISMATCH"
+      },
+      "C25": {
+        "temporal_activity": 0.2836209237575531,
+        "displacement_px": 48.13524730241777,
+        "path_length_px": 371.4087861791945,
+        "straightness": 0.12960180020941625,
+        "direction_cosine": 0.7557266591962976,
+        "direction_class": "DIRECTION_MATCH"
+      }
+    },
+    "stationary": {
+      "caption": "A medium cyan square on a gray background, remaining stationary.",
+      "C1": {
+        "temporal_activity": 0.13099487125873566,
+        "displacement_px": 5.512976307029839,
+        "path_length_px": 375.0658607657613,
+        "straightness": 0.014698688640374127,
+        "direction_cosine": null,
+        "direction_class": "STATIONARY_EXPECTED"
+      },
+      "C25": {
+        "temporal_activity": 0.31312569975852966,
+        "displacement_px": 20.513812769065183,
+        "path_length_px": 251.28040231432817,
+        "straightness": 0.08163713755680926,
+        "direction_cosine": null,
+        "direction_class": "STATIONARY_EXPECTED"
+      }
+    }
+  },
+  "summary": {
+    "C1": {
+      "mean_temporal_activity": 0.12120073040326436,
+      "mean_displacement_px": 17.948497241589468,
+      "mean_direction_cosine": -0.4263618527803067,
+      "direction_class_counts": {
+        "STATIONARY_EXPECTED": 1,
+        "DIRECTION_MISMATCH": 4,
+        "DIRECTION_MATCH": 1
+      }
+    },
+    "C25": {
+      "mean_temporal_activity": 0.2646830528974533,
+      "mean_displacement_px": 19.619059635337475,
+      "mean_direction_cosine": 0.5444983645342949,
+      "direction_class_counts": {
+        "STATIONARY_EXPECTED": 1,
+        "DIRECTION_MISMATCH": 1,
+        "DIRECTION_MATCH": 4
+      }
+    }
+  }
+}

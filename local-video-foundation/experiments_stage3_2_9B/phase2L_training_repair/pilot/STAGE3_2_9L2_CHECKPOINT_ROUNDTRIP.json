@@ -1,0 +1,30 @@
+{
+  "experiment_B": {
+    "checkpoint_loaded": true,
+    "experiment": "B",
+    "num_parameters": 589,
+    "has_optimizer_state": true
+  },
+  "experiment_C": {
+    "checkpoint_loaded": true,
+    "experiment": "C",
+    "num_parameters": 589,
+    "has_optimizer_state": true
+  },
+  "comparison": {
+    "common_keys": 589,
+    "b_only_keys": 0,
+    "c_only_keys": 0,
+    "key_match": true,
+    "motion_embedding_max_diff": 0.10428019613027573,
+    "motion_embedding_mean_diff": 0.022343359887599945,
+    "motion_embeddings_differ": true,
+    "temporal_params_in_C": 16,
+    "fusion_params_in_C": 2,
+    "max_spatial_diff": 0.0,
+    "spatial_identical": true
+  },
+  "summary": {
+    "all_checks_pass": true
+  }
+}

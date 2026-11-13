@@ -1,0 +1,24 @@
+{
+  "note": "post-hoc forward test at ckpt_10000",
+  "swap_pairs": [
+    {
+      "a": "red circle",
+      "b": "blue square",
+      "mean_abs": 0.0013,
+      "cos": 0.99999
+    },
+    {
+      "a": "blue square",
+      "b": "yellow triangle",
+      "mean_abs": 0.0012,
+      "cos": 0.99999
+    },
+    {
+      "a": "yellow triangle",
+      "b": "green circle",
+      "mean_abs": 0.0064,
+      "cos": 0.99984
+    }
+  ],
+  "zero_ablate": 0.003
+}

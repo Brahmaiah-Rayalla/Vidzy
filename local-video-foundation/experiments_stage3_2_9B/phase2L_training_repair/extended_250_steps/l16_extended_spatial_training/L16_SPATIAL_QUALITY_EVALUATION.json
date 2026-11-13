@@ -1,0 +1,8 @@
+{
+  "object_recognizability": "FAIL all checkpoints",
+  "color_accuracy": "collapsed by step2000 (color_frac <0.011 all simple prompts); step1000 yellow washed-field artifact",
+  "prompt_differentiation": "degraded (pairwise 0.152->0.089, mid-run 0.037)",
+  "background": "corner_std improved to 0.11-0.29 at s2000 (smoother) but desaturated",
+  "seed_consistency": "n/a - no objects",
+  "val_generalization": "val captions equally abstract"
+}

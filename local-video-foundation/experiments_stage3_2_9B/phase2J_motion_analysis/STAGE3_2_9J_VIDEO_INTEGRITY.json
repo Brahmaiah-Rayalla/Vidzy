@@ -1,0 +1,30 @@
+{
+  "total_videos": 36,
+  "valid_videos": 36,
+  "invalid_videos": 0,
+  "errors": 0,
+  "success": true,
+  "validation_results": {
+    "frame_count": {
+      "expected": 16,
+      "all_valid": true
+    },
+    "resolution": {
+      "expected": "64x64",
+      "all_valid": true
+    },
+    "channels": {
+      "expected": 3,
+      "all_valid": true
+    },
+    "pixel_range": {
+      "expected": "0-255",
+      "all_valid": true
+    },
+    "corruption": {
+      "detected": false,
+      "all_valid": true
+    }
+  },
+  "summary": "All 36 videos passed integrity validation with correct frame count, resolution, channels, and pixel range. No corruption, NaN, infinity, blank frames, or duplicate frames detected."
+}

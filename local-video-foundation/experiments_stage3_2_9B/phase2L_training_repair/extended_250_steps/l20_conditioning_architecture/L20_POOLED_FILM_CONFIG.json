@@ -1,0 +1,5 @@
+{
+  "pooling": "masked mean over valid tokens",
+  "mlp": "256->256->256",
+  "heads": "per-block Linear 256->2C zero-init"
+}

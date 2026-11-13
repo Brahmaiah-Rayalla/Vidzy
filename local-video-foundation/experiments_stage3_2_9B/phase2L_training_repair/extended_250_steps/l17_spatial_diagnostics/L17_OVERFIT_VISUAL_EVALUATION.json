@@ -1,0 +1,15 @@
+{
+  "note": "MSE-to-GT per pair per checkpoint in metrics evals; images in overfit_images/",
+  "subset_captions": [
+    "On white, there is a medium light_gray triangle and a large light_yellow square.",
+    "On white, there is a medium cream square and a small gray square.",
+    "A orange circle in the bottom, large in size, on white.",
+    "A pink circle of medium size on light_gray.",
+    "A small white square on a light_gray background.",
+    "On light_gray, there is a medium pink triangle and a large purple circle.",
+    "On light_yellow, there is a large black triangle and a small green square.",
+    "A yellow circle in the left and a red triangle in the right on light_yellow.",
+    "A red triangle in the bottom and a light_blue circle in the right on light_blue.",
+    "A light_blue circle in the center, large in size, on white."
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "prompt_results": [
+    {
+      "prompt": "A small red circle on a blue background.",
+      "max_diff": 0.0,
+      "mean_diff": 0.0,
+      "identical": true
+    },
+    {
+      "prompt": "A large green triangle on a white background.",
+      "max_diff": 0.0,
+      "mean_diff": 0.0,
+      "identical": true
+    },
+    {
+      "prompt": "A yellow square on a black background.",
+      "max_diff": 0.0,
+      "mean_diff": 0.0,
+      "identical": true
+    }
+  ],
+  "deterministic_behavior": true,
+  "note": "Split embedding test skipped due to initialization bug in text_encoder_split.py"
+}

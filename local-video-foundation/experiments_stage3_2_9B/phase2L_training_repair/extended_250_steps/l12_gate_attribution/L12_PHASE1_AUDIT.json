@@ -1,0 +1,246 @@
+{
+  "checks": {
+    "l11_artifacts_present": {
+      "STAGE3_2_9L11_FINAL_REPORT.md": true,
+      "L11_DDIM_INFRASTRUCTURE_AUDIT.md": true,
+      "L11_INFERENCE_SMOKE_TEST.json": true,
+      "L11_MOTION_EVALUATION.json": true,
+      "L11_C1_C25_COMPARISON.json": true,
+      "run_l11_evaluation.py": true,
+      "ARTIFACT_HASHES.json": true
+    },
+    "prompt_named_files": {
+      "L11_GENERATION_CONFIG.json": false,
+      "L11_MOTION_METRICS.json": false,
+      "L11_SEED_LEVEL_RESULTS.json": false
+    },
+    "checkpoints": {
+      "C1": {
+        "path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\extended_250_steps\\recovery_l10\\C1\\checkpoint_step_000250.pt",
+        "exists": true,
+        "keys": [
+          "model_state_dict",
+          "optimizer_state_dict",
+          "step",
+          "experiment",
+          "recovery"
+        ],
+        "step": 250,
+        "gate_init": null,
+        "gates_bottleneck_raw": -4.557628154754639,
+        "gates_low_res_raw": -4.523617267608643
+      },
+      "C25": {
+        "path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\extended_250_steps\\recovery_l10\\C25\\checkpoint_step_000250.pt",
+        "exists": true,
+        "keys": [
+          "model_state_dict",
+          "optimizer_state_dict",
+          "step",
+          "experiment",
+          "recovery"
+        ],
+        "step": 250,
+        "gate_init": null,
+        "gates_bottleneck_raw": -1.0409202575683594,
+        "gates_low_res_raw": -1.0322657823562622
+      }
+    },
+    "prompts": [
+      {
+        "motion_type": "left_to_right",
+        "caption": "A medium blue circle slowly moving from left to right on a white background."
+      },
+      {
+        "motion_type": "right_to_left",
+        "caption": "A large pink triangle quickly moving from right to left on a white background."
+      },
+      {
+        "motion_type": "top_to_bottom",
+        "caption": "A large pink circle slowly moving from top to bottom on a light_yellow background."
+      },
+      {
+        "motion_type": "bottom_to_top",
+        "caption": "A medium white circle moving from bottom to top on a light_yellow background."
+      },
+      {
+        "motion_type": "diagonal",
+        "caption": "A small purple triangle moving diagonally on a black background."
+      },
+      {
+        "motion_type": "stationary",
+        "caption": "A medium cyan square on a gray background, remaining stationary."
+      }
+    ],
+    "ddim_config": {
+      "num_timesteps": 1000,
+      "sampling_steps": 25,
+      "beta_start": 0.0001,
+      "beta_end": 0.02,
+      "frames": 16,
+      "resolution": 64,
+      "seed_scheme": "torch.Generator().manual_seed(1000 + prompt_index), identical across models"
+    },
+    "sample_count_resolution": {
+      "captions_per_config": 6,
+      "directional_prompts": 5,
+      "stationary_prompts": 1,
+      "direction_metrics_use": "5 directional only; stationary reported separately as STATIONARY_EXPECTED",
+      "note": "Not a discrepancy - by design. cosine_similarity is null for stationary."
+    },
+    "artifact_hash_mismatches": []
+  },
+  "reproduction": {
+    "C1": {
+      "left_to_right": {
+        "png_temporal_activity": 0.11400552839040756,
+        "json_temporal_activity": 0.11401917040348053,
+        "activity_abs_diff": 1.364201307296753e-05,
+        "png_displacement_px": 24.496131094082592,
+        "json_displacement_px": 24.46166621659003,
+        "disp_abs_diff": 0.03446487749256377,
+        "png_direction_cosine": -0.31429961732820616,
+        "json_direction_cosine": -0.31170276781086637,
+        "png_direction_class": "DIRECTION_MISMATCH",
+        "json_direction_class": "DIRECTION_MISMATCH"
+      },
+      "right_to_left": {
+        "png_temporal_activity": 0.09944465756416321,
+        "json_temporal_activity": 0.09925225377082825,
+        "activity_abs_diff": 0.00019240379333496094,
+        "png_displacement_px": 19.228453686472953,
+        "json_displacement_px": 19.395323736543688,
+        "disp_abs_diff": 0.16687005007073452,
+        "png_direction_cosine": -0.9357688524018457,
+        "json_direction_cosine": -0.9335673257774657,
+        "png_direction_class": "DIRECTION_MISMATCH",
+        "json_direction_class": "DIRECTION_MISMATCH"
+      },
+      "top_to_bottom": {
+        "png_temporal_activity": 0.16852393746376038,
+        "json_temporal_activity": 0.16854453086853027,
+        "activity_abs_diff": 2.059340476989746e-05,
+        "png_displacement_px": 21.643102811207548,
+        "json_displacement_px": 21.49203837893303,
+        "disp_abs_diff": 0.1510644322745165,
+        "png_direction_cosine": -0.8705162950658749,
+        "json_direction_cosine": -0.8721087190456177,
+        "png_direction_class": "DIRECTION_MISMATCH",
+        "json_direction_class": "DIRECTION_MISMATCH"
+      },
+      "bottom_to_top": {
+        "png_temporal_activity": 0.134649857878685,
+        "json_temporal_activity": 0.13487166166305542,
+        "activity_abs_diff": 0.00022180378437042236,
+        "png_displacement_px": 21.25675625803341,
+        "json_displacement_px": 21.275279406267398,
+        "disp_abs_diff": 0.018523148233988707,
+        "png_direction_cosine": 0.7655534702224176,
+        "json_direction_cosine": 0.7647686362656293,
+        "png_direction_class": "DIRECTION_MATCH",
+        "json_direction_class": "DIRECTION_MATCH"
+      },
+      "diagonal": {
+        "png_temporal_activity": 0.07964450865983963,
+        "json_temporal_activity": 0.07952189445495605,
+        "activity_abs_diff": 0.00012261420488357544,
+        "png_displacement_px": 15.67110688503092,
+        "json_displacement_px": 15.553699404172818,
+        "disp_abs_diff": 0.11740748085810182,
+        "png_direction_cosine": -0.7801661431993594,
+        "json_direction_cosine": -0.7791990875332128,
+        "png_direction_class": "DIRECTION_MISMATCH",
+        "json_direction_class": "DIRECTION_MISMATCH"
+      },
+      "stationary": {
+        "png_temporal_activity": 0.13104501366615295,
+        "json_temporal_activity": 0.13099487125873566,
+        "activity_abs_diff": 5.014240741729736e-05,
+        "png_displacement_px": 5.627171162814363,
+        "json_displacement_px": 5.512976307029839,
+        "disp_abs_diff": 0.1141948557845236,
+        "png_direction_cosine": null,
+        "json_direction_cosine": null,
+        "png_direction_class": "STATIONARY_EXPECTED",
+        "json_direction_class": "STATIONARY_EXPECTED"
+      }
+    },
+    "C25": {
+      "left_to_right": {
+        "png_temporal_activity": 0.23274746537208557,
+        "json_temporal_activity": 0.2326352298259735,
+        "activity_abs_diff": 0.00011223554611206055,
+        "png_displacement_px": 5.662975908404489,
+        "json_displacement_px": 5.567864710702254,
+        "disp_abs_diff": 0.0951111977022352,
+        "png_direction_cosine": -0.7018549244197283,
+        "json_direction_cosine": -0.6879133189670051,
+        "png_direction_class": "DIRECTION_MISMATCH",
+        "json_direction_class": "DIRECTION_MISMATCH"
+      },
+      "right_to_left": {
+        "png_temporal_activity": 0.2744014859199524,
+        "json_temporal_activity": 0.27445611357688904,
+        "activity_abs_diff": 5.462765693664551e-05,
+        "png_displacement_px": 37.743041594711976,
+        "json_displacement_px": 37.89219076456186,
+        "disp_abs_diff": 0.1491491698498848,
+        "png_direction_cosine": 0.9913334376640388,
+        "json_direction_cosine": 0.9915221350875584,
+        "png_direction_class": "DIRECTION_MATCH",
+        "json_direction_class": "DIRECTION_MATCH"
+      },
+      "top_to_bottom": {
+        "png_temporal_activity": 0.2379767745733261,
+        "json_temporal_activity": 0.23795689642429352,
+        "activity_abs_diff": 1.9878149032592773e-05,
+        "png_displacement_px": 0.1543683793701646,
+        "json_displacement_px": 0.1539621798075586,
+        "disp_abs_diff": 0.00040619956260598555,
+        "png_direction_cosine": 0.6558435584561929,
+        "json_direction_cosine": 0.6779288861049163,
+        "png_direction_class": "DIRECTION_MATCH",
+        "json_direction_class": "DIRECTION_MATCH"
+      },
+      "bottom_to_top": {
+        "png_temporal_activity": 0.2463407814502716,
+        "json_temporal_activity": 0.24630345404148102,
+        "activity_abs_diff": 3.732740879058838e-05,
+        "png_displacement_px": 5.3772935224154,
+        "json_displacement_px": 5.451280085470223,
+        "disp_abs_diff": 0.07398656305482287,
+        "png_direction_cosine": 0.9838041186968504,
+        "json_direction_cosine": 0.985227461249707,
+        "png_direction_class": "DIRECTION_MATCH",
+        "json_direction_class": "DIRECTION_MATCH"
+      },
+      "diagonal": {
+        "png_temporal_activity": 0.28370600938796997,
+        "json_temporal_activity": 0.2836209237575531,
+        "activity_abs_diff": 8.508563041687012e-05,
+        "png_displacement_px": 48.12071088197268,
+        "json_displacement_px": 48.13524730241777,
+        "disp_abs_diff": 0.01453642044508996,
+        "png_direction_cosine": 0.755582485600729,
+        "json_direction_cosine": 0.7557266591962976,
+        "png_direction_class": "DIRECTION_MATCH",
+        "json_direction_class": "DIRECTION_MATCH"
+      },
+      "stationary": {
+        "png_temporal_activity": 0.31316617131233215,
+        "json_temporal_activity": 0.31312569975852966,
+        "activity_abs_diff": 4.0471553802490234e-05,
+        "png_displacement_px": 20.50651850438561,
+        "json_displacement_px": 20.513812769065183,
+        "disp_abs_diff": 0.007294264679572393,
+        "png_direction_cosine": null,
+        "json_direction_cosine": null,
+        "png_direction_class": "STATIONARY_EXPECTED",
+        "json_direction_class": "STATIONARY_EXPECTED"
+      }
+    }
+  },
+  "discrepancies": [
+    "L.12 prompt referenced L11_GENERATION_CONFIG.json, L11_MOTION_METRICS.json, L11_SEED_LEVEL_RESULTS.json - none exist. Equivalent information is stored in L11_MOTION_EVALUATION.json (per-video metrics), L11_C1_C25_COMPARISON.json (config, seeds, sampling settings, summary), and run_l11_evaluation.py (seed scheme 1000+i, DDIM schedule). No data loss; naming difference only."
+  ]
+}

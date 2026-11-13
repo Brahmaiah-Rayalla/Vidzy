@@ -1,0 +1,10 @@
+A orange triangle in the left, small in size, on white.
+On white, there is a small red circle and a large orange triangle.
+On a white background, there is a medium pink triangle.
+A medium green square positioned in the right on white.
+On a light_yellow background, there is a large green square.
+A green triangle of small size on light_yellow.
+A cyan square in the right and a orange triangle in the center on white.
+A medium pink square on a light_gray background.
+On a light_gray background, there is a medium pink square.
+A light_yellow square in the top and a white triangle in the right on light_gray.

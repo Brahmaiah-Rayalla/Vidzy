@@ -1,0 +1,6 @@
+{
+  "n_train": 210,
+  "n_val": 45,
+  "n_test": 45,
+  "templates": 10
+}

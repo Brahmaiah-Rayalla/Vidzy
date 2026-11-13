@@ -1,0 +1,48 @@
+{
+  "checks": {
+    "checkpoint_hashes": {
+      "status": "PASS",
+      "hashes": {
+        "stage2": "a7f5142e133c6aeadc656967639eab046a7a8f922e3201a6feda4496a544d57c",
+        "stage3_spatial": "a7f5142e133c6aeadc656967639eab046a7a8f922e3201a6feda4496a544d57c"
+      },
+      "expected": {
+        "stage2": "a7f5142e133c6aeadc656967639eab046a7a8f922e3201a6feda4496a544d57c",
+        "stage3_spatial": "a7f5142e133c6aeadc656967639eab046a7a8f922e3201a6feda4496a544d57c"
+      }
+    },
+    "temporal_disabled_equivalence": {
+      "status": "PASS",
+      "max_diff": 9.5367431640625e-07,
+      "tolerance": 0.0001
+    },
+    "temporal_enabled_initialization": {
+      "status": "PASS",
+      "max_diff": 4.669760704040527,
+      "threshold": 5.0
+    },
+    "gradients_intended": {
+      "status": "PASS",
+      "motion_emb_grad": true,
+      "temporal_grad": true,
+      "fusion_grad": true
+    },
+    "frozen_no_gradients": {
+      "status": "PASS",
+      "spatial_grad": false,
+      "appearance_grad": false
+    },
+    "optimizer_permitted": {
+      "status": "PASS",
+      "optimizer_params": 19,
+      "frozen_params": 505,
+      "overlap": 0
+    },
+    "optimizer_step_frozen_unchanged": {
+      "status": "PASS",
+      "spatial_unchanged": true,
+      "appearance_unchanged": true
+    }
+  },
+  "final_status": "PASS"
+}

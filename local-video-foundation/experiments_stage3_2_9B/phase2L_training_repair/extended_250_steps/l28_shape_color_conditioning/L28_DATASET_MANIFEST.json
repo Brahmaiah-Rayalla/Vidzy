@@ -1,0 +1,9 @@
+{
+  "train": 1200,
+  "val": 300,
+  "classes": 6,
+  "per_class": {
+    "train": 200,
+    "val": 50
+  }
+}

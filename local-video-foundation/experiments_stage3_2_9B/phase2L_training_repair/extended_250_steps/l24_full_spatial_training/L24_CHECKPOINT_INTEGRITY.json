@@ -1,0 +1,5 @@
+{
+  "ckpts": "ckpt_{500..10000}.pt",
+  "te_frozen": true,
+  "stage2": "untouched"
+}

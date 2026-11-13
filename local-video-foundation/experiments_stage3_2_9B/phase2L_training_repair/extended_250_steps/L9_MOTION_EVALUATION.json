@@ -1,0 +1,1 @@
+{"note": "Motion evaluation requires full DDIM generation with corrected text-conditioning inference pipeline. L.8 training did not complete for C25, and DDIM infrastructure is not available. Motion evaluation deferred.", "status": "DEFERRED"}

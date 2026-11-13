@@ -1,0 +1,6 @@
+{
+  "collapse_detected": true,
+  "type": "diversity/conditioning collapse (not constant-color)",
+  "evidence": "pairwise diff fell 40%+ by s2000; prompt color fractions ->0; val_loss kept improving = loss/visual decoupling",
+  "action": "completed budget; no early stop triggered since no NaN/constant field"
+}

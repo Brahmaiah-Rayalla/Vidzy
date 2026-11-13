@@ -1,0 +1,9 @@
+{
+  "seq_len": 64,
+  "features_per_token": 8,
+  "channels": 512,
+  "total_in": 515,
+  "token_proj": "Linear 256->8 std0.02",
+  "conv_init": "RGB copied; text N(0,0.02)",
+  "legacy_bypass": "text_emb=zeros"
+}

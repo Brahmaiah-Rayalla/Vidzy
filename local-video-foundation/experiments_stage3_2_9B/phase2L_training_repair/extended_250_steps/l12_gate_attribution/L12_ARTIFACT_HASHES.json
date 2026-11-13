@@ -1,0 +1,25 @@
+{
+  "algorithm": "sha256",
+  "files": {
+    "l12_analyze.py": "49adf27f2d729d6c290d0d98ab8c9ed06cb0548501b855486ebed8d13a519673",
+    "L12_C1_C25_GATE_COMPARISON.json": "01ea654897fa0874c67526914bac6c53120989c2fc83576abdcc2d6f6faaa758",
+    "l12_common.py": "8c435f47a4efbb621c18ae1a4c7ae4ca676acb21a78dbfd8319f826222ff35ac",
+    "L12_FINALIST_MULTI_SEED_RESULTS.json": "48f0ed5f3632a80cf372c80a9d687610902430113ab8b4c36dd988282d89746f",
+    "L12_FIRST_PASS_RESULTS.json": "770b7027d7504a3fe4bc85f85730bd4c2f34cdae9ab4642074bb82389471e171",
+    "L12_GATE_ACTIVATION_ANALYSIS.json": "b43f1347e26bdd627135922552e4530cc3c7035121060ea1dd685361586d1445",
+    "L12_GATE_CONFIGURATION.json": "45e48ebd06ebcf9ac2b849694f9efa9be5464fa784e213f00ce31da8eaaf934f",
+    "L12_METRIC_RELIABILITY_AUDIT.json": "7a040c04bc14333a3e390656ad23c024ef6af3038a1354e000926e9e45f9ffb6",
+    "l12_pass1_generate.py": "aec035499480459bb839ef6a4d98ddcd247cd26f9653dec543e68d34059ff3ed",
+    "l12_pass2_multiseed.py": "d12d020a0b12f7a43a74eb24f3a4d5bbd48781eca9c6c1217b816d04a7fce36c",
+    "L12_PHASE1_AUDIT.json": "9e171eb4ff71ece0152403b77237b3149625c0e29487bd25403f904e441272d3",
+    "l12_phase1_audit.py": "69d5eb50a255cd20c870ce039080ea64b4587818bf148656bb3ee68e4eaf6450",
+    "l12_phase2_reliability.py": "a2b8b2e2e08ca8a348d9b2bc85eff7331ec994a2e49e76345390c931fdda7a5e",
+    "l12_phase3_gates.py": "9d0ce471333a864146c1a84f3b4df62bebda7e337972fd9f66118eb838c9475c",
+    "STAGE3_2_9L12_FINAL_REPORT.md": "029051409a0ae980a71f534bf8e19d9781b5a57e172e62eb73cd4af77be775e6",
+    "_video_artifact_counts": {
+      "videos_pass1_files": 756,
+      "videos_multiseed_files": 432,
+      "reliability_files": 9
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "source": "data/text_image/*.png + train_metadata.json",
+  "n_metadata": 800,
+  "image_size": 64,
+  "captions": "single-image scene descriptions (bg_color + up to 2 objects with shape/color/size/position) - appropriate for spatial model",
+  "split": "first 700 train / rest val, fixed order",
+  "verification": "image_path PNG uint8, captions match scene_params",
+  "note": "motion captions not used; single-frame images only"
+}

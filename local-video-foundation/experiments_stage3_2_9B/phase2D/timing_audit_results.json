@@ -1,0 +1,68 @@
+{
+  "experiment_B": {
+    "num_steps": 100,
+    "total_time_seconds": 1280.3168168067932,
+    "total_time_minutes": 21.338613613446554,
+    "mean_step_time": 12.803168168067932,
+    "median_step_time": 3.3174407482147217,
+    "p90_step_time": 3.867734599113465,
+    "max_step_time": 941.8727340698242,
+    "min_step_time": 2.7606680393218994,
+    "std_step_time": 93.37642937823087,
+    "outlier_threshold": 292.93245630276056,
+    "num_outliers": 1,
+    "outlier_indices": [
+      47
+    ],
+    "outlier_values": [
+      941.8727340698242
+    ],
+    "max_step_index": 47,
+    "max_is_outlier": true,
+    "outlier_rate": 0.01
+  },
+  "experiment_C": {
+    "num_steps": 100,
+    "total_time_seconds": 1125.8030879497528,
+    "total_time_minutes": 18.763384799162548,
+    "mean_step_time": 11.258030879497529,
+    "median_step_time": 7.122628569602966,
+    "p90_step_time": 8.9781081199646,
+    "max_step_time": 232.4378306865692,
+    "min_step_time": 5.89866304397583,
+    "std_step_time": 25.773856297298508,
+    "outlier_threshold": 88.57959977139305,
+    "num_outliers": 2,
+    "outlier_indices": [
+      2,
+      57
+    ],
+    "outlier_values": [
+      232.4378306865692,
+      132.98683142662048
+    ],
+    "max_step_index": 2,
+    "max_is_outlier": true,
+    "outlier_rate": 0.02
+  },
+  "phase2c_report": {
+    "experiment_B": {
+      "total_time": 354,
+      "mean_step_time": 3.54,
+      "median_step_time": 3.31,
+      "max_step_time": 941.87,
+      "outlier_step": 62
+    }
+  },
+  "consistency_check": {
+    "total_time_match": false,
+    "mean_step_time_match": false,
+    "median_step_time_match": true,
+    "max_step_time_match": true
+  },
+  "mathematical_consistency": {
+    "expected_total_from_mean": 1280.3168168067932,
+    "actual_total": 1280.3168168067932,
+    "max_greater_than_total": false
+  }
+}
