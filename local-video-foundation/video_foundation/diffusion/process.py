@@ -65,6 +65,13 @@ class DiffusionProcess:
         # Get schedule values for the given timesteps
         _, alpha_bar, one_minus_alpha_bar = self.schedule.get(timesteps, device)
 
+        # Schedules are returned as [B,1,1,1] for images. Extend their rank for
+        # video tensors [B,C,T,H,W] without changing the image behavior.
+        if x_0.ndim != alpha_bar.ndim:
+            target_shape = (batch_size,) + (1,) * (x_0.ndim - 1)
+            alpha_bar = alpha_bar.reshape(target_shape)
+            one_minus_alpha_bar = one_minus_alpha_bar.reshape(target_shape)
+
         # Compute noisy images:
         # x_t = sqrt(alpha_bar_t) * x_0 + sqrt(1 - alpha_bar_t) * epsilon
         sqrt_alpha_bar = torch.sqrt(alpha_bar)
@@ -114,7 +121,12 @@ class DiffusionProcess:
         clip_x0: bool = True,
         clip_range: tuple = (-1.0, 1.0),
         text_emb: Optional[torch.Tensor] = None,
-        text_mask: Optional[torch.Tensor] = None
+        text_mask: Optional[torch.Tensor] = None,
+        initial_noise: Optional[torch.Tensor] = None,
+        recompute_noise_after_clipping: bool = False,
+        prediction_type: str = "epsilon",
+        class_labels: Optional[torch.Tensor] = None,
+        color_labels: Optional[torch.Tensor] = None
     ) -> torch.Tensor:
         """
         DDIM sampling for image generation with optional text conditioning.
@@ -136,7 +148,9 @@ class DiffusionProcess:
         batch_size, channels, height, width = shape
 
         # Start from pure Gaussian noise
-        x = torch.randn(shape, device=device)
+        x = torch.randn(shape, device=device) if initial_noise is None else initial_noise.to(device).clone()
+        if tuple(x.shape) != tuple(shape):
+            raise ValueError(f"initial_noise must have shape {shape}, got {tuple(x.shape)}")
 
         # Create subsampled timesteps
         # We want to go from T to 0 in num_sampling_steps
@@ -150,7 +164,14 @@ class DiffusionProcess:
 
             # Predict noise at current timestep (with or without conditioning)
             t_batch = t.expand(batch_size)
-            if text_emb is not None:
+            if class_labels is not None or color_labels is not None:
+                labels = class_labels.to(device=device, dtype=torch.long) if class_labels is not None else None
+                colors = color_labels.to(device=device, dtype=torch.long) if color_labels is not None else None
+                for name, values in (("class", labels), ("color", colors)):
+                    if values is not None and values.numel() != batch_size:
+                        raise ValueError(f"Expected {batch_size} {name} labels, got {values.numel()}")
+                predicted_noise = model(x, t_batch, labels, colors)
+            elif text_emb is not None:
                 predicted_noise = model(x, t_batch, text_emb, text_mask)
             else:
                 predicted_noise = model(x, t_batch)
@@ -174,17 +195,30 @@ class DiffusionProcess:
             sqrt_one_minus_alpha_bar_t = torch.sqrt(1 - alpha_bar_t)
             sqrt_one_minus_alpha_bar_t_prev = torch.sqrt(1 - alpha_bar_t_prev)
 
-            # Predict x_0
-            x_0_pred = (x - sqrt_one_minus_alpha_bar_t * predicted_noise) / sqrt_alpha_bar_t
+            if prediction_type == "epsilon":
+                epsilon_pred = predicted_noise
+                x_0_pred = (x - sqrt_one_minus_alpha_bar_t * epsilon_pred) / sqrt_alpha_bar_t
+            elif prediction_type == "v_prediction":
+                # v = sqrt(alpha_bar)*epsilon - sqrt(1-alpha_bar)*x0
+                x_0_pred = sqrt_alpha_bar_t * x - sqrt_one_minus_alpha_bar_t * predicted_noise
+                epsilon_pred = sqrt_one_minus_alpha_bar_t * x + sqrt_alpha_bar_t * predicted_noise
+            else:
+                raise ValueError(f"Unsupported prediction_type: {prediction_type}")
 
             # Clip x_0 prediction to prevent instability at high noise levels
             # Note: Per Stage 1.8, we avoid per-step clipping to prevent mode collapse
             # Only clip if explicitly requested (e.g., for numerical stability)
             if clip_x0:
                 x_0_pred = torch.clamp(x_0_pred, clip_range[0], clip_range[1])
+                if recompute_noise_after_clipping:
+                    # Keep the clipped x0 estimate and epsilon estimate
+                    # algebraically consistent before the DDIM update.
+                    epsilon_pred = (
+                        x - sqrt_alpha_bar_t * x_0_pred
+                    ) / sqrt_one_minus_alpha_bar_t.clamp_min(1e-8)
 
             # Compute x_{t-1}
-            x = sqrt_alpha_bar_t_prev * x_0_pred + sqrt_one_minus_alpha_bar_t_prev * predicted_noise
+            x = sqrt_alpha_bar_t_prev * x_0_pred + sqrt_one_minus_alpha_bar_t_prev * epsilon_pred
 
         # Final clipping after sampling complete (Stage 1.8 fix)
         x = torch.clamp(x, clip_range[0], clip_range[1])
@@ -288,7 +322,12 @@ class DiffusionProcess:
         progress_callback: Optional[callable] = None,
         clip_x0: bool = True,
         text_emb: Optional[torch.Tensor] = None,
-        text_mask: Optional[torch.Tensor] = None
+        text_mask: Optional[torch.Tensor] = None,
+        initial_noise: Optional[torch.Tensor] = None,
+        recompute_noise_after_clipping: bool = False,
+        prediction_type: str = "epsilon",
+        class_labels: Optional[torch.Tensor] = None,
+        color_labels: Optional[torch.Tensor] = None
     ) -> torch.Tensor:
         """
         Convenience method for DDIM sampling with explicit dimensions and optional text conditioning.
@@ -309,7 +348,11 @@ class DiffusionProcess:
             Generated images of shape [batch_size, channels, image_size, image_size]
         """
         shape = (batch_size, channels, image_size, image_size)
-        return self.ddim_sample(model, shape, num_sampling_steps, device, progress_callback, clip_x0, (-1.0, 1.0), text_emb, text_mask)
+        return self.ddim_sample(
+            model, shape, num_sampling_steps, device, progress_callback,
+            clip_x0, (-1.0, 1.0), text_emb, text_mask, initial_noise,
+            recompute_noise_after_clipping, prediction_type, class_labels, color_labels
+        )
 
     def ddpm_sample_loop(
         self,

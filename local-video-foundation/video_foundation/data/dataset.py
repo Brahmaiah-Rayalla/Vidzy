@@ -3,6 +3,7 @@ PyTorch Dataset wrapper for synthetic geometric images.
 """
 
 import os
+import json
 from typing import Optional, Callable
 from PIL import Image
 import torch
@@ -18,7 +19,10 @@ class SyntheticImageDataset(Dataset):
         data_dir: str,
         image_size: int = 64,
         transform: Optional[Callable] = None,
-        normalize: bool = True
+        normalize: bool = True,
+        cache_in_memory: bool = False,
+        return_label: bool = False,
+        return_color_label: bool = False
     ):
         """
         Initialize the dataset.
@@ -33,6 +37,10 @@ class SyntheticImageDataset(Dataset):
         self.image_size = image_size
         self.transform = transform
         self.normalize = normalize
+        self.cache_in_memory = cache_in_memory
+        self.return_label = return_label
+        self.return_color_label = return_color_label
+        self._cache = {}
 
         # Find all image files
         self.image_files = sorted([
@@ -42,6 +50,26 @@ class SyntheticImageDataset(Dataset):
 
         if len(self.image_files) == 0:
             raise ValueError(f"No images found in {data_dir}")
+
+        if self.return_label:
+            labels_path = os.path.join(data_dir, "class_labels.json")
+            if not os.path.isfile(labels_path):
+                raise ValueError(f"Class-conditioned training requires {labels_path}")
+            with open(labels_path, "r", encoding="utf-8") as f:
+                self.class_labels = json.load(f)
+            if len(self.class_labels) != len(self.image_files):
+                raise ValueError(
+                    f"Found {len(self.class_labels)} class labels for "
+                    f"{len(self.image_files)} images in {data_dir}"
+                )
+        if self.return_color_label:
+            labels_path = os.path.join(data_dir, "color_labels.json")
+            if not os.path.isfile(labels_path):
+                raise ValueError(f"Color-conditioned training requires {labels_path}")
+            with open(labels_path, "r", encoding="utf-8") as f:
+                self.color_labels = json.load(f)
+            if len(self.color_labels) != len(self.image_files):
+                raise ValueError(f"Found {len(self.color_labels)} color labels for {len(self.image_files)} images")
 
         print(f"Found {len(self.image_files)} images in {data_dir}")
 
@@ -55,6 +83,10 @@ class SyntheticImageDataset(Dataset):
         Returns:
             Image tensor of shape [3, image_size, image_size]
         """
+        if self.cache_in_memory and idx in self._cache:
+            image_tensor = self._cache[idx]
+            return self._format_sample(image_tensor, idx)
+
         # Load image
         image_path = os.path.join(self.data_dir, self.image_files[idx])
         image = Image.open(image_path).convert('RGB')
@@ -75,4 +107,16 @@ class SyntheticImageDataset(Dataset):
         if self.normalize:
             image_tensor = image_tensor / 255.0 * 2.0 - 1.0
 
-        return image_tensor
+        if self.cache_in_memory:
+            self._cache[idx] = image_tensor
+        return self._format_sample(image_tensor, idx)
+
+    def _format_sample(self, image_tensor, idx):
+        labels = []
+        if self.return_label:
+            labels.append(self.class_labels[idx])
+        if self.return_color_label:
+            labels.append(self.color_labels[idx])
+        if not labels:
+            return image_tensor
+        return (image_tensor, *labels)

@@ -1,0 +1,50 @@
+{
+  "shape": "square",
+  "color": "blue",
+  "motion": "left_to_right",
+  "size_adjective": "medium",
+  "speed_adjective": "slowly",
+  "background_color": "red",
+  "object_size": 32,
+  "velocity": 0.5635118295900013,
+  "start_position": [
+    32.0,
+    32.0
+  ],
+  "trajectory": [
+    [
+      32.0,
+      32.0
+    ],
+    [
+      32.56351182959,
+      32.0
+    ],
+    [
+      33.12702365918,
+      32.0
+    ],
+    [
+      33.690535488769996,
+      32.0
+    ],
+    [
+      34.254047318359994,
+      32.0
+    ],
+    [
+      34.81755914794999,
+      32.0
+    ],
+    [
+      35.38107097753999,
+      32.0
+    ],
+    [
+      35.94458280712999,
+      32.0
+    ]
+  ],
+  "num_frames": 8,
+  "image_size": 64
+}

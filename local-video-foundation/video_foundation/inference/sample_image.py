@@ -9,8 +9,8 @@ from PIL import Image
 import torch
 import numpy as np
 
-# Add parent directory to path for imports
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# Add project root to path for package imports when run as a script.
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
 from video_foundation.models.unet import UNet
 from video_foundation.diffusion.sampler import DiffusionSampler
@@ -114,7 +114,9 @@ def sample(args: argparse.Namespace):
         num_res_blocks=config['model']['num_res_blocks'],
         attention_resolutions=config['model']['attention_resolutions'],
         dropout=config['model']['dropout'],
-        num_timesteps=config['diffusion']['num_timesteps']
+        num_timesteps=config['diffusion']['num_timesteps'],
+        num_classes=config['model'].get('num_classes', 0),
+        num_color_classes=config['model'].get('num_color_classes', 0)
     )
     model.load_state_dict(checkpoint_data['model_state_dict'])
     model = model.to(device)
@@ -156,6 +158,19 @@ def sample(args: argparse.Namespace):
     # Generate samples
     print("Generating samples...")
     with torch.no_grad():
+        class_labels = None
+        color_labels = None
+        if model.num_classes > 0:
+            if args.class_label < 0 or args.class_label >= model.num_classes:
+                raise ValueError(f"--class_label must be in [0, {model.num_classes - 1}]")
+            class_labels = torch.full((num_samples,), args.class_label, device=device, dtype=torch.long)
+        if model.num_color_classes > 0:
+            if args.vary_colors:
+                color_labels = torch.arange(num_samples, device=device, dtype=torch.long) % model.num_color_classes
+            elif args.color_label < 0 or args.color_label >= model.num_color_classes:
+                raise ValueError(f"--color_label must be in [0, {model.num_color_classes - 1}]")
+            else:
+                color_labels = torch.full((num_samples,), args.color_label, device=device, dtype=torch.long)
         samples = diffusion.sample(
             model=model,
             batch_size=num_samples,
@@ -163,7 +178,11 @@ def sample(args: argparse.Namespace):
             image_size=image_size,
             num_sampling_steps=num_sampling_steps,
             device=device,
-            progress_callback=progress_callback
+            progress_callback=progress_callback,
+            prediction_type=config.get('diffusion', {}).get('prediction_type', 'epsilon'),
+            recompute_noise_after_clipping=True,
+            class_labels=class_labels,
+            color_labels=color_labels
         )
 
     # Create output directory
@@ -197,6 +216,9 @@ def main():
     parser.add_argument("--num_samples", type=int, default=4, help="Number of samples to generate")
     parser.add_argument("--sampling_steps", type=int, default=50, help="Number of DDIM sampling steps")
     parser.add_argument("--seed", type=int, default=None, help="Random seed for generation")
+    parser.add_argument("--class_label", type=int, default=0, help="Class ID for class-conditional checkpoints (0 circle, 1 square, 2 triangle)")
+    parser.add_argument("--color_label", type=int, default=0, help="Palette ID for color-conditional checkpoints (0 red, 1 green, 2 blue, 3 yellow)")
+    parser.add_argument("--vary_colors", action="store_true", help="Cycle color IDs across samples in one batch")
 
     args = parser.parse_args()
 

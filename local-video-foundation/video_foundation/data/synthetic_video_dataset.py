@@ -62,7 +62,10 @@ class SyntheticVideoGenerator:
         self,
         image_size: int = 64,
         num_frames: int = 16,
-        seed: int = 42
+        seed: int = 42,
+        shapes: Optional[List[str]] = None,
+        colors: Optional[List[str]] = None,
+        motions: Optional[List[str]] = None
     ):
         """
         Initialize the video generator.
@@ -75,6 +78,15 @@ class SyntheticVideoGenerator:
         self.image_size = image_size
         self.num_frames = num_frames
         self.rng = np.random.RandomState(seed)
+        self.shapes = list(shapes) if shapes else list(self.SHAPES)
+        self.colors = list(colors) if colors else list(self.COLORS)
+        self.motions = list(motions) if motions else list(self.MOTIONS)
+        if any(name not in self.SHAPES for name in self.shapes):
+            raise ValueError(f"Unsupported shapes: {self.shapes}")
+        if any(name not in self.COLORS for name in self.colors):
+            raise ValueError(f"Unsupported colors: {self.colors}")
+        if any(name not in self.MOTIONS for name in self.motions):
+            raise ValueError(f"Unsupported motions: {self.motions}")
 
     def _get_color(self, color_name: str) -> Tuple[int, int, int]:
         """Get RGB tuple for a color name."""
@@ -244,20 +256,20 @@ class SyntheticVideoGenerator:
         """
         # Random selections if not specified
         if shape is None:
-            shape = self.rng.choice(self.SHAPES)
+            shape = self.rng.choice(self.shapes)
         if color is None:
-            color, _ = self._get_random_color()
+            color = self.rng.choice(self.colors)
         if motion is None:
-            motion = self.rng.choice(self.MOTIONS)
+            motion = self.rng.choice(self.motions)
         if size_adj is None:
             size_adj = self.rng.choice(list(self.SIZE_ADJECTIVES.keys()))
         if speed_adj is None:
             speed_adj = self.rng.choice(list(self.SPEED_ADJECTIVES.keys()))
         if bg_color is None:
-            bg_color, _ = self._get_random_color()
+            bg_color = self.rng.choice(self.colors)
             # Ensure background is different from object
             while bg_color == color:
-                bg_color, _ = self._get_random_color()
+                bg_color = self.rng.choice(self.colors)
 
         # Get RGB values
         obj_rgb = self._get_color(color)
@@ -271,13 +283,44 @@ class SyntheticVideoGenerator:
         vel_range = self.SPEED_ADJECTIVES[speed_adj]
         velocity = self.rng.uniform(vel_range[0], vel_range[1])
 
-        # Random starting position (ensure object stays in frame)
-        margin = size
-        max_start = self.image_size - margin
+        # Bound object size by the requested travel distance. This preserves
+        # the sampled speed while ensuring the complete shape remains visible
+        # for every frame instead of saving clipped trajectories.
+        moves_x = motion in ('left_to_right', 'right_to_left', 'diagonal_down_right', 'diagonal_down_left')
+        moves_y = motion in ('top_to_bottom', 'bottom_to_top', 'diagonal_down_right', 'diagonal_down_left')
+        travel = velocity * max(self.num_frames - 1, 0)
+        max_path = max(0.0, self.image_size - 8.0)
+        if (moves_x or moves_y) and travel > max_path:
+            velocity = max_path / max(self.num_frames - 1, 1)
+            travel = velocity * max(self.num_frames - 1, 0)
+        max_size_for_path = self.image_size - (travel if moves_x or moves_y else 0.0)
+        if size > max_size_for_path:
+            size = max(8, int(max_size_for_path))
+
+        # Pick a start point from the subset of the canvas that leaves room for
+        # the full trajectory in its requested direction.
+        margin = size / 2.0
+        max_center = self.image_size - margin
+        x_min, x_max = margin, max_center
+        y_min, y_max = margin, max_center
+        if motion in ('left_to_right', 'diagonal_down_right'):
+            x_max -= travel
+        elif motion in ('right_to_left', 'diagonal_down_left'):
+            x_min += travel
+        if motion in ('top_to_bottom', 'diagonal_down_right', 'diagonal_down_left'):
+            y_max -= travel
+        elif motion == 'bottom_to_top':
+            y_min += travel
+        x_max, y_max = max(x_min, x_max), max(y_min, y_max)
         if start_pos is None:
-            start_x = self.rng.uniform(margin, max_start)
-            start_y = self.rng.uniform(margin, max_start)
+            start_x = self.rng.uniform(x_min, x_max)
+            start_y = self.rng.uniform(y_min, y_max)
             start_pos = (start_x, start_y)
+        else:
+            start_pos = (
+                float(np.clip(start_pos[0], x_min, x_max)),
+                float(np.clip(start_pos[1], y_min, y_max)),
+            )
 
         # Compute trajectory
         positions = self._compute_trajectory(start_pos, motion, velocity, self.num_frames)
@@ -433,6 +476,9 @@ def main():
     parser.add_argument("--output_dir", type=str, default="data/synthetic_video", help="Output directory")
     parser.add_argument("--split", type=str, default="train", choices=['train', 'val', 'test'], help="Dataset split")
     parser.add_argument("--seed", type=int, default=42, help="Random seed")
+    parser.add_argument("--shapes", nargs="+", default=None, help="Optional subset of shape names")
+    parser.add_argument("--colors", nargs="+", default=None, help="Optional subset of color names")
+    parser.add_argument("--motions", nargs="+", default=None, help="Optional subset of motion names")
     args = parser.parse_args()
 
     print(f"Generating {args.num_videos} synthetic videos...")
@@ -445,7 +491,10 @@ def main():
     generator = SyntheticVideoGenerator(
         image_size=args.image_size,
         num_frames=args.num_frames,
-        seed=args.seed
+        seed=args.seed,
+        shapes=args.shapes,
+        colors=args.colors,
+        motions=args.motions
     )
 
     video_dirs, metadata_list = generator.generate_dataset(

@@ -71,7 +71,12 @@ class DiffusionSampler:
         progress_callback: callable = None,
         clip_x0: bool = True,
         text_emb: Optional[torch.Tensor] = None,
-        text_mask: Optional[torch.Tensor] = None
+        text_mask: Optional[torch.Tensor] = None,
+        initial_noise: Optional[torch.Tensor] = None,
+        prediction_type: str = "epsilon",
+        recompute_noise_after_clipping: bool = False,
+        class_labels: Optional[torch.Tensor] = None,
+        color_labels: Optional[torch.Tensor] = None
     ) -> torch.Tensor:
         """
         Sample images using DDIM with optional text conditioning.
@@ -101,7 +106,12 @@ class DiffusionSampler:
             progress_callback=progress_callback,
             clip_x0=clip_x0,
             text_emb=text_emb,
-            text_mask=text_mask
+            text_mask=text_mask,
+            initial_noise=initial_noise,
+            prediction_type=prediction_type,
+            recompute_noise_after_clipping=recompute_noise_after_clipping,
+            class_labels=class_labels,
+            color_labels=color_labels
         )
 
     def sample_ddpm(

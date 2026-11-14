@@ -31,7 +31,7 @@ from diffusion.process import DiffusionProcess
 class SyntheticVideoDataset(Dataset):
     """Dataset for synthetic video data."""
 
-    def __init__(self, data_dir, split='train', num_frames=16, image_size=64):
+    def __init__(self, data_dir, split='train', num_frames=16, image_size=64, cache_size=128):
         """
         Initialize dataset.
 
@@ -44,6 +44,8 @@ class SyntheticVideoDataset(Dataset):
         self.data_dir = os.path.join(data_dir, split)
         self.num_frames = num_frames
         self.image_size = image_size
+        self.cache = {}
+        self.cache_size = max(0, int(cache_size))
 
         # Load metadata
         metadata_path = os.path.join(self.data_dir, "all_metadata.json")
@@ -61,6 +63,33 @@ class SyntheticVideoDataset(Dataset):
             if os.path.isdir(os.path.join(self.data_dir, d)) and d.startswith('video_')
         ])
 
+        if not self.video_dirs:
+            raise ValueError(f"No video_* directories found in {self.data_dir}")
+        if len(self.captions) != len(self.video_dirs):
+            raise ValueError(
+                f"Caption/video count mismatch in {split}: "
+                f"{len(self.captions)} captions for {len(self.video_dirs)} videos"
+            )
+        if len(self.metadata) != len(self.video_dirs):
+            raise ValueError(
+                f"Metadata/video count mismatch in {split}: "
+                f"{len(self.metadata)} metadata records for {len(self.video_dirs)} videos"
+            )
+
+        # Validate clip completeness before training starts, avoiding silent
+        # truncation and tensor shape failures deep in a training epoch.
+        for video_name in self.video_dirs:
+            video_path = os.path.join(self.data_dir, video_name)
+            frame_paths = [
+                f for f in os.listdir(video_path)
+                if f.lower().endswith('.png')
+            ]
+            if len(frame_paths) < self.num_frames:
+                raise ValueError(
+                    f"{video_name} has {len(frame_paths)} frames; "
+                    f"requested {self.num_frames}"
+                )
+
         print(f"Loaded {len(self.video_dirs)} videos from {split} split")
 
     def __len__(self):
@@ -68,19 +97,34 @@ class SyntheticVideoDataset(Dataset):
 
     def __getitem__(self, idx):
         """Load a video sample."""
+        if idx in self.cache:
+            video = self.cache[idx]
+            return {
+                'video': video,
+                'caption': self.captions[idx],
+                'metadata': self.metadata[idx]
+            }
         video_dir = os.path.join(self.data_dir, self.video_dirs[idx])
 
         # Load frames
         frame_paths = sorted([
             f for f in os.listdir(video_dir)
-            if f.endswith('.png')
+            if f.lower().endswith('.png')
         ])
+
+        if len(frame_paths) < self.num_frames:
+            raise ValueError(
+                f"{self.video_dirs[idx]} has {len(frame_paths)} frames; "
+                f"requested {self.num_frames}"
+            )
 
         frames = []
         for frame_path in frame_paths[:self.num_frames]:
-            frame = Image.open(os.path.join(video_dir, frame_path))
-            frame = frame.resize((self.image_size, self.image_size))
-            frame = np.array(frame).astype(np.float32) / 127.5 - 1.0  # Normalize to [-1, 1]
+            with Image.open(os.path.join(video_dir, frame_path)) as source:
+                frame = source.convert('RGB')
+                if frame.size != (self.image_size, self.image_size):
+                    frame = frame.resize((self.image_size, self.image_size), Image.Resampling.NEAREST)
+                frame = np.array(frame, dtype=np.float32) / 127.5 - 1.0  # Normalize to [-1, 1]
             frames.append(frame)
 
         # Stack frames: [num_frames, height, width, channels] -> [channels, num_frames, height, width]
@@ -90,8 +134,13 @@ class SyntheticVideoDataset(Dataset):
         # Get caption
         caption = self.captions[idx]
 
+        video_tensor = torch.from_numpy(video).float()
+        if self.cache_size:
+            if len(self.cache) >= self.cache_size:
+                self.cache.pop(next(iter(self.cache)))
+            self.cache[idx] = video_tensor
         return {
-            'video': torch.from_numpy(video).float(),
+            'video': video_tensor,
             'caption': caption,
             'metadata': self.metadata[idx]
         }
@@ -207,13 +256,35 @@ def train_video(
             state_dict = checkpoint['model_state_dict']
         else:
             state_dict = checkpoint
-        spatial_unet.load_state_dict(state_dict, strict=False)
+        incompatible = spatial_unet.load_state_dict(state_dict, strict=False)
+        print(
+            f"Spatial checkpoint load: {len(incompatible.missing_keys)} missing keys, "
+            f"{len(incompatible.unexpected_keys)} unexpected keys"
+        )
+        if incompatible.missing_keys:
+            preview = ", ".join(incompatible.missing_keys[:8])
+            raise RuntimeError(
+                "Spatial checkpoint is missing required U-Net weights; "
+                f"first missing keys: {preview}"
+            )
+        if incompatible.unexpected_keys:
+            preview = ", ".join(incompatible.unexpected_keys[:8])
+            raise RuntimeError(
+                "Spatial checkpoint contains unexpected weights; "
+                f"first unexpected keys: {preview}"
+            )
 
         # Load text encoder from checkpoint
         if 'text_encoder_state_dict' in checkpoint:
             text_encoder.load_state_dict(checkpoint['text_encoder_state_dict'])
 
     # Create video U-Net with temporal modules
+    if spatial_checkpoint_path is None:
+        raise ValueError(
+            "Video training requires a validated spatial checkpoint. "
+            "Train and verify the image denoiser before training temporal modules."
+        )
+
     video_unet = VideoUNet(
         spatial_unet=spatial_unet,
         text_encoder=text_encoder,
@@ -311,17 +382,31 @@ def train_video(
             # Reshape predicted noise to match noise shape
             predicted_noise_flat = predicted_noise.permute(0, 2, 1, 3, 4).reshape(batch_size * num_frames, 3, image_size, image_size)
 
-            loss = nn.functional.mse_loss(predicted_noise_flat, noise)
+            per_sample_loss = (predicted_noise_flat - noise).square().flatten(1).mean(1)
+            loss = per_sample_loss.mean()
+            bands = [timesteps < 333, (timesteps >= 333) & (timesteps < 666), timesteps >= 666]
+            band_losses = [
+                per_sample_loss[mask].mean().item() if mask.any() else float('nan')
+                for mask in bands
+            ]
 
             # Backward pass
             optimizer.zero_grad()
             loss.backward()
+            grad_norm = torch.nn.utils.clip_grad_norm_(video_unet.parameters(), 1.0).item()
             optimizer.step()
+
+            if global_step % 20 == 0:
+                pbar.set_postfix({
+                    'loss': f'{loss.item():.4f}',
+                    't<333': f'{band_losses[0]:.3f}',
+                    't333-665': f'{band_losses[1]:.3f}',
+                    't>=666': f'{band_losses[2]:.3f}',
+                    'grad': f'{grad_norm:.3f}'
+                })
 
             train_loss += loss.item()
             global_step += 1
-
-            pbar.set_postfix({'loss': f'{loss.item():.4f}'})
 
             # Save checkpoint
             if global_step % checkpoint_interval == 0:

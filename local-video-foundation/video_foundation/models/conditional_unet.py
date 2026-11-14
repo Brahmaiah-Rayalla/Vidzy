@@ -327,7 +327,8 @@ class ConditionalUNet(nn.Module):
         timesteps: torch.Tensor,
         text_emb: torch.Tensor,
         text_mask: Optional[torch.Tensor] = None,
-        return_features: bool = False
+        return_features: bool = False,
+        feature_transform=None
     ) -> torch.Tensor:
         """
         Forward pass of the conditional U-Net.
@@ -362,9 +363,12 @@ class ConditionalUNet(nn.Module):
 
         # Middle block (bottleneck)
         h = self.middle_block(h, timestep_emb, text_emb, text_mask)
+        if feature_transform is not None:
+            h = feature_transform("bottleneck", h)
         bottleneck_features = h.clone() if return_features else None
 
         # Decoder with skip connections
+        low_res_features = None
         for modules in self.up_blocks:
             for module in modules:
                 if isinstance(module, ConditionalResidualBlock):
@@ -372,9 +376,15 @@ class ConditionalUNet(nn.Module):
                     h = module(h, timestep_emb, text_emb, text_mask)
                 else:
                     h = module(h)
+                    # Inject the first decoder upsample, at the next spatial
+                    # scale below the bottleneck.
+                    if feature_transform is not None and isinstance(module, Upsample) and low_res_features is None:
+                        h = feature_transform("low_res", h)
+                        low_res_features = h.clone() if return_features else h
 
-        # Capture low-res features (after first upsample in decoder)
-        low_res_features = h.clone() if return_features else None
+        # Preserve the historical return_features API when no transform is used.
+        if return_features and low_res_features is None:
+            low_res_features = h.clone()
 
         # Output
         output = self.conv_out(h)

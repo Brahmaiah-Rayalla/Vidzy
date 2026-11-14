@@ -51,7 +51,9 @@ class TemporalConv1DBlock(nn.Module):
             self.layers.append(
                 nn.Conv1d(in_ch, out_ch, kernel_size=temporal_kernel, padding=temporal_kernel // 2)
             )
-            self.layers.append(nn.GroupNorm(8, channels))
+            # Normalize channels independently at each pixel/frame location;
+            # GroupNorm on [B*H*W,C,T] otherwise mixes temporal statistics.
+            self.layers.append(nn.LayerNorm(channels))
             self.layers.append(nn.SiLU())
 
         self.dropout = nn.Dropout(dropout) if dropout > 0 else nn.Identity()
@@ -76,7 +78,10 @@ class TemporalConv1DBlock(nn.Module):
 
         # Apply temporal convolutions
         for layer in self.layers:
-            x = layer(x)
+            if isinstance(layer, nn.LayerNorm):
+                x = layer(x.transpose(1, 2)).transpose(1, 2)
+            else:
+                x = layer(x)
 
         # Reshape back: [batch * h * w, channels, frames] -> [batch, frames, channels, h, w]
         x = x.reshape(batch, height, width, frames, channels)
@@ -162,9 +167,8 @@ class VideoUNet(nn.Module):
                 dropout=0.0
             )
 
-            # Low-resolution level (base model channels at lower resolution)
-            # This is after the first upsample in the decoder
-            low_res_channels = model_channels  # 64
+            # Low-resolution level after the first decoder upsample.
+            low_res_channels = model_channels * channel_mult[-1]
             self.temporal_modules['low_res'] = TemporalConv1DBlock(
                 channels=low_res_channels,
                 temporal_kernel=temporal_kernel,
@@ -226,6 +230,10 @@ class VideoUNet(nn.Module):
             Predicted noise of shape [batch, channels, frames, height, width]
         """
         batch, channels, num_frames, height, width = x.shape
+        if num_frames < 2 and self.use_temporal:
+            raise ValueError("Temporal video processing requires at least two frames")
+        if num_frames != self.num_frames:
+            raise ValueError(f"Expected {self.num_frames} frames, received {num_frames}")
 
         if not self.use_temporal:
             # Frame-independent baseline (no temporal processing)
@@ -304,52 +312,23 @@ class VideoUNet(nn.Module):
         else:
             text_mask_spatial = None
 
-        # Spatial processing with feature extraction
-        predicted_noise_spatial, features = self.spatial_unet(
+        def apply_temporal(level: str, features: torch.Tensor) -> torch.Tensor:
+            # Spatial U-Net features are [B*T,C,H,W]. Convert to the temporal
+            # block layout, transform along frames, then return to [B*T,C,H,W].
+            _, feat_channels, feat_h, feat_w = features.shape
+            video_features = features.reshape(batch, num_frames, feat_channels, feat_h, feat_w)
+            video_features = self.temporal_modules[level](video_features)
+            return video_features.reshape(batch * num_frames, feat_channels, feat_h, feat_w)
+
+        # Temporal outputs are injected at their feature-map resolutions while
+        # the decoder is still running, preserving per-frame spatial structure.
+        predicted_noise_spatial = self.spatial_unet(
             x_spatial,
             timesteps_spatial,
             text_emb_spatial,
             text_mask_spatial,
-            return_features=True
+            feature_transform=apply_temporal
         )
-
-        # Reshape features to video format for temporal processing
-        # features['bottleneck']: [batch*frames, channels, h, w]
-        # features['low_res']: [batch*frames, channels, h, w]
-
-        # Process bottleneck features
-        bottleneck_features = features['bottleneck']
-        b_ch, b_h, b_w = bottleneck_features.shape[1], bottleneck_features.shape[2], bottleneck_features.shape[3]
-        bottleneck_video = bottleneck_features.reshape(batch, num_frames, b_ch, b_h, b_w)
-        # Temporal module expects [batch, frames, channels, h, w]
-        bottleneck_video = bottleneck_video.permute(0, 1, 2, 3, 4)  # [batch, frames, channels, h, w]
-
-        # Apply temporal module to bottleneck
-        bottleneck_video = self.temporal_modules['bottleneck'](bottleneck_video)
-
-        # Process low-res features
-        low_res_features = features['low_res']
-        lr_ch, lr_h, lr_w = low_res_features.shape[1], low_res_features.shape[2], low_res_features.shape[3]
-        low_res_video = low_res_features.reshape(batch, num_frames, lr_ch, lr_h, lr_w)
-        # Temporal module expects [batch, frames, channels, h, w]
-        low_res_video = low_res_video.permute(0, 1, 2, 3, 4)  # [batch, frames, channels, h, w]
-
-        # Apply temporal module to low-res
-        low_res_video = self.temporal_modules['low_res'](low_res_video)
-
-        # For Stage 3.2, both temporal modules participate in the computation.
-        # We combine both bottleneck and low-res temporal features.
-
-        # Compute temporal consistency from both bottleneck and low-res features
-        bottleneck_mean = bottleneck_video.mean()  # scalar
-        low_res_mean = low_res_video.mean()  # scalar
-
-        # Combine both temporal terms with small scaling factors
-        # This ensures both temporal modules receive gradients
-        temporal_term = (bottleneck_mean + low_res_mean) * 0.001
-
-        # Add temporal term to spatial prediction
-        predicted_noise_spatial = predicted_noise_spatial + temporal_term
 
         # Reshape back to video format for output
         predicted_noise = predicted_noise_spatial.reshape(batch, num_frames, channels, height, width)

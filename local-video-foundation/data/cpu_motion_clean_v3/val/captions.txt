@@ -1,0 +1,128 @@
+A medium yellow triangle quickly moves from top to bottom on a red background.
+A small red triangle quickly remains stationary on a blue background.
+A large red triangle quickly moves diagonally down and left on a blue background.
+A small green square quickly remains stationary on a blue background.
+A small red circle quickly moves from bottom to top on a blue background.
+A medium red triangle quickly moves from right to left on a green background.
+A medium red circle quickly moves from right to left on a blue background.
+A large red square quickly moves from bottom to top on a yellow background.
+A small yellow circle slowly moves from bottom to top on a blue background.
+A medium green square quickly moves diagonally down and right on a red background.
+A small green circle quickly moves from left to right on a yellow background.
+A small yellow circle slowly remains stationary on a green background.
+A large blue triangle slowly moves from right to left on a yellow background.
+A medium red circle quickly moves from left to right on a green background.
+A small green square slowly moves from bottom to top on a yellow background.
+A medium yellow triangle slowly moves from bottom to top on a blue background.
+A medium red circle quickly remains stationary on a blue background.
+A large red triangle slowly moves diagonally down and left on a yellow background.
+A medium green square slowly moves diagonally down and left on a red background.
+A small red triangle slowly moves diagonally down and right on a green background.
+A large green square slowly moves diagonally down and right on a blue background.
+A large blue triangle slowly moves diagonally down and left on a yellow background.
+A large yellow triangle slowly moves from left to right on a green background.
+A small blue circle slowly moves diagonally down and right on a red background.
+A medium green circle slowly moves diagonally down and left on a blue background.
+A large red square quickly moves diagonally down and left on a yellow background.
+A large red triangle quickly remains stationary on a yellow background.
+A large blue triangle slowly moves from bottom to top on a yellow background.
+A large blue square slowly moves from right to left on a green background.
+A small green square slowly moves from left to right on a blue background.
+A large yellow triangle slowly moves from left to right on a green background.
+A small blue circle slowly moves diagonally down and right on a red background.
+A medium red circle quickly moves from left to right on a blue background.
+A large blue circle quickly remains stationary on a yellow background.
+A small blue triangle slowly moves from top to bottom on a red background.
+A small red circle slowly moves from left to right on a yellow background.
+A small red circle quickly moves diagonally down and right on a yellow background.
+A large blue triangle quickly moves from left to right on a yellow background.
+A large blue square quickly moves from left to right on a green background.
+A small yellow triangle quickly moves from bottom to top on a blue background.
+A large yellow circle quickly moves from left to right on a blue background.
+A medium yellow circle slowly moves from bottom to top on a red background.
+A medium blue square slowly remains stationary on a yellow background.
+A small blue square quickly moves from right to left on a red background.
+A large green circle slowly moves diagonally down and left on a yellow background.
+A small yellow square slowly moves diagonally down and left on a red background.
+A medium red triangle quickly remains stationary on a blue background.
+A medium red triangle slowly moves from top to bottom on a yellow background.
+A medium green triangle slowly moves diagonally down and left on a red background.
+A medium green square slowly moves diagonally down and right on a yellow background.
+A large green square slowly moves from bottom to top on a blue background.
+A large red square slowly remains stationary on a green background.
+A medium red triangle slowly moves diagonally down and left on a blue background.
+A large blue triangle slowly moves from right to left on a yellow background.
+A medium blue square quickly moves from bottom to top on a green background.
+A medium green triangle quickly moves from right to left on a yellow background.
+A small blue circle slowly moves diagonally down and left on a red background.
+A large yellow circle slowly moves diagonally down and left on a red background.
+A medium green square slowly moves from bottom to top on a blue background.
+A medium red square quickly moves diagonally down and right on a green background.
+A large yellow circle slowly moves from bottom to top on a red background.
+A small green circle slowly moves from top to bottom on a red background.
+A large blue circle slowly moves from top to bottom on a red background.
+A small yellow circle slowly moves from top to bottom on a blue background.
+A large yellow circle slowly moves from right to left on a green background.
+A medium red circle quickly moves diagonally down and left on a green background.
+A medium green triangle slowly moves from right to left on a red background.
+A large red triangle quickly remains stationary on a blue background.
+A medium green square slowly moves from bottom to top on a yellow background.
+A small yellow circle slowly remains stationary on a green background.
+A medium yellow square quickly moves diagonally down and left on a blue background.
+A small yellow circle quickly moves from right to left on a green background.
+A large yellow square slowly moves from bottom to top on a blue background.
+A large red square quickly moves from right to left on a blue background.
+A medium yellow square quickly moves diagonally down and left on a blue background.
+A medium green circle slowly remains stationary on a red background.
+A small green triangle quickly remains stationary on a red background.
+A medium red circle quickly moves diagonally down and right on a blue background.
+A medium red square quickly moves diagonally down and right on a blue background.
+A medium green triangle slowly moves from right to left on a yellow background.
+A medium yellow circle slowly moves from top to bottom on a green background.
+A large yellow triangle quickly moves diagonally down and left on a green background.
+A large green square slowly moves from right to left on a yellow background.
+A small yellow square slowly remains stationary on a red background.
+A large green triangle quickly moves from bottom to top on a red background.
+A large green square slowly moves from left to right on a yellow background.
+A large green triangle quickly moves from top to bottom on a blue background.
+A large green circle quickly moves from right to left on a red background.
+A large green square slowly moves diagonally down and left on a yellow background.
+A large blue square quickly moves from left to right on a yellow background.
+A large red circle quickly moves diagonally down and left on a green background.
+A small yellow square slowly moves from left to right on a blue background.
+A medium green circle quickly moves from bottom to top on a blue background.
+A medium red triangle quickly moves diagonally down and right on a green background.
+A medium blue square slowly moves from left to right on a green background.
+A medium blue circle slowly moves from top to bottom on a green background.
+A large green circle quickly moves diagonally down and left on a blue background.
+A small yellow triangle slowly moves diagonally down and left on a blue background.
+A small red triangle quickly remains stationary on a green background.
+A medium red triangle quickly moves from bottom to top on a blue background.
+A small blue triangle quickly moves from left to right on a red background.
+A medium yellow circle quickly moves from right to left on a blue background.
+A small yellow triangle slowly moves from top to bottom on a green background.
+A large yellow triangle quickly remains stationary on a blue background.
+A medium blue circle slowly moves from bottom to top on a yellow background.
+A large green circle slowly moves from left to right on a blue background.
+A medium yellow square slowly moves from right to left on a green background.
+A small yellow triangle quickly remains stationary on a green background.
+A medium red triangle slowly remains stationary on a green background.
+A small yellow square slowly moves from top to bottom on a green background.
+A large yellow square quickly moves diagonally down and right on a blue background.
+A small blue circle slowly moves from right to left on a green background.
+A small green circle quickly moves diagonally down and left on a blue background.
+A large red triangle slowly moves diagonally down and right on a yellow background.
+A large yellow triangle quickly remains stationary on a green background.
+A large red square quickly moves from top to bottom on a yellow background.
+A medium yellow triangle quickly moves from left to right on a red background.
+A large red circle slowly remains stationary on a yellow background.
+A large yellow circle quickly moves from bottom to top on a blue background.
+A small blue circle quickly moves diagonally down and left on a red background.
+A small red triangle quickly moves from left to right on a yellow background.
+A small yellow triangle slowly moves from right to left on a red background.
+A large green triangle slowly moves from left to right on a blue background.
+A medium yellow triangle slowly moves from top to bottom on a blue background.
+A small green triangle quickly remains stationary on a yellow background.
+A medium blue triangle quickly moves from top to bottom on a red background.
+A medium blue square quickly moves diagonally down and left on a red background.
+A small blue square slowly moves from right to left on a yellow background.

@@ -169,7 +169,9 @@ class UNet(nn.Module):
         num_res_blocks: int = 2,
         attention_resolutions: List[int] = [],
         dropout: float = 0.0,
-        num_timesteps: int = 1000
+        num_timesteps: int = 1000,
+        num_classes: int = 0,
+        num_color_classes: int = 0
     ):
         """
         Args:
@@ -187,9 +189,13 @@ class UNet(nn.Module):
         self.model_channels = model_channels
         self.channel_mult = channel_mult
         self.num_res_blocks = num_res_blocks
+        self.num_classes = num_classes
+        self.num_color_classes = num_color_classes
 
         # Timestep embedding
         self.timestep_embed = SinusoidalPositionEmbedding(model_channels)
+        self.class_embed = nn.Embedding(num_classes, model_channels) if num_classes > 0 else None
+        self.color_embed = nn.Embedding(num_color_classes, model_channels) if num_color_classes > 0 else None
 
         # Initial convolution
         self.conv_in = nn.Conv2d(in_channels, model_channels, 3, padding=1)
@@ -241,7 +247,13 @@ class UNet(nn.Module):
         # Output convolution
         self.conv_out = nn.Conv2d(now_channels, in_channels, 3, padding=1)
 
-    def forward(self, x: torch.Tensor, timesteps: torch.Tensor) -> torch.Tensor:
+    def forward(
+        self,
+        x: torch.Tensor,
+        timesteps: torch.Tensor,
+        class_labels: Optional[torch.Tensor] = None,
+        color_labels: Optional[torch.Tensor] = None
+    ) -> torch.Tensor:
         """
         Forward pass of the U-Net.
 
@@ -254,6 +266,18 @@ class UNet(nn.Module):
         """
         # Timestep embedding
         timestep_emb = self.timestep_embed(timesteps)
+        if self.class_embed is not None:
+            if class_labels is None:
+                raise ValueError("class_labels are required for this class-conditional U-Net")
+            timestep_emb = timestep_emb + self.class_embed(class_labels.long())
+        elif class_labels is not None:
+            raise ValueError("class_labels were provided to an unconditional U-Net")
+        if self.color_embed is not None:
+            if color_labels is None:
+                raise ValueError("color_labels are required for this color-conditional U-Net")
+            timestep_emb = timestep_emb + self.color_embed(color_labels.long())
+        elif color_labels is not None:
+            raise ValueError("color_labels were provided to a model without color conditioning")
 
         # Initial convolution
         h = self.conv_in(x)
