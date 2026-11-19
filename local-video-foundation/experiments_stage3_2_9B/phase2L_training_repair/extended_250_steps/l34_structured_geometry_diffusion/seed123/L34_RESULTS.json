@@ -1,0 +1,191 @@
+{
+  "experiment": "L34 structured geometry diffusion + CPU renderer",
+  "generation_mode": "conditional 5D geometry diffusion followed by supersampled primitive rasterization",
+  "seed": 123,
+  "samples_per_class": 100,
+  "architecture": {
+    "kind": "MLP diffusion denoiser",
+    "width": 128,
+    "residual_blocks": 3,
+    "parameters": 71085
+  },
+  "dataset": {
+    "train": 1200,
+    "validation": 300,
+    "manifest_sha256": "860dea7d8dd3e46d4249d58b994f5c9803550a4d75d9301b3f85d369103ffab8"
+  },
+  "heldout_geometry_noise_mse": [
+    {
+      "timestep": 0,
+      "epsilon_mse": 1.1140079498291016
+    },
+    {
+      "timestep": 100,
+      "epsilon_mse": 0.7314525842666626
+    },
+    {
+      "timestep": 250,
+      "epsilon_mse": 0.3149152398109436
+    },
+    {
+      "timestep": 500,
+      "epsilon_mse": 0.03422759845852852
+    },
+    {
+      "timestep": 750,
+      "epsilon_mse": 0.008375970646739006
+    },
+    {
+      "timestep": 999,
+      "epsilon_mse": 0.0036059366539120674
+    }
+  ],
+  "renderer_label_adherence": 1.0,
+  "geometry_distribution_by_class": {
+    "0": {
+      "cx": {
+        "heldout_mean": 31.9,
+        "generated_mean": 32.48208717346191,
+        "heldout_std": 5.937171043518958,
+        "generated_std": 6.358846245959951,
+        "ks_distance": 0.17000000000000004
+      },
+      "cy": {
+        "heldout_mean": 32.26,
+        "generated_mean": 31.629442749023436,
+        "heldout_std": 6.14104225681602,
+        "generated_std": 6.466935128581437,
+        "ks_distance": 0.13
+      },
+      "extent": {
+        "heldout_mean": 9.54,
+        "generated_mean": 9.56,
+        "heldout_std": 1.525909564816998,
+        "generated_std": 1.6930445948054647,
+        "ks_distance": 0.13
+      }
+    },
+    "1": {
+      "cx": {
+        "heldout_mean": 32.5,
+        "generated_mean": 31.74540174484253,
+        "heldout_std": 5.7870545184921145,
+        "generated_std": 5.793981268518898,
+        "ks_distance": 0.16000000000000003
+      },
+      "cy": {
+        "heldout_mean": 33.26,
+        "generated_mean": 30.224741687774657,
+        "heldout_std": 5.673834682117554,
+        "generated_std": 6.501280761971799,
+        "ks_distance": 0.27
+      },
+      "extent": {
+        "heldout_mean": 26.26,
+        "generated_mean": 24.72,
+        "heldout_std": 4.898203752397403,
+        "generated_std": 3.995197116538807,
+        "ks_distance": 0.31000000000000005
+      }
+    },
+    "2": {
+      "cx": {
+        "heldout_mean": 31.44,
+        "generated_mean": 32.948827476501464,
+        "heldout_std": 6.465786881733731,
+        "generated_std": 6.067579827257679,
+        "ks_distance": 0.2
+      },
+      "cy": {
+        "heldout_mean": 33.78,
+        "generated_mean": 30.962484226226806,
+        "heldout_std": 5.842225603312491,
+        "generated_std": 5.940008622476938,
+        "ks_distance": 0.31000000000000005
+      },
+      "extent": {
+        "heldout_mean": 9.6,
+        "generated_mean": 9.54,
+        "heldout_std": 1.5999999999999999,
+        "generated_std": 1.6517869111964774,
+        "ks_distance": 0.030000000000000027
+      }
+    },
+    "3": {
+      "cx": {
+        "heldout_mean": 30.26,
+        "generated_mean": 32.4048611831665,
+        "heldout_std": 5.952512074746258,
+        "generated_std": 5.660467053910905,
+        "ks_distance": 0.23000000000000004
+      },
+      "cy": {
+        "heldout_mean": 33.18,
+        "generated_mean": 30.07444366455078,
+        "heldout_std": 6.43953414464121,
+        "generated_std": 5.618765424574314,
+        "ks_distance": 0.31999999999999995
+      },
+      "extent": {
+        "heldout_mean": 25.82,
+        "generated_mean": 24.92,
+        "heldout_std": 4.008441093492581,
+        "generated_std": 3.6074367631325153,
+        "ks_distance": 0.20999999999999996
+      }
+    },
+    "4": {
+      "cx": {
+        "heldout_mean": 31.64,
+        "generated_mean": 32.769272804260254,
+        "heldout_std": 5.850675174712745,
+        "generated_std": 5.572716976119746,
+        "ks_distance": 0.16999999999999998
+      },
+      "cy": {
+        "heldout_mean": 30.0,
+        "generated_mean": 32.26415735244751,
+        "heldout_std": 5.81033561853358,
+        "generated_std": 5.704360496115625,
+        "ks_distance": 0.29999999999999993
+      },
+      "extent": {
+        "heldout_mean": 9.2,
+        "generated_mean": 9.51,
+        "heldout_std": 1.8,
+        "generated_std": 1.499966666296288,
+        "ks_distance": 0.21
+      }
+    },
+    "5": {
+      "cx": {
+        "heldout_mean": 31.56,
+        "generated_mean": 33.40635345458984,
+        "heldout_std": 6.699731337897066,
+        "generated_std": 5.989953031839545,
+        "ks_distance": 0.21000000000000002
+      },
+      "cy": {
+        "heldout_mean": 30.46,
+        "generated_mean": 31.192307147979736,
+        "heldout_std": 5.625691068659921,
+        "generated_std": 5.928036666598306,
+        "ks_distance": 0.15
+      },
+      "extent": {
+        "heldout_mean": 26.0,
+        "generated_mean": 24.92,
+        "heldout_std": 4.732863826479693,
+        "generated_std": 3.822773862001256,
+        "ks_distance": 0.25
+      }
+    }
+  },
+  "training_elapsed_seconds": 9.052,
+  "sample_generation_and_render_seconds": 1.606,
+  "evaluation_sampling_render_seconds": 1.611,
+  "generated_samples_per_second": 373.538,
+  "cpu_threads": 4,
+  "checkpoint": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\extended_250_steps\\l34_structured_geometry_diffusion\\seed123\\checkpoint_final.pt",
+  "generation_grid": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\extended_250_steps\\l34_structured_geometry_diffusion\\seed123\\generation_grid.png"
+}

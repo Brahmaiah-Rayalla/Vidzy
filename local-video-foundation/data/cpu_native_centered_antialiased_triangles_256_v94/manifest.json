@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "dataset": "native_resolution_antialiased_triangles",
+  "image_size": 256,
+  "split_counts": {
+    "train": 1536,
+    "val": 384
+  },
+  "per_condition_counts": {
+    "train": 128,
+    "val": 32
+  },
+  "condition_combinations": 12,
+  "shape_id": 2,
+  "colors_rgb": [
+    [
+      255,
+      0,
+      0
+    ],
+    [
+      0,
+      255,
+      0
+    ],
+    [
+      0,
+      0,
+      255
+    ],
+    [
+      255,
+      255,
+      0
+    ]
+  ],
+  "size_extents_pixels": [
+    60,
+    116,
+    168
+  ],
+  "seed": 88094,
+  "supersample": 4,
+  "center_jitter_pixels": 0.0,
+  "angle_jitter_degrees": 0.0,
+  "background_rgb": [
+    0,
+    0,
+    0
+  ],
+  "rasterization": "high-resolution polygon coverage, single Lanczos downsample"
+}

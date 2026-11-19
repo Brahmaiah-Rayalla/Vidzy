@@ -1,0 +1,102 @@
+{
+  "experiment": "L32 compact factorized color/shape high-salience pilot",
+  "evaluation_only": true,
+  "seed": 42,
+  "samples_per_class": 30,
+  "dataset": {
+    "train": 1200,
+    "validation": 300,
+    "analytic_area_mean_by_shape": {
+      "circle": 293.56612551469823,
+      "triangle": 291.2089805887188
+    }
+  },
+  "architecture": {
+    "base_channels": 24,
+    "channel_mult": [
+      1,
+      2,
+      3
+    ],
+    "res_blocks": 1,
+    "input_channels": 8,
+    "output_channels": 3,
+    "cross_attention": false,
+    "factorized_timestep_conditioning": false,
+    "factorized_adagn_conditioning": true,
+    "trainable_parameters": 795363
+  },
+  "loss_config": {
+    "epsilon_foreground_weight": 5.0,
+    "low_noise_reconstruction_weight": 0.05,
+    "low_noise_silhouette_weight": 0.03,
+    "low_noise_timestep_max": 250
+  },
+  "validation_noise_mse": {
+    "initial": 0.010165363407383362,
+    "final_ema": 0.010165363407383362
+  },
+  "generation": {
+    "samples": 180,
+    "joint_accuracy": 0.4222222222222222,
+    "shape_accuracy": 0.49444444444444446,
+    "color_accuracy": 0.8944444444444445,
+    "per_class_joint_accuracy": {
+      "0": 0.03333333333333333,
+      "1": 0.9666666666666667,
+      "2": 0.0,
+      "3": 0.9666666666666667,
+      "4": 0.0,
+      "5": 0.5666666666666667
+    }
+  },
+  "paired_vs_warm_start": {
+    "joint_correct": {
+      "baseline_accuracy": 0.4111111111111111,
+      "candidate_accuracy": 0.4222222222222222,
+      "paired_delta": 0.011111111111111112,
+      "improved_pairs": 4,
+      "regressed_pairs": 2,
+      "bootstrap_95pct_interval": [
+        -0.016666666666666666,
+        0.03888888888888889
+      ]
+    },
+    "shape_correct": {
+      "baseline_accuracy": 0.5055555555555555,
+      "candidate_accuracy": 0.49444444444444446,
+      "paired_delta": -0.011111111111111112,
+      "improved_pairs": 0,
+      "regressed_pairs": 2,
+      "bootstrap_95pct_interval": [
+        -0.027777777777777776,
+        0.0
+      ]
+    },
+    "color_correct": {
+      "baseline_accuracy": 0.8166666666666667,
+      "candidate_accuracy": 0.8944444444444445,
+      "paired_delta": 0.07777777777777778,
+      "improved_pairs": 14,
+      "regressed_pairs": 0,
+      "bootstrap_95pct_interval": [
+        0.03888888888888889,
+        0.11666666666666667
+      ]
+    }
+  },
+  "detector_calibration": {
+    "clean_accuracy": 1.0,
+    "gaussian_noise_accuracy": {
+      "0.10": 1.0,
+      "0.20": 1.0
+    },
+    "n": 300,
+    "detector": "Gaussian blur 1.2 px, nearest palette-vs-background, largest connected component, radial 3-fold score"
+  },
+  "train_elapsed_seconds": 0.0,
+  "evaluation_elapsed_seconds": 91.54,
+  "total_elapsed_seconds": 123.6,
+  "cpu_threads": 4,
+  "checkpoint": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\extended_250_steps\\l32c_adagn_conditioning_pilot\\checkpoint_step_00400.pt"
+}

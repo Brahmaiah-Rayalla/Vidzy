@@ -1,0 +1,50 @@
+{
+  "experiment": "L34 structured geometry diffusion + CPU renderer, 3 training seeds",
+  "runs": [
+    {
+      "seed": 42,
+      "samples": 600,
+      "training_seconds": 7.886,
+      "sample_and_render_seconds": 1.473,
+      "samples_per_second": 407.458,
+      "max_parameter_ks_distance": 0.32,
+      "mean_parameter_ks_distance": 0.20222222222222225,
+      "geometry_in_training_support": true,
+      "no_rendered_object_cropped": true,
+      "renderer_class_mapping": "shape and color are selected from the requested class ID by the renderer"
+    },
+    {
+      "seed": 123,
+      "samples": 600,
+      "training_seconds": 9.052,
+      "sample_and_render_seconds": 1.606,
+      "samples_per_second": 373.538,
+      "max_parameter_ks_distance": 0.31999999999999995,
+      "mean_parameter_ks_distance": 0.20888888888888887,
+      "geometry_in_training_support": true,
+      "no_rendered_object_cropped": true,
+      "renderer_class_mapping": "shape and color are selected from the requested class ID by the renderer"
+    },
+    {
+      "seed": 777,
+      "samples": 600,
+      "training_seconds": 10.751,
+      "sample_and_render_seconds": 1.956,
+      "samples_per_second": 306.689,
+      "max_parameter_ks_distance": 0.32000000000000006,
+      "mean_parameter_ks_distance": 0.18888888888888888,
+      "geometry_in_training_support": true,
+      "no_rendered_object_cropped": true,
+      "renderer_class_mapping": "shape and color are selected from the requested class ID by the renderer"
+    }
+  ],
+  "total_rendered_samples": 1800,
+  "mean_training_seconds": 9.229666666666667,
+  "mean_600_sample_generation_and_render_seconds": 1.6783333333333335,
+  "mean_samples_per_second": 362.5616666666667,
+  "max_parameter_ks_distance_across_runs": 0.32000000000000006,
+  "all_rendered_shapes_and_colors_follow_conditions": true,
+  "all_geometry_in_support": true,
+  "all_outputs_uncropped": true,
+  "interpretation": "Renderer-backed shape/color appearance is reliable by construction. Learned geometry-distribution fidelity is approximate and should be refined before treating center/size sampling as final. This does not pass or replace the raw RGB diffusion gate."
+}

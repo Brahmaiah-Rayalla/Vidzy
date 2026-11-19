@@ -58,7 +58,8 @@ class ResidualBlock(nn.Module):
         in_channels: int,
         out_channels: int,
         timestep_emb_dim: int,
-        dropout: float = 0.0
+        dropout: float = 0.0,
+        dilation: int = 1,
     ):
         """
         Args:
@@ -69,6 +70,9 @@ class ResidualBlock(nn.Module):
         """
         super().__init__()
 
+        if dilation < 1:
+            raise ValueError("ResidualBlock dilation must be positive")
+
         # Timestep embedding projection
         self.timestep_proj = nn.Sequential(
             nn.SiLU(),
@@ -76,11 +80,15 @@ class ResidualBlock(nn.Module):
         )
 
         # First convolution
-        self.conv1 = nn.Conv2d(in_channels, out_channels, 3, padding=1)
+        self.conv1 = nn.Conv2d(
+            in_channels, out_channels, 3, padding=dilation, dilation=dilation
+        )
         self.norm1 = nn.GroupNorm(8, out_channels)
 
         # Second convolution
-        self.conv2 = nn.Conv2d(out_channels, out_channels, 3, padding=1)
+        self.conv2 = nn.Conv2d(
+            out_channels, out_channels, 3, padding=dilation, dilation=dilation
+        )
         self.norm2 = nn.GroupNorm(8, out_channels)
 
         # Skip connection projection if needed
@@ -171,7 +179,12 @@ class UNet(nn.Module):
         dropout: float = 0.0,
         num_timesteps: int = 1000,
         num_classes: int = 0,
-        num_color_classes: int = 0
+        num_color_classes: int = 0,
+        num_size_classes: int = 0,
+        spatial_size_conditioning: bool = False,
+        high_resolution_refinement: bool = False,
+        size_embedding_scale: float = 1.0,
+        middle_dilation: int = 1,
     ):
         """
         Args:
@@ -191,14 +204,29 @@ class UNet(nn.Module):
         self.num_res_blocks = num_res_blocks
         self.num_classes = num_classes
         self.num_color_classes = num_color_classes
+        self.num_size_classes = num_size_classes
+        self.spatial_size_conditioning = spatial_size_conditioning
+        self.high_resolution_refinement = high_resolution_refinement
+        if middle_dilation < 1:
+            raise ValueError("middle_dilation must be positive")
+        self.middle_dilation = int(middle_dilation)
+        if size_embedding_scale <= 0:
+            raise ValueError("size_embedding_scale must be positive")
+        self.size_embedding_scale = float(size_embedding_scale)
 
         # Timestep embedding
         self.timestep_embed = SinusoidalPositionEmbedding(model_channels)
         self.class_embed = nn.Embedding(num_classes, model_channels) if num_classes > 0 else None
         self.color_embed = nn.Embedding(num_color_classes, model_channels) if num_color_classes > 0 else None
+        self.size_embed = nn.Embedding(num_size_classes, model_channels) if num_size_classes > 0 else None
+        if self.size_embed is not None:
+            nn.init.zeros_(self.size_embed.weight)
 
         # Initial convolution
-        self.conv_in = nn.Conv2d(in_channels, model_channels, 3, padding=1)
+        extra_size_channel = int(spatial_size_conditioning)
+        self.conv_in = nn.Conv2d(in_channels + extra_size_channel, model_channels, 3, padding=1)
+        if extra_size_channel:
+            nn.init.zeros_(self.conv_in.weight[:, in_channels:])
 
         # Encoder
         self.down_blocks = nn.ModuleList()
@@ -220,7 +248,10 @@ class UNet(nn.Module):
                 channels.append(now_channels)
 
         # Middle block
-        self.middle_block = ResidualBlock(now_channels, now_channels, model_channels, dropout)
+        self.middle_block = ResidualBlock(
+            now_channels, now_channels, model_channels, dropout,
+            dilation=self.middle_dilation,
+        )
 
         # Decoder
         self.up_blocks = nn.ModuleList()
@@ -245,6 +276,15 @@ class UNet(nn.Module):
                 self.up_blocks.append(nn.ModuleList([Upsample(now_channels)]))
 
         # Output convolution
+        self.high_res_refine = (
+            ResidualBlock(now_channels, now_channels, model_channels, dropout)
+            if high_resolution_refinement else None
+        )
+        if self.high_res_refine is not None:
+            # Preserve the pretrained denoiser at initialization; training can
+            # then learn a small full-resolution correction for sharp edges.
+            nn.init.zeros_(self.high_res_refine.conv2.weight)
+            nn.init.zeros_(self.high_res_refine.conv2.bias)
         self.conv_out = nn.Conv2d(now_channels, in_channels, 3, padding=1)
 
     def forward(
@@ -252,7 +292,8 @@ class UNet(nn.Module):
         x: torch.Tensor,
         timesteps: torch.Tensor,
         class_labels: Optional[torch.Tensor] = None,
-        color_labels: Optional[torch.Tensor] = None
+        color_labels: Optional[torch.Tensor] = None,
+        size_labels: Optional[torch.Tensor] = None
     ) -> torch.Tensor:
         """
         Forward pass of the U-Net.
@@ -278,8 +319,21 @@ class UNet(nn.Module):
             timestep_emb = timestep_emb + self.color_embed(color_labels.long())
         elif color_labels is not None:
             raise ValueError("color_labels were provided to a model without color conditioning")
+        if self.size_embed is not None:
+            if size_labels is None:
+                raise ValueError("size_labels are required for this size-conditional U-Net")
+            timestep_emb = timestep_emb + self.size_embedding_scale * self.size_embed(size_labels.long())
+        elif size_labels is not None:
+            raise ValueError("size_labels were provided to a model without size conditioning")
 
         # Initial convolution
+        if self.spatial_size_conditioning:
+            if size_labels is None:
+                raise ValueError("size_labels are required for spatial size conditioning")
+            size_plane = size_labels.to(dtype=x.dtype).view(-1, 1, 1, 1)
+            size_plane = (2.0 * size_plane / max(self.num_size_classes - 1, 1) - 1.0)
+            size_plane = size_plane.expand(-1, 1, x.shape[2], x.shape[3])
+            x = torch.cat((x, size_plane), dim=1)
         h = self.conv_in(x)
 
         # Encoder with skip connections
@@ -303,6 +357,10 @@ class UNet(nn.Module):
                     h = module(h, timestep_emb)
                 else:
                     h = module(h)
+
+        # Optional inexpensive full-resolution detail refinement.
+        if self.high_res_refine is not None:
+            h = self.high_res_refine(h, timestep_emb)
 
         # Output
         return self.conv_out(h)

@@ -1,0 +1,44 @@
+{
+  "experiment": "L32c factorized AdaGN conditioning pilot",
+  "seed": 42,
+  "samples_per_joint_class": 30,
+  "decision": "not_promoted_shape_gate_failed",
+  "stop_training_at_gate": true,
+  "comparison": "L32 EMA vs L32c 400-step AdaGN EMA; identical 12-step clipped DDIM sampler and fixed noise seeds",
+  "baseline": {
+    "joint_accuracy": 0.4111111111111111,
+    "shape_accuracy": 0.5055555555555555,
+    "color_accuracy": 0.8166666666666667
+  },
+  "candidate": {
+    "joint_accuracy": 0.4222222222222222,
+    "shape_accuracy": 0.49444444444444446,
+    "color_accuracy": 0.8944444444444445
+  },
+  "paired_changes": {
+    "joint_accuracy": {
+      "delta": 0.011111111111111112,
+      "bootstrap_95pct_interval": [-0.016666666666666666, 0.03888888888888889]
+    },
+    "shape_accuracy": {
+      "delta": -0.011111111111111112,
+      "bootstrap_95pct_interval": [-0.027777777777777776, 0.0]
+    },
+    "color_accuracy": {
+      "delta": 0.07777777777777778,
+      "bootstrap_95pct_interval": [0.03888888888888889, 0.11666666666666667]
+    }
+  },
+  "per_class_joint_accuracy": {
+    "red_circle": 0.03333333333333333,
+    "red_triangle": 0.9666666666666667,
+    "blue_circle": 0.0,
+    "blue_triangle": 0.9666666666666667,
+    "yellow_circle": 0.0,
+    "yellow_triangle": 0.5666666666666667
+  },
+  "reason": "Color conditioning improved, but shape accuracy regressed and circle-conditioned generations remain near zero. Paired shape interval does not show a positive effect. Do not promote or extend this run.",
+  "checkpoint": "../checkpoint_step_00400.pt",
+  "evaluation_report": "L32_RESULTS.json",
+  "run_manifest": "run_manifest.json"
+}

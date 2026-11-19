@@ -1,0 +1,161 @@
+{
+  "experiment": "L32 compact factorized color/shape high-salience pilot",
+  "evaluation_only": false,
+  "seed": 42,
+  "samples_per_class": 30,
+  "dataset": {
+    "train": 1200,
+    "validation": 300,
+    "analytic_area_mean_by_shape": {
+      "circle": 293.56612551469823,
+      "triangle": 291.2089805887188
+    }
+  },
+  "architecture": {
+    "base_channels": 24,
+    "channel_mult": [
+      1,
+      2,
+      3
+    ],
+    "res_blocks": 1,
+    "input_channels": 8,
+    "output_channels": 3,
+    "cross_attention": false,
+    "factorized_timestep_conditioning": false,
+    "factorized_adagn_conditioning": true,
+    "auxiliary_shape_head": true,
+    "trainable_parameters": 795580
+  },
+  "loss_config": {
+    "epsilon_foreground_weight": 5.0,
+    "low_noise_reconstruction_weight": 0.05,
+    "low_noise_silhouette_weight": 0.03,
+    "auxiliary_shape_head_weight": 0.1,
+    "auxiliary_shape_head_components": "balanced BCE + 0.5 Dice + 0.25 3x3 boundary-band L1",
+    "low_noise_timestep_max": 250
+  },
+  "validation_noise_mse": {
+    "initial": 0.010165363407383362,
+    "final_ema": 0.00961907061127325
+  },
+  "generation": {
+    "samples": 180,
+    "joint_accuracy": 0.13333333333333333,
+    "shape_accuracy": 0.3,
+    "color_accuracy": 0.2722222222222222,
+    "per_class_joint_accuracy": {
+      "0": 0.0,
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.23333333333333334,
+      "4": 0.0,
+      "5": 0.5666666666666667
+    }
+  },
+  "raw_generation": {
+    "samples": 180,
+    "joint_accuracy": 0.45555555555555555,
+    "shape_accuracy": 0.4888888888888889,
+    "color_accuracy": 0.9611111111111111,
+    "per_class_joint_accuracy": {
+      "0": 0.06666666666666667,
+      "1": 0.9,
+      "2": 0.03333333333333333,
+      "3": 0.9333333333333333,
+      "4": 0.0,
+      "5": 0.8
+    }
+  },
+  "generation_modes": {
+    "raw": "epsilon diffusion with clipped DDIM and final x0 reconstruction",
+    "reported_output": "learned silhouette projection"
+  },
+  "paired_vs_baseline": {
+    "raw_diffusion_vs_baseline": {
+      "joint_correct": {
+        "baseline_accuracy": 0.4222222222222222,
+        "candidate_accuracy": 0.45555555555555555,
+        "paired_delta": 0.03333333333333333,
+        "improved_pairs": 9,
+        "regressed_pairs": 3,
+        "bootstrap_95pct_interval": [
+          0.0,
+          0.07222222222222222
+        ]
+      },
+      "shape_correct": {
+        "baseline_accuracy": 0.49444444444444446,
+        "candidate_accuracy": 0.4888888888888889,
+        "paired_delta": -0.005555555555555556,
+        "improved_pairs": 2,
+        "regressed_pairs": 3,
+        "bootstrap_95pct_interval": [
+          -0.03333333333333333,
+          0.016666666666666666
+        ]
+      },
+      "color_correct": {
+        "baseline_accuracy": 0.8944444444444445,
+        "candidate_accuracy": 0.9611111111111111,
+        "paired_delta": 0.06666666666666667,
+        "improved_pairs": 12,
+        "regressed_pairs": 0,
+        "bootstrap_95pct_interval": [
+          0.03333333333333333,
+          0.10555555555555556
+        ]
+      }
+    },
+    "reported_output_vs_baseline": {
+      "joint_correct": {
+        "baseline_accuracy": 0.4222222222222222,
+        "candidate_accuracy": 0.13333333333333333,
+        "paired_delta": -0.28888888888888886,
+        "improved_pairs": 12,
+        "regressed_pairs": 64,
+        "bootstrap_95pct_interval": [
+          -0.37222222222222223,
+          -0.20555555555555555
+        ]
+      },
+      "shape_correct": {
+        "baseline_accuracy": 0.49444444444444446,
+        "candidate_accuracy": 0.3,
+        "paired_delta": -0.19444444444444445,
+        "improved_pairs": 2,
+        "regressed_pairs": 37,
+        "bootstrap_95pct_interval": [
+          -0.25555555555555554,
+          -0.13333333333333333
+        ]
+      },
+      "color_correct": {
+        "baseline_accuracy": 0.8944444444444445,
+        "candidate_accuracy": 0.2722222222222222,
+        "paired_delta": -0.6222222222222222,
+        "improved_pairs": 16,
+        "regressed_pairs": 128,
+        "bootstrap_95pct_interval": [
+          -0.7111111111111111,
+          -0.5222222222222223
+        ]
+      }
+    },
+    "reported_output_mode": "learned_silhouette_projection"
+  },
+  "detector_calibration": {
+    "clean_accuracy": 1.0,
+    "gaussian_noise_accuracy": {
+      "0.10": 1.0,
+      "0.20": 1.0
+    },
+    "n": 300,
+    "detector": "Gaussian blur 1.2 px, nearest palette-vs-background, largest connected component, radial 3-fold score"
+  },
+  "train_elapsed_seconds": 198.2,
+  "evaluation_elapsed_seconds": 207.74,
+  "total_elapsed_seconds": 462.36,
+  "cpu_threads": 4,
+  "checkpoint": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\extended_250_steps\\l33_auxiliary_silhouette_head_pilot\\checkpoint_step_00400.pt"
+}

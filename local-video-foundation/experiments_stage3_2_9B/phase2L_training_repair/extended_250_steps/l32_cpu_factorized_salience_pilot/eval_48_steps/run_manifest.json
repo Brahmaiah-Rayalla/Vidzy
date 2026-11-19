@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "task": "l32_sampling_step_ablation",
+  "created_at_utc": "2026-11-17T18:38:30.559621+00:00",
+  "evaluation_elapsed_seconds_excluding_manifest_hashing": 521.19,
+  "device": "cpu",
+  "cpu_threads": 4,
+  "logical_cpu_count": 8,
+  "software": {
+    "python": "3.13.4",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "torch": "2.15.0+cpu"
+  },
+  "git": {
+    "revision": "a6f4797d33af3ee1a86f07eec7184d206eddc836",
+    "tracked_worktree_dirty": true
+  },
+  "arguments": {
+    "checkpoint": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\extended_250_steps\\l32_cpu_factorized_salience_pilot\\checkpoint_step_01200.pt",
+    "sampling_steps": 48,
+    "eval_per_class": 30,
+    "seed": 42,
+    "threads": 4,
+    "noise_seed_formula": "50000 + seed*1000000 + class_id*1000 + sample_id"
+  },
+  "checkpoints": {
+    "l32_ema": {
+      "path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\extended_250_steps\\l32_cpu_factorized_salience_pilot\\checkpoint_step_01200.pt",
+      "sha256": "996005cab5fcb83418a270084352ca06a092df20cbaa86190093260c79a22c9d",
+      "step": 1200,
+      "config": {
+        "architecture": {
+          "base_channels": 24,
+          "channel_mult": [
+            1,
+            2,
+            3
+          ],
+          "res_blocks": 1,
+          "input_channels": 8,
+          "output_channels": 3,
+          "cross_attention": false,
+          "trainable_parameters": 785283
+        },
+        "conditioning": {
+          "factorized_color_shape": true,
+          "color_classes": [
+            "red",
+            "blue",
+            "yellow"
+          ],
+          "shape_classes": [
+            "circle",
+            "triangle"
+          ]
+        },
+        "loss": {
+          "epsilon_foreground_weight": 5.0,
+          "low_noise_reconstruction_weight": 0.05,
+          "low_noise_silhouette_weight": 0.03,
+          "low_noise_timestep_max": 250
+        },
+        "training": {
+          "steps": 1200,
+          "step": 1200,
+          "batch_size": 8,
+          "learning_rate": 0.0002,
+          "weight_decay": 0.0001,
+          "seed": 42,
+          "timestep_seed": 43,
+          "threads": 4,
+          "ema_decay": 0.995
+        },
+        "data_manifest": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\extended_250_steps\\l32_cpu_factorized_salience_pilot\\data\\manifest.jsonl"
+      },
+      "config_sha256": "19475d53ffba71b02069f44ee49d053d018406c9785c0efea83c8a6023e21bd0"
+    }
+  },
+  "dataset": {
+    "path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\extended_250_steps\\l32_cpu_factorized_salience_pilot\\data",
+    "file_count": 3001,
+    "sha256": "46d64ec020afe1eff641726db2b771c4b223881eb1e9f6fcf509404715231348"
+  },
+  "source_files_sha256": {
+    "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\extended_250_steps\\l32_cpu_factorized_salience_pilot\\evaluate_l32_checkpoint.py": "eb14a80321632cd6d3a547593edf761daa0e94f0ffe03d0a2ced645ec4a8e5a9",
+    "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\extended_250_steps\\l32_cpu_factorized_salience_pilot\\train_l32_cpu_pilot.py": "c93e313d956eb4d9249f199e38cdc5f7c6762b74f8d0cf351c337c412135e0f4",
+    "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_7\\video_foundation\\models\\conditional_unet.py": "5bc5e6e48e22ceb87fa60d89dd3f4a644bf39c162c86d04122bde65a15faa4b5",
+    "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\video_foundation\\utils\\experiment_metadata.py": "2dd6c0890ac957574fb0a6df61c754d2befdaac2c10156da8283eb0e290d9f0f"
+  }
+}

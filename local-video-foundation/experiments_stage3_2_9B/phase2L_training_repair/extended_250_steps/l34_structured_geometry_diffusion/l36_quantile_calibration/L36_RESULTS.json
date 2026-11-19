@@ -1,0 +1,1196 @@
+{
+  "experiment": "L36 train-only quantile calibration of L34 geometry diffusion",
+  "dataset": {
+    "train_rows": 1200,
+    "heldout_rows": 300,
+    "manifest_sha256": "860dea7d8dd3e46d4249d58b994f5c9803550a4d75d9301b3f85d369103ffab8"
+  },
+  "sampling": {
+    "calibration_samples_per_class": 512,
+    "evaluation_samples_per_class": 100,
+    "sampling_steps": 50,
+    "threads": 4,
+    "seed": 3600
+  },
+  "inference_source_sha256": "c0ec197ff49aa91739281d409174989c77b67a24c4d00c9410f951e727587c18",
+  "runs": [
+    {
+      "checkpoint": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\extended_250_steps\\l34_structured_geometry_diffusion\\checkpoint_final.pt",
+      "checkpoint_sha256": "6a23c8c3c2ce7e198df7551f60b113ee2d61797860ef9cfe27e967a3d52735fa",
+      "checkpoint_seed": 42,
+      "checkpoint_config": {
+        "representation": [
+          "center_x",
+          "center_y",
+          "normalized_extent",
+          "cos_3theta",
+          "sin_3theta"
+        ],
+        "conditioning": {
+          "class_id_order": "color_id*2+shape_id",
+          "colors": [
+            "red",
+            "blue",
+            "yellow"
+          ],
+          "shapes": [
+            "circle",
+            "triangle"
+          ]
+        },
+        "architecture": {
+          "kind": "MLP diffusion denoiser",
+          "width": 128,
+          "residual_blocks": 3,
+          "parameters": 71085
+        },
+        "diffusion": {
+          "timesteps": 1000,
+          "beta_schedule": "linear 1e-4..0.02",
+          "objective": "epsilon_mse",
+          "ema_decay": 0.995
+        },
+        "training": {
+          "steps": 3000,
+          "batch_size": 128,
+          "learning_rate": 0.001,
+          "seed": 42,
+          "threads": 4
+        }
+      },
+      "checkpoint_config_sha256": "7f92fdcd160586bde4b4a8afa4ad255d48957a8a050100339b79397fded31a37",
+      "raw_max_feature_ks": 0.35,
+      "calibrated_max_feature_ks": 0.33,
+      "raw_mean_feature_ks": 0.18857142857142856,
+      "calibrated_mean_feature_ks": 0.14476190476190479,
+      "per_class_feature_metrics": {
+        "0": {
+          "raw": {
+            "cx": {
+              "ks_distance": 0.12,
+              "heldout_mean": 31.9,
+              "generated_mean": 32.02047788619995,
+              "heldout_std": 5.937171043518958,
+              "generated_std": 6.067716496723361
+            },
+            "cy": {
+              "ks_distance": 0.14,
+              "heldout_mean": 32.26,
+              "generated_mean": 32.03623321533203,
+              "heldout_std": 6.14104225681602,
+              "generated_std": 5.881653835466798
+            },
+            "extent": {
+              "ks_distance": 0.1,
+              "heldout_mean": 9.54,
+              "generated_mean": 9.44,
+              "heldout_std": 1.525909564816998,
+              "generated_std": 1.4987995196156156
+            }
+          },
+          "calibrated": {
+            "cx": {
+              "ks_distance": 0.12,
+              "heldout_mean": 31.9,
+              "generated_mean": 31.99,
+              "heldout_std": 5.937171043518958,
+              "generated_std": 6.179797731317748
+            },
+            "cy": {
+              "ks_distance": 0.10999999999999999,
+              "heldout_mean": 32.26,
+              "generated_mean": 31.51,
+              "heldout_std": 6.14104225681602,
+              "generated_std": 5.999158274291485
+            },
+            "extent": {
+              "ks_distance": 0.11000000000000001,
+              "heldout_mean": 9.54,
+              "generated_mean": 9.72,
+              "heldout_std": 1.525909564816998,
+              "generated_std": 1.8004443895883038
+            }
+          }
+        },
+        "1": {
+          "raw": {
+            "cx": {
+              "ks_distance": 0.15999999999999998,
+              "heldout_mean": 32.5,
+              "generated_mean": 31.57866579055786,
+              "heldout_std": 5.7870545184921145,
+              "generated_std": 5.754823362748147
+            },
+            "cy": {
+              "ks_distance": 0.16999999999999993,
+              "heldout_mean": 33.26,
+              "generated_mean": 32.453505229949954,
+              "heldout_std": 5.673834682117554,
+              "generated_std": 5.506552273558398
+            },
+            "extent": {
+              "ks_distance": 0.25,
+              "heldout_mean": 26.26,
+              "generated_mean": 25.84,
+              "heldout_std": 4.898203752397403,
+              "generated_std": 3.626899502329779
+            },
+            "angle_rad_mod_120deg": {
+              "ks_distance": 0.15,
+              "heldout_mean": 1.1320815608130939,
+              "generated_mean": 1.050384414693456,
+              "heldout_std": 0.5579143032688707,
+              "generated_std": 0.6476198423709645
+            }
+          },
+          "calibrated": {
+            "cx": {
+              "ks_distance": 0.09999999999999998,
+              "heldout_mean": 32.5,
+              "generated_mean": 31.62,
+              "heldout_std": 5.7870545184921145,
+              "generated_std": 5.716257516942357
+            },
+            "cy": {
+              "ks_distance": 0.17999999999999994,
+              "heldout_mean": 33.26,
+              "generated_mean": 31.87,
+              "heldout_std": 5.673834682117554,
+              "generated_std": 6.281170273125861
+            },
+            "extent": {
+              "ks_distance": 0.16000000000000003,
+              "heldout_mean": 26.26,
+              "generated_mean": 25.72,
+              "heldout_std": 4.898203752397403,
+              "generated_std": 4.280373815451169
+            },
+            "angle_rad_mod_120deg": {
+              "ks_distance": 0.12,
+              "heldout_mean": 1.1320815608130939,
+              "generated_mean": 1.0816780326690505,
+              "heldout_std": 0.5579143032688707,
+              "generated_std": 0.5797664298497824
+            }
+          }
+        },
+        "2": {
+          "raw": {
+            "cx": {
+              "ks_distance": 0.19,
+              "heldout_mean": 31.44,
+              "generated_mean": 32.093161277770996,
+              "heldout_std": 6.465786881733731,
+              "generated_std": 5.93065574919919
+            },
+            "cy": {
+              "ks_distance": 0.24,
+              "heldout_mean": 33.78,
+              "generated_mean": 31.929422035217286,
+              "heldout_std": 5.842225603312491,
+              "generated_std": 5.604035619985403
+            },
+            "extent": {
+              "ks_distance": 0.08999999999999997,
+              "heldout_mean": 9.6,
+              "generated_mean": 9.37,
+              "heldout_std": 1.5999999999999999,
+              "generated_std": 1.4605136082899057
+            }
+          },
+          "calibrated": {
+            "cx": {
+              "ks_distance": 0.07000000000000006,
+              "heldout_mean": 31.44,
+              "generated_mean": 31.7,
+              "heldout_std": 6.465786881733731,
+              "generated_std": 6.356886030125127
+            },
+            "cy": {
+              "ks_distance": 0.18,
+              "heldout_mean": 33.78,
+              "generated_mean": 32.16,
+              "heldout_std": 5.842225603312491,
+              "generated_std": 6.478765314471577
+            },
+            "extent": {
+              "ks_distance": 0.08999999999999997,
+              "heldout_mean": 9.6,
+              "generated_mean": 9.4,
+              "heldout_std": 1.5999999999999999,
+              "generated_std": 1.6370705543744901
+            }
+          }
+        },
+        "3": {
+          "raw": {
+            "cx": {
+              "ks_distance": 0.19999999999999996,
+              "heldout_mean": 30.26,
+              "generated_mean": 31.24735668182373,
+              "heldout_std": 5.952512074746258,
+              "generated_std": 5.4234516035621
+            },
+            "cy": {
+              "ks_distance": 0.31000000000000005,
+              "heldout_mean": 33.18,
+              "generated_mean": 31.336713085174562,
+              "heldout_std": 6.43953414464121,
+              "generated_std": 5.3902800105683815
+            },
+            "extent": {
+              "ks_distance": 0.13999999999999996,
+              "heldout_mean": 25.82,
+              "generated_mean": 25.6,
+              "heldout_std": 4.008441093492581,
+              "generated_std": 3.9140771581561857
+            },
+            "angle_rad_mod_120deg": {
+              "ks_distance": 0.16000000000000003,
+              "heldout_mean": 0.9297049473380347,
+              "generated_mean": 1.0364437985713395,
+              "heldout_std": 0.5777993767744534,
+              "generated_std": 0.6319515077881905
+            }
+          },
+          "calibrated": {
+            "cx": {
+              "ks_distance": 0.2,
+              "heldout_mean": 30.26,
+              "generated_mean": 32.25,
+              "heldout_std": 5.952512074746258,
+              "generated_std": 6.478232783715016
+            },
+            "cy": {
+              "ks_distance": 0.23999999999999994,
+              "heldout_mean": 33.18,
+              "generated_mean": 31.0,
+              "heldout_std": 6.43953414464121,
+              "generated_std": 6.338769596696191
+            },
+            "extent": {
+              "ks_distance": 0.12,
+              "heldout_mean": 25.82,
+              "generated_mean": 25.19,
+              "heldout_std": 4.008441093492581,
+              "generated_std": 4.442285447829754
+            },
+            "angle_rad_mod_120deg": {
+              "ks_distance": 0.16000000000000003,
+              "heldout_mean": 0.9297049473380347,
+              "generated_mean": 1.1018558491798642,
+              "heldout_std": 0.5777993767744534,
+              "generated_std": 0.5577248980719465
+            }
+          }
+        },
+        "4": {
+          "raw": {
+            "cx": {
+              "ks_distance": 0.15000000000000002,
+              "heldout_mean": 31.64,
+              "generated_mean": 32.194469413757325,
+              "heldout_std": 5.850675174712745,
+              "generated_std": 5.798115025778869
+            },
+            "cy": {
+              "ks_distance": 0.35,
+              "heldout_mean": 30.0,
+              "generated_mean": 33.38844058990478,
+              "heldout_std": 5.81033561853358,
+              "generated_std": 6.444768642092743
+            },
+            "extent": {
+              "ks_distance": 0.19,
+              "heldout_mean": 9.2,
+              "generated_mean": 9.54,
+              "heldout_std": 1.8,
+              "generated_std": 1.5519020587653074
+            }
+          },
+          "calibrated": {
+            "cx": {
+              "ks_distance": 0.12,
+              "heldout_mean": 31.64,
+              "generated_mean": 31.85,
+              "heldout_std": 5.850675174712745,
+              "generated_std": 6.334627060845808
+            },
+            "cy": {
+              "ks_distance": 0.33,
+              "heldout_mean": 30.0,
+              "generated_mean": 33.36,
+              "heldout_std": 5.81033561853358,
+              "generated_std": 6.653600529036892
+            },
+            "extent": {
+              "ks_distance": 0.12,
+              "heldout_mean": 9.2,
+              "generated_mean": 9.46,
+              "heldout_std": 1.8,
+              "generated_std": 1.639634105524766
+            }
+          }
+        },
+        "5": {
+          "raw": {
+            "cx": {
+              "ks_distance": 0.15999999999999992,
+              "heldout_mean": 31.56,
+              "generated_mean": 31.489604511260985,
+              "heldout_std": 6.699731337897066,
+              "generated_std": 5.810464413463698
+            },
+            "cy": {
+              "ks_distance": 0.22999999999999998,
+              "heldout_mean": 30.46,
+              "generated_mean": 31.75773012161255,
+              "heldout_std": 5.625691068659921,
+              "generated_std": 5.58127981766564
+            },
+            "extent": {
+              "ks_distance": 0.26,
+              "heldout_mean": 26.0,
+              "generated_mean": 24.98,
+              "heldout_std": 4.732863826479693,
+              "generated_std": 3.839218670510968
+            },
+            "angle_rad_mod_120deg": {
+              "ks_distance": 0.2,
+              "heldout_mean": 1.2180420694248104,
+              "generated_mean": 1.0423773192849928,
+              "heldout_std": 0.6119549580873457,
+              "generated_std": 0.6017602552886041
+            }
+          },
+          "calibrated": {
+            "cx": {
+              "ks_distance": 0.09999999999999998,
+              "heldout_mean": 31.56,
+              "generated_mean": 31.08,
+              "heldout_std": 6.699731337897066,
+              "generated_std": 6.163894872562315
+            },
+            "cy": {
+              "ks_distance": 0.10999999999999999,
+              "heldout_mean": 30.46,
+              "generated_mean": 30.99,
+              "heldout_std": 5.625691068659921,
+              "generated_std": 5.752382115263207
+            },
+            "extent": {
+              "ks_distance": 0.05999999999999994,
+              "heldout_mean": 26.0,
+              "generated_mean": 25.54,
+              "heldout_std": 4.732863826479693,
+              "generated_std": 4.574756824138306
+            },
+            "angle_rad_mod_120deg": {
+              "ks_distance": 0.24000000000000005,
+              "heldout_mean": 1.2180420694248104,
+              "generated_mean": 0.996757856548379,
+              "heldout_std": 0.6119549580873457,
+              "generated_std": 0.523663503186579
+            }
+          }
+        }
+      },
+      "sample_support": {
+        "all_calibrated_centers_in_22_42": true,
+        "all_calibrated_extents_observed_in_training": true
+      }
+    },
+    {
+      "checkpoint": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\extended_250_steps\\l34_structured_geometry_diffusion\\seed123\\checkpoint_final.pt",
+      "checkpoint_sha256": "b2bf27d630d2b421799eac653968fa5ccaa1a442f65b3f339013c3626f51592b",
+      "checkpoint_seed": 123,
+      "checkpoint_config": {
+        "representation": [
+          "center_x",
+          "center_y",
+          "normalized_extent",
+          "cos_3theta",
+          "sin_3theta"
+        ],
+        "conditioning": {
+          "class_id_order": "color_id*2+shape_id",
+          "colors": [
+            "red",
+            "blue",
+            "yellow"
+          ],
+          "shapes": [
+            "circle",
+            "triangle"
+          ]
+        },
+        "architecture": {
+          "kind": "MLP diffusion denoiser",
+          "width": 128,
+          "residual_blocks": 3,
+          "parameters": 71085
+        },
+        "diffusion": {
+          "timesteps": 1000,
+          "beta_schedule": "linear 1e-4..0.02",
+          "objective": "epsilon_mse",
+          "ema_decay": 0.995
+        },
+        "training": {
+          "steps": 3000,
+          "batch_size": 128,
+          "learning_rate": 0.001,
+          "seed": 123,
+          "threads": 4
+        }
+      },
+      "checkpoint_config_sha256": "f37b769c6d14f74f35b27472623c8fbd3e56875788f2dd3147d4910a063a71f2",
+      "raw_max_feature_ks": 0.26999999999999996,
+      "calibrated_max_feature_ks": 0.22999999999999998,
+      "raw_mean_feature_ks": 0.18142857142857144,
+      "calibrated_mean_feature_ks": 0.13857142857142857,
+      "per_class_feature_metrics": {
+        "0": {
+          "raw": {
+            "cx": {
+              "ks_distance": 0.18000000000000005,
+              "heldout_mean": 31.9,
+              "generated_mean": 33.26553258895874,
+              "heldout_std": 5.937171043518958,
+              "generated_std": 6.061212563925023
+            },
+            "cy": {
+              "ks_distance": 0.1399999999999999,
+              "heldout_mean": 32.26,
+              "generated_mean": 31.964930934906008,
+              "heldout_std": 6.14104225681602,
+              "generated_std": 6.183648441926592
+            },
+            "extent": {
+              "ks_distance": 0.09000000000000002,
+              "heldout_mean": 9.54,
+              "generated_mean": 9.7,
+              "heldout_std": 1.525909564816998,
+              "generated_std": 1.5968719422671314
+            }
+          },
+          "calibrated": {
+            "cx": {
+              "ks_distance": 0.10999999999999999,
+              "heldout_mean": 31.9,
+              "generated_mean": 32.63,
+              "heldout_std": 5.937171043518958,
+              "generated_std": 6.042607053251105
+            },
+            "cy": {
+              "ks_distance": 0.06,
+              "heldout_mean": 32.26,
+              "generated_mean": 32.3,
+              "heldout_std": 6.14104225681602,
+              "generated_std": 5.932115979985556
+            },
+            "extent": {
+              "ks_distance": 0.17000000000000004,
+              "heldout_mean": 9.54,
+              "generated_mean": 10.05,
+              "heldout_std": 1.525909564816998,
+              "generated_std": 1.6874537030686203
+            }
+          }
+        },
+        "1": {
+          "raw": {
+            "cx": {
+              "ks_distance": 0.15000000000000002,
+              "heldout_mean": 32.5,
+              "generated_mean": 33.1790505027771,
+              "heldout_std": 5.7870545184921145,
+              "generated_std": 6.5982540638451646
+            },
+            "cy": {
+              "ks_distance": 0.17999999999999994,
+              "heldout_mean": 33.26,
+              "generated_mean": 31.81035562515259,
+              "heldout_std": 5.673834682117554,
+              "generated_std": 6.11201825533598
+            },
+            "extent": {
+              "ks_distance": 0.21000000000000008,
+              "heldout_mean": 26.26,
+              "generated_mean": 25.52,
+              "heldout_std": 4.898203752397403,
+              "generated_std": 4.2130274150544045
+            },
+            "angle_rad_mod_120deg": {
+              "ks_distance": 0.17,
+              "heldout_mean": 1.1320815608130939,
+              "generated_mean": 1.104710936039783,
+              "heldout_std": 0.5579143032688707,
+              "generated_std": 0.6452394777905971
+            }
+          },
+          "calibrated": {
+            "cx": {
+              "ks_distance": 0.10000000000000003,
+              "heldout_mean": 32.5,
+              "generated_mean": 32.16,
+              "heldout_std": 5.7870545184921145,
+              "generated_std": 6.668912954897523
+            },
+            "cy": {
+              "ks_distance": 0.15999999999999998,
+              "heldout_mean": 33.26,
+              "generated_mean": 32.03,
+              "heldout_std": 5.673834682117554,
+              "generated_std": 6.6429737316957675
+            },
+            "extent": {
+              "ks_distance": 0.06,
+              "heldout_mean": 26.26,
+              "generated_mean": 25.86,
+              "heldout_std": 4.898203752397403,
+              "generated_std": 4.724447057593089
+            },
+            "angle_rad_mod_120deg": {
+              "ks_distance": 0.14,
+              "heldout_mean": 1.1320815608130939,
+              "generated_mean": 1.0151422294792112,
+              "heldout_std": 0.5579143032688707,
+              "generated_std": 0.5360086116223014
+            }
+          }
+        },
+        "2": {
+          "raw": {
+            "cx": {
+              "ks_distance": 0.25,
+              "heldout_mean": 31.44,
+              "generated_mean": 32.97627069473267,
+              "heldout_std": 6.465786881733731,
+              "generated_std": 5.656367804714872
+            },
+            "cy": {
+              "ks_distance": 0.26,
+              "heldout_mean": 33.78,
+              "generated_mean": 31.183235740661623,
+              "heldout_std": 5.842225603312491,
+              "generated_std": 6.330231962681198
+            },
+            "extent": {
+              "ks_distance": 0.06000000000000005,
+              "heldout_mean": 9.6,
+              "generated_mean": 9.47,
+              "heldout_std": 1.5999999999999999,
+              "generated_std": 1.577688182119648
+            }
+          },
+          "calibrated": {
+            "cx": {
+              "ks_distance": 0.10999999999999999,
+              "heldout_mean": 31.44,
+              "generated_mean": 31.54,
+              "heldout_std": 6.465786881733731,
+              "generated_std": 6.038907185907067
+            },
+            "cy": {
+              "ks_distance": 0.20000000000000007,
+              "heldout_mean": 33.78,
+              "generated_mean": 31.97,
+              "heldout_std": 5.842225603312491,
+              "generated_std": 6.414756425617422
+            },
+            "extent": {
+              "ks_distance": 0.10999999999999999,
+              "heldout_mean": 9.6,
+              "generated_mean": 9.69,
+              "heldout_std": 1.5999999999999999,
+              "generated_std": 1.7360587547660937
+            }
+          }
+        },
+        "3": {
+          "raw": {
+            "cx": {
+              "ks_distance": 0.26999999999999996,
+              "heldout_mean": 30.26,
+              "generated_mean": 32.91085906982422,
+              "heldout_std": 5.952512074746258,
+              "generated_std": 6.185750408522547
+            },
+            "cy": {
+              "ks_distance": 0.26,
+              "heldout_mean": 33.18,
+              "generated_mean": 31.907911701202394,
+              "heldout_std": 6.43953414464121,
+              "generated_std": 6.048228806540235
+            },
+            "extent": {
+              "ks_distance": 0.13,
+              "heldout_mean": 25.82,
+              "generated_mean": 25.82,
+              "heldout_std": 4.008441093492581,
+              "generated_std": 3.753345174640883
+            },
+            "angle_rad_mod_120deg": {
+              "ks_distance": 0.22999999999999998,
+              "heldout_mean": 0.9297049473380347,
+              "generated_mean": 1.1084495971766664,
+              "heldout_std": 0.5777993767744534,
+              "generated_std": 0.6618035597117845
+            }
+          },
+          "calibrated": {
+            "cx": {
+              "ks_distance": 0.21000000000000002,
+              "heldout_mean": 30.26,
+              "generated_mean": 32.89,
+              "heldout_std": 5.952512074746258,
+              "generated_std": 6.407643872750731
+            },
+            "cy": {
+              "ks_distance": 0.15999999999999998,
+              "heldout_mean": 33.18,
+              "generated_mean": 32.07,
+              "heldout_std": 6.43953414464121,
+              "generated_std": 6.351779278281008
+            },
+            "extent": {
+              "ks_distance": 0.10999999999999999,
+              "heldout_mean": 25.82,
+              "generated_mean": 26.16,
+              "heldout_std": 4.008441093492581,
+              "generated_std": 4.267833173871725
+            },
+            "angle_rad_mod_120deg": {
+              "ks_distance": 0.22999999999999998,
+              "heldout_mean": 0.9297049473380347,
+              "generated_mean": 1.1314466825405054,
+              "heldout_std": 0.5777993767744534,
+              "generated_std": 0.5728665849810402
+            }
+          }
+        },
+        "4": {
+          "raw": {
+            "cx": {
+              "ks_distance": 0.18999999999999997,
+              "heldout_mean": 31.64,
+              "generated_mean": 33.828394203186036,
+              "heldout_std": 5.850675174712745,
+              "generated_std": 5.655380673978578
+            },
+            "cy": {
+              "ks_distance": 0.17000000000000004,
+              "heldout_mean": 30.0,
+              "generated_mean": 30.805924625396727,
+              "heldout_std": 5.81033561853358,
+              "generated_std": 5.789272489325361
+            },
+            "extent": {
+              "ks_distance": 0.15999999999999998,
+              "heldout_mean": 9.2,
+              "generated_mean": 9.37,
+              "heldout_std": 1.8,
+              "generated_std": 1.5010329776523899
+            }
+          },
+          "calibrated": {
+            "cx": {
+              "ks_distance": 0.09999999999999998,
+              "heldout_mean": 31.64,
+              "generated_mean": 32.38,
+              "heldout_std": 5.850675174712745,
+              "generated_std": 5.952780862756498
+            },
+            "cy": {
+              "ks_distance": 0.17999999999999994,
+              "heldout_mean": 30.0,
+              "generated_mean": 31.64,
+              "heldout_std": 5.81033561853358,
+              "generated_std": 5.833558090908155
+            },
+            "extent": {
+              "ks_distance": 0.16,
+              "heldout_mean": 9.2,
+              "generated_mean": 9.44,
+              "heldout_std": 1.8,
+              "generated_std": 1.5831613941730642
+            }
+          }
+        },
+        "5": {
+          "raw": {
+            "cx": {
+              "ks_distance": 0.14,
+              "heldout_mean": 31.56,
+              "generated_mean": 32.35439630508423,
+              "heldout_std": 6.699731337897066,
+              "generated_std": 6.127954187162585
+            },
+            "cy": {
+              "ks_distance": 0.11000000000000004,
+              "heldout_mean": 30.46,
+              "generated_mean": 30.36208829879761,
+              "heldout_std": 5.625691068659921,
+              "generated_std": 5.861963377872752
+            },
+            "extent": {
+              "ks_distance": 0.25,
+              "heldout_mean": 26.0,
+              "generated_mean": 24.7,
+              "heldout_std": 4.732863826479693,
+              "generated_std": 3.889730067755345
+            },
+            "angle_rad_mod_120deg": {
+              "ks_distance": 0.20999999999999996,
+              "heldout_mean": 1.2180420694248104,
+              "generated_mean": 1.1050099259655872,
+              "heldout_std": 0.6119549580873457,
+              "generated_std": 0.7178391386240371
+            }
+          },
+          "calibrated": {
+            "cx": {
+              "ks_distance": 0.10999999999999999,
+              "heldout_mean": 31.56,
+              "generated_mean": 32.08,
+              "heldout_std": 6.699731337897066,
+              "generated_std": 6.596483911903371
+            },
+            "cy": {
+              "ks_distance": 0.12000000000000005,
+              "heldout_mean": 30.46,
+              "generated_mean": 31.49,
+              "heldout_std": 5.625691068659921,
+              "generated_std": 5.854049880211135
+            },
+            "extent": {
+              "ks_distance": 0.09000000000000002,
+              "heldout_mean": 26.0,
+              "generated_mean": 25.31,
+              "heldout_std": 4.732863826479693,
+              "generated_std": 4.573171765853541
+            },
+            "angle_rad_mod_120deg": {
+              "ks_distance": 0.22000000000000003,
+              "heldout_mean": 1.2180420694248104,
+              "generated_mean": 1.003895286924589,
+              "heldout_std": 0.6119549580873457,
+              "generated_std": 0.6370006028746196
+            }
+          }
+        }
+      },
+      "sample_support": {
+        "all_calibrated_centers_in_22_42": true,
+        "all_calibrated_extents_observed_in_training": true
+      }
+    },
+    {
+      "checkpoint": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\extended_250_steps\\l34_structured_geometry_diffusion\\seed777\\checkpoint_final.pt",
+      "checkpoint_sha256": "83d216b3cbdc1bbd7f6d6526591479d8c222bbf770715d1612fc7b06a3ee2aea",
+      "checkpoint_seed": 777,
+      "checkpoint_config": {
+        "representation": [
+          "center_x",
+          "center_y",
+          "normalized_extent",
+          "cos_3theta",
+          "sin_3theta"
+        ],
+        "conditioning": {
+          "class_id_order": "color_id*2+shape_id",
+          "colors": [
+            "red",
+            "blue",
+            "yellow"
+          ],
+          "shapes": [
+            "circle",
+            "triangle"
+          ]
+        },
+        "architecture": {
+          "kind": "MLP diffusion denoiser",
+          "width": 128,
+          "residual_blocks": 3,
+          "parameters": 71085
+        },
+        "diffusion": {
+          "timesteps": 1000,
+          "beta_schedule": "linear 1e-4..0.02",
+          "objective": "epsilon_mse",
+          "ema_decay": 0.995
+        },
+        "training": {
+          "steps": 3000,
+          "batch_size": 128,
+          "learning_rate": 0.001,
+          "seed": 777,
+          "threads": 4
+        }
+      },
+      "checkpoint_config_sha256": "ae10a9db0ea57c4bd07ca1c09fe95ed8c5b8e67c43e30fff13f99da7af9dcecd",
+      "raw_max_feature_ks": 0.4,
+      "calibrated_max_feature_ks": 0.28,
+      "raw_mean_feature_ks": 0.19190476190476188,
+      "calibrated_mean_feature_ks": 0.1485714285714286,
+      "per_class_feature_metrics": {
+        "0": {
+          "raw": {
+            "cx": {
+              "ks_distance": 0.12,
+              "heldout_mean": 31.9,
+              "generated_mean": 32.3117568397522,
+              "heldout_std": 5.937171043518958,
+              "generated_std": 5.563575941223102
+            },
+            "cy": {
+              "ks_distance": 0.16,
+              "heldout_mean": 32.26,
+              "generated_mean": 33.25643255233765,
+              "heldout_std": 6.14104225681602,
+              "generated_std": 5.911071005652367
+            },
+            "extent": {
+              "ks_distance": 0.16,
+              "heldout_mean": 9.54,
+              "generated_mean": 9.08,
+              "heldout_std": 1.525909564816998,
+              "generated_std": 1.4810806865258894
+            }
+          },
+          "calibrated": {
+            "cx": {
+              "ks_distance": 0.08000000000000007,
+              "heldout_mean": 31.9,
+              "generated_mean": 32.07,
+              "heldout_std": 5.937171043518958,
+              "generated_std": 5.7779840775135405
+            },
+            "cy": {
+              "ks_distance": 0.06999999999999995,
+              "heldout_mean": 32.26,
+              "generated_mean": 32.17,
+              "heldout_std": 6.14104225681602,
+              "generated_std": 5.978386069835237
+            },
+            "extent": {
+              "ks_distance": 0.1,
+              "heldout_mean": 9.54,
+              "generated_mean": 9.62,
+              "heldout_std": 1.525909564816998,
+              "generated_std": 1.7422973339817749
+            }
+          }
+        },
+        "1": {
+          "raw": {
+            "cx": {
+              "ks_distance": 0.17000000000000004,
+              "heldout_mean": 32.5,
+              "generated_mean": 31.68775426864624,
+              "heldout_std": 5.7870545184921145,
+              "generated_std": 5.420584259787189
+            },
+            "cy": {
+              "ks_distance": 0.12,
+              "heldout_mean": 33.26,
+              "generated_mean": 32.437728328704836,
+              "heldout_std": 5.673834682117554,
+              "generated_std": 5.9149701183073065
+            },
+            "extent": {
+              "ks_distance": 0.29000000000000004,
+              "heldout_mean": 26.26,
+              "generated_mean": 25.58,
+              "heldout_std": 4.898203752397403,
+              "generated_std": 3.5388698761045174
+            },
+            "angle_rad_mod_120deg": {
+              "ks_distance": 0.15999999999999998,
+              "heldout_mean": 1.1320815608130939,
+              "generated_mean": 1.0624444282315324,
+              "heldout_std": 0.5579143032688707,
+              "generated_std": 0.6490167169560318
+            }
+          },
+          "calibrated": {
+            "cx": {
+              "ks_distance": 0.16000000000000003,
+              "heldout_mean": 32.5,
+              "generated_mean": 31.06,
+              "heldout_std": 5.7870545184921145,
+              "generated_std": 5.558453022199611
+            },
+            "cy": {
+              "ks_distance": 0.16,
+              "heldout_mean": 33.26,
+              "generated_mean": 32.08,
+              "heldout_std": 5.673834682117554,
+              "generated_std": 6.965170493247096
+            },
+            "extent": {
+              "ks_distance": 0.15000000000000002,
+              "heldout_mean": 26.26,
+              "generated_mean": 25.58,
+              "heldout_std": 4.898203752397403,
+              "generated_std": 3.9804019897492764
+            },
+            "angle_rad_mod_120deg": {
+              "ks_distance": 0.13,
+              "heldout_mean": 1.1320815608130939,
+              "generated_mean": 1.0509447852186413,
+              "heldout_std": 0.5579143032688707,
+              "generated_std": 0.6128374998711383
+            }
+          }
+        },
+        "2": {
+          "raw": {
+            "cx": {
+              "ks_distance": 0.22,
+              "heldout_mean": 31.44,
+              "generated_mean": 32.38640361785889,
+              "heldout_std": 6.465786881733731,
+              "generated_std": 5.4356562441022005
+            },
+            "cy": {
+              "ks_distance": 0.16999999999999993,
+              "heldout_mean": 33.78,
+              "generated_mean": 33.06120803833008,
+              "heldout_std": 5.842225603312491,
+              "generated_std": 5.885608322642394
+            },
+            "extent": {
+              "ks_distance": 0.17,
+              "heldout_mean": 9.6,
+              "generated_mean": 8.92,
+              "heldout_std": 1.5999999999999999,
+              "generated_std": 1.5011995203836161
+            }
+          },
+          "calibrated": {
+            "cx": {
+              "ks_distance": 0.17000000000000004,
+              "heldout_mean": 31.44,
+              "generated_mean": 30.66,
+              "heldout_std": 6.465786881733731,
+              "generated_std": 5.6977539434412225
+            },
+            "cy": {
+              "ks_distance": 0.20999999999999996,
+              "heldout_mean": 33.78,
+              "generated_mean": 31.66,
+              "heldout_std": 5.842225603312491,
+              "generated_std": 6.386266514952222
+            },
+            "extent": {
+              "ks_distance": 0.07999999999999999,
+              "heldout_mean": 9.6,
+              "generated_mean": 9.29,
+              "heldout_std": 1.5999999999999999,
+              "generated_std": 1.6142800252744256
+            }
+          }
+        },
+        "3": {
+          "raw": {
+            "cx": {
+              "ks_distance": 0.19999999999999996,
+              "heldout_mean": 30.26,
+              "generated_mean": 31.411339836120604,
+              "heldout_std": 5.952512074746258,
+              "generated_std": 5.1076973050574175
+            },
+            "cy": {
+              "ks_distance": 0.18999999999999995,
+              "heldout_mean": 33.18,
+              "generated_mean": 32.694675006866454,
+              "heldout_std": 6.43953414464121,
+              "generated_std": 5.882606104436116
+            },
+            "extent": {
+              "ks_distance": 0.1499999999999999,
+              "heldout_mean": 25.82,
+              "generated_mean": 25.71,
+              "heldout_std": 4.008441093492581,
+              "generated_std": 3.6777574688932386
+            },
+            "angle_rad_mod_120deg": {
+              "ks_distance": 0.21999999999999997,
+              "heldout_mean": 0.9297049473380347,
+              "generated_mean": 1.1435920669807695,
+              "heldout_std": 0.5777993767744534,
+              "generated_std": 0.6273901660187332
+            }
+          },
+          "calibrated": {
+            "cx": {
+              "ks_distance": 0.21000000000000002,
+              "heldout_mean": 30.26,
+              "generated_mean": 32.23,
+              "heldout_std": 5.952512074746258,
+              "generated_std": 5.863198785645938
+            },
+            "cy": {
+              "ks_distance": 0.12999999999999995,
+              "heldout_mean": 33.18,
+              "generated_mean": 32.42,
+              "heldout_std": 6.43953414464121,
+              "generated_std": 6.6830831208357715
+            },
+            "extent": {
+              "ks_distance": 0.08000000000000007,
+              "heldout_mean": 25.82,
+              "generated_mean": 25.38,
+              "heldout_std": 4.008441093492581,
+              "generated_std": 4.358394199702455
+            },
+            "angle_rad_mod_120deg": {
+              "ks_distance": 0.24,
+              "heldout_mean": 0.9297049473380347,
+              "generated_mean": 1.1868307169410806,
+              "heldout_std": 0.5777993767744534,
+              "generated_std": 0.5686516879013586
+            }
+          }
+        },
+        "4": {
+          "raw": {
+            "cx": {
+              "ks_distance": 0.19999999999999998,
+              "heldout_mean": 31.64,
+              "generated_mean": 32.895652256011964,
+              "heldout_std": 5.850675174712745,
+              "generated_std": 5.057838599609654
+            },
+            "cy": {
+              "ks_distance": 0.4,
+              "heldout_mean": 30.0,
+              "generated_mean": 33.55766353607178,
+              "heldout_std": 5.81033561853358,
+              "generated_std": 5.44275897658407
+            },
+            "extent": {
+              "ks_distance": 0.08000000000000002,
+              "heldout_mean": 9.2,
+              "generated_mean": 9.18,
+              "heldout_std": 1.8,
+              "generated_std": 1.6086018774078312
+            }
+          },
+          "calibrated": {
+            "cx": {
+              "ks_distance": 0.10999999999999999,
+              "heldout_mean": 31.64,
+              "generated_mean": 31.89,
+              "heldout_std": 5.850675174712745,
+              "generated_std": 5.798094514579768
+            },
+            "cy": {
+              "ks_distance": 0.28,
+              "heldout_mean": 30.0,
+              "generated_mean": 32.48,
+              "heldout_std": 5.81033561853358,
+              "generated_std": 5.759305513688261
+            },
+            "extent": {
+              "ks_distance": 0.1,
+              "heldout_mean": 9.2,
+              "generated_mean": 9.42,
+              "heldout_std": 1.8,
+              "generated_std": 1.6624078921853087
+            }
+          }
+        },
+        "5": {
+          "raw": {
+            "cx": {
+              "ks_distance": 0.21999999999999997,
+              "heldout_mean": 31.56,
+              "generated_mean": 31.9540558052063,
+              "heldout_std": 6.699731337897066,
+              "generated_std": 4.95452646677804
+            },
+            "cy": {
+              "ks_distance": 0.24,
+              "heldout_mean": 30.46,
+              "generated_mean": 33.05820404052734,
+              "heldout_std": 5.625691068659921,
+              "generated_std": 5.845409912203742
+            },
+            "extent": {
+              "ks_distance": 0.27,
+              "heldout_mean": 26.0,
+              "generated_mean": 25.15,
+              "heldout_std": 4.732863826479693,
+              "generated_std": 3.4011027623404737
+            },
+            "angle_rad_mod_120deg": {
+              "ks_distance": 0.12000000000000001,
+              "heldout_mean": 1.2180420694248104,
+              "generated_mean": 1.1211601824015396,
+              "heldout_std": 0.6119549580873457,
+              "generated_std": 0.6231786475732889
+            }
+          },
+          "calibrated": {
+            "cx": {
+              "ks_distance": 0.10000000000000003,
+              "heldout_mean": 31.56,
+              "generated_mean": 32.04,
+              "heldout_std": 6.699731337897066,
+              "generated_std": 6.052966215005664
+            },
+            "cy": {
+              "ks_distance": 0.2699999999999999,
+              "heldout_mean": 30.46,
+              "generated_mean": 33.02,
+              "heldout_std": 5.625691068659921,
+              "generated_std": 6.310277331464918
+            },
+            "extent": {
+              "ks_distance": 0.09999999999999998,
+              "heldout_mean": 26.0,
+              "generated_mean": 25.65,
+              "heldout_std": 4.732863826479693,
+              "generated_std": 4.219893363581597
+            },
+            "angle_rad_mod_120deg": {
+              "ks_distance": 0.19000000000000006,
+              "heldout_mean": 1.2180420694248104,
+              "generated_mean": 1.0450574484906843,
+              "heldout_std": 0.6119549580873457,
+              "generated_std": 0.5675219328041423
+            }
+          }
+        }
+      },
+      "sample_support": {
+        "all_calibrated_centers_in_22_42": true,
+        "all_calibrated_extents_observed_in_training": true
+      }
+    }
+  ],
+  "multi_seed": {
+    "model_seeds": [
+      42,
+      123,
+      777
+    ],
+    "mean_raw_max_feature_ks": 0.34,
+    "mean_calibrated_max_feature_ks": 0.28,
+    "mean_raw_feature_ks": 0.1873015873015873,
+    "mean_calibrated_feature_ks": 0.14396825396825397,
+    "mean_feature_ks_relative_reduction_percent": 23.135593220338986,
+    "max_raw_feature_ks": 0.4,
+    "max_calibrated_feature_ks": 0.33,
+    "calibration_improved_every_seed": true,
+    "all_calibrated_centers_in_support": true,
+    "all_calibrated_sizes_in_training_support": true
+  },
+  "calibration_tables": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\extended_250_steps\\l34_structured_geometry_diffusion\\l36_quantile_calibration\\L36_CALIBRATION_TABLES.json",
+  "comparison_grid": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\extended_250_steps\\l34_structured_geometry_diffusion\\l36_quantile_calibration\\L36_raw_vs_calibrated_grid.png",
+  "elapsed_seconds": 1.0776883999933489
+}

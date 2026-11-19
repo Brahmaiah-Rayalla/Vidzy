@@ -1,0 +1,85 @@
+{
+  "comparison": "L32 1200-step EMA vs L32b 400-step conditioned-timestep EMA",
+  "samples": 180,
+  "same_noise_seeds": true,
+  "metrics": {
+    "joint_correct": {
+      "baseline": 0.4166666666666667,
+      "candidate": 0.4,
+      "delta": -0.016666666666666666,
+      "improved_pairs": 2,
+      "regressed_pairs": 5,
+      "bootstrap_95pct_interval": [
+        -0.044444444444444446,
+        0.011111111111111112
+      ]
+    },
+    "shape_correct": {
+      "baseline": 0.49444444444444446,
+      "candidate": 0.4888888888888889,
+      "delta": -0.005555555555555556,
+      "improved_pairs": 2,
+      "regressed_pairs": 3,
+      "bootstrap_95pct_interval": [
+        -0.027777777777777776,
+        0.016666666666666666
+      ]
+    },
+    "color_correct": {
+      "baseline": 0.8055555555555556,
+      "candidate": 0.7777777777777778,
+      "delta": -0.027777777777777776,
+      "improved_pairs": 2,
+      "regressed_pairs": 7,
+      "bootstrap_95pct_interval": [
+        -0.06111111111111111,
+        0.005555555555555556
+      ]
+    }
+  },
+  "per_class_joint": {
+    "0": {
+      "class_name": "red circle",
+      "baseline_joint_accuracy": 0.0,
+      "candidate_joint_accuracy": 0.0,
+      "improved_pairs": 0,
+      "regressed_pairs": 0
+    },
+    "1": {
+      "class_name": "red triangle",
+      "baseline_joint_accuracy": 0.7,
+      "candidate_joint_accuracy": 0.7,
+      "improved_pairs": 0,
+      "regressed_pairs": 0
+    },
+    "2": {
+      "class_name": "blue circle",
+      "baseline_joint_accuracy": 0.0,
+      "candidate_joint_accuracy": 0.0,
+      "improved_pairs": 0,
+      "regressed_pairs": 0
+    },
+    "3": {
+      "class_name": "blue triangle",
+      "baseline_joint_accuracy": 0.9,
+      "candidate_joint_accuracy": 0.8,
+      "improved_pairs": 0,
+      "regressed_pairs": 3
+    },
+    "4": {
+      "class_name": "yellow circle",
+      "baseline_joint_accuracy": 0.06666666666666667,
+      "candidate_joint_accuracy": 0.03333333333333333,
+      "improved_pairs": 0,
+      "regressed_pairs": 1
+    },
+    "5": {
+      "class_name": "yellow triangle",
+      "baseline_joint_accuracy": 0.8333333333333334,
+      "candidate_joint_accuracy": 0.8666666666666667,
+      "improved_pairs": 2,
+      "regressed_pairs": 1
+    }
+  },
+  "note": "The pilot runner initially omitted the return from its paired_stats helper; these paired metrics were recomputed from the saved per-sample records."
+}

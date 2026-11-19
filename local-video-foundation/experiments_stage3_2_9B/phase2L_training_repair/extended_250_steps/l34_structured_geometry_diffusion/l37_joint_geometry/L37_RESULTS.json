@@ -1,0 +1,759 @@
+{
+  "experiment": "L37 joint geometry evaluation: raw diffusion vs marginal vs factorized train prior",
+  "dataset": {
+    "train_rows": 1200,
+    "heldout_rows": 300,
+    "manifest_sha256": "860dea7d8dd3e46d4249d58b994f5c9803550a4d75d9301b3f85d369103ffab8"
+  },
+  "sampling": {
+    "samples_per_class": 100,
+    "calibration_samples_per_class": 512,
+    "sampling_steps": 50,
+    "threads": 4,
+    "seed": 3700
+  },
+  "inference_source_sha256": "b80aa4aa3734783862d5a3897facc800b4a5192e0070850cefd046e2b8597e12",
+  "runs": [
+    {
+      "checkpoint": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\extended_250_steps\\l34_structured_geometry_diffusion\\checkpoint_final.pt",
+      "checkpoint_sha256": "6a23c8c3c2ce7e198df7551f60b113ee2d61797860ef9cfe27e967a3d52735fa",
+      "checkpoint_config_sha256": "7f92fdcd160586bde4b4a8afa4ad255d48957a8a050100339b79397fded31a37",
+      "checkpoint_seed": 42,
+      "methods": {
+        "raw_l34": {
+          "mean_feature_ks": 0.2054166666666666,
+          "mean_class_max_feature_ks": 0.27666666666666667,
+          "mean_multivariate_energy_distance": 0.08885344142722795,
+          "mean_correlation_matrix_mae_vs_heldout": 0.19895075073644633,
+          "per_class": {
+            "0": {
+              "feature_ks": {
+                "cx": 0.14999999999999997,
+                "cy": 0.16999999999999998,
+                "extent": 0.06999999999999995
+              },
+              "mean_feature_ks": 0.12999999999999998,
+              "max_feature_ks": 0.16999999999999998,
+              "multivariate_energy_distance": 0.040369516638306235,
+              "correlation_matrix_mae_vs_heldout": 0.29343024691659153
+            },
+            "1": {
+              "feature_ks": {
+                "cx": 0.18000000000000005,
+                "cy": 0.21999999999999997,
+                "extent": 0.31000000000000005,
+                "angle_rad_mod_120deg": 0.15000000000000002
+              },
+              "mean_feature_ks": 0.21500000000000002,
+              "max_feature_ks": 0.31000000000000005,
+              "multivariate_energy_distance": 0.11396666253159826,
+              "correlation_matrix_mae_vs_heldout": 0.22084912648034347
+            },
+            "2": {
+              "feature_ks": {
+                "cx": 0.19,
+                "cy": 0.24,
+                "extent": 0.06000000000000005
+              },
+              "mean_feature_ks": 0.16333333333333336,
+              "max_feature_ks": 0.24,
+              "multivariate_energy_distance": 0.06397237229402264,
+              "correlation_matrix_mae_vs_heldout": 0.17709547582534935
+            },
+            "3": {
+              "feature_ks": {
+                "cx": 0.27999999999999997,
+                "cy": 0.32999999999999996,
+                "extent": 0.22000000000000003,
+                "angle_rad_mod_120deg": 0.18999999999999995
+              },
+              "mean_feature_ks": 0.25499999999999995,
+              "max_feature_ks": 0.32999999999999996,
+              "multivariate_energy_distance": 0.11440335326433893,
+              "correlation_matrix_mae_vs_heldout": 0.16274167003361373
+            },
+            "4": {
+              "feature_ks": {
+                "cx": 0.17000000000000004,
+                "cy": 0.3400000000000001,
+                "extent": 0.23
+              },
+              "mean_feature_ks": 0.2466666666666667,
+              "max_feature_ks": 0.3400000000000001,
+              "multivariate_energy_distance": 0.12710771868417647,
+              "correlation_matrix_mae_vs_heldout": 0.25517736167476907
+            },
+            "5": {
+              "feature_ks": {
+                "cx": 0.16999999999999993,
+                "cy": 0.22,
+                "extent": 0.27,
+                "angle_rad_mod_120deg": 0.22999999999999998
+              },
+              "mean_feature_ks": 0.22249999999999998,
+              "max_feature_ks": 0.27,
+              "multivariate_energy_distance": 0.07330102515092518,
+              "correlation_matrix_mae_vs_heldout": 0.0844106234880108
+            }
+          }
+        },
+        "marginal_calibrated": {
+          "mean_feature_ks": 0.15888888888888889,
+          "mean_class_max_feature_ks": 0.22166666666666668,
+          "mean_multivariate_energy_distance": 0.07735823496982937,
+          "mean_correlation_matrix_mae_vs_heldout": 0.19932494445952262,
+          "per_class": {
+            "0": {
+              "feature_ks": {
+                "cx": 0.19999999999999996,
+                "cy": 0.22000000000000003,
+                "extent": 0.12
+              },
+              "mean_feature_ks": 0.18000000000000002,
+              "max_feature_ks": 0.22000000000000003,
+              "multivariate_energy_distance": 0.0661871461276553,
+              "correlation_matrix_mae_vs_heldout": 0.26950375942880334
+            },
+            "1": {
+              "feature_ks": {
+                "cx": 0.16000000000000003,
+                "cy": 0.16999999999999993,
+                "extent": 0.19000000000000006,
+                "angle_rad_mod_120deg": 0.14
+              },
+              "mean_feature_ks": 0.165,
+              "max_feature_ks": 0.19000000000000006,
+              "multivariate_energy_distance": 0.0689991972535049,
+              "correlation_matrix_mae_vs_heldout": 0.23307887758861218
+            },
+            "2": {
+              "feature_ks": {
+                "cx": 0.08999999999999997,
+                "cy": 0.19,
+                "extent": 0.07
+              },
+              "mean_feature_ks": 0.11666666666666665,
+              "max_feature_ks": 0.19,
+              "multivariate_energy_distance": 0.04935729721805493,
+              "correlation_matrix_mae_vs_heldout": 0.16635980203858478
+            },
+            "3": {
+              "feature_ks": {
+                "cx": 0.23000000000000004,
+                "cy": 0.24,
+                "extent": 0.18999999999999995,
+                "angle_rad_mod_120deg": 0.19999999999999996
+              },
+              "mean_feature_ks": 0.21499999999999997,
+              "max_feature_ks": 0.24,
+              "multivariate_energy_distance": 0.13858122376474857,
+              "correlation_matrix_mae_vs_heldout": 0.15761059508501934
+            },
+            "4": {
+              "feature_ks": {
+                "cx": 0.10000000000000003,
+                "cy": 0.26,
+                "extent": 0.11000000000000001
+              },
+              "mean_feature_ks": 0.1566666666666667,
+              "max_feature_ks": 0.26,
+              "multivariate_energy_distance": 0.08004429588393469,
+              "correlation_matrix_mae_vs_heldout": 0.2726936020742811
+            },
+            "5": {
+              "feature_ks": {
+                "cx": 0.12,
+                "cy": 0.07999999999999996,
+                "extent": 0.04999999999999999,
+                "angle_rad_mod_120deg": 0.23000000000000004
+              },
+              "mean_feature_ks": 0.12,
+              "max_feature_ks": 0.23000000000000004,
+              "multivariate_energy_distance": 0.06098024957107784,
+              "correlation_matrix_mae_vs_heldout": 0.09670303054183474
+            }
+          }
+        },
+        "factorized_train_prior": {
+          "mean_feature_ks": 0.14194444444444446,
+          "mean_class_max_feature_ks": 0.205,
+          "mean_multivariate_energy_distance": 0.06379482750672368,
+          "mean_correlation_matrix_mae_vs_heldout": 0.13483063742137621,
+          "per_class": {
+            "0": {
+              "feature_ks": {
+                "cx": 0.08999999999999997,
+                "cy": 0.17999999999999994,
+                "extent": 0.08000000000000002
+              },
+              "mean_feature_ks": 0.11666666666666664,
+              "max_feature_ks": 0.17999999999999994,
+              "multivariate_energy_distance": 0.05185039836937988,
+              "correlation_matrix_mae_vs_heldout": 0.1790632396411057
+            },
+            "1": {
+              "feature_ks": {
+                "cx": 0.09000000000000008,
+                "cy": 0.24,
+                "extent": 0.15000000000000002,
+                "angle_rad_mod_120deg": 0.13999999999999999
+              },
+              "mean_feature_ks": 0.15500000000000003,
+              "max_feature_ks": 0.24,
+              "multivariate_energy_distance": 0.06979331490195229,
+              "correlation_matrix_mae_vs_heldout": 0.18450774426653913
+            },
+            "2": {
+              "feature_ks": {
+                "cx": 0.14,
+                "cy": 0.12,
+                "extent": 0.12
+              },
+              "mean_feature_ks": 0.12666666666666668,
+              "max_feature_ks": 0.14,
+              "multivariate_energy_distance": 0.05039147879057948,
+              "correlation_matrix_mae_vs_heldout": 0.1157539044583656
+            },
+            "3": {
+              "feature_ks": {
+                "cx": 0.27,
+                "cy": 0.15999999999999998,
+                "extent": 0.14999999999999997,
+                "angle_rad_mod_120deg": 0.19
+              },
+              "mean_feature_ks": 0.1925,
+              "max_feature_ks": 0.27,
+              "multivariate_energy_distance": 0.10354566954163369,
+              "correlation_matrix_mae_vs_heldout": 0.17272520426590182
+            },
+            "4": {
+              "feature_ks": {
+                "cx": 0.10999999999999999,
+                "cy": 0.18999999999999995,
+                "extent": 0.13
+              },
+              "mean_feature_ks": 0.1433333333333333,
+              "max_feature_ks": 0.18999999999999995,
+              "multivariate_energy_distance": 0.05927180298292578,
+              "correlation_matrix_mae_vs_heldout": 0.07227881211936954
+            },
+            "5": {
+              "feature_ks": {
+                "cx": 0.10999999999999999,
+                "cy": 0.10999999999999999,
+                "extent": 0.03999999999999998,
+                "angle_rad_mod_120deg": 0.21000000000000008
+              },
+              "mean_feature_ks": 0.11750000000000001,
+              "max_feature_ks": 0.21000000000000008,
+              "multivariate_energy_distance": 0.047916300453870964,
+              "correlation_matrix_mae_vs_heldout": 0.08465491977697563
+            }
+          }
+        }
+      }
+    },
+    {
+      "checkpoint": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\extended_250_steps\\l34_structured_geometry_diffusion\\seed123\\checkpoint_final.pt",
+      "checkpoint_sha256": "b2bf27d630d2b421799eac653968fa5ccaa1a442f65b3f339013c3626f51592b",
+      "checkpoint_config_sha256": "f37b769c6d14f74f35b27472623c8fbd3e56875788f2dd3147d4910a063a71f2",
+      "checkpoint_seed": 123,
+      "methods": {
+        "raw_l34": {
+          "mean_feature_ks": 0.19666666666666666,
+          "mean_class_max_feature_ks": 0.24999999999999997,
+          "mean_multivariate_energy_distance": 0.10117677100478051,
+          "mean_correlation_matrix_mae_vs_heldout": 0.23169347407734242,
+          "per_class": {
+            "0": {
+              "feature_ks": {
+                "cx": 0.18999999999999995,
+                "cy": 0.1499999999999999,
+                "extent": 0.16
+              },
+              "mean_feature_ks": 0.16666666666666663,
+              "max_feature_ks": 0.18999999999999995,
+              "multivariate_energy_distance": 0.06252386310820657,
+              "correlation_matrix_mae_vs_heldout": 0.3641358221781949
+            },
+            "1": {
+              "feature_ks": {
+                "cx": 0.15000000000000002,
+                "cy": 0.14,
+                "extent": 0.27,
+                "angle_rad_mod_120deg": 0.22000000000000003
+              },
+              "mean_feature_ks": 0.195,
+              "max_feature_ks": 0.27,
+              "multivariate_energy_distance": 0.15924886671454996,
+              "correlation_matrix_mae_vs_heldout": 0.21516693603574413
+            },
+            "2": {
+              "feature_ks": {
+                "cx": 0.21,
+                "cy": 0.22999999999999998,
+                "extent": 0.15
+              },
+              "mean_feature_ks": 0.19666666666666666,
+              "max_feature_ks": 0.22999999999999998,
+              "multivariate_energy_distance": 0.09432737104000388,
+              "correlation_matrix_mae_vs_heldout": 0.19738796317047846
+            },
+            "3": {
+              "feature_ks": {
+                "cx": 0.31999999999999995,
+                "cy": 0.21999999999999997,
+                "extent": 0.19999999999999996,
+                "angle_rad_mod_120deg": 0.20000000000000007
+              },
+              "mean_feature_ks": 0.235,
+              "max_feature_ks": 0.31999999999999995,
+              "multivariate_energy_distance": 0.14560361111137432,
+              "correlation_matrix_mae_vs_heldout": 0.15782401513308292
+            },
+            "4": {
+              "feature_ks": {
+                "cx": 0.18000000000000005,
+                "cy": 0.24,
+                "extent": 0.14
+              },
+              "mean_feature_ks": 0.18666666666666668,
+              "max_feature_ks": 0.24,
+              "multivariate_energy_distance": 0.06144859471147135,
+              "correlation_matrix_mae_vs_heldout": 0.21909347627322454
+            },
+            "5": {
+              "feature_ks": {
+                "cx": 0.19,
+                "cy": 0.14,
+                "extent": 0.25,
+                "angle_rad_mod_120deg": 0.22000000000000003
+              },
+              "mean_feature_ks": 0.2,
+              "max_feature_ks": 0.25,
+              "multivariate_energy_distance": 0.08390831934307696,
+              "correlation_matrix_mae_vs_heldout": 0.23655263167332952
+            }
+          }
+        },
+        "marginal_calibrated": {
+          "mean_feature_ks": 0.14416666666666664,
+          "mean_class_max_feature_ks": 0.205,
+          "mean_multivariate_energy_distance": 0.06725718832058507,
+          "mean_correlation_matrix_mae_vs_heldout": 0.21598687329951186,
+          "per_class": {
+            "0": {
+              "feature_ks": {
+                "cx": 0.10999999999999999,
+                "cy": 0.07000000000000006,
+                "extent": 0.1
+              },
+              "mean_feature_ks": 0.09333333333333334,
+              "max_feature_ks": 0.10999999999999999,
+              "multivariate_energy_distance": 0.044683844095504854,
+              "correlation_matrix_mae_vs_heldout": 0.36856010207281414
+            },
+            "1": {
+              "feature_ks": {
+                "cx": 0.10000000000000003,
+                "cy": 0.10999999999999999,
+                "extent": 0.15000000000000002,
+                "angle_rad_mod_120deg": 0.14
+              },
+              "mean_feature_ks": 0.125,
+              "max_feature_ks": 0.15000000000000002,
+              "multivariate_energy_distance": 0.046354486811772455,
+              "correlation_matrix_mae_vs_heldout": 0.2201948375769563
+            },
+            "2": {
+              "feature_ks": {
+                "cx": 0.06999999999999995,
+                "cy": 0.17,
+                "extent": 0.15
+              },
+              "mean_feature_ks": 0.12999999999999998,
+              "max_feature_ks": 0.17,
+              "multivariate_energy_distance": 0.04518970992582605,
+              "correlation_matrix_mae_vs_heldout": 0.16806987827423145
+            },
+            "3": {
+              "feature_ks": {
+                "cx": 0.3,
+                "cy": 0.21000000000000002,
+                "extent": 0.11999999999999994,
+                "angle_rad_mod_120deg": 0.20999999999999996
+              },
+              "mean_feature_ks": 0.20999999999999996,
+              "max_feature_ks": 0.3,
+              "multivariate_energy_distance": 0.12501137330019363,
+              "correlation_matrix_mae_vs_heldout": 0.1747279096538934
+            },
+            "4": {
+              "feature_ks": {
+                "cx": 0.09999999999999998,
+                "cy": 0.24,
+                "extent": 0.13
+              },
+              "mean_feature_ks": 0.15666666666666665,
+              "max_feature_ks": 0.24,
+              "multivariate_energy_distance": 0.06511547904384907,
+              "correlation_matrix_mae_vs_heldout": 0.20884904125262693
+            },
+            "5": {
+              "feature_ks": {
+                "cx": 0.14,
+                "cy": 0.1499999999999999,
+                "extent": 0.050000000000000044,
+                "angle_rad_mod_120deg": 0.26
+              },
+              "mean_feature_ks": 0.15,
+              "max_feature_ks": 0.26,
+              "multivariate_energy_distance": 0.07718823674636432,
+              "correlation_matrix_mae_vs_heldout": 0.15551947096654903
+            }
+          }
+        },
+        "factorized_train_prior": {
+          "mean_feature_ks": 0.1293055555555556,
+          "mean_class_max_feature_ks": 0.17333333333333334,
+          "mean_multivariate_energy_distance": 0.04611754003625294,
+          "mean_correlation_matrix_mae_vs_heldout": 0.15125076038830432,
+          "per_class": {
+            "0": {
+              "feature_ks": {
+                "cx": 0.08999999999999997,
+                "cy": 0.15000000000000002,
+                "extent": 0.15
+              },
+              "mean_feature_ks": 0.13,
+              "max_feature_ks": 0.15000000000000002,
+              "multivariate_energy_distance": 0.03985528569282826,
+              "correlation_matrix_mae_vs_heldout": 0.2579456276017747
+            },
+            "1": {
+              "feature_ks": {
+                "cx": 0.09999999999999998,
+                "cy": 0.14,
+                "extent": 0.16000000000000003,
+                "angle_rad_mod_120deg": 0.16000000000000003
+              },
+              "mean_feature_ks": 0.14,
+              "max_feature_ks": 0.16000000000000003,
+              "multivariate_energy_distance": 0.04862867847637564,
+              "correlation_matrix_mae_vs_heldout": 0.15417987376575376
+            },
+            "2": {
+              "feature_ks": {
+                "cx": 0.11000000000000004,
+                "cy": 0.14999999999999997,
+                "extent": 0.07000000000000006
+              },
+              "mean_feature_ks": 0.11000000000000003,
+              "max_feature_ks": 0.14999999999999997,
+              "multivariate_energy_distance": 0.034409999364304555,
+              "correlation_matrix_mae_vs_heldout": 0.10017478811736481
+            },
+            "3": {
+              "feature_ks": {
+                "cx": 0.23000000000000004,
+                "cy": 0.13999999999999996,
+                "extent": 0.10000000000000009,
+                "angle_rad_mod_120deg": 0.16000000000000003
+              },
+              "mean_feature_ks": 0.15750000000000003,
+              "max_feature_ks": 0.23000000000000004,
+              "multivariate_energy_distance": 0.07358647136637408,
+              "correlation_matrix_mae_vs_heldout": 0.1409515446005138
+            },
+            "4": {
+              "feature_ks": {
+                "cx": 0.09999999999999998,
+                "cy": 0.17000000000000004,
+                "extent": 0.040000000000000036
+              },
+              "mean_feature_ks": 0.10333333333333335,
+              "max_feature_ks": 0.17000000000000004,
+              "multivariate_energy_distance": 0.03002821276767742,
+              "correlation_matrix_mae_vs_heldout": 0.15771613630081935
+            },
+            "5": {
+              "feature_ks": {
+                "cx": 0.16000000000000003,
+                "cy": 0.10999999999999999,
+                "extent": 0.08999999999999997,
+                "angle_rad_mod_120deg": 0.18
+              },
+              "mean_feature_ks": 0.135,
+              "max_feature_ks": 0.18,
+              "multivariate_energy_distance": 0.050196592549957675,
+              "correlation_matrix_mae_vs_heldout": 0.09653659194359959
+            }
+          }
+        }
+      }
+    },
+    {
+      "checkpoint": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\extended_250_steps\\l34_structured_geometry_diffusion\\seed777\\checkpoint_final.pt",
+      "checkpoint_sha256": "83d216b3cbdc1bbd7f6d6526591479d8c222bbf770715d1612fc7b06a3ee2aea",
+      "checkpoint_config_sha256": "ae10a9db0ea57c4bd07ca1c09fe95ed8c5b8e67c43e30fff13f99da7af9dcecd",
+      "checkpoint_seed": 777,
+      "methods": {
+        "raw_l34": {
+          "mean_feature_ks": 0.19875,
+          "mean_class_max_feature_ks": 0.2833333333333333,
+          "mean_multivariate_energy_distance": 0.09123380146643345,
+          "mean_correlation_matrix_mae_vs_heldout": 0.21528076885520608,
+          "per_class": {
+            "0": {
+              "feature_ks": {
+                "cx": 0.14,
+                "cy": 0.2,
+                "extent": 0.17
+              },
+              "mean_feature_ks": 0.17,
+              "max_feature_ks": 0.2,
+              "multivariate_energy_distance": 0.052714877002111526,
+              "correlation_matrix_mae_vs_heldout": 0.40069296830219603
+            },
+            "1": {
+              "feature_ks": {
+                "cx": 0.19000000000000006,
+                "cy": 0.24,
+                "extent": 0.31000000000000005,
+                "angle_rad_mod_120deg": 0.16000000000000003
+              },
+              "mean_feature_ks": 0.22500000000000003,
+              "max_feature_ks": 0.31000000000000005,
+              "multivariate_energy_distance": 0.09371262273949932,
+              "correlation_matrix_mae_vs_heldout": 0.23837489554650454
+            },
+            "2": {
+              "feature_ks": {
+                "cx": 0.15999999999999998,
+                "cy": 0.15000000000000002,
+                "extent": 0.17
+              },
+              "mean_feature_ks": 0.16,
+              "max_feature_ks": 0.17,
+              "multivariate_energy_distance": 0.0715032866922638,
+              "correlation_matrix_mae_vs_heldout": 0.18978641833756135
+            },
+            "3": {
+              "feature_ks": {
+                "cx": 0.33999999999999997,
+                "cy": 0.18000000000000005,
+                "extent": 0.13,
+                "angle_rad_mod_120deg": 0.14
+              },
+              "mean_feature_ks": 0.1975,
+              "max_feature_ks": 0.33999999999999997,
+              "multivariate_energy_distance": 0.09564025253562991,
+              "correlation_matrix_mae_vs_heldout": 0.1592644839232257
+            },
+            "4": {
+              "feature_ks": {
+                "cx": 0.15999999999999998,
+                "cy": 0.41,
+                "extent": 0.12
+              },
+              "mean_feature_ks": 0.22999999999999998,
+              "max_feature_ks": 0.41,
+              "multivariate_energy_distance": 0.15313714823575464,
+              "correlation_matrix_mae_vs_heldout": 0.208111604111303
+            },
+            "5": {
+              "feature_ks": {
+                "cx": 0.15,
+                "cy": 0.23000000000000004,
+                "extent": 0.27,
+                "angle_rad_mod_120deg": 0.19
+              },
+              "mean_feature_ks": 0.21000000000000002,
+              "max_feature_ks": 0.27,
+              "multivariate_energy_distance": 0.08069462159334151,
+              "correlation_matrix_mae_vs_heldout": 0.0954542429104458
+            }
+          }
+        },
+        "marginal_calibrated": {
+          "mean_feature_ks": 0.15527777777777776,
+          "mean_class_max_feature_ks": 0.225,
+          "mean_multivariate_energy_distance": 0.07363837138539586,
+          "mean_correlation_matrix_mae_vs_heldout": 0.20697089346465525,
+          "per_class": {
+            "0": {
+              "feature_ks": {
+                "cx": 0.08999999999999997,
+                "cy": 0.12,
+                "extent": 0.15000000000000002
+              },
+              "mean_feature_ks": 0.12,
+              "max_feature_ks": 0.15000000000000002,
+              "multivariate_energy_distance": 0.055949144932631034,
+              "correlation_matrix_mae_vs_heldout": 0.3984635010217184
+            },
+            "1": {
+              "feature_ks": {
+                "cx": 0.15999999999999998,
+                "cy": 0.17999999999999994,
+                "extent": 0.17000000000000004,
+                "angle_rad_mod_120deg": 0.16000000000000003
+              },
+              "mean_feature_ks": 0.1675,
+              "max_feature_ks": 0.17999999999999994,
+              "multivariate_energy_distance": 0.06834678780011716,
+              "correlation_matrix_mae_vs_heldout": 0.23012955409965316
+            },
+            "2": {
+              "feature_ks": {
+                "cx": 0.10999999999999999,
+                "cy": 0.13,
+                "extent": 0.09000000000000002
+              },
+              "mean_feature_ks": 0.11,
+              "max_feature_ks": 0.13,
+              "multivariate_energy_distance": 0.05332543682569524,
+              "correlation_matrix_mae_vs_heldout": 0.18886614489964482
+            },
+            "3": {
+              "feature_ks": {
+                "cx": 0.32,
+                "cy": 0.14,
+                "extent": 0.10999999999999999,
+                "angle_rad_mod_120deg": 0.13
+              },
+              "mean_feature_ks": 0.17500000000000002,
+              "max_feature_ks": 0.32,
+              "multivariate_energy_distance": 0.10234852206025313,
+              "correlation_matrix_mae_vs_heldout": 0.12945990929765783
+            },
+            "4": {
+              "feature_ks": {
+                "cx": 0.13,
+                "cy": 0.33999999999999997,
+                "extent": 0.12
+              },
+              "mean_feature_ks": 0.19666666666666666,
+              "max_feature_ks": 0.33999999999999997,
+              "multivariate_energy_distance": 0.08473478631294373,
+              "correlation_matrix_mae_vs_heldout": 0.1982037672729939
+            },
+            "5": {
+              "feature_ks": {
+                "cx": 0.09000000000000002,
+                "cy": 0.19,
+                "extent": 0.14,
+                "angle_rad_mod_120deg": 0.23000000000000004
+              },
+              "mean_feature_ks": 0.16250000000000003,
+              "max_feature_ks": 0.23000000000000004,
+              "multivariate_energy_distance": 0.07712555038073488,
+              "correlation_matrix_mae_vs_heldout": 0.09670248419626339
+            }
+          }
+        },
+        "factorized_train_prior": {
+          "mean_feature_ks": 0.1359722222222222,
+          "mean_class_max_feature_ks": 0.18666666666666668,
+          "mean_multivariate_energy_distance": 0.05260970246454929,
+          "mean_correlation_matrix_mae_vs_heldout": 0.13332393046115185,
+          "per_class": {
+            "0": {
+              "feature_ks": {
+                "cx": 0.16000000000000003,
+                "cy": 0.13,
+                "extent": 0.09000000000000008
+              },
+              "mean_feature_ks": 0.1266666666666667,
+              "max_feature_ks": 0.16000000000000003,
+              "multivariate_energy_distance": 0.033205024447553244,
+              "correlation_matrix_mae_vs_heldout": 0.1597280518569046
+            },
+            "1": {
+              "feature_ks": {
+                "cx": 0.14999999999999997,
+                "cy": 0.17999999999999994,
+                "extent": 0.07,
+                "angle_rad_mod_120deg": 0.22000000000000003
+              },
+              "mean_feature_ks": 0.15499999999999997,
+              "max_feature_ks": 0.22000000000000003,
+              "multivariate_energy_distance": 0.06530227600362837,
+              "correlation_matrix_mae_vs_heldout": 0.1382312708941198
+            },
+            "2": {
+              "feature_ks": {
+                "cx": 0.12,
+                "cy": 0.16000000000000003,
+                "extent": 0.09
+              },
+              "mean_feature_ks": 0.12333333333333334,
+              "max_feature_ks": 0.16000000000000003,
+              "multivariate_energy_distance": 0.04404169598104324,
+              "correlation_matrix_mae_vs_heldout": 0.08412614530381135
+            },
+            "3": {
+              "feature_ks": {
+                "cx": 0.16000000000000003,
+                "cy": 0.13999999999999996,
+                "extent": 0.13,
+                "angle_rad_mod_120deg": 0.12
+              },
+              "mean_feature_ks": 0.1375,
+              "max_feature_ks": 0.16000000000000003,
+              "multivariate_energy_distance": 0.0555396090921656,
+              "correlation_matrix_mae_vs_heldout": 0.12054998651718565
+            },
+            "4": {
+              "feature_ks": {
+                "cx": 0.12,
+                "cy": 0.19,
+                "extent": 0.09
+              },
+              "mean_feature_ks": 0.13333333333333333,
+              "max_feature_ks": 0.19,
+              "multivariate_energy_distance": 0.0506545016549651,
+              "correlation_matrix_mae_vs_heldout": 0.18646237554107126
+            },
+            "5": {
+              "feature_ks": {
+                "cx": 0.13999999999999996,
+                "cy": 0.1399999999999999,
+                "extent": 0.04999999999999999,
+                "angle_rad_mod_120deg": 0.22999999999999998
+              },
+              "mean_feature_ks": 0.13999999999999996,
+              "max_feature_ks": 0.22999999999999998,
+              "multivariate_energy_distance": 0.06691510760794017,
+              "correlation_matrix_mae_vs_heldout": 0.11084575265381838
+            }
+          }
+        }
+      }
+    }
+  ],
+  "three_seed_aggregate": {
+    "raw_l34": {
+      "mean_feature_ks": 0.20027777777777775,
+      "mean_class_max_feature_ks": 0.26999999999999996,
+      "mean_multivariate_energy_distance": 0.09375467129948063,
+      "mean_correlation_matrix_mae_vs_heldout": 0.21530833122299828
+    },
+    "marginal_calibrated": {
+      "mean_feature_ks": 0.15277777777777776,
+      "mean_class_max_feature_ks": 0.2172222222222222,
+      "mean_multivariate_energy_distance": 0.07275126489193677,
+      "mean_correlation_matrix_mae_vs_heldout": 0.20742757040789658
+    },
+    "factorized_train_prior": {
+      "mean_feature_ks": 0.13574074074074075,
+      "mean_class_max_feature_ks": 0.18833333333333332,
+      "mean_multivariate_energy_distance": 0.054174023335841974,
+      "mean_correlation_matrix_mae_vs_heldout": 0.13980177609027747,
+      "beats_marginal_calibration_on_joint_energy_all_seeds": true
+    }
+  },
+  "elapsed_seconds": 2.5240445000235923,
+  "comparison_grid": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\extended_250_steps\\l34_structured_geometry_diffusion\\l37_joint_geometry\\L37_joint_geometry_comparison.png",
+  "interpretation_note": "All visible outputs use the canonical renderer. Distribution metrics evaluate geometry only; the factorized prior is a train-fitted statistical sampler, not a neural generator."
+}

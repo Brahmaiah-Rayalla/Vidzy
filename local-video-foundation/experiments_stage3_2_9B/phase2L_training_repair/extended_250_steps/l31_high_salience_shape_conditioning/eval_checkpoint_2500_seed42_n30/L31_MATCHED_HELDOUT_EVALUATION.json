@@ -1,0 +1,153 @@
+{
+  "task": "L31 high-salience shape/color pilot, matched Stage3 baseline evaluation",
+  "evaluation_seed": 42,
+  "samples_per_class": 30,
+  "classes": [
+    {
+      "class_id": 0,
+      "color": "red",
+      "shape": "circle"
+    },
+    {
+      "class_id": 1,
+      "color": "red",
+      "shape": "triangle"
+    },
+    {
+      "class_id": 2,
+      "color": "blue",
+      "shape": "circle"
+    },
+    {
+      "class_id": 3,
+      "color": "blue",
+      "shape": "triangle"
+    },
+    {
+      "class_id": 4,
+      "color": "yellow",
+      "shape": "circle"
+    },
+    {
+      "class_id": 5,
+      "color": "yellow",
+      "shape": "triangle"
+    }
+  ],
+  "validation_v_noise_mse": {
+    "stage3_l27_migrated_baseline": {
+      "mean": 0.002055294441524893,
+      "per_class": {
+        "0": 0.0016313690389506519,
+        "1": 0.0030932111595757305,
+        "2": 0.0015551836148370057,
+        "3": 0.0026988578867167233,
+        "4": 0.0013671572797466069,
+        "5": 0.0019859876693226397
+      }
+    },
+    "l31_step_2500": {
+      "mean": 0.002099544338416308,
+      "per_class": {
+        "0": 0.0020160741289146243,
+        "1": 0.0023916542599909008,
+        "2": 0.001845175677444786,
+        "3": 0.002290915350895375,
+        "4": 0.0018954344769008457,
+        "5": 0.0021580121363513173
+      }
+    }
+  },
+  "generation": {
+    "stage3_l27_migrated_baseline": {
+      "total": 180,
+      "joint_correct": 47,
+      "color_correct": 90,
+      "shape_correct": 86,
+      "per_class": {
+        "0": {
+          "correct": 6,
+          "total": 30
+        },
+        "1": {
+          "correct": 1,
+          "total": 30
+        },
+        "2": {
+          "correct": 10,
+          "total": 30
+        },
+        "3": {
+          "correct": 3,
+          "total": 30
+        },
+        "4": {
+          "correct": 19,
+          "total": 30
+        },
+        "5": {
+          "correct": 8,
+          "total": 30
+        }
+      },
+      "joint_accuracy": 0.2611111111111111,
+      "color_accuracy": 0.5,
+      "shape_accuracy": 0.4777777777777778,
+      "per_class_accuracy": {
+        "0": 0.2,
+        "1": 0.03333333333333333,
+        "2": 0.3333333333333333,
+        "3": 0.1,
+        "4": 0.6333333333333333,
+        "5": 0.26666666666666666
+      }
+    },
+    "l31_step_2500": {
+      "total": 180,
+      "joint_correct": 47,
+      "color_correct": 104,
+      "shape_correct": 80,
+      "per_class": {
+        "0": {
+          "correct": 5,
+          "total": 30
+        },
+        "1": {
+          "correct": 0,
+          "total": 30
+        },
+        "2": {
+          "correct": 18,
+          "total": 30
+        },
+        "3": {
+          "correct": 0,
+          "total": 30
+        },
+        "4": {
+          "correct": 20,
+          "total": 30
+        },
+        "5": {
+          "correct": 4,
+          "total": 30
+        }
+      },
+      "joint_accuracy": 0.2611111111111111,
+      "color_accuracy": 0.5777777777777777,
+      "shape_accuracy": 0.4444444444444444,
+      "per_class_accuracy": {
+        "0": 0.16666666666666666,
+        "1": 0.0,
+        "2": 0.6,
+        "3": 0.0,
+        "4": 0.6666666666666666,
+        "5": 0.13333333333333333
+      }
+    }
+  },
+  "generation_elapsed_seconds": 944.37,
+  "training_checkpoint": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\extended_250_steps\\l31_high_salience_shape_conditioning\\ckpt_2500.pt",
+  "training_checkpoint_step": 2500,
+  "cpu_threads": 8
+}

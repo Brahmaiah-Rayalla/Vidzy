@@ -29,13 +29,30 @@ def set_seed(seed: int):
     torch.backends.cudnn.benchmark = False
 
 
-def get_device() -> torch.device:
+def get_device(requested: str = "auto") -> torch.device:
     """
-    Automatically select the best available device.
+    Select a requested device or automatically choose the best available one.
 
     Returns:
         torch.device: The selected device
     """
+    if requested == "cpu":
+        print("Using CPU device (explicitly requested)")
+        return torch.device("cpu")
+    if requested == "cuda":
+        if not torch.cuda.is_available():
+            raise RuntimeError("CUDA was requested, but CUDA is not available")
+        device = torch.device("cuda")
+        print(f"Using CUDA device: {torch.cuda.get_device_name(0)}")
+        return device
+    if requested == "mps":
+        if not (hasattr(torch.backends, "mps") and torch.backends.mps.is_available()):
+            raise RuntimeError("MPS was requested, but MPS is not available")
+        print("Using MPS (Apple Silicon) device")
+        return torch.device("mps")
+    if requested != "auto":
+        raise ValueError("requested device must be one of: auto, cpu, cuda, mps")
+
     if torch.cuda.is_available():
         device = torch.device('cuda')
         print(f"Using CUDA device: {torch.cuda.get_device_name(0)}")

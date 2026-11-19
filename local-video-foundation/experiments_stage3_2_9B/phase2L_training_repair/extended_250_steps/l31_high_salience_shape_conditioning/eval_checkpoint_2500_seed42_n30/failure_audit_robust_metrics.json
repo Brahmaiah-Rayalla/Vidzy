@@ -1,0 +1,230 @@
+{
+  "detector": {
+    "method": "RGB Gaussian blur 1.2px; nearest palette-vs-background mask; largest 8-connected component; radial 3-fold shape score",
+    "clean_heldout_calibration": {
+      "total": 300,
+      "correct": 300,
+      "accuracy": 1.0
+    },
+    "additive_rgb_noise_calibration": {
+      "0.05": {
+        "accuracy": 1.0,
+        "total": 300
+      },
+      "0.1": {
+        "accuracy": 1.0,
+        "total": 300
+      },
+      "0.15": {
+        "accuracy": 1.0,
+        "total": 300
+      },
+      "0.2": {
+        "accuracy": 1.0,
+        "total": 300
+      }
+    }
+  },
+  "training_data_analytic_area": {
+    "circle": {
+      "mean_analytic_area_px2": 470.54251166692336,
+      "n": 600
+    },
+    "triangle": {
+      "mean_analytic_area_px2": 235.96088995429062,
+      "n": 600
+    }
+  },
+  "generated_outputs_reclassified": {
+    "stage3_l27_migrated_baseline": {
+      "samples": 180,
+      "joint_accuracy": 0.28888888888888886,
+      "color_accuracy": 0.6277777777777778,
+      "shape_accuracy": 0.4722222222222222,
+      "per_class_joint_accuracy": {
+        "0": 0.43333333333333335,
+        "1": 0.13333333333333333,
+        "2": 0.26666666666666666,
+        "3": 0.3,
+        "4": 0.4666666666666667,
+        "5": 0.13333333333333333
+      },
+      "confusion_matrix": [
+        [
+          13,
+          5,
+          0,
+          1,
+          4,
+          4
+        ],
+        [
+          14,
+          4,
+          0,
+          6,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          8,
+          7,
+          6,
+          2
+        ],
+        [
+          0,
+          0,
+          13,
+          9,
+          0,
+          0
+        ],
+        [
+          1,
+          2,
+          0,
+          2,
+          14,
+          8
+        ],
+        [
+          0,
+          2,
+          1,
+          2,
+          14,
+          4
+        ]
+      ]
+    },
+    "l31_step_2500": {
+      "samples": 180,
+      "joint_accuracy": 0.3333333333333333,
+      "color_accuracy": 0.6777777777777778,
+      "shape_accuracy": 0.5166666666666667,
+      "per_class_joint_accuracy": {
+        "0": 0.0,
+        "1": 0.36666666666666664,
+        "2": 0.26666666666666666,
+        "3": 0.6666666666666666,
+        "4": 0.16666666666666666,
+        "5": 0.5333333333333333
+      },
+      "confusion_matrix": [
+        [
+          0,
+          15,
+          0,
+          11,
+          1,
+          2
+        ],
+        [
+          0,
+          11,
+          1,
+          11,
+          0,
+          6
+        ],
+        [
+          0,
+          0,
+          8,
+          21,
+          0,
+          0
+        ],
+        [
+          0,
+          5,
+          1,
+          20,
+          0,
+          3
+        ],
+        [
+          0,
+          4,
+          0,
+          5,
+          5,
+          16
+        ],
+        [
+          0,
+          3,
+          0,
+          3,
+          8,
+          16
+        ]
+      ]
+    }
+  },
+  "paired_comparison": {
+    "joint_correct": {
+      "baseline_accuracy": 0.28888888888888886,
+      "candidate_accuracy": 0.3333333333333333,
+      "paired_delta": 0.044444444444444446,
+      "paired_improvements": 46,
+      "paired_regressions": 38,
+      "bootstrap_95pct_interval": [
+        -0.06111111111111111,
+        0.14444444444444443
+      ]
+    },
+    "shape_correct": {
+      "baseline_accuracy": 0.4722222222222222,
+      "candidate_accuracy": 0.5166666666666667,
+      "paired_delta": 0.044444444444444446,
+      "paired_improvements": 55,
+      "paired_regressions": 47,
+      "bootstrap_95pct_interval": [
+        -0.06666666666666667,
+        0.15555555555555556
+      ]
+    },
+    "color_correct": {
+      "baseline_accuracy": 0.6277777777777778,
+      "candidate_accuracy": 0.6777777777777778,
+      "paired_delta": 0.05,
+      "paired_improvements": 35,
+      "paired_regressions": 26,
+      "bootstrap_95pct_interval": [
+        -0.03333333333333333,
+        0.13333333333333333
+      ]
+    }
+  },
+  "per_class_joint_comparison": {
+    "0": {
+      "baseline_joint_accuracy": 0.43333333333333335,
+      "candidate_joint_accuracy": 0.0
+    },
+    "1": {
+      "baseline_joint_accuracy": 0.13333333333333333,
+      "candidate_joint_accuracy": 0.36666666666666664
+    },
+    "2": {
+      "baseline_joint_accuracy": 0.26666666666666666,
+      "candidate_joint_accuracy": 0.26666666666666666
+    },
+    "3": {
+      "baseline_joint_accuracy": 0.3,
+      "candidate_joint_accuracy": 0.6666666666666666
+    },
+    "4": {
+      "baseline_joint_accuracy": 0.4666666666666667,
+      "candidate_joint_accuracy": 0.16666666666666666
+    },
+    "5": {
+      "baseline_joint_accuracy": 0.13333333333333333,
+      "candidate_joint_accuracy": 0.5333333333333333
+    }
+  },
+  "limitations": "Synthetic additive-noise calibration is not identical to diffusion artifacts; read scores together with the saved image grid."
+}

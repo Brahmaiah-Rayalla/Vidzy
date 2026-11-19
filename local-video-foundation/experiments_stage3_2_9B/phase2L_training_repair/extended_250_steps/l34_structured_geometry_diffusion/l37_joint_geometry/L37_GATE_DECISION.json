@@ -1,0 +1,36 @@
+{
+  "experiment": "L37 joint geometry evaluation: raw diffusion vs marginal vs factorized train prior",
+  "decision": "pass_optional_factorized_renderer_sampler",
+  "raw_rgb_diffusion_gate_passed": false,
+  "neural_checkpoint_weights_changed": false,
+  "fit_data": "L32 training split only; held-out split used only for evaluation",
+  "metrics": {
+    "L34_model_seeds": [42, 123, 777],
+    "samples_per_class_per_seed": 100,
+    "mean_feature_ks": {
+      "raw_l34": 0.2003,
+      "marginal_calibrated": 0.1528,
+      "factorized_train_prior": 0.1357
+    },
+    "mean_joint_energy_distance": {
+      "raw_l34": 0.09375,
+      "marginal_calibrated": 0.07275,
+      "factorized_train_prior": 0.05417
+    },
+    "mean_correlation_matrix_mae_vs_heldout": {
+      "raw_l34": 0.2153,
+      "marginal_calibrated": 0.2074,
+      "factorized_train_prior": 0.1398
+    },
+    "factorized_prior_beats_marginal_calibration_on_joint_energy_all_three_seeds": true,
+    "six_second_collision_render_elapsed_seconds": 0.3162,
+    "collision_validation_cases": 12,
+    "all_collision_cases_correct_and_uncropped": true
+  },
+  "limitations": [
+    "The factorized prior samples empirical training marginals and is not a neural generator.",
+    "It is suited to this procedural independent-geometry curriculum and should not be assumed to generalize to correlated or natural geometry.",
+    "This result concerns structured geometry plus a CPU renderer; raw RGB diffusion remains gated separately."
+  ],
+  "deployment": "Available in sample_geometry_collision.py as --geometry-sampler factorized_train_prior. Raw L34 diffusion remains the default learned route."
+}

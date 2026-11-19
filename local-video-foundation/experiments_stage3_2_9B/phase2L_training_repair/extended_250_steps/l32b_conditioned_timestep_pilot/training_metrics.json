@@ -1,0 +1,59 @@
+{
+  "completed_steps": 400,
+  "elapsed_train_seconds": 280.403,
+  "seed": 42,
+  "threads": 4,
+  "history": [
+    {
+      "step": 1,
+      "loss": 0.07002009451389313,
+      "epsilon_loss": 0.05823821946978569,
+      "foreground_epsilon_mse": 0.10292020440101624,
+      "background_epsilon_mse": 0.04062185436487198,
+      "low_noise_rgb_l1": 0.013368559069931507,
+      "low_noise_silhouette_bce": 0.37044820189476013,
+      "elapsed_seconds": 1.14
+    },
+    {
+      "step": 100,
+      "loss": 0.042454347014427185,
+      "epsilon_loss": 0.025657493621110916,
+      "foreground_epsilon_mse": 0.042801808565855026,
+      "background_epsilon_mse": 0.019139615818858147,
+      "low_noise_rgb_l1": 0.04399818927049637,
+      "low_noise_silhouette_bce": 0.4865647852420807,
+      "elapsed_seconds": 100.03
+    },
+    {
+      "step": 200,
+      "loss": 0.038491882383823395,
+      "epsilon_loss": 0.0180982518941164,
+      "foreground_epsilon_mse": 0.028646832332015038,
+      "background_epsilon_mse": 0.014783966355025768,
+      "low_noise_rgb_l1": 0.05994478240609169,
+      "low_noise_silhouette_bce": 0.579879641532898,
+      "elapsed_seconds": 183.1
+    },
+    {
+      "step": 300,
+      "loss": 0.06825563311576843,
+      "epsilon_loss": 0.0490339957177639,
+      "foreground_epsilon_mse": 0.10155238956212997,
+      "background_epsilon_mse": 0.030757678672671318,
+      "low_noise_rgb_l1": 0.053813617676496506,
+      "low_noise_silhouette_bce": 0.5510319471359253,
+      "elapsed_seconds": 231.64
+    },
+    {
+      "step": 400,
+      "loss": 0.07625741511583328,
+      "epsilon_loss": 0.06017123535275459,
+      "foreground_epsilon_mse": 0.11569347232580185,
+      "background_epsilon_mse": 0.03912753239274025,
+      "low_noise_rgb_l1": 0.03856872022151947,
+      "low_noise_silhouette_bce": 0.47192469239234924,
+      "elapsed_seconds": 280.4
+    }
+  ],
+  "checkpoint": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\extended_250_steps\\l32b_conditioned_timestep_pilot\\checkpoint_step_00400.pt"
+}

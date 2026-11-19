@@ -1,0 +1,39 @@
+{
+  "experiment": "L31 high-salience shape/color conditioning pilot",
+  "status": "completed_at_2500_steps_gate_failed_not_promoted",
+  "training_config": {
+    "seed_recorded": 42,
+    "steps": 2500,
+    "batch_size": 4,
+    "learning_rate": 0.0001,
+    "weight_decay": 0.01,
+    "cpu_threads": 8,
+    "train_examples": 1200,
+    "validation_examples": 300,
+    "class_balance": "200 train / 50 validation per color-shape class"
+  },
+  "checkpoints": {
+    "step_1000": {
+      "path": "ckpt_1000.pt",
+      "saved_at_local": "2026-11-17T10:55:18",
+      "sha256": "4605dd1751314b60fc0d03d6008015900a5c3702f1c2fb980fc80d7bd3353dfa"
+    },
+    "step_2500": {
+      "path": "ckpt_2500.pt",
+      "saved_at_local": "2026-11-17T11:56:12",
+      "sha256": "62a6da5bb75b6dfca4af5c7bf0ef553df64811ee01772f717b7986652a5ce431"
+    }
+  },
+  "measured_checkpoint_interval": {
+    "from_step": 1000,
+    "to_step": 2500,
+    "seconds_including_validation_and_checkpoint_io": 3654,
+    "optimizer_steps_per_second_approx": 0.4105
+  },
+  "total_training_elapsed_seconds": null,
+  "elapsed_time_note": "The original process was interrupted after saving step 2500 and before it flushed its training-metrics file. The exact total training elapsed time was therefore not persisted; checkpoint timestamps provide the measured interval above.",
+  "reproducibility_caveat": "The executed training script recorded seed 42 but sampled diffusion timesteps with the global PyTorch RNG without explicitly seeding it. The matched evaluation noise was deterministic, but an exact training replay is not guaranteed. l31_full.py now uses an explicit seeded timestep generator and writes atomic checkpoint metrics for future runs; those changes were applied after this checkpoint and were not used to train it.",
+  "evaluation_report": "eval_checkpoint_2500_seed42_n30/L31_MATCHED_HELDOUT_EVALUATION.json",
+  "evaluation_manifest": "eval_checkpoint_2500_seed42_n30/run_manifest.json",
+  "gate_decision": "eval_checkpoint_2500_seed42_n30/gate_decision.json"
+}

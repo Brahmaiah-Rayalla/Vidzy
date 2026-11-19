@@ -22,7 +22,8 @@ class SyntheticImageDataset(Dataset):
         normalize: bool = True,
         cache_in_memory: bool = False,
         return_label: bool = False,
-        return_color_label: bool = False
+        return_color_label: bool = False,
+        return_size_label: bool = False
     ):
         """
         Initialize the dataset.
@@ -40,6 +41,7 @@ class SyntheticImageDataset(Dataset):
         self.cache_in_memory = cache_in_memory
         self.return_label = return_label
         self.return_color_label = return_color_label
+        self.return_size_label = return_size_label
         self._cache = {}
 
         # Find all image files
@@ -70,6 +72,14 @@ class SyntheticImageDataset(Dataset):
                 self.color_labels = json.load(f)
             if len(self.color_labels) != len(self.image_files):
                 raise ValueError(f"Found {len(self.color_labels)} color labels for {len(self.image_files)} images")
+        if self.return_size_label:
+            labels_path = os.path.join(data_dir, "size_labels.json")
+            if not os.path.isfile(labels_path):
+                raise ValueError(f"Size-conditioned training requires {labels_path}")
+            with open(labels_path, "r", encoding="utf-8") as f:
+                self.size_labels = json.load(f)
+            if len(self.size_labels) != len(self.image_files):
+                raise ValueError(f"Found {len(self.size_labels)} size labels for {len(self.image_files)} images")
 
         print(f"Found {len(self.image_files)} images in {data_dir}")
 
@@ -117,6 +127,8 @@ class SyntheticImageDataset(Dataset):
             labels.append(self.class_labels[idx])
         if self.return_color_label:
             labels.append(self.color_labels[idx])
+        if self.return_size_label:
+            labels.append(self.size_labels[idx])
         if not labels:
             return image_tensor
         return (image_tensor, *labels)

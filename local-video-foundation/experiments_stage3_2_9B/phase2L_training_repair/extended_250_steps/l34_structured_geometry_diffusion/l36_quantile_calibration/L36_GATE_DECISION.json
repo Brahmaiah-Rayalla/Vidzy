@@ -1,0 +1,31 @@
+{
+  "experiment": "L36 train-only quantile calibration of L34 geometry diffusion",
+  "decision": "pass_optional_sampling_pilot_only",
+  "neural_checkpoint_weights_changed": false,
+  "calibration_fitted_from": "L32 training split only plus independent L34 generated calibration samples; validation split used only for evaluation",
+  "metrics": {
+    "L34_model_seeds": [42, 123, 777],
+    "evaluation_samples_per_class_per_seed": 100,
+    "calibration_samples_per_class_per_seed": 512,
+    "mean_feature_ks_raw": 0.1873,
+    "mean_feature_ks_calibrated": 0.1440,
+    "mean_feature_ks_reduction_percent": 23.14,
+    "mean_worst_feature_ks_raw": 0.34,
+    "mean_worst_feature_ks_calibrated": 0.28,
+    "worst_feature_ks_raw_across_seeds": 0.40,
+    "worst_feature_ks_calibrated_across_seeds": 0.33,
+    "worst_feature_ks_by_seed_raw": [0.35, 0.27, 0.40],
+    "worst_feature_ks_by_seed_calibrated": [0.33, 0.23, 0.28],
+    "improved_worst_feature_ks_on_all_three_seeds": true,
+    "all_centers_in_training_support": true,
+    "all_sizes_in_training_support": true,
+    "evaluation_elapsed_seconds": 1.078
+  },
+  "limitations": [
+    "Some individual class-feature distances regress even though the mean and per-seed worst distance improve.",
+    "The remaining worst held-out KS distance is 0.33; calibration does not resolve all distribution mismatch.",
+    "This calibrates marginals and does not guarantee better joint geometry correlations.",
+    "No neural training was performed; a small empirical calibration table is applied after L34 sampling."
+  ],
+  "deployment": "Available as an optional sampler via --geometry-calibration. The uncalibrated L34 path remains the default until a larger held-out evaluation confirms the gains."
+}

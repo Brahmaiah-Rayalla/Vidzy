@@ -1,0 +1,59 @@
+{
+  "checkpoint": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\extended_250_steps\\l32_cpu_factorized_salience_pilot\\checkpoint_step_01200.pt",
+  "checkpoint_step": 1200,
+  "sampling_steps": 48,
+  "seed": 42,
+  "samples_per_class": 30,
+  "generation": {
+    "samples": 180,
+    "joint_accuracy": 0.4222222222222222,
+    "shape_accuracy": 0.5,
+    "color_accuracy": 0.8222222222222222,
+    "per_class_joint_accuracy": {
+      "0": 0.0,
+      "1": 0.7,
+      "2": 0.0,
+      "3": 0.9333333333333333,
+      "4": 0.1,
+      "5": 0.8
+    }
+  },
+  "paired_vs_same_checkpoint_12_step_samples": {
+    "joint_correct": {
+      "baseline_accuracy": 0.4166666666666667,
+      "candidate_accuracy": 0.4222222222222222,
+      "paired_delta": 0.005555555555555556,
+      "improved_pairs": 2,
+      "regressed_pairs": 1,
+      "bootstrap_95pct_interval": [
+        -0.011111111111111112,
+        0.027777777777777776
+      ]
+    },
+    "shape_correct": {
+      "baseline_accuracy": 0.49444444444444446,
+      "candidate_accuracy": 0.5,
+      "paired_delta": 0.005555555555555556,
+      "improved_pairs": 1,
+      "regressed_pairs": 0,
+      "bootstrap_95pct_interval": [
+        0.0,
+        0.016666666666666666
+      ]
+    },
+    "color_correct": {
+      "baseline_accuracy": 0.8055555555555556,
+      "candidate_accuracy": 0.8222222222222222,
+      "paired_delta": 0.016666666666666666,
+      "improved_pairs": 4,
+      "regressed_pairs": 1,
+      "bootstrap_95pct_interval": [
+        -0.005555555555555556,
+        0.044444444444444446
+      ]
+    }
+  },
+  "elapsed_generation_seconds": 521.19,
+  "cpu_threads": 4,
+  "note": "Same EMA checkpoint and same noise seeds as the 12-step evaluation; only inference step count changes."
+}

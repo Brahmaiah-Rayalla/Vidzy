@@ -1,0 +1,59 @@
+{
+  "completed_steps": 400,
+  "elapsed_train_seconds": 160.836,
+  "seed": 42,
+  "threads": 4,
+  "history": [
+    {
+      "step": 1,
+      "loss": 0.07002009451389313,
+      "epsilon_loss": 0.05823821946978569,
+      "foreground_epsilon_mse": 0.10292020440101624,
+      "background_epsilon_mse": 0.04062185436487198,
+      "low_noise_rgb_l1": 0.013368559069931507,
+      "low_noise_silhouette_bce": 0.37044820189476013,
+      "elapsed_seconds": 0.56
+    },
+    {
+      "step": 100,
+      "loss": 0.04246078431606293,
+      "epsilon_loss": 0.025662347674369812,
+      "foreground_epsilon_mse": 0.0428202822804451,
+      "background_epsilon_mse": 0.019142139703035355,
+      "low_noise_rgb_l1": 0.04401237890124321,
+      "low_noise_silhouette_bce": 0.48659396171569824,
+      "elapsed_seconds": 42.9
+    },
+    {
+      "step": 200,
+      "loss": 0.03859225660562515,
+      "epsilon_loss": 0.018158281221985817,
+      "foreground_epsilon_mse": 0.028784606605768204,
+      "background_epsilon_mse": 0.014817958697676659,
+      "low_noise_rgb_l1": 0.060200389474630356,
+      "low_noise_silhouette_bce": 0.5807986259460449,
+      "elapsed_seconds": 82.87
+    },
+    {
+      "step": 300,
+      "loss": 0.06809630244970322,
+      "epsilon_loss": 0.048907388001680374,
+      "foreground_epsilon_mse": 0.10164272040128708,
+      "background_epsilon_mse": 0.030541501939296722,
+      "low_noise_rgb_l1": 0.05366804450750351,
+      "low_noise_silhouette_bce": 0.5501838326454163,
+      "elapsed_seconds": 121.48
+    },
+    {
+      "step": 400,
+      "loss": 0.07598686963319778,
+      "epsilon_loss": 0.05992941930890083,
+      "foreground_epsilon_mse": 0.11507754027843475,
+      "background_epsilon_mse": 0.039035096764564514,
+      "low_noise_rgb_l1": 0.03841446712613106,
+      "low_noise_silhouette_bce": 0.47122427821159363,
+      "elapsed_seconds": 160.84
+    }
+  ],
+  "checkpoint": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\extended_250_steps\\l32c_adagn_conditioning_pilot\\checkpoint_step_00400.pt"
+}

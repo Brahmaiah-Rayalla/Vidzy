@@ -126,7 +126,8 @@ class DiffusionProcess:
         recompute_noise_after_clipping: bool = False,
         prediction_type: str = "epsilon",
         class_labels: Optional[torch.Tensor] = None,
-        color_labels: Optional[torch.Tensor] = None
+        color_labels: Optional[torch.Tensor] = None,
+        size_labels: Optional[torch.Tensor] = None
     ) -> torch.Tensor:
         """
         DDIM sampling for image generation with optional text conditioning.
@@ -164,13 +165,17 @@ class DiffusionProcess:
 
             # Predict noise at current timestep (with or without conditioning)
             t_batch = t.expand(batch_size)
-            if class_labels is not None or color_labels is not None:
+            if class_labels is not None or color_labels is not None or size_labels is not None:
                 labels = class_labels.to(device=device, dtype=torch.long) if class_labels is not None else None
                 colors = color_labels.to(device=device, dtype=torch.long) if color_labels is not None else None
-                for name, values in (("class", labels), ("color", colors)):
+                sizes = size_labels.to(device=device, dtype=torch.long) if size_labels is not None else None
+                for name, values in (("class", labels), ("color", colors), ("size", sizes)):
                     if values is not None and values.numel() != batch_size:
                         raise ValueError(f"Expected {batch_size} {name} labels, got {values.numel()}")
-                predicted_noise = model(x, t_batch, labels, colors)
+                if size_labels is not None:
+                    predicted_noise = model(x, t_batch, labels, colors, sizes)
+                else:
+                    predicted_noise = model(x, t_batch, labels, colors)
             elif text_emb is not None:
                 predicted_noise = model(x, t_batch, text_emb, text_mask)
             else:
@@ -327,7 +332,8 @@ class DiffusionProcess:
         recompute_noise_after_clipping: bool = False,
         prediction_type: str = "epsilon",
         class_labels: Optional[torch.Tensor] = None,
-        color_labels: Optional[torch.Tensor] = None
+        color_labels: Optional[torch.Tensor] = None,
+        size_labels: Optional[torch.Tensor] = None
     ) -> torch.Tensor:
         """
         Convenience method for DDIM sampling with explicit dimensions and optional text conditioning.
@@ -351,7 +357,7 @@ class DiffusionProcess:
         return self.ddim_sample(
             model, shape, num_sampling_steps, device, progress_callback,
             clip_x0, (-1.0, 1.0), text_emb, text_mask, initial_noise,
-            recompute_noise_after_clipping, prediction_type, class_labels, color_labels
+            recompute_noise_after_clipping, prediction_type, class_labels, color_labels, size_labels
         )
 
     def ddpm_sample_loop(

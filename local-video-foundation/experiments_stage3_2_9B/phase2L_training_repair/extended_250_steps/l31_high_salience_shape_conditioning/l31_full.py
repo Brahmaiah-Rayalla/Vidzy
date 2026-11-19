@@ -1,7 +1,25 @@
 """L.31: circle-vs-triangle high-salience 6-class conditioning."""
-import json, sys, time, torch, numpy as np, random, math, hashlib
+import argparse, json, sys, time, torch, numpy as np, random, math, hashlib
 from pathlib import Path
 from PIL import Image, ImageDraw
+
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--steps', type=int, default=2500,
+                    help='Pilot steps; default stops at the first held-out gate (2500)')
+parser.add_argument('--eval_per_class', type=int, default=30,
+                    help='Matched generated samples per joint class at baseline and gate')
+parser.add_argument('--seed', type=int, default=42,
+                    help='Training/evaluation seed; dataset generation remains fixed at 30000')
+parser.add_argument('--threads', type=int, default=8,
+                    help='PyTorch CPU intra-op threads')
+args = parser.parse_args()
+if args.steps < 2500:
+    parser.error('--steps must be at least 2500 to reach the first held-out gate')
+if args.eval_per_class < 1:
+    parser.error('--eval_per_class must be positive')
+if args.threads < 1:
+    parser.error('--threads must be positive')
+run_started = time.perf_counter()
 L12 = Path(r'C:\Brahma\AI\AIDirector\Vidzy\local-video-foundation\experiments_stage3_2_9B\phase2L_training_repair\extended_250_steps\l12_gate_attribution')
 L27 = Path(r'C:\Brahma\AI\AIDirector\Vidzy\local-video-foundation\experiments_stage3_2_9B\phase2L_training_repair\extended_250_steps\l27_structured_validation_text_mapping')
 sys.path.insert(0, str(L12))
@@ -9,11 +27,17 @@ import l12_common
 from l12_common import *
 from models.conditional_unet import ConditionalUNet
 import torch.optim as optim
+REPO_ROOT=Path(__file__).resolve().parents[4]
+sys.path.insert(0,str(REPO_ROOT))
+from video_foundation.utils.experiment_metadata import build_evaluation_manifest
 
 OUT = Path(r'C:\Brahma\AI\AIDirector\Vidzy\local-video-foundation\experiments_stage3_2_9B\phase2L_training_repair\extended_250_steps\l31_high_salience_shape_conditioning')
 DATA = OUT/'data'; IMG = OUT/'images'; DATA.mkdir(exist_ok=True); IMG.mkdir(exist_ok=True)
 base = l12_common.base_dir
-torch.set_num_threads(8)
+torch.set_num_threads(args.threads)
+torch.manual_seed(args.seed)
+np.random.seed(args.seed)
+random.seed(args.seed)
 ck = torch.load(base/'experiments_stage3_2_7/checkpoints/checkpoint_stage2_motion_expanded.pt', map_location='cpu')
 ac, ts = build_diffusion_schedule()
 betas=torch.linspace(0.0001,0.02,1000); abars=torch.cumprod(1-betas,0)
@@ -160,7 +184,7 @@ su.train()
 
 def val_loss():
     su.eval(); ls=[];per={c:[] for c in range(6)}
-    g2=torch.Generator().manual_seed(999)
+    g2=torch.Generator().manual_seed(args.seed + 999)
     for m in val_set:
         img,cid=load_ex(m); img=img.unsqueeze(0)
         tt=torch.tensor([500]); nz=torch.randn(1,3,64,64,generator=g2)
@@ -168,12 +192,13 @@ def val_loss():
         with torch.no_grad(): pred=fwd(su,xt,tt,[cid])
         l=float(torch.nn.functional.mse_loss(pred,nz)); ls.append(l); per[cid].append(l)
     su.train(); return float(np.mean(ls)),{k:float(np.mean(v)) for k,v in per.items()}
-def gen_eval(n_per=30,tag='',shape_fn=None):
+def gen_eval(n_per=None,tag='',shape_fn=None):
     sf=shape_fn or radial_shape; su.eval()
+    n_per = args.eval_per_class if n_per is None else n_per
     res={'joint':0,'total':0,'color_ok':0,'shape_ok':0,'per_class':{c:[0,0] for c in range(6)}}
     for cid in range(6):
         for s in range(n_per):
-            gg=torch.Generator().manual_seed(50000+cid*1000+s); xx=torch.randn(1,3,64,64,generator=gg)
+            gg=torch.Generator().manual_seed(50000+args.seed*1000000+cid*1000+s); xx=torch.randn(1,3,64,64,generator=gg)
             sub=ts[::2]
             for i in range(len(sub)-1):
                 tt,tp_=sub[i],sub[i+1]
@@ -191,18 +216,21 @@ def gen_eval(n_per=30,tag='',shape_fn=None):
     su.train(); return res
 
 mets={'val':[],'evals':{},'steps':[]}
-vl,pc=val_loss(); ge=gen_eval(30,'init',radial_shape)
+vl,pc=val_loss(); ge=gen_eval(tag='init',shape_fn=radial_shape)
 mets['val'].append({'step':0,'val':vl,'per_class':pc}); mets['evals']['0']=ge
 print('init val',round(vl,4),'joint',round(ge['joint_acc'],3),flush=True)
-g=torch.Generator().manual_seed(42); t0=time.time(); N=10000
+g=torch.Generator().manual_seed(args.seed)
+timestep_generator=torch.Generator().manual_seed(args.seed + 1)
+t0=time.time(); N=args.steps
 perm=list(range(len(train_set)))
-EVAL_AT={2500,5000,7500,10000}; CKPT={1000,2500,5000,7500,10000}
+EVAL_AT={s for s in (2500,5000,7500,10000) if s <= N} | {N}
+CKPT={s for s in (1000,2500,5000,7500,10000) if s <= N} | {N}
 for step in range(N):
-    if step%len(perm)==0: random.Random(42+step).shuffle(perm)
+    if step%len(perm)==0: random.Random(args.seed+step).shuffle(perm)
     bi=step%len(perm)
     batch=[train_set[perm[(bi+k)%len(perm)]] for k in range(4)]; cids=[m['cid'] for m in batch]
     imgs=torch.stack([load_ex(m)[0] for m in batch])
-    tt=torch.randint(0,1000,(4,)); nz=torch.randn(4,3,64,64,generator=g)
+    tt=torch.randint(0,1000,(4,),generator=timestep_generator); nz=torch.randn(4,3,64,64,generator=g)
     aa=abars[tt].view(4,1,1,1); xt=torch.sqrt(aa)*imgs+torch.sqrt(1-aa)*nz
     pred=fwd(su,xt,tt,cids); loss=torch.nn.functional.mse_loss(pred,nz)
     opt.zero_grad(); loss.backward(); opt.step()
@@ -210,16 +238,79 @@ for step in range(N):
     if s%100==0 or s==1:
         mets['steps'].append({'step':s,'loss':float(loss),'sec':round(time.time()-t0,1)})
     if s in CKPT:
-        vl,pc=val_loss(); torch.save({'su':su.state_dict(),'opt':opt.state_dict(),'step':s},OUT/f'ckpt_{s}.pt')
+        vl,pc=val_loss()
+        checkpoint_config={
+            'model': {'in_channels': 3, 'model_channels': 64, 'channel_mult': [1,2,2,2],
+                      'num_res_blocks': 2, 'num_condition_classes': 6, 'image_size': 64},
+            'conditioning': {'type': 'onehot6', 'class_id': 'color*2+shape',
+                             'colors': CN, 'shapes': SH},
+            'training': {'steps': N, 'step': s, 'batch_size': 4, 'learning_rate': 1e-4,
+                         'weight_decay': 0.01, 'seed': args.seed, 'timestep_seed': args.seed + 1,
+                         'cpu_threads': torch.get_num_threads(),
+                         'eval_per_class': args.eval_per_class},
+            'dataset_manifest': str(DATA/'manifest.jsonl'),
+            'initialization': {'checkpoint': str(L27/'ckpt_10000.pt'), 'step': 10000},
+        }
+        torch.save({'su':su.state_dict(),'opt':opt.state_dict(),'step':s,
+                    'config':checkpoint_config},OUT/f'ckpt_{s}.pt')
+        metrics_snapshot=dict(mets)
+        metrics_snapshot.update({
+            'completed_optimizer_steps':s,
+            'elapsed_seconds_at_checkpoint':round(time.time()-t0,1),
+            'pilot_elapsed_seconds_at_checkpoint':round(time.perf_counter()-run_started,1),
+            'seed':args.seed,
+            'steps_requested':N,
+            'eval_per_class':args.eval_per_class,
+            'cpu_threads':torch.get_num_threads(),
+        })
+        metrics_temp=OUT/'L31_TRAINING_METRICS.json.tmp'
+        with open(metrics_temp,'w') as f: json.dump(metrics_snapshot,f,indent=2)
+        metrics_temp.replace(OUT/'L31_TRAINING_METRICS.json')
+        print(f'  checkpoint s{s} saved after {time.time()-t0:.0f}s',flush=True)
         if s in EVAL_AT:
-            ge=gen_eval(30,f's{s}',radial_shape); mets['evals'][str(s)]=ge; mets['val'].append({'step':s,'val':vl,'per_class':pc})
+            ge=gen_eval(tag=f's{s}',shape_fn=radial_shape); mets['evals'][str(s)]=ge; mets['val'].append({'step':s,'val':vl,'per_class':pc})
             print(f'  s{s} val={vl:.4f} joint={ge["joint_acc"]:.3f} color={ge["color_acc"]:.3f} shape={ge["shape_acc"]:.3f} {time.time()-t0:.0f}s',flush=True)
 mets['total_sec']=round(time.time()-t0,1)
-with open(OUT/'L31_TRAINING_METRICS.json','w') as f: json.dump(mets,f,indent=2)
+mets['pilot_elapsed_sec']=round(time.perf_counter()-run_started,1)
+mets['seed']=args.seed
+mets['steps_requested']=N
+mets['eval_per_class']=args.eval_per_class
+mets['cpu_threads']=torch.get_num_threads()
+metrics_temp=OUT/'L31_TRAINING_METRICS.json.tmp'
+with open(metrics_temp,'w') as f: json.dump(mets,f,indent=2)
+metrics_temp.replace(OUT/'L31_TRAINING_METRICS.json')
 with open(OUT/'L31_JOINT_GENERATION_EVALUATION.json','w') as f: json.dump({'evals':{k:{'joint':v['joint_acc'],'color':v['color_acc'],'shape':v['shape_acc'],'per_class':v['per_class']} for k,v in mets['evals'].items()}},f,indent=2)
 with open(OUT/'L31_COLOR_ACCURACY.json','w') as f: json.dump({'evals':{k:v['color_acc'] for k,v in mets['evals'].items()}},f,indent=2)
 with open(OUT/'L31_SHAPE_ACCURACY.json','w') as f: json.dump({'evals':{k:v['shape_acc'] for k,v in mets['evals'].items()}},f,indent=2)
 print('TRAIN DONE',mets['total_sec']/3600,'h',flush=True)
-for fn,d in [('L31_CLASS_LOSS_COMPARISON.json',{'note':'per-class val in metrics'}),('L31_CONDITION_ABLATION.json',{'init_sens':sens}),('L31_DIVERSITY_ANALYSIS.json',{'note':'seed-varied gens in images/'}),('L31_STATISTICAL_EVALUATION.json',{'note':'n=30/class per eval'}),('L31_CHECKPOINT_MIGRATION_AUDIT.json',{'rgb':'bit-identical L27','cond':'color slices->shape pairs +0.001 offset'}),('L31_INITIALIZATION_AUDIT.json',{'init':'L27 ckpt_10000 migrated','opt':'new warm-start'}),('L31_CONDITIONING_CONFIG.json',{'type':'onehot6','cid':'color*2+shape'}),('L31_TRAINING_CONFIG.json',{'init':'L27 s10000','bs':4,'lr':1e-4,'steps':10000}),('L31_CPU_PERFORMANCE.json',{'train_h':round(mets['total_sec']/3600,2)}),('L31_CHECKPOINT_INTEGRITY.json',{'L27':'untouched','ckpts':'ckpt_{1000..10000}.pt'})]:
+saved_steps=sorted(CKPT)
+for fn,d in [('L31_CLASS_LOSS_COMPARISON.json',{'note':'per-class val in metrics'}),('L31_CONDITION_ABLATION.json',{'init_sens':sens}),('L31_DIVERSITY_ANALYSIS.json',{'note':'seed-varied gens in images/'}),('L31_STATISTICAL_EVALUATION.json',{'note':f'n={args.eval_per_class}/class per eval'}),('L31_CHECKPOINT_MIGRATION_AUDIT.json',{'rgb':'bit-identical L27','cond':'color slices->shape pairs +0.001 offset'}),('L31_INITIALIZATION_AUDIT.json',{'init':'L27 s10000 migrated','opt':'new warm-start'}),('L31_CONDITIONING_CONFIG.json',{'type':'onehot6','cid':'color*2+shape'}),('L31_TRAINING_CONFIG.json',{'init':'L27 s10000','bs':4,'lr':1e-4,'steps':N,'seed':args.seed,'eval_per_class':args.eval_per_class}),('L31_CPU_PERFORMANCE.json',{'train_h':round(mets['total_sec']/3600,2),'pilot_elapsed_sec':mets['pilot_elapsed_sec'],'cpu_threads':torch.get_num_threads()}),('L31_CHECKPOINT_INTEGRITY.json',{'L27':'untouched','ckpts':[f'ckpt_{step}.pt' for step in saved_steps]})]:
     with open(OUT/fn,'w') as f: json.dump(d,f,indent=2)
+final_checkpoint_path=OUT/f'ckpt_{N}.pt'
+final_checkpoint=torch.load(final_checkpoint_path,map_location='cpu',weights_only=False)
+baseline_checkpoint_path=L27/'ckpt_10000.pt'
+baseline_checkpoint=torch.load(baseline_checkpoint_path,map_location='cpu',weights_only=False)
+baseline_manifest_payload=dict(baseline_checkpoint)
+baseline_manifest_payload.setdefault('step',10000)
+baseline_manifest_payload['config']={
+    'model': {'in_channels': 3, 'model_channels': 64, 'channel_mult': [1,2,2,2],
+              'num_res_blocks': 2, 'num_condition_classes': 3, 'image_size': 64},
+    'conditioning': {'type': 'onehot3_color', 'classes': CN},
+    'training': {'steps': 10000, 'checkpoint_step': 10000, 'batch_size': 4,
+                 'learning_rate': 1e-4, 'weight_decay': 0.01},
+}
+manifest=build_evaluation_manifest(
+    task='l31_high_salience_shape_color_pilot',
+    args={**vars(args),'baseline_checkpoint':str(baseline_checkpoint_path),
+          'pilot_checkpoint':str(final_checkpoint_path),'generation_mode':'class_conditioned_diffusion',
+          'paired_generation_seeds':'50000 + seed*1000000 + class_id*1000 + sample_index'},
+    checkpoint_paths={'stage3_l27_baseline':baseline_checkpoint_path,'l31_pilot':final_checkpoint_path},
+    checkpoint_payloads={'stage3_l27_baseline':baseline_manifest_payload,'l31_pilot':final_checkpoint},
+    data_dir=DATA,
+    source_paths=[Path(__file__),L27/'l27_full.py',L12/'l12_common.py',
+                  REPO_ROOT/'experiments_stage3_2_7'/'video_foundation'/'models'/'conditional_unet.py',
+                  REPO_ROOT/'video_foundation'/'utils'/'experiment_metadata.py'],
+    elapsed_seconds=mets['pilot_elapsed_sec'],torch_version=torch.__version__,
+    cpu_threads=torch.get_num_threads())
+with open(OUT/'L31_RUN_MANIFEST.json','w') as f: json.dump(manifest,f,indent=2)
 print('DONE ALL')

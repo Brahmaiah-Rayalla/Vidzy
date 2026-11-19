@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "task": "l31_high_salience_shape_color_pilot_matched_eval",
+  "created_at_utc": "2026-11-17T17:33:46.546207+00:00",
+  "evaluation_elapsed_seconds_excluding_manifest_hashing": 944.37,
+  "device": "cpu",
+  "cpu_threads": 8,
+  "logical_cpu_count": 8,
+  "software": {
+    "python": "3.13.4",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "torch": "2.15.0+cpu"
+  },
+  "git": {
+    "revision": "a6f4797d33af3ee1a86f07eec7184d206eddc836",
+    "tracked_worktree_dirty": true
+  },
+  "arguments": {
+    "checkpoint": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\extended_250_steps\\l31_high_salience_shape_conditioning\\ckpt_2500.pt",
+    "baseline_checkpoint": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\extended_250_steps\\l27_structured_validation_text_mapping\\ckpt_10000.pt",
+    "output_dir": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\extended_250_steps\\l31_high_salience_shape_conditioning\\eval_checkpoint_2500_seed42_n30",
+    "eval_per_class": 30,
+    "seed": 42,
+    "threads": 8,
+    "batch_size": 8,
+    "generation_mode": "class_conditioned_diffusion",
+    "paired_generation_seed_formula": "50000 + seed*1000000 + class_id*1000 + sample_id"
+  },
+  "checkpoints": {
+    "stage3_l27_baseline": {
+      "path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\extended_250_steps\\l27_structured_validation_text_mapping\\ckpt_10000.pt",
+      "sha256": "8519850ebc88a3b9f74cf1691d043de8e7b4b9f78e8008c5cf4b93489285e1e3",
+      "step": 10000,
+      "config": {
+        "model": {
+          "in_channels": 3,
+          "model_channels": 64,
+          "channel_mult": [
+            1,
+            2,
+            2,
+            2
+          ],
+          "num_res_blocks": 2,
+          "num_condition_classes": 3,
+          "image_size": 64
+        },
+        "conditioning": {
+          "type": "onehot3_color",
+          "classes": [
+            "red",
+            "blue",
+            "yellow"
+          ]
+        },
+        "training": {
+          "steps": 10000,
+          "checkpoint_step": 10000,
+          "batch_size": 4,
+          "learning_rate": 0.0001,
+          "weight_decay": 0.01
+        }
+      },
+      "config_sha256": "5ae5c51d06e375d65e83de316a44fafc80b84da5babb4a442093835cc3efdbec"
+    },
+    "l31_pilot": {
+      "path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\extended_250_steps\\l31_high_salience_shape_conditioning\\ckpt_2500.pt",
+      "sha256": "62a6da5bb75b6dfca4af5c7bf0ef553df64811ee01772f717b7986652a5ce431",
+      "step": 2500,
+      "config": {
+        "model": {
+          "in_channels": 3,
+          "model_channels": 64,
+          "channel_mult": [
+            1,
+            2,
+            2,
+            2
+          ],
+          "num_res_blocks": 2,
+          "num_condition_classes": 6,
+          "image_size": 64
+        },
+        "conditioning": {
+          "type": "onehot6",
+          "class_id": "color*2+shape",
+          "colors": [
+            "red",
+            "blue",
+            "yellow"
+          ],
+          "shapes": [
+            "circle",
+            "triangle"
+          ]
+        },
+        "training": {
+          "steps": 2500,
+          "step": 2500,
+          "batch_size": 4,
+          "learning_rate": 0.0001,
+          "weight_decay": 0.01,
+          "seed": 42,
+          "cpu_threads": 8,
+          "eval_per_class": 30
+        },
+        "dataset_manifest": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\extended_250_steps\\l31_high_salience_shape_conditioning\\data\\manifest.jsonl",
+        "initialization": {
+          "checkpoint": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\extended_250_steps\\l27_structured_validation_text_mapping\\ckpt_10000.pt",
+          "step": 10000
+        }
+      },
+      "config_sha256": "b081d227edcf07256f0596599b8977ac1be1a049bc806d216c9bd0f748338829"
+    }
+  },
+  "dataset": {
+    "path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\extended_250_steps\\l31_high_salience_shape_conditioning\\data",
+    "file_count": 3001,
+    "sha256": "fde3c96b06c7c31e07ca8ffa1db860d3774ce41afb3e91404d21cbf8966bc52b"
+  },
+  "source_files_sha256": {
+    "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\extended_250_steps\\l31_high_salience_shape_conditioning\\evaluate_l31_checkpoint.py": "36170a368bd9e711f01075efcc8c01338d462ebe66b07b08391e9ee47140f486",
+    "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\extended_250_steps\\l31_high_salience_shape_conditioning\\l31_full.py": "2660463a345bc83c35e5924f69af7d3c3f9c35001e9fe6d26886dccec2a444d0",
+    "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\extended_250_steps\\l27_structured_validation_text_mapping\\l27_full.py": "ba5f110b0d43f9b8772450e1bdeaf541ea24b9d72665ee81afe5b30440671189",
+    "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\extended_250_steps\\l12_gate_attribution\\l12_common.py": "8c435f47a4efbb621c18ae1a4c7ae4ca676acb21a78dbfd8319f826222ff35ac",
+    "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_7\\video_foundation\\models\\conditional_unet.py": "5bc5e6e48e22ceb87fa60d89dd3f4a644bf39c162c86d04122bde65a15faa4b5",
+    "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\video_foundation\\utils\\experiment_metadata.py": "2dd6c0890ac957574fb0a6df61c754d2befdaac2c10156da8283eb0e290d9f0f"
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "task": "cpu_video_generation",
+  "generation_mode": "learned_pixel_video",
+  "created_at_utc": "2026-11-18T08:47:12.607642+00:00",
+  "elapsed_seconds_excluding_manifest_hashing": 9.637677,
+  "device": "cpu",
+  "cpu_threads": 4,
+  "logical_cpu_count": 8,
+  "software": {
+    "python": "3.13.4",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "torch": "2.15.0+cpu"
+  },
+  "git": {
+    "revision": "a6f4797d33af3ee1a86f07eec7184d206eddc836",
+    "tracked_worktree_dirty": true
+  },
+  "arguments": {
+    "checkpoint": "runs\\verification_cpu_prompt_20261118\\train\\checkpoint_final.pt",
+    "spatial_checkpoint": "checkpoints\\cpu_triangle_small_specialist_v59\\checkpoint_step_001600.pt",
+    "output": "runs\\raw_diffusion_fix01\\candidate_v59_medium.mp4",
+    "prompt": "A medium blue triangle moving left to right quickly",
+    "shape": 2,
+    "color": 2,
+    "size": "medium",
+    "frames": 72,
+    "duration_seconds": 6.0,
+    "fps": 12.0,
+    "image_size": null,
+    "steps": 8,
+    "threads": 4,
+    "seed": 2345,
+    "noise_correlation": 0.0,
+    "noise_alignment": "canonical",
+    "metrics_json": null,
+    "manifest_json": null,
+    "motion_mode": "learned",
+    "refine_motion_geometry": false,
+    "raw_learned_geometry": true,
+    "rigid_appearance": "palette",
+    "rigid_geometry": "canonical",
+    "motion": "left_to_right",
+    "speed": "quickly",
+    "speed_scale": 1.0,
+    "velocity_px_per_frame": null
+  },
+  "input_dataset": null,
+  "checkpoint": {
+    "path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\runs\\verification_cpu_prompt_20261118\\train\\checkpoint_final.pt",
+    "sha256": "5d857981f74ea3c483416a1056989c33f753b853cc6d78295788a626634edc38",
+    "step": 8501,
+    "config": {
+      "model": {
+        "num_classes": 3,
+        "num_color_classes": 4,
+        "num_size_classes": 3,
+        "spatial_size_conditioning": true,
+        "image_size": 64,
+        "in_channels": 3,
+        "model_channels": 16,
+        "channel_mult": [
+          1,
+          2,
+          2
+        ],
+        "attention_resolutions": [],
+        "num_res_blocks": 1,
+        "dropout": 0.0,
+        "size_embedding_scale": 8.0
+      },
+      "diffusion": {
+        "num_timesteps": 1000,
+        "beta_start": 0.0001,
+        "beta_end": 0.02,
+        "beta_schedule": "linear",
+        "prediction_type": "v_prediction"
+      },
+      "training": {
+        "num_steps": 1600,
+        "batch_size": 4,
+        "learning_rate": 5e-06,
+        "weight_decay": 0.0,
+        "seed": 31415,
+        "cpu_threads": 4,
+        "save_interval": 400,
+        "log_interval": 20,
+        "sample_interval": 400,
+        "structure_loss_weight": 0.1,
+        "position_augmentation_pixels": 24
+      },
+      "dataset": {
+        "num_images": 512,
+        "image_size": 64,
+        "seed": 27182,
+        "cache_in_memory": true
+      },
+      "inference": {
+        "num_samples": 4,
+        "sampling_steps": 24,
+        "seed": 31415
+      }
+    },
+    "config_sha256": "9dc162cedfdafd4108e528eab1e87f79335cd78abadd7e12d0f2a33ef192e656"
+  },
+  "source_files_sha256": {
+    "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\video_foundation\\inference\\sample_cpu_video.py": "88abd2e3dff365c14fe937f27b610235c49465e6036e31a0937ff96cd126a9bc",
+    "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\video_foundation\\models\\unet.py": "a2886e57961c076e1470d79962e36a7d55f050627042bd8b6b12d6cb253238da",
+    "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\video_foundation\\models\\cpu_video_unet.py": "fcc7dfe7305742e9d623e8a2acfbad554be1559969d7813b3e62615a5cdb8966",
+    "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\video_foundation\\inference\\shape_rendering.py": "b39caaa7d75c4d3c7d6b95c3e1ec3429bbc8d8fa474796ebd139074ed1dcfcaf",
+    "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\video_foundation\\inference\\prompt_conditions.py": "f94123f8f0193892ff84c5688e8c92643c28406b69024c35d7d3dfe9790bbdb5",
+    "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\video_foundation\\utils\\experiment_metadata.py": "2dd6c0890ac957574fb0a6df61c754d2befdaac2c10156da8283eb0e290d9f0f"
+  },
+  "spatial_prior_checkpoint": {
+    "path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\checkpoints\\cpu_triangle_small_specialist_v59\\checkpoint_step_001600.pt",
+    "sha256": "2d80607a6b68337c8a23430f812e03d27e2232da5fbe2a9c32f6721905de280f",
+    "step": 1600,
+    "config": {
+      "model": {
+        "num_classes": 3,
+        "num_color_classes": 4,
+        "num_size_classes": 3,
+        "spatial_size_conditioning": true,
+        "image_size": 64,
+        "in_channels": 3,
+        "model_channels": 16,
+        "channel_mult": [
+          1,
+          2,
+          2
+        ],
+        "attention_resolutions": [],
+        "num_res_blocks": 1,
+        "dropout": 0.0,
+        "size_embedding_scale": 1.0,
+        "high_resolution_refinement": false
+      },
+      "diffusion": {
+        "num_timesteps": 1000,
+        "beta_start": 0.0001,
+        "beta_end": 0.02,
+        "beta_schedule": "linear",
+        "prediction_type": "v_prediction"
+      },
+      "training": {
+        "num_steps": 2000,
+        "batch_size": 4,
+        "learning_rate": 4e-06,
+        "weight_decay": 0.0,
+        "seed": 59021,
+        "cpu_threads": 4,
+        "save_interval": 400,
+        "log_interval": 20,
+        "sample_interval": 400,
+        "structure_loss_weight": 0.3,
+        "position_augmentation_pixels": 0,
+        "ema_decay": 0.99,
+        "foreground_weight": 0.1,
+        "foreground_x0_weight": 0.25,
+        "triangle_edge_weight": 0.05,
+        "balance_condition_combinations": true,
+        "conditioning_only": false
+      },
+      "dataset": {
+        "image_size": 64,
+        "cache_in_memory": true
+      },
+      "inference": {
+        "num_samples": 3,
+        "sampling_steps": 24,
+        "seed": 1234
+      }
+    }
+  }
+}

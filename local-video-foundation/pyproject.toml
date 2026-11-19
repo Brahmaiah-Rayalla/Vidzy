@@ -7,15 +7,14 @@ name = "local-video-foundation"
 version = "0.1.0"
 description = "Stage 1: Unconditional Image Generation with Diffusion Models"
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.10"
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
 ]
 dependencies = [
     "torch>=2.0.0",
@@ -24,6 +23,7 @@ dependencies = [
     "pyyaml>=6.0",
     "tqdm>=4.65.0",
     "torchvision>=0.15.0",
+    "imageio-ffmpeg>=0.5.1",
 ]
 
 [project.optional-dependencies]
@@ -35,6 +35,9 @@ dev = [
 generate-dataset = "video_foundation.data.synthetic:main"
 train-image = "video_foundation.training.train_image:main"
 sample-image = "video_foundation.inference.sample_image:main"
+sample-cpu-video = "video_foundation.inference.sample_cpu_video:main"
+generate-native-triangle-data = "video_foundation.training.generate_native_triangle_data:main"
+evaluate-size-conditioned = "video_foundation.training.evaluate_size_conditioned:main"
 
 [tool.setuptools.packages.find]
 where = ["."]

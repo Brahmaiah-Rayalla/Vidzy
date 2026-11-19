@@ -1,0 +1,447 @@
+{
+  "experiment": "L39 CPU learned acceleration/deceleration profile",
+  "training_mode": "supervised synthetic profile regression; not video-pixel training",
+  "config": {
+    "input_features": [
+      "time_0_1",
+      "speed_style_minus1_plus1",
+      "acceleration_control",
+      "wave_amplitude",
+      "sin_phase",
+      "cos_phase",
+      "cycles"
+    ],
+    "output": "positive_speed_scale_clipped_to_0.55_1.45_at_inference",
+    "teacher": "1 + 0.20*a*(2t-1) + 0.14*b*sin(2*pi*f*t+phase) + 0.06*style*sin(pi*t)",
+    "architecture": {
+      "kind": "MLP",
+      "width": 32,
+      "hidden_layers": 2,
+      "parameters": 1345
+    },
+    "training": {
+      "profiles": 1800,
+      "validation_profiles": 400,
+      "points_per_profile": 32,
+      "steps": 3000,
+      "batch_size": 512,
+      "learning_rate": 0.001,
+      "seed": 3903,
+      "threads": 4,
+      "train_data_sha256": "0edce9c096d578d6d4a3c4243469b95b6f9614a54d291ec703fe1844c5665462",
+      "validation_data_sha256": "aa832d1d264343222d4b725031d45e84f2f28035c9d92ce25c110157da38900c"
+    }
+  },
+  "validation_at_initialization": {
+    "mae": 1.0424555540084839,
+    "rmse": 1.0482820272445679,
+    "max_absolute_error": 1.4311320781707764,
+    "constant_speed_baseline_rmse": 0.09527526050806046,
+    "by_style": {
+      "slowly": {
+        "mae": 0.978484034538269,
+        "rmse": 0.9825533628463745,
+        "constant_speed_baseline_rmse": 0.09570032358169556
+      },
+      "quickly": {
+        "mae": 1.1064271926879883,
+        "rmse": 1.1101258993148804,
+        "constant_speed_baseline_rmse": 0.09484829753637314
+      }
+    }
+  },
+  "validation_best": {
+    "mae": 0.045175597071647644,
+    "rmse": 0.05701514706015587,
+    "max_absolute_error": 0.17780005931854248,
+    "constant_speed_baseline_rmse": 0.09527526050806046,
+    "by_style": {
+      "slowly": {
+        "mae": 0.04514768719673157,
+        "rmse": 0.057153575122356415,
+        "constant_speed_baseline_rmse": 0.09570032358169556
+      },
+      "quickly": {
+        "mae": 0.04520350322127342,
+        "rmse": 0.05687638744711876,
+        "constant_speed_baseline_rmse": 0.09484829753637314
+      }
+    }
+  },
+  "best_step": 3000,
+  "training_elapsed_seconds": 5.337,
+  "total_training_and_evaluation_seconds": 5.347,
+  "checkpoint": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\extended_250_steps\\l39_learned_speed_profiles\\seed3903\\trajectory_profile.pt",
+  "checkpoint_sha256": "b11757b5ae65e1e79639edda438801d7dddd907c1ee540005b85d9bd3fc2620c",
+  "training_source_sha256": "2b30c3333aca99865c7c2b1317d20c6bf1ff84798621e4bb9cd719f300f4299e",
+  "history": [
+    {
+      "step": 0,
+      "train_mse": null,
+      "validation": {
+        "mae": 1.0424555540084839,
+        "rmse": 1.0482820272445679,
+        "max_absolute_error": 1.4311320781707764,
+        "constant_speed_baseline_rmse": 0.09527526050806046,
+        "by_style": {
+          "slowly": {
+            "mae": 0.978484034538269,
+            "rmse": 0.9825533628463745,
+            "constant_speed_baseline_rmse": 0.09570032358169556
+          },
+          "quickly": {
+            "mae": 1.1064271926879883,
+            "rmse": 1.1101258993148804,
+            "constant_speed_baseline_rmse": 0.09484829753637314
+          }
+        }
+      },
+      "elapsed_seconds": 0.0
+    },
+    {
+      "step": 200,
+      "train_mse": 0.01362893357872963,
+      "validation": {
+        "mae": 0.09220942854881287,
+        "rmse": 0.11530432850122452,
+        "max_absolute_error": 0.44451940059661865,
+        "constant_speed_baseline_rmse": 0.09527526050806046,
+        "by_style": {
+          "slowly": {
+            "mae": 0.08968769013881683,
+            "rmse": 0.11331839859485626,
+            "constant_speed_baseline_rmse": 0.09570032358169556
+          },
+          "quickly": {
+            "mae": 0.0947311595082283,
+            "rmse": 0.11725663393735886,
+            "constant_speed_baseline_rmse": 0.09484829753637314
+          }
+        }
+      },
+      "elapsed_seconds": 0.677
+    },
+    {
+      "step": 400,
+      "train_mse": 0.006866777781397104,
+      "validation": {
+        "mae": 0.06521821767091751,
+        "rmse": 0.08107864856719971,
+        "max_absolute_error": 0.33555591106414795,
+        "constant_speed_baseline_rmse": 0.09527526050806046,
+        "by_style": {
+          "slowly": {
+            "mae": 0.06386686116456985,
+            "rmse": 0.08038108795881271,
+            "constant_speed_baseline_rmse": 0.09570032358169556
+          },
+          "quickly": {
+            "mae": 0.06656957417726517,
+            "rmse": 0.08177024871110916,
+            "constant_speed_baseline_rmse": 0.09484829753637314
+          }
+        }
+      },
+      "elapsed_seconds": 1.036
+    },
+    {
+      "step": 600,
+      "train_mse": 0.005505823064595461,
+      "validation": {
+        "mae": 0.053904157131910324,
+        "rmse": 0.06745991855859756,
+        "max_absolute_error": 0.24248981475830078,
+        "constant_speed_baseline_rmse": 0.09527526050806046,
+        "by_style": {
+          "slowly": {
+            "mae": 0.05376391112804413,
+            "rmse": 0.06768134236335754,
+            "constant_speed_baseline_rmse": 0.09570032358169556
+          },
+          "quickly": {
+            "mae": 0.05404440313577652,
+            "rmse": 0.06723775714635849,
+            "constant_speed_baseline_rmse": 0.09484829753637314
+          }
+        }
+      },
+      "elapsed_seconds": 1.34
+    },
+    {
+      "step": 800,
+      "train_mse": 0.0034766397438943386,
+      "validation": {
+        "mae": 0.04780089482665062,
+        "rmse": 0.060070011764764786,
+        "max_absolute_error": 0.2146672010421753,
+        "constant_speed_baseline_rmse": 0.09527526050806046,
+        "by_style": {
+          "slowly": {
+            "mae": 0.04755629599094391,
+            "rmse": 0.05999075993895531,
+            "constant_speed_baseline_rmse": 0.09570032358169556
+          },
+          "quickly": {
+            "mae": 0.04804549738764763,
+            "rmse": 0.060149163007736206,
+            "constant_speed_baseline_rmse": 0.09484829753637314
+          }
+        }
+      },
+      "elapsed_seconds": 1.663
+    },
+    {
+      "step": 1000,
+      "train_mse": 0.0034239417873322964,
+      "validation": {
+        "mae": 0.04635746031999588,
+        "rmse": 0.05839749798178673,
+        "max_absolute_error": 0.19199925661087036,
+        "constant_speed_baseline_rmse": 0.09527526050806046,
+        "by_style": {
+          "slowly": {
+            "mae": 0.045867033302783966,
+            "rmse": 0.058060068637132645,
+            "constant_speed_baseline_rmse": 0.09570032358169556
+          },
+          "quickly": {
+            "mae": 0.046847887337207794,
+            "rmse": 0.05873298645019531,
+            "constant_speed_baseline_rmse": 0.09484829753637314
+          }
+        }
+      },
+      "elapsed_seconds": 1.961
+    },
+    {
+      "step": 1200,
+      "train_mse": 0.003384081879630685,
+      "validation": {
+        "mae": 0.046111539006233215,
+        "rmse": 0.05810239911079407,
+        "max_absolute_error": 0.1931665539741516,
+        "constant_speed_baseline_rmse": 0.09527526050806046,
+        "by_style": {
+          "slowly": {
+            "mae": 0.04584497958421707,
+            "rmse": 0.05782756209373474,
+            "constant_speed_baseline_rmse": 0.09570032358169556
+          },
+          "quickly": {
+            "mae": 0.04637811332941055,
+            "rmse": 0.05837593227624893,
+            "constant_speed_baseline_rmse": 0.09484829753637314
+          }
+        }
+      },
+      "elapsed_seconds": 2.268
+    },
+    {
+      "step": 1400,
+      "train_mse": 0.0033298793714493513,
+      "validation": {
+        "mae": 0.045944761484861374,
+        "rmse": 0.05794871225953102,
+        "max_absolute_error": 0.19018077850341797,
+        "constant_speed_baseline_rmse": 0.09527526050806046,
+        "by_style": {
+          "slowly": {
+            "mae": 0.04578092694282532,
+            "rmse": 0.05777280777692795,
+            "constant_speed_baseline_rmse": 0.09570032358169556
+          },
+          "quickly": {
+            "mae": 0.046108607202768326,
+            "rmse": 0.05812407284975052,
+            "constant_speed_baseline_rmse": 0.09484829753637314
+          }
+        }
+      },
+      "elapsed_seconds": 2.67
+    },
+    {
+      "step": 1600,
+      "train_mse": 0.0031296266242861748,
+      "validation": {
+        "mae": 0.04580458998680115,
+        "rmse": 0.05776256322860718,
+        "max_absolute_error": 0.18685531616210938,
+        "constant_speed_baseline_rmse": 0.09527526050806046,
+        "by_style": {
+          "slowly": {
+            "mae": 0.045508816838264465,
+            "rmse": 0.057593341916799545,
+            "constant_speed_baseline_rmse": 0.09570032358169556
+          },
+          "quickly": {
+            "mae": 0.04610036686062813,
+            "rmse": 0.057931289076805115,
+            "constant_speed_baseline_rmse": 0.09484829753637314
+          }
+        }
+      },
+      "elapsed_seconds": 2.981
+    },
+    {
+      "step": 1800,
+      "train_mse": 0.0033352463506162167,
+      "validation": {
+        "mae": 0.045672863721847534,
+        "rmse": 0.057680629193782806,
+        "max_absolute_error": 0.1822769045829773,
+        "constant_speed_baseline_rmse": 0.09527526050806046,
+        "by_style": {
+          "slowly": {
+            "mae": 0.04540460184216499,
+            "rmse": 0.05755436047911644,
+            "constant_speed_baseline_rmse": 0.09570032358169556
+          },
+          "quickly": {
+            "mae": 0.045941125601530075,
+            "rmse": 0.05780662223696709,
+            "constant_speed_baseline_rmse": 0.09484829753637314
+          }
+        }
+      },
+      "elapsed_seconds": 3.302
+    },
+    {
+      "step": 2000,
+      "train_mse": 0.003105269046500325,
+      "validation": {
+        "mae": 0.045834917575120926,
+        "rmse": 0.05783449113368988,
+        "max_absolute_error": 0.1795492172241211,
+        "constant_speed_baseline_rmse": 0.09527526050806046,
+        "by_style": {
+          "slowly": {
+            "mae": 0.04555278271436691,
+            "rmse": 0.05777830630540848,
+            "constant_speed_baseline_rmse": 0.09570032358169556
+          },
+          "quickly": {
+            "mae": 0.04611704871058464,
+            "rmse": 0.05789061635732651,
+            "constant_speed_baseline_rmse": 0.09484829753637314
+          }
+        }
+      },
+      "elapsed_seconds": 3.649
+    },
+    {
+      "step": 2200,
+      "train_mse": 0.0035606538876891136,
+      "validation": {
+        "mae": 0.0455876924097538,
+        "rmse": 0.05747198313474655,
+        "max_absolute_error": 0.18720662593841553,
+        "constant_speed_baseline_rmse": 0.09527526050806046,
+        "by_style": {
+          "slowly": {
+            "mae": 0.045405901968479156,
+            "rmse": 0.057446762919425964,
+            "constant_speed_baseline_rmse": 0.09570032358169556
+          },
+          "quickly": {
+            "mae": 0.04576948285102844,
+            "rmse": 0.05749719217419624,
+            "constant_speed_baseline_rmse": 0.09484829753637314
+          }
+        }
+      },
+      "elapsed_seconds": 4.008
+    },
+    {
+      "step": 2400,
+      "train_mse": 0.003605809761211276,
+      "validation": {
+        "mae": 0.045418813824653625,
+        "rmse": 0.05729897692799568,
+        "max_absolute_error": 0.18390285968780518,
+        "constant_speed_baseline_rmse": 0.09527526050806046,
+        "by_style": {
+          "slowly": {
+            "mae": 0.0452180951833725,
+            "rmse": 0.05730900913476944,
+            "constant_speed_baseline_rmse": 0.09570032358169556
+          },
+          "quickly": {
+            "mae": 0.045619525015354156,
+            "rmse": 0.05728894844651222,
+            "constant_speed_baseline_rmse": 0.09484829753637314
+          }
+        }
+      },
+      "elapsed_seconds": 4.338
+    },
+    {
+      "step": 2600,
+      "train_mse": 0.003218549769371748,
+      "validation": {
+        "mae": 0.04541141167283058,
+        "rmse": 0.057378657162189484,
+        "max_absolute_error": 0.184911847114563,
+        "constant_speed_baseline_rmse": 0.09527526050806046,
+        "by_style": {
+          "slowly": {
+            "mae": 0.04544435814023018,
+            "rmse": 0.05749588832259178,
+            "constant_speed_baseline_rmse": 0.09570032358169556
+          },
+          "quickly": {
+            "mae": 0.045378465205430984,
+            "rmse": 0.057261183857917786,
+            "constant_speed_baseline_rmse": 0.09484829753637314
+          }
+        }
+      },
+      "elapsed_seconds": 4.665
+    },
+    {
+      "step": 2800,
+      "train_mse": 0.003069769125431776,
+      "validation": {
+        "mae": 0.045199356973171234,
+        "rmse": 0.05717375501990318,
+        "max_absolute_error": 0.18070733547210693,
+        "constant_speed_baseline_rmse": 0.09527526050806046,
+        "by_style": {
+          "slowly": {
+            "mae": 0.04517030343413353,
+            "rmse": 0.057312045246362686,
+            "constant_speed_baseline_rmse": 0.09570032358169556
+          },
+          "quickly": {
+            "mae": 0.04522841423749924,
+            "rmse": 0.05703513324260712,
+            "constant_speed_baseline_rmse": 0.09484829753637314
+          }
+        }
+      },
+      "elapsed_seconds": 4.972
+    },
+    {
+      "step": 3000,
+      "train_mse": 0.0030207100789994,
+      "validation": {
+        "mae": 0.045175597071647644,
+        "rmse": 0.05701514706015587,
+        "max_absolute_error": 0.17780005931854248,
+        "constant_speed_baseline_rmse": 0.09527526050806046,
+        "by_style": {
+          "slowly": {
+            "mae": 0.04514768719673157,
+            "rmse": 0.057153575122356415,
+            "constant_speed_baseline_rmse": 0.09570032358169556
+          },
+          "quickly": {
+            "mae": 0.04520350322127342,
+            "rmse": 0.05687638744711876,
+            "constant_speed_baseline_rmse": 0.09484829753637314
+          }
+        }
+      },
+      "elapsed_seconds": 5.336
+    }
+  ]
+}

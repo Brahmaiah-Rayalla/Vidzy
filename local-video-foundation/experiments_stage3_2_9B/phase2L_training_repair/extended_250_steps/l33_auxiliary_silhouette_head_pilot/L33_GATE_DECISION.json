@@ -1,0 +1,39 @@
+{
+  "experiment": "L33 auxiliary silhouette head pilot",
+  "seed": 42,
+  "samples_per_joint_class": 30,
+  "decision": "not_promoted_reverse_process_shape_gate_failed",
+  "stop_training_at_gate": true,
+  "training": {
+    "steps": 400,
+    "elapsed_seconds": 198.2,
+    "threads": 4,
+    "parameters": 795580,
+    "auxiliary_head_loss_step_1": 1.2561198472976685,
+    "auxiliary_head_loss_step_400": 0.11830727010965347
+  },
+  "raw_diffusion_vs_L32c": {
+    "joint_accuracy": {"baseline": 0.4222222222222222, "candidate": 0.45555555555555555, "delta": 0.03333333333333333, "bootstrap_95pct_interval": [0.0, 0.07222222222222222]},
+    "shape_accuracy": {"baseline": 0.49444444444444446, "candidate": 0.4888888888888889, "delta": -0.005555555555555556, "bootstrap_95pct_interval": [-0.03333333333333333, 0.016666666666666666]},
+    "color_accuracy": {"baseline": 0.8944444444444445, "candidate": 0.9611111111111111, "delta": 0.06666666666666667, "bootstrap_95pct_interval": [0.03333333333333333, 0.10555555555555556]}
+  },
+  "thresholded_projection_vs_L32c": {
+    "threshold": 0.5,
+    "joint_accuracy": {"baseline": 0.4222222222222222, "candidate": 0.39444444444444443, "delta": -0.027777777777777776, "bootstrap_95pct_interval": [-0.08888888888888889, 0.03333333333333333]},
+    "shape_accuracy": {"baseline": 0.49444444444444446, "candidate": 0.39444444444444443, "delta": -0.1, "bootstrap_95pct_interval": [-0.15, -0.05]},
+    "color_accuracy": {"baseline": 0.8944444444444445, "candidate": 0.8111111111111111, "delta": -0.08333333333333333, "bootstrap_95pct_interval": [-0.15555555555555556, -0.005555555555555556]}
+  },
+  "heldout_mask_head_audit": {
+    "validation_samples": 300,
+    "timestep_0_threshold_0.6": {"iou": 0.9241626554727554, "area_ratio": 0.974244302312533, "boundary_f1": 0.9943243722120921},
+    "timestep_100_threshold_0.5": {"iou": 0.9342027968168258, "area_ratio": 0.9990114049116771, "boundary_f1": 0.9981791114807129},
+    "timestep_250_threshold_0.4": {"iou": 0.8835738847653071, "area_ratio": 0.9730567938089371, "boundary_f1": 0.979928343097719}
+  },
+  "reason": "The auxiliary head segments held-out real/noised examples well but fails on reverse-process generated states. The mask projection creates sparse, hollow outputs and reduces generated shape/color accuracy. The raw diffusion branch retains its output and color improves, but shape accuracy does not; do not promote or extend this run.",
+  "checkpoint": "checkpoint_step_00400.pt",
+  "thresholded_evaluation": "eval_threshold_050/L32_RESULTS.json",
+  "raw_and_projected_grid": "eval_threshold_050/generation_grid.png",
+  "raw_diffusion_grid": "eval_threshold_050/generation_grid_raw.png",
+  "mask_validation_audit": "eval_mask_head_validation/MASK_HEAD_VALIDATION_AUDIT.json",
+  "run_manifest": "eval_threshold_050/run_manifest.json"
+}

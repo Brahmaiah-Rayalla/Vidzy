@@ -1,0 +1,16 @@
+{
+  "experiment": "L34 structured geometry diffusion + CPU renderer",
+  "decision": "pass_renderer_backed_visual_gate_only",
+  "raw_rgb_diffusion_gate_passed": false,
+  "metrics": {
+    "training_seeds": 3,
+    "rendered_samples": 1800,
+    "requested_shape_and_color_adherence": 1.0,
+    "all_geometry_in_training_support": true,
+    "all_outputs_uncropped": true,
+    "mean_time_for_600_samples_seconds": 1.6783,
+    "worst_heldout_geometry_parameter_ks_distance": 0.32
+  },
+  "interpretation": "The CPU renderer guarantees crisp requested primitive shape and color. The learned geometry distribution remains approximate, and rendered appearance does not demonstrate raw RGB diffusion quality.",
+  "next_action": "Use this route for structured rendering and event-driven motion pilots; keep raw diffusion scores separate. Improve geometry distribution calibration before claiming faithful learned geometry."
+}

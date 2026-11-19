@@ -1,0 +1,27 @@
+{
+  "task": "l34_structured_geometry_diffusion",
+  "created_at_unix": 1794977752.5748637,
+  "seed": 123,
+  "torch": "2.15.0+cpu",
+  "device": "cpu",
+  "cpu_threads": 4,
+  "arguments": {
+    "steps": 3000,
+    "batch_size": 128,
+    "samples_per_class": 100,
+    "sampling_steps": 50,
+    "seed": 123,
+    "threads": 4,
+    "learning_rate": 0.001,
+    "output_dir": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\extended_250_steps\\l34_structured_geometry_diffusion\\seed123"
+  },
+  "checkpoint": {
+    "path": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\extended_250_steps\\l34_structured_geometry_diffusion\\seed123\\checkpoint_final.pt",
+    "sha256": "b2bf27d630d2b421799eac653968fa5ccaa1a442f65b3f339013c3626f51592b",
+    "config_sha256": "7b9041432bca24e5023113bace4cef35e3bc4aa4c4f30718809abac656a17b61"
+  },
+  "source_sha256": "4bdaf38ee7474e29fc9147c1ac6e708b3d4827623df67c1a792dfe6ab43db9cb",
+  "dataset_manifest_sha256": "860dea7d8dd3e46d4249d58b994f5c9803550a4d75d9301b3f85d369103ffab8",
+  "train_elapsed_seconds": 9.052,
+  "evaluation_elapsed_seconds": 1.611
+}

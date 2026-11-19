@@ -76,7 +76,8 @@ class DiffusionSampler:
         prediction_type: str = "epsilon",
         recompute_noise_after_clipping: bool = False,
         class_labels: Optional[torch.Tensor] = None,
-        color_labels: Optional[torch.Tensor] = None
+        color_labels: Optional[torch.Tensor] = None,
+        size_labels: Optional[torch.Tensor] = None
     ) -> torch.Tensor:
         """
         Sample images using DDIM with optional text conditioning.
@@ -111,7 +112,8 @@ class DiffusionSampler:
             prediction_type=prediction_type,
             recompute_noise_after_clipping=recompute_noise_after_clipping,
             class_labels=class_labels,
-            color_labels=color_labels
+            color_labels=color_labels,
+            size_labels=size_labels
         )
 
     def sample_ddpm(

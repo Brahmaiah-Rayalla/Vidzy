@@ -4,3 +4,4 @@ Pillow>=10.0.0
 pyyaml>=6.0
 tqdm>=4.65.0
 torchvision>=0.15.0
+imageio-ffmpeg>=0.5.1

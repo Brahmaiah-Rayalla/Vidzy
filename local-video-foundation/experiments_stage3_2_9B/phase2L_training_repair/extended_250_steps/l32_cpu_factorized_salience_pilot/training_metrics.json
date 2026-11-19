@@ -1,0 +1,139 @@
+{
+  "completed_steps": 1200,
+  "elapsed_train_seconds": 1112.009,
+  "seed": 42,
+  "threads": 4,
+  "history": [
+    {
+      "step": 1,
+      "loss": 1.2349488735198975,
+      "epsilon_loss": 1.2183479070663452,
+      "foreground_epsilon_mse": 1.3655025959014893,
+      "background_epsilon_mse": 1.165661334991455,
+      "low_noise_rgb_l1": 0.03991609439253807,
+      "low_noise_silhouette_bce": 0.4868406355381012,
+      "elapsed_seconds": 1.47
+    },
+    {
+      "step": 100,
+      "loss": 0.19830049574375153,
+      "epsilon_loss": 0.16452205181121826,
+      "foreground_epsilon_mse": 0.2234020084142685,
+      "background_epsilon_mse": 0.14233450591564178,
+      "low_noise_rgb_l1": 0.11625022441148758,
+      "low_noise_silhouette_bce": 0.9321977496147156,
+      "elapsed_seconds": 103.97
+    },
+    {
+      "step": 200,
+      "loss": 0.10690689086914062,
+      "epsilon_loss": 0.06926742941141129,
+      "foreground_epsilon_mse": 0.09453888237476349,
+      "background_epsilon_mse": 0.061988428235054016,
+      "low_noise_rgb_l1": 0.12221714854240417,
+      "low_noise_silhouette_bce": 1.0509535074234009,
+      "elapsed_seconds": 200.36
+    },
+    {
+      "step": 300,
+      "loss": 0.1455937623977661,
+      "epsilon_loss": 0.11501146107912064,
+      "foreground_epsilon_mse": 0.18409663438796997,
+      "background_epsilon_mse": 0.09258910268545151,
+      "low_noise_rgb_l1": 0.09952332079410553,
+      "low_noise_silhouette_bce": 0.8535376787185669,
+      "elapsed_seconds": 291.14
+    },
+    {
+      "step": 400,
+      "loss": 0.15410232543945312,
+      "epsilon_loss": 0.13183757662773132,
+      "foreground_epsilon_mse": 0.19443285465240479,
+      "background_epsilon_mse": 0.11017028242349625,
+      "low_noise_rgb_l1": 0.0646200031042099,
+      "low_noise_silhouette_bce": 0.6344583630561829,
+      "elapsed_seconds": 381.62
+    },
+    {
+      "step": 500,
+      "loss": 0.048647988587617874,
+      "epsilon_loss": 0.027162667363882065,
+      "foreground_epsilon_mse": 0.02774551883339882,
+      "background_epsilon_mse": 0.02601229026913643,
+      "low_noise_rgb_l1": 0.06640727072954178,
+      "low_noise_silhouette_bce": 0.6054985523223877,
+      "elapsed_seconds": 474.14
+    },
+    {
+      "step": 600,
+      "loss": 0.05020175874233246,
+      "epsilon_loss": 0.03405408561229706,
+      "foreground_epsilon_mse": 0.048889853060245514,
+      "background_epsilon_mse": 0.02896471507847309,
+      "low_noise_rgb_l1": 0.04049982130527496,
+      "low_noise_silhouette_bce": 0.47075605392456055,
+      "elapsed_seconds": 565.18
+    },
+    {
+      "step": 700,
+      "loss": 0.07288152724504471,
+      "epsilon_loss": 0.05416535958647728,
+      "foreground_epsilon_mse": 0.08237274736166,
+      "background_epsilon_mse": 0.0416034460067749,
+      "low_noise_rgb_l1": 0.044741224497556686,
+      "low_noise_silhouette_bce": 0.5493035316467285,
+      "elapsed_seconds": 656.66
+    },
+    {
+      "step": 800,
+      "loss": 0.041553303599357605,
+      "epsilon_loss": 0.02053818851709366,
+      "foreground_epsilon_mse": 0.02856908179819584,
+      "background_epsilon_mse": 0.017837602645158768,
+      "low_noise_rgb_l1": 0.06506617367267609,
+      "low_noise_silhouette_bce": 0.5920602083206177,
+      "elapsed_seconds": 746.85
+    },
+    {
+      "step": 900,
+      "loss": 0.05372646450996399,
+      "epsilon_loss": 0.033706892281770706,
+      "foreground_epsilon_mse": 0.0584588386118412,
+      "background_epsilon_mse": 0.02515421435236931,
+      "low_noise_rgb_l1": 0.05878039821982384,
+      "low_noise_silhouette_bce": 0.569351851940155,
+      "elapsed_seconds": 838.62
+    },
+    {
+      "step": 1000,
+      "loss": 0.11815078556537628,
+      "epsilon_loss": 0.0988096296787262,
+      "foreground_epsilon_mse": 0.14147980511188507,
+      "background_epsilon_mse": 0.08099228888750076,
+      "low_noise_rgb_l1": 0.049658846110105515,
+      "low_noise_silhouette_bce": 0.5619404911994934,
+      "elapsed_seconds": 930.07
+    },
+    {
+      "step": 1100,
+      "loss": 0.044621698558330536,
+      "epsilon_loss": 0.024542037397623062,
+      "foreground_epsilon_mse": 0.035797517746686935,
+      "background_epsilon_mse": 0.019351139664649963,
+      "low_noise_rgb_l1": 0.060782209038734436,
+      "low_noise_silhouette_bce": 0.5680184364318848,
+      "elapsed_seconds": 1020.83
+    },
+    {
+      "step": 1200,
+      "loss": 0.03674791008234024,
+      "epsilon_loss": 0.015111343003809452,
+      "foreground_epsilon_mse": 0.02507668174803257,
+      "background_epsilon_mse": 0.01120455376803875,
+      "low_noise_rgb_l1": 0.06607537716627121,
+      "low_noise_silhouette_bce": 0.6110933423042297,
+      "elapsed_seconds": 1112.01
+    }
+  ],
+  "checkpoint": "C:\\Brahma\\AI\\AIDirector\\Vidzy\\local-video-foundation\\experiments_stage3_2_9B\\phase2L_training_repair\\extended_250_steps\\l32_cpu_factorized_salience_pilot\\checkpoint_step_01200.pt"
+}

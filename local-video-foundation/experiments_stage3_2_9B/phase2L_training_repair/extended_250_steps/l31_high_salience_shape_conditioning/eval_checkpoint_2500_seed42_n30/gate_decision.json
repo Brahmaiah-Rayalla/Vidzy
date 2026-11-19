@@ -1,0 +1,48 @@
+{
+  "experiment": "L31 high-salience shape/color conditioning pilot",
+  "checkpoint_step": 2500,
+  "evaluation_samples": 180,
+  "samples_per_joint_class": 30,
+  "seed": 42,
+  "decision": "inconclusive_not_promoted",
+  "stop_training_at_gate": true,
+  "criteria": {
+    "joint_and_shape_point_estimates_should_improve": true,
+    "paired_95pct_intervals_should_exclude_zero_for_promotion": true,
+    "color_accuracy_must_not_materially_regress": true,
+    "per_class_shape_collapse_is_a_stop_condition": true
+  },
+  "baseline": {
+    "joint_accuracy": 0.28888888888888886,
+    "shape_accuracy": 0.4722222222222222,
+    "color_accuracy": 0.6277777777777778,
+    "validation_v_noise_mse": 0.00205529444152489
+  },
+  "candidate": {
+    "joint_accuracy": 0.3333333333333333,
+    "shape_accuracy": 0.5166666666666667,
+    "color_accuracy": 0.6777777777777778,
+    "validation_v_noise_mse": 0.00209954433841631
+  },
+  "deltas": {
+    "joint_accuracy": 0.044444444444444446,
+    "shape_accuracy": 0.044444444444444446,
+    "color_accuracy": 0.05,
+    "validation_v_noise_mse": 0.000044249896891420085
+  },
+  "paired_95pct_intervals": {
+    "joint_accuracy": [-0.06111111111111111, 0.14444444444444443],
+    "shape_accuracy": [-0.06666666666666667, 0.15555555555555556],
+    "color_accuracy": [-0.03333333333333333, 0.13333333333333333]
+  },
+  "decision_history": {
+    "original_detector_decision": "failed_not_promoted",
+    "original_decision_invalidated": true,
+    "reason": "The original detector was not reliable on structured diffusion artifacts. Noise-tolerant reclassification changed the point estimates; all paired intervals still include zero."
+  },
+  "reason": "Robust reclassification suggests modest positive joint, shape, and color changes, but the paired intervals include zero, class-level results are unstable, and absolute shape quality remains low. Keep the candidate unpromoted and do not continue training it automatically.",
+  "metric_source": "failure_audit_robust_metrics.json",
+  "training_checkpoint": "../ckpt_2500.pt",
+  "matched_evaluation": "L31_MATCHED_HELDOUT_EVALUATION.json",
+  "run_manifest": "run_manifest.json"
+}
